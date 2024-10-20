@@ -28,6 +28,7 @@ module.exports = { // eslint-disable-line no-undef
     'require-jsdoc': 'off',
     'no-throw-literal': 'error',
     'no-extra-semi': 'error',
+    'linebreak-style': 'off',
 
     // Disabled entries from eslint:recommended
     'no-inner-declarations': 'off',

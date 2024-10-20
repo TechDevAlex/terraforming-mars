@@ -11,16 +11,16 @@ export class AcquiredCompany extends Card implements IProjectCard {
       type: CardType.AUTOMATED,
       name: CardName.ACQUIRED_COMPANY,
       tags: [Tag.EARTH],
-      cost: 10,
+      cost: 8,
 
       behavior: {
-        production: {megacredits: 3},
+        production: {megacredits: 10},
       },
 
       metadata: {
-        description: 'Increase your M€ production 3 steps.',
+        description: 'Increase your M€ production 5 steps.',
         cardNumber: '106',
-        renderData: CardRenderer.builder((b) => b.production((pb) => pb.megacredits(3))),
+        renderData: CardRenderer.builder((b) => b.production((pb) => pb.megacredits(10))),
       },
     });
   }

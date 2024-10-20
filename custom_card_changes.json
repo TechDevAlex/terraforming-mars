@@ -1,0 +1,28 @@
+{
+    "AcquiredCompany": {
+        "cost": 10,
+        "behavior": {
+            "production": {
+                "megacredits": 3
+            }
+        },
+        "metadata": {
+            "description": "Increase your M€ production 3 steps."
+        },
+        "renderData": {
+            "megacredits": 3
+        }
+    },
+
+    "AdaptationTechnology": {
+        "cost": 10
+    },
+
+    "AerobrakedAmmoniaAsteroid":{
+        "cost":21
+    },
+
+    "test"
+
+
+}
