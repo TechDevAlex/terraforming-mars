@@ -13,17 +13,17 @@ export class RobinsonIndustries extends CorporationCard implements IActionCard {
   constructor() {
     super({
       name: CardName.ROBINSON_INDUSTRIES,
-      startingMegaCredits: 47,
+      startingMegaCredits: 50,
 
       metadata: {
         cardNumber: 'R27',
-        description: 'You start with 47 M€.',
+        description: 'You start with 50 M€.',
         renderData: CardRenderer.builder((b) => {
           b.br.br.br;
-          b.megacredits(47);
+          b.megacredits(50);
           b.corpBox('action', (ce) => {
-            ce.action('Spend 4 M€ to increase (one of) your LOWEST production 1 step.', (eb) => {
-              eb.megacredits(4).startAction.production((pb) => pb.wild(1).asterix());
+            ce.action('Spend 2 M€ to increase (one of) your LOWEST production 1 step.', (eb) => {
+              eb.megacredits(2).startAction.production((pb) => pb.wild(1).asterix());
             });
           });
         }),
@@ -31,7 +31,7 @@ export class RobinsonIndustries extends CorporationCard implements IActionCard {
     });
   }
   public canAct(player: IPlayer): boolean {
-    return player.canAfford(4);
+    return player.canAfford(2);
   }
 
   public action(player: IPlayer) {

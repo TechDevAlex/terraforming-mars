@@ -11,14 +11,14 @@ export class Viron extends CorporationCard {
     super({
       name: CardName.VIRON,
       tags: [Tag.MICROBE],
-      startingMegaCredits: 48,
+      startingMegaCredits: 51,
 
       metadata: {
         cardNumber: 'R12',
-        description: 'You start with 48 M€.',
+        description: 'You start with 51 M€.',
         renderData: CardRenderer.builder((b) => {
           b.br.br.br;
-          b.megacredits(48);
+          b.megacredits(51);
           b.corpBox('action', (ce) => {
             ce.action('Use a blue card action that has already been used this generation.', (eb) => {
               eb.empty().startAction.empty();

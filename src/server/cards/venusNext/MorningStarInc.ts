@@ -9,19 +9,19 @@ export class MorningStarInc extends CorporationCard {
     super({
       name: CardName.MORNING_STAR_INC,
       tags: [Tag.VENUS],
-      startingMegaCredits: 50,
+      startingMegaCredits: 53,
       globalParameterRequirementBonus: {steps: 2, parameter: GlobalParameter.VENUS},
 
       firstAction: {
-        text: 'Draw 3 cards with a Venus tag',
-        drawCard: {count: 3, tag: Tag.VENUS},
+        text: 'Draw 5 cards with a Venus tag',
+        drawCard: {count: 5, tag: Tag.VENUS},
       },
 
       metadata: {
         cardNumber: 'R06',
-        description: 'You start with 50 M€. As your first action, reveal cards from the deck until you have revealed 3 Venus-tag cards. Take those into hand and discard the rest.',
+        description: 'You start with 53 M€. As your first action, reveal cards from the deck until you have revealed 5 Venus-tag cards. Take those into hand and discard the rest.',
         renderData: CardRenderer.builder((b) => {
-          b.megacredits(50).nbsp.cards(3, {secondaryTag: Tag.VENUS});
+          b.megacredits(53).nbsp.cards(5, {secondaryTag: Tag.VENUS});
           b.corpBox('effect', (ce) => {
             ce.effect('Your Venus requirements are +/- 2 steps, your choice in each case.', (eb) => {
               eb.plate('Venus requirements').startEffect.text('+/- 2');
