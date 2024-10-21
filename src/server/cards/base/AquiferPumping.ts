@@ -17,7 +17,7 @@ export class AquiferPumping extends Card implements IActionCard, IProjectCard {
       type: CardType.ACTIVE,
       name: CardName.AQUIFER_PUMPING,
       tags: [Tag.BUILDING],
-      cost: 18,
+      cost: 10,
 
       metadata: {
         cardNumber: '187',

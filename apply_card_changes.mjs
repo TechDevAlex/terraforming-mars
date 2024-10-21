@@ -33,25 +33,16 @@ async function applyChangesToFile(cardFile, cardChanges) {
   try {
     let content = await fs.readFile(cardFile, 'utf8');
 
-    // Replace specific values in the card file content
-    if (cardChanges.cost !== undefined) {
-      const costRegex = /cost:\s*\d+/;
-      content = content.replace(costRegex, `cost: ${cardChanges.cost}`);
+    // Update requirements (e.g., Venus requirement)
+    if (cardChanges.requirements && cardChanges.requirements.venus !== undefined) {
+      const venusRequirementRegex = /requirements:\s*\{\s*venus:\s*\d+/;
+      content = content.replace(venusRequirementRegex, `requirements: {venus: ${cardChanges.requirements.venus}`);
     }
 
-    if (cardChanges.behavior && cardChanges.behavior.production && cardChanges.behavior.production.megacredits !== undefined) {
-      const productionRegex = /production:\s*\{\s*megacredits:\s*\d+\s*\}/;
-      content = content.replace(productionRegex, `production: {megacredits: ${cardChanges.behavior.production.megacredits}}`);
-    }
-
+    // Update metadata description
     if (cardChanges.metadata && cardChanges.metadata.description !== undefined) {
       const descriptionRegex = /description:\s*['"].*?['"]/;
       content = content.replace(descriptionRegex, `description: '${cardChanges.metadata.description}'`);
-    }
-
-    if (cardChanges.renderData && cardChanges.renderData.megacredits !== undefined) {
-      const renderDataRegex = /pb\.megacredits\(\s*\d+\s*\)/;
-      content = content.replace(renderDataRegex, `pb.megacredits(${cardChanges.renderData.megacredits})`);
     }
 
     // Write the updated content back to the card file

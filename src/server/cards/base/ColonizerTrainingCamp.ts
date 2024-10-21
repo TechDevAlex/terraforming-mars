@@ -12,7 +12,7 @@ export class ColonizerTrainingCamp extends Card implements IProjectCard {
       name: CardName.COLONIZER_TRAINING_CAMP,
       tags: [Tag.JOVIAN, Tag.BUILDING],
       cost: 8,
-      victoryPoints: 2,
+      victoryPoints: 3,
 
       requirements: {oxygen: 5, max},
       metadata: {

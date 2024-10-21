@@ -19,15 +19,15 @@ export class RotatorImpacts extends Card implements IActionCard {
       name: CardName.ROTATOR_IMPACTS,
       type: CardType.ACTIVE,
       tags: [Tag.SPACE],
-      cost: 6,
+      cost: 5,
       resourceType: CardResource.ASTEROID,
 
       requirements: {venus: 14, max},
       metadata: {
         cardNumber: '243',
         renderData: CardRenderer.builder((b) => {
-          b.action('Spend 6 M€ to add an asteroid resource to this card [TITANIUM MAY BE USED].', (eb) => {
-            eb.megacredits(6).super((b) => b.titanium(1)).startAction.resource(CardResource.ASTEROID);
+          b.action('Spend 3 M€ to add an asteroid resource to this card [TITANIUM MAY BE USED].', (eb) => {
+            eb.megacredits(3).super((b) => b.titanium(1)).startAction.resource(CardResource.ASTEROID);
           }).br;
           b.action('Spend 1 resource from this card to increase Venus 1 step.', (eb) => {
             eb.or().resource(CardResource.ASTEROID).startAction.venus(1);

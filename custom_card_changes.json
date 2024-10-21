@@ -13,16 +13,261 @@
             "megacredits": 3
         }
     },
-
     "AdaptationTechnology": {
         "cost": 10
     },
-
-    "AerobrakedAmmoniaAsteroid":{
-        "cost":21
+    "AerobrakedAmmoniaAsteroid": {
+        "cost": 21
     },
-
-    "test"
-
-
+    "AICentral": {
+        "cost": 31,
+        "victoryPoints": 3
+    },
+    "Ants": {
+        "cost": 7,
+        "requirements": {
+            "oxygen": 2
+        },
+        "metadata": {
+            "description": "Nom Nom microbe myam at 2% Oxygen"
+        }
+    },
+    "AquiferPumping": {
+        "cost": 10
+    },
+    "CallistoPenalMines": {
+        "Cost": 20
+    },
+    "CaretakerContract": {
+        "requirements": {
+            "temperature": -20
+        },
+        "metadata": {
+            "description": "Stall the heat track by converting 8 heat into a TR"
+        }
+    },
+    "CloudSeeding": {
+        "production": {
+            "megacredits": 0
+        }
+    },
+    "ColonizerTrainingCamp": {
+        "victoryPoints": 3
+    },
+    "DustSeals": {
+        "victoryPoints": 2
+    },
+    "EquatorialMagnetizer": {
+        "cost": 6
+    },
+    "FusionPower": {
+        "cost": 12
+    },
+    "Hackers": {
+        "cost": 1
+    },
+    "ImmigrationShuttles": {
+        "cost": 26
+    },
+    "MagneticFieldGenerators": {
+        "cost": 16
+    },
+    "MarsUniversity": {
+        "cost": 25,
+        "victoryPoints": 4
+    },
+    "MartianRails": {
+        "cost": 10
+    },
+    "MicroMills": {
+        "cost": 2
+    },
+    "NitriteReducingBacteria": {
+        "cost": 9
+    },
+    "OlympusConference": {
+        "cost": 20,
+        "victoryPoints": 3
+    },
+    "PhobosSpaceHaven": {
+        "victoryPoints": 4
+    },
+    "PhysicsComplex": {
+        "cost": 8
+    },
+    "PowerGrid": {
+        "cost": 15
+    },
+    "RegolithEaters": {
+        "cost": 11
+    },
+    "SecurityFleet": {
+        "cost": 5
+    },
+    "SoilFactory": {
+        "cost": 7
+    },
+    "SolarPower": {
+        "victoryPoints": 2
+    },
+    "Soletta": {
+        "cost": 32
+    },
+    "SpaceMirrors": {
+        "cost": 1
+    },
+    "SpecialDesign": {
+        "cost": 1
+    },
+    "Tardigrades": {
+        "cost": 2
+    },
+    "TectonicStressPower": {
+        "victoryPoints": 2
+    },
+    "TollStation": {
+        "cost": 22,
+        "victoryPoints": 2
+    },
+    "TropicalResort": {
+        "behavior": {
+            "production": {
+                "megacredits": 8,
+                "heat": -4
+            }
+        }
+    },
+    "TundraFarming": {
+        "behavior": {
+            "production": {
+                "megacredits": 1,
+                "plants": 2
+            }
+        }
+    },
+    "UndergroundDetonations": {
+        "cost": 8,
+        "renderData": {
+            "megacredits": 7,
+            "heatProduction": 3
+        }
+    },
+    "Worms": {
+        "cost": 6,
+        "requirements": {
+            "oxygen": 2
+        },
+        "metadata": {
+            "description": "2% Oxygen. 1 Plantprod/2microbe tags, including this."
+        }
+    },
+    "__comment": {
+        "END OF BASIC & CORPORATE ERA CARDS": 0
+    },
+    "Helion": {
+        "heatProduction": 4,
+        "renderData": {
+            "heatProduction": 4
+        }
+    },
+    "Inventrix": {
+        "startingMegaCredits": 50,
+        "renderData": {
+            "megacredits": 50
+        }
+    },
+    "Thorgate": {
+        "cardDiscount": {
+            "amount": 4
+        },
+        "startingMegaCredits": 50,
+        "renderData": {
+            "megacredits": 50
+        }
+    },
+    "UnitedNationsMarsInitiative": {
+        "startingMegaCredits": 45,
+        "metadata": {
+            "description": "You start with 45 M€. If you Terraform this gen, press cool button for 1 extra TR!",
+            "renderData": {
+                "megacredits": 45,
+                "actionCost": 0
+            }
+        }
+    },
+    "___comment": {
+        "END OF BASE & CORPORATE ERA CORPS": 0
+    },
+    "ExtractorBalloons": {
+        "cost": 14
+    },
+    "ForcedPrecipitation": {
+        "metadata": {
+            "renderData": {
+                "actions": [
+                    {
+                        "description": "Spend 1 M€ to add 1 floater to THIS card.",
+                        "spend": {
+                            "megacredits": 1
+                        },
+                        "resource": {
+                            "type": "FLOATER",
+                            "quantity": 1
+                        }
+                    },
+                    {
+                        "description": "Spend 3 floaters here to increase Venus 2 steps.",
+                        "spend": {
+                            "floaters": 3
+                        },
+                        "effect": {
+                            "venus": 2
+                        }
+                    }
+                ]
+            }
+        }
+    },
+    "GHGImportFromVenus": {
+        "cost": 18
+    },
+    "GiantSolarShade": {
+        "cost": 23
+    },
+    "JetStreamMicroScrappers": {
+        "cost": 4
+    },
+    "LocalShading": {
+        "cost": 3
+    },
+    "OrbitalReflectors": {
+        "cost": 20
+    },
+    "RotatorImpacts": {
+        "cost": 5,
+        "metadata": {
+            "renderData": {
+                "actions": [
+                    {
+                        "description": "Spend 3 M€ to add an asteroid resource to this card [TITANIUM MAY BE USED].",
+                        "spend": {
+                            "megacredits": 3
+                        }
+                    }
+                ]
+            }
+        }
+    },
+    "Stratopolis":{
+        "cost": 16
+    },
+    "Thermophiles":{
+        "requirements":{
+            "venus": 2
+        },
+        "metadata":{
+            "description": "Requires Venus 2%"
+        }
+    }
+    
 }
