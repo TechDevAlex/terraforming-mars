@@ -11,7 +11,7 @@ export class PowerGrid extends Card implements IProjectCard {
       type: CardType.AUTOMATED,
       name: CardName.POWER_GRID,
       tags: [Tag.POWER],
-      cost: 18,
+      cost: 15,
 
       behavior: {
         production: {energy: {tag: Tag.POWER}},

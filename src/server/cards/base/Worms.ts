@@ -11,13 +11,13 @@ export class Worms extends Card implements IProjectCard {
       type: CardType.AUTOMATED,
       name: CardName.WORMS,
       tags: [Tag.MICROBE],
-      cost: 8,
+      cost: 6,
 
       behavior: {
         production: {plants: {tag: Tag.MICROBE, per: 2}},
       },
 
-      requirements: {oxygen: 4},
+      requirements: {oxygen: 2},
       metadata: {
         cardNumber: '130',
         renderData: CardRenderer.builder((b) => {

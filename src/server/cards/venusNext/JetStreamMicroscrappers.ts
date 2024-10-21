@@ -18,7 +18,7 @@ export class JetStreamMicroscrappers extends Card implements IActionCard {
       name: CardName.JET_STREAM_MICROSCRAPPERS,
       type: CardType.ACTIVE,
       tags: [Tag.VENUS],
-      cost: 12,
+      cost: 4,
       resourceType: CardResource.FLOATER,
 
       metadata: {

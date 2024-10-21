@@ -13,7 +13,7 @@ export class PhobosSpaceHaven extends Card implements IProjectCard {
       name: CardName.PHOBOS_SPACE_HAVEN,
       tags: [Tag.SPACE, Tag.CITY],
       cost: 25,
-      victoryPoints: 3,
+      victoryPoints: 4,
 
       behavior: {
         production: {titanium: 1},

@@ -16,7 +16,7 @@ export class TectonicStressPower extends Card implements IProjectCard {
       behavior: {
         production: {energy: 3},
       },
-      victoryPoints: 1,
+      victoryPoints: 2,
 
       requirements: {tag: Tag.SCIENCE, count: 2},
       metadata: {

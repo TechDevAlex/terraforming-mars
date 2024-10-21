@@ -13,7 +13,7 @@ export class Hackers extends Card implements IProjectCard {
     super({
       type: CardType.AUTOMATED,
       name: CardName.HACKERS,
-      cost: 3,
+      cost: 1,
       victoryPoints: -1,
 
       behavior: {

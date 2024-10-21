@@ -21,7 +21,7 @@ export class Thermophiles extends ActionCard implements IActionCard {
           behaviors: [{
             title: 'Spend 2 microbes here to raise Venus 1 step.',
             spend: {resourcesHere: 2},
-            global: {venus: 1},
+            global: {venus: 2},
             // LogHelper.logRemoveResource(player, this, 2, 'raise oxygen 1 step');
           },
           {
@@ -37,7 +37,7 @@ export class Thermophiles extends ActionCard implements IActionCard {
         },
       },
 
-      requirements: {venus: 6},
+      requirements: {venus: 2},
       metadata: {
         cardNumber: '253',
         renderData: CardRenderer.builder((b) => {
@@ -49,7 +49,7 @@ export class Thermophiles extends ActionCard implements IActionCard {
             eb.resource(CardResource.MICROBE, 2).startAction.venus(1);
           });
         }),
-        description: 'Requires Venus 6%',
+        description: 'Requires Venus 2%',
       },
     });
   }

@@ -12,7 +12,7 @@ export class Stratopolis extends ActionCard {
       name: CardName.STRATOPOLIS,
       type: CardType.ACTIVE,
       tags: [Tag.CITY, Tag.VENUS],
-      cost: 22,
+      cost: 16,
 
       resourceType: CardResource.FLOATER,
       victoryPoints: {resourcesHere: {}, per: 3},

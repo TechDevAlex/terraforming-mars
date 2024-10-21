@@ -15,7 +15,7 @@ export class TundraFarming extends Card implements IProjectCard {
       victoryPoints: 2,
 
       behavior: {
-        production: {plants: 1, megacredits: 2},
+        production: { megacredits: 1, plants: 2 },
         stock: {plants: 1},
       },
 

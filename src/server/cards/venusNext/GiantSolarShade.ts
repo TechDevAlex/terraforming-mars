@@ -11,7 +11,7 @@ export class GiantSolarShade extends Card implements IProjectCard {
       name: CardName.GIANT_SOLAR_SHADE,
       type: CardType.AUTOMATED,
       tags: [Tag.SPACE, Tag.VENUS],
-      cost: 27,
+      cost: 23,
 
       behavior: {
         global: {venus: 3},

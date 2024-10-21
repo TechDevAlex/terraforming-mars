@@ -33,16 +33,46 @@ async function applyChangesToFile(cardFile, cardChanges) {
   try {
     let content = await fs.readFile(cardFile, 'utf8');
 
-    // Update requirements (e.g., Venus requirement)
-    if (cardChanges.requirements && cardChanges.requirements.venus !== undefined) {
-      const venusRequirementRegex = /requirements:\s*\{\s*venus:\s*\d+/;
-      content = content.replace(venusRequirementRegex, `requirements: {venus: ${cardChanges.requirements.venus}`);
+    // Update cost
+    if (cardChanges.cost !== undefined) {
+      const costRegex = /(cost:\s*)\d+/;
+      content = content.replace(costRegex, `$1${cardChanges.cost}`);
+    }
+
+    // Update victory points (top level, not in behavior)
+    if (cardChanges.victoryPoints !== undefined) {
+      const victoryPointsRegex = /(victoryPoints:\s*)\d+/;
+      content = content.replace(victoryPointsRegex, `$1${cardChanges.victoryPoints}`);
+    }
+
+    // Update production behavior (precise replacement for production properties)
+    if (cardChanges.behavior && cardChanges.behavior.production !== undefined) {
+      const productionRegex = /(production:\s*\{[^}]*)(megacredits:\s*)\d+/;
+      if (cardChanges.behavior.production.megacredits !== undefined) {
+        content = content.replace(productionRegex, `$1$2${cardChanges.behavior.production.megacredits}`);
+      }
+    }
+
+    // Update requirements (Venus, oxygen, temperature, etc.)
+    if (cardChanges.requirements) {
+      if (cardChanges.requirements.venus !== undefined) {
+        const venusRequirementRegex = /(venus:\s*)\d+/;
+        content = content.replace(venusRequirementRegex, `$1${cardChanges.requirements.venus}`);
+      }
+      if (cardChanges.requirements.oxygen !== undefined) {
+        const oxygenRequirementRegex = /(oxygen:\s*)\d+/;
+        content = content.replace(oxygenRequirementRegex, `$1${cardChanges.requirements.oxygen}`);
+      }
+      if (cardChanges.requirements.temperature !== undefined) {
+        const temperatureRequirementRegex = /(temperature:\s*)\d+/;
+        content = content.replace(temperatureRequirementRegex, `$1${cardChanges.requirements.temperature}`);
+      }
     }
 
     // Update metadata description
     if (cardChanges.metadata && cardChanges.metadata.description !== undefined) {
-      const descriptionRegex = /description:\s*['"].*?['"]/;
-      content = content.replace(descriptionRegex, `description: '${cardChanges.metadata.description}'`);
+      const descriptionRegex = /(description:\s*['"]).*?(['"])/;
+      content = content.replace(descriptionRegex, `$1${cardChanges.metadata.description}$2`);
     }
 
     // Write the updated content back to the card file

@@ -14,9 +14,8 @@ export class AcquiredCompany extends Card implements IProjectCard {
       cost: 10,
 
       behavior: {
-        production: {megacredits: 3},
+        production: { megacredits: 3 },
       },
-
       metadata: {
         description: 'Increase your M€ production 3 steps.',
         cardNumber: '106',

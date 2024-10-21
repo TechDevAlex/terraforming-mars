@@ -12,12 +12,11 @@ export class TropicalResort extends Card implements IProjectCard {
       name: CardName.TROPICAL_RESORT,
       tags: [Tag.BUILDING],
       cost: 13,
-
-      behavior: {
-        production: {megacredits: 3, heat: -2},
-      },
       victoryPoints: 2,
 
+      behavior: {
+        production: { megacredits: 8, heat: -4 },
+      },
       metadata: {
         cardNumber: '098',
         renderData: CardRenderer.builder((b) => {

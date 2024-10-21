@@ -16,9 +16,9 @@ export class OlympusConference extends Card implements IProjectCard {
       type: CardType.ACTIVE,
       name: CardName.OLYMPUS_CONFERENCE,
       tags: [Tag.SCIENCE, Tag.EARTH, Tag.BUILDING],
-      cost: 10,
+      cost: 20,
       resourceType: CardResource.SCIENCE,
-      victoryPoints: 1,
+      victoryPoints: 3,
 
       metadata: {
         cardNumber: '185',

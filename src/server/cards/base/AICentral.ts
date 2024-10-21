@@ -11,7 +11,7 @@ export class AICentral extends ActionCard implements IProjectCard {
       type: CardType.ACTIVE,
       name: CardName.AI_CENTRAL,
       tags: [Tag.SCIENCE, Tag.BUILDING],
-      cost: 21,
+      cost: 31,
 
       behavior: {
         production: {energy: -1},
@@ -21,7 +21,7 @@ export class AICentral extends ActionCard implements IProjectCard {
         drawCard: {count: 2},
       },
 
-      victoryPoints: 1,
+      victoryPoints: 3,
 
       requirements: {tag: Tag.SCIENCE, count: 3},
       metadata: {

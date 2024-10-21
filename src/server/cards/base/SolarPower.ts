@@ -16,7 +16,7 @@ export class SolarPower extends Card implements IProjectCard {
       behavior: {
         production: {energy: 1},
       },
-      victoryPoints: 1,
+      victoryPoints: 2,
 
       metadata: {
         cardNumber: '113',

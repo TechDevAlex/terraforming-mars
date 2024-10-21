@@ -23,7 +23,7 @@ export class Manutech extends CorporationCard {
           b.br.br;
           b.production((pb) => pb.steel(1)).nbsp.megacredits(35);
           b.corpBox('effect', (ce) => {
-            ce.effect('For each step you increase the production of a resource, including this, you also gain that resource.', (eb) => {
+            ce.effect('For each step you increase the production of a resource, including this, you also gain half of that resource (rounded up).', (eb) => {
               eb.production((pb) => pb.wild(1)).startEffect.wild(1);
             });
           });
@@ -34,7 +34,8 @@ export class Manutech extends CorporationCard {
 
   public onProductionGain(player: IPlayer, resource: Resource, amount: number) {
     if (amount > 0) {
-      player.stock.add(resource, amount);
+      const givenamount = Math.ceil(amount/2);
+      player.stock.add(resource, givenamount);
     }
   }
 }

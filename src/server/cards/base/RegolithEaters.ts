@@ -12,7 +12,7 @@ export class RegolithEaters extends ActionCard implements IProjectCard {
       type: CardType.ACTIVE,
       name: CardName.REGOLITH_EATERS,
       tags: [Tag.SCIENCE, Tag.MICROBE],
-      cost: 13,
+      cost: 11,
       resourceType: CardResource.MICROBE,
 
       action: {

@@ -12,7 +12,7 @@ export class LocalShading extends ActionCard implements IActionCard {
       name: CardName.LOCAL_SHADING,
       type: CardType.ACTIVE,
       tags: [Tag.VENUS],
-      cost: 4,
+      cost: 3,
       resourceType: CardResource.FLOATER,
 
       action: {
