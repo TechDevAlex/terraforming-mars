@@ -271,7 +271,25 @@
     },
     "____comment": {
         "END OF VENUS CARDS": 0
-    }
+    },
     
+    "AsteroidHollowing":{
+        "cost": 6
+    },
+
+    "CarbonNanosystems":{
+        "cost": 20,
+        "victoryPoints": 2
+    },
+    "IcyImpactors":{
+        "cost": 5
+    },
+    "MeatIndustry":{
+        "cost": 9
+    },
+    "SolarLogistics":{
+        "cost": 32
+    }
+
 
 }

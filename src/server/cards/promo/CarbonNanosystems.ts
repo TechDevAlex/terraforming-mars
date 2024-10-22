@@ -14,8 +14,8 @@ export class CarbonNanosystems extends Card implements IProjectCard {
       type: CardType.ACTIVE,
       name: CardName.CARBON_NANOSYSTEMS,
       tags: [Tag.SCIENCE, Tag.BUILDING],
-      cost: 14,
-      victoryPoints: 1,
+      cost: 20,
+      victoryPoints: 2,
       resourceType: CardResource.GRAPHENE,
 
       metadata: {

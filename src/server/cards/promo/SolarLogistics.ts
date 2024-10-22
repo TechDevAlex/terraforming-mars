@@ -12,7 +12,7 @@ export class SolarLogistics extends Card implements IProjectCard {
     super({
       type: CardType.ACTIVE,
       name: CardName.SOLAR_LOGISTICS,
-      cost: 20,
+      cost: 32,
       tags: [Tag.EARTH, Tag.SPACE],
 
       behavior: {
