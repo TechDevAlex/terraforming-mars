@@ -74,7 +74,7 @@
     },
     "MarsUniversity": {
         "cost": 25,
-        "victoryPoints": 4
+        "victoryPoints": 3
     },
     "MartianRails": {
         "cost": 10
@@ -269,6 +269,13 @@
             "description": "Requires Venus 2%"
         }
     },
+
+    "VenusianAnimals":{
+        "requirements":{
+            "venus": 22
+        }
+    },
+
     "____comment": {
         "END OF VENUS CARDS": 0
     },
