@@ -18,7 +18,7 @@ export class PharmacyUnion extends CorporationCard {
   constructor() {
     super({
       name: CardName.PHARMACY_UNION,
-      startingMegaCredits: 46, // 54 minus 8 for the 2 diseases
+      startingMegaCredits: 48, // 54 minus 8 for the 2 diseases
       resourceType: CardResource.DISEASE,
 
       behavior: {
@@ -29,9 +29,9 @@ export class PharmacyUnion extends CorporationCard {
       metadata: {
         cardNumber: 'R39',
         renderData: CardRenderer.builder((b) => {
-          b.megacredits(54).cards(1, {secondaryTag: Tag.SCIENCE});
+          b.megacredits(56).cards(1, {secondaryTag: Tag.SCIENCE});
           // blank space after MC is on purpose
-          b.text('(You start with 54 M€ . Draw a Science card.)', Size.TINY, false, false);
+          b.text('(You start with 56 M€ . Draw a Science card.)', Size.TINY, false, false);
           b.corpBox('effect', (ce) => {
             ce.vSpace(Size.LARGE);
             ce.effect(undefined, (eb) => {

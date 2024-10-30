@@ -13,7 +13,7 @@ export class UnitedNationsMarsInitiative extends CorporationCard implements IAct
     super({
       name: CardName.UNITED_NATIONS_MARS_INITIATIVE,
       tags: [Tag.EARTH],
-      startingMegaCredits: 45,
+      startingMegaCredits: 50,
 
       metadata: {
         cardNumber: 'R32',
@@ -21,7 +21,7 @@ export class UnitedNationsMarsInitiative extends CorporationCard implements IAct
         renderData: CardRenderer.builder((b) => {
           // TODO(chosta): find a not so hacky solutions to spacing
           b.br.br.br;
-          b.empty().nbsp.nbsp.nbsp.nbsp.megacredits(45);
+          b.empty().nbsp.nbsp.nbsp.nbsp.megacredits(50);
           b.corpBox('action', (ce) => {
             ce.action('If your Terraform Rating was raised this generation, you may pay 1 M€ to raise it 1 step more.', (eb) => {
               eb.megacredits(0).startAction.tr(1).asterix();

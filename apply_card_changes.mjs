@@ -75,6 +75,13 @@ async function applyChangesToFile(cardFile, cardChanges) {
       content = content.replace(descriptionRegex, `$1${cardChanges.metadata.description}$2`);
     }
 
+    // Update tags
+    if (cardChanges.tags !== undefined) {
+      const tagsArray = cardChanges.tags.map(tag => `Tag.${tag.toUpperCase()}`).join(', ');
+      const tagsRegex = /(tags:\s*\[)[^\]]*(\])/;
+      content = content.replace(tagsRegex, `$1${tagsArray}$2`);
+    }
+
     // Write the updated content back to the card file
     await fs.writeFile(cardFile, content, 'utf8');
     console.log(`Updated ${path.basename(cardFile)}`);

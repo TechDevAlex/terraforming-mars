@@ -17,7 +17,7 @@ export class MarsUniversity extends Card implements IProjectCard {
       name: CardName.MARS_UNIVERSITY,
       tags: [Tag.SCIENCE, Tag.BUILDING],
       cost: 25,
-      victoryPoints: 4,
+      victoryPoints: 3,
 
       metadata: {
         cardNumber: '073',

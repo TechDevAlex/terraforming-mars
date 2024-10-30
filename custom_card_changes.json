@@ -57,6 +57,12 @@
     "DustSeals": {
         "victoryPoints": 2
     },
+
+    "EarthCatapult":{
+        "cost": 46
+    },
+
+
     "EquatorialMagnetizer": {
         "cost": 6
     },
@@ -164,6 +170,13 @@
     "__comment": {
         "END OF BASIC & CORPORATE ERA CARDS": 0
     },
+
+    "Credicor":{
+        "startingMegaCredits": 40
+    },
+
+
+
     "Helion": {
         "heatProduction": 4,
         "renderData": {

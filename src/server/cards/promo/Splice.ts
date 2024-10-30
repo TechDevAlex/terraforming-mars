@@ -19,16 +19,16 @@ export class Splice extends CorporationCard {
     super({
       name: CardName.SPLICE,
       tags: [Tag.MICROBE],
-      startingMegaCredits: 48, // 44 + 4 as card resolution when played
+      startingMegaCredits: 46, // 42 + 4 as card resolution when played
 
       firstAction: {
         text: 'Draw a card with a microbe tag',
-        drawCard: {count: 1, tag: Tag.MICROBE},
+        drawCard: {count: 2, tag: Tag.MICROBE},
       },
 
       metadata: {
         cardNumber: 'R28',
-        description: 'You start with 44 M€. As your first action, reveal cards until you have revealed a microbe tag. Take it and discard the rest.',
+        description: 'You start with 42 M€. As your first action, reveal cards until you have revealed 2 microbe tags. Take it and discard the rest.',
         renderData: CardRenderer.builder((b) => {
           b.megacredits(44).nbsp.cards(1, {secondaryTag: Tag.MICROBE});
           b.corpBox('effect', (ce) => {
@@ -38,9 +38,9 @@ export class Splice extends CorporationCard {
               eb.megacredits(2, {all}).or().resource(CardResource.MICROBE, {all}).asterix();
             });
             ce.vSpace();
-            ce.effect('when a microbe tag is played, incl. this, THAT PLAYER gains 2 M€, or adds a microbe to THAT card, and you gain 2 M€.', (eb) => {
+            ce.effect('when a microbe tag is played, incl. this, THAT PLAYER gains 2 M€, or adds a microbe to THAT card, and you gain 4 M€.', (eb) => {
               eb.tag(Tag.MICROBE, {all}).startEffect;
-              eb.megacredits(2);
+              eb.megacredits(4);
             });
           });
         }),
@@ -76,7 +76,7 @@ export class Splice extends CorporationCard {
 
     // Splice owner gets 2M€ per microbe tag
     const cardPlayer = game.getCardPlayerOrThrow(this.name);
-    game.defer(new GainResources(cardPlayer, Resource.MEGACREDITS, {count: gain, log: true, from: this}));
+    game.defer(new GainResources(cardPlayer, Resource.MEGACREDITS, {count: gain*2, log: true, from: this}));
 
     if (card.resourceType === CardResource.MICROBE) {
       // Card player chooses between 2 M€ and a microbe on card, if possible

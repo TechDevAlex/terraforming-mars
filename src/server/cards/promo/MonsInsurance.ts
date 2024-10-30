@@ -18,10 +18,10 @@ export class MonsInsurance extends CorporationCard {
 
       metadata: {
         cardNumber: 'R46',
-        description: 'You start with 48 M€. Increase your M€ production 4 steps. ALL OPPONENTS DECREASE THEIR M€ production 2 STEPS. THIS DOES NOT TRIGGER THE EFFECT BELOW.',
+        description: 'You start with 48 M€. Increase your M€ production 4 steps. ALL OPPONENTS DECREASE THEIR M€ production 3 STEPS. THIS DOES NOT TRIGGER THE EFFECT BELOW.',
         renderData: CardRenderer.builder((b) => {
           b.megacredits(48).production((pb) => {
-            pb.megacredits(4).nbsp.megacredits(-2, {all}).asterix();
+            pb.megacredits(4).nbsp.megacredits(-3, {all}).asterix();
           });
           b.corpBox('effect', (cb) => {
             cb.vSpace(Size.SMALL);
@@ -37,7 +37,7 @@ export class MonsInsurance extends CorporationCard {
 
   public override bespokePlay(player: IPlayer) {
     for (const p of player.getOpponents()) {
-      p.production.add(Resource.MEGACREDITS, -2, {log: true});
+      p.production.add(Resource.MEGACREDITS, -3, {log: true});
     }
     player.game.monsInsuranceOwner = player.id;
     return undefined;

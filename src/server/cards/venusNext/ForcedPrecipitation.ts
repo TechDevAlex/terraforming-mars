@@ -29,7 +29,7 @@ export class ForcedPrecipitation extends Card implements IActionCard {
             eb.megacredits(1).startAction.resource(CardResource.FLOATER);
           }).br;
           b.or().br;
-          b.action('Spend 2 floaters here to increase Venus 1 step.', (eb) => {
+          b.action('Spend 3 floaters here to increase Venus 2 steps.', (eb) => {
             eb.resource(CardResource.FLOATER, 3).startAction.venus(2);
           });
         }),
@@ -38,10 +38,10 @@ export class ForcedPrecipitation extends Card implements IActionCard {
   }
 
   public canAct(player: IPlayer): boolean {
-    if (player.canAfford(2)) {
+    if (player.canAfford(1)) {
       return true;
     }
-    if (this.resourceCount > 1 && player.canAfford({cost: 0, tr: {venus: 1}})) {
+    if (this.resourceCount > 1 && player.canAfford({cost: 0, tr: {venus: 2}})) {
       if (player.game.getVenusScaleLevel() === MAX_VENUS_SCALE) {
         this.warnings.add('maxvenus');
       }
@@ -53,18 +53,18 @@ export class ForcedPrecipitation extends Card implements IActionCard {
   public action(player: IPlayer) {
     const opts = [];
 
-    const addResource = new SelectOption('Pay 2 M€ to add 1 floater to this card', 'Pay').andThen(() => this.addResource(player));
-    const spendResource = new SelectOption('Remove 2 floaters to raise Venus 1 step', 'Remove floaters').andThen(() => this.spendResource(player));
+    const addResource = new SelectOption('Pay 1 M€ to add 1 floater to this card', 'Pay').andThen(() => this.addResource(player));
+    const spendResource = new SelectOption('Remove 3 floaters to raise Venus 2 step', 'Remove floaters').andThen(() => this.spendResource(player));
     if (player.game.getVenusScaleLevel() === MAX_VENUS_SCALE) {
       spendResource.warnings = ['maxvenus'];
     }
-    if (this.resourceCount > 1 && player.canAfford({cost: 0, tr: {venus: 1}})) {
+    if (this.resourceCount > 3 && player.canAfford({cost: 0, tr: {venus: 2}})) {
       opts.push(spendResource);
     } else {
       return this.addResource(player);
     }
 
-    if (player.canAfford(2)) {
+    if (player.canAfford(1)) {
       opts.push(addResource);
     } else {
       return this.spendResource(player);
@@ -74,14 +74,14 @@ export class ForcedPrecipitation extends Card implements IActionCard {
   }
 
   private addResource(player: IPlayer) {
-    player.game.defer(new SelectPaymentDeferred(player, 2, {title: TITLES.payForCardAction(this.name)}))
+    player.game.defer(new SelectPaymentDeferred(player, 1, {title: TITLES.payForCardAction(this.name)}))
       .andThen(() => player.addResourceTo(this, {log: true}));
     return undefined;
   }
 
   private spendResource(player: IPlayer) {
-    player.removeResourceFrom(this, 2);
-    const actual = player.game.increaseVenusScaleLevel(player, 1);
+    player.removeResourceFrom(this, 3);
+    const actual = player.game.increaseVenusScaleLevel(player, 2);
     LogHelper.logVenusIncrease(player, actual);
     return undefined;
   }

@@ -14,13 +14,13 @@ export class CrediCor extends CorporationCard {
 
       metadata: {
         cardNumber: 'R08',
-        description: 'You start with 57 M€.',
+        description: 'You start with 40 M€.',
         renderData: CardRenderer.builder((b) => {
           b.br.br.br;
-          b.megacredits(57);
+          b.megacredits(40);
           b.corpBox('effect', (ce) => {
-            ce.effect('After you pay for a card or standard project with a basic cost of 20M€ or more, you gain 4 M€.', (eb) => {
-              eb.minus().megacredits(20).startEffect.megacredits(4);
+            ce.effect('After you pay for a card or standard project with a basic cost of 20M€ or more, you gain 6 M€.', (eb) => {
+              eb.minus().megacredits(20).startEffect.megacredits(6);
             });
           });
         }),
@@ -29,7 +29,7 @@ export class CrediCor extends CorporationCard {
   }
   private effect(player: IPlayer, card: IProjectCard | IStandardProjectCard): void {
     if (player.isCorporation(this.name) && card.cost >= 20) {
-      player.stock.add(Resource.MEGACREDITS, 4, {log: true});
+      player.stock.add(Resource.MEGACREDITS, 6, {log: true});
     }
   }
   public onCardPlayed(player: IPlayer, card: IProjectCard) {
