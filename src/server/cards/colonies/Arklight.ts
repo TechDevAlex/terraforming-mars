@@ -11,7 +11,7 @@ export class Arklight extends CorporationCard {
     super({
       name: CardName.ARKLIGHT,
       tags: [Tag.ANIMAL],
-      startingMegaCredits: 45,
+      startingMegaCredits: 48,
       resourceType: CardResource.ANIMAL,
       victoryPoints: {resourcesHere: {}, per: 2},
 
@@ -22,9 +22,9 @@ export class Arklight extends CorporationCard {
 
       metadata: {
         cardNumber: 'R04',
-        description: 'You start with 45 M€. Increase your M€ production 2 steps. 1 VP per 2 animals on this card.',
+        description: 'You start with 48 M€. Increase your M€ production 2 steps. 1 VP per 2 animals on this card.',
         renderData: CardRenderer.builder((b) => {
-          b.megacredits(45).nbsp.production((pb) => pb.megacredits(2));
+          b.megacredits(48).nbsp.production((pb) => pb.megacredits(2));
           b.corpBox('effect', (ce) => {
             ce.effect('When you play an animal or plant tag, including this, add 1 animal to this card.', (eb) => {
               eb.tag(Tag.ANIMAL).slash().tag(Tag.PLANT).startEffect.resource(CardResource.ANIMAL);

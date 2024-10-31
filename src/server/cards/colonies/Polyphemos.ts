@@ -7,23 +7,23 @@ export class Polyphemos extends CorporationCard {
   constructor() {
     super({
       name: CardName.POLYPHEMOS,
-      startingMegaCredits: 50,
-      cardCost: 5,
+      startingMegaCredits: 60,
+      cardCost: 6,
 
       behavior: {
-        production: {megacredits: 5},
-        stock: {titanium: 5},
+        production: {megacredits: 6},
+        stock: {titanium: 6},
       },
 
       metadata: {
         cardNumber: 'R11',
-        description: 'You start with 50 M€. Increase your M€ production 5 steps. Gain 5 titanium.',
+        description: 'You start with 60 M€. Increase your M€ production 6 steps. Gain 6 titanium.',
         renderData: CardRenderer.builder((b) => {
           b.br;
-          b.megacredits(50).nbsp.production((pb) => pb.megacredits(5)).nbsp.titanium(5, {digit});
+          b.megacredits(60).nbsp.production((pb) => pb.megacredits(6)).nbsp.titanium(6, {digit});
           b.corpBox('effect', (ce) => {
-            ce.effect('When you buy a card to hand, pay 5M€ instead of 3, including the starting hand.', (eb) => {
-              eb.cards(1).asterix().startEffect.megacredits(5);
+            ce.effect('When you buy a card to hand, pay 6M€ instead of 3, including the starting hand.', (eb) => {
+              eb.cards(1).asterix().startEffect.megacredits(6);
             });
           });
         }),

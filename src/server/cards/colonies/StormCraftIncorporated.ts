@@ -20,7 +20,7 @@ export class StormCraftIncorporated extends ActiveCorporationCard {
       resourceType: CardResource.FLOATER,
 
       action: {
-        addResourcesToAnyCard: {type: CardResource.FLOATER, count: 1, autoSelect: true},
+        addResourcesToAnyCard: {type: CardResource.FLOATER, count: 2, autoSelect: true},
       },
 
       metadata: {
@@ -31,12 +31,12 @@ export class StormCraftIncorporated extends ActiveCorporationCard {
           b.megacredits(48);
           b.corpBox('action', (ce) => {
             ce.vSpace(Size.LARGE);
-            ce.action('Add a floater to ANY card.', (eb) => {
+            ce.action('Add 2 floaters to ANY card.', (eb) => {
               eb.empty().startAction.resource(CardResource.FLOATER).asterix();
             });
             ce.vSpace();
             ce.effect('Floaters on this card may be used as 2 heat each.', (eb) => {
-              eb.startEffect.resource(CardResource.FLOATER).equals().heat(2);
+              eb.startEffect.resource(CardResource.FLOATER, 2).equals().heat(2);
             });
           });
         }),
