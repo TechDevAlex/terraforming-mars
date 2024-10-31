@@ -14,13 +14,13 @@ export class Karen extends CeoCard {
         renderData: CardRenderer.builder((b) => {
           b.opgArrow().text('X').prelude().asterix();
         }),
-        description: 'Once per game, draw Prelude cards equal to the current generation number and choose one to play, and discard the rest.',
+        description: 'DO NOT PLAY GEN 1!!Once per game, draw Prelude cards equal to the current generation number -1 and choose one to play, and discard the rest.',
       },
     });
   }
 
   public override canAct(player: IPlayer) {
-    if (!player.game.preludeDeck.canDraw(player.game.generation)) {
+    if (!player.game.preludeDeck.canDraw(player.game.generation) && player.game.generation > 1) {
       this.warnings.add('deckTooSmall');
     }
     return super.canAct(player);
