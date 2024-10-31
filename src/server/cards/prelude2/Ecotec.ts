@@ -15,7 +15,7 @@ export class Ecotec extends CorporationCard {
     super({
       name: CardName.ECOTEC,
       tags: [Tag.MICROBE, Tag.PLANT],
-      startingMegaCredits: 42,
+      startingMegaCredits: 45,
 
       behavior: {
         production: {plants: 1},
@@ -25,11 +25,11 @@ export class Ecotec extends CorporationCard {
         cardNumber: 'PC04', // Renumber
         renderData: CardRenderer.builder((b) => {
           b.br.br.br;
-          b.megacredits(42).production((pb) => pb.plants(1)).br;
+          b.megacredits(45).production((pb) => pb.plants(1)).br;
           b.effect('When you play a bio tag, gain 1 plant or add a microbe to ANY card.',
             (eb) => eb.tag(Tag.MICROBE).tag(Tag.PLANT).tag(Tag.ANIMAL).startEffect.plants(1).slash().resource(CardResource.MICROBE).asterix());
         }),
-        description: 'You start with 42 M€. Increase your plant production 1 step.',
+        description: 'You start with 45 M€. Increase your plant production 1 step.',
       },
     });
   }

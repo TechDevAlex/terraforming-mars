@@ -37,7 +37,7 @@ export class UnitedNationsMarsInitiative extends CorporationCard implements IAct
   }
 
   public action(player: IPlayer) {
-    player.game.defer(new SelectPaymentDeferred(player, 3, {title: TITLES.payForCardAction(this.name)}))
+    player.game.defer(new SelectPaymentDeferred(player, 1, {title: TITLES.payForCardAction(this.name)}))
       .andThen(() => player.increaseTerraformRating());
     return undefined;
   }

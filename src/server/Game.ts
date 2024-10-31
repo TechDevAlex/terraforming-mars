@@ -1109,7 +1109,8 @@ export class Game implements IGame, Logger {
     // Check for Aphrodite corporation
     const aphrodite = this.players.find((player) => player.isCorporation(CardName.APHRODITE));
     if (aphrodite !== undefined) {
-      aphrodite.megaCredits += steps * 2;
+      // changed Aphrodite money per step to 3
+      aphrodite.megaCredits += steps * 3;
     }
 
     this.venusScaleLevel += steps * 2;

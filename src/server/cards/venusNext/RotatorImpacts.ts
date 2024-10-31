@@ -48,7 +48,7 @@ export class RotatorImpacts extends Card implements IActionCard {
   public action(player: IPlayer) {
     const opts = [];
 
-    const addResource = new SelectOption('Pay 6 M€ to add 1 asteroid to this card', 'Pay').andThen(() => this.addResource(player));
+    const addResource = new SelectOption('Pay 3 M€ to add 1 asteroid to this card', 'Pay').andThen(() => this.addResource(player));
     const spendResource = new SelectOption('Remove 1 asteroid to raise Venus 1 step', 'Remove asteroid').andThen(() => this.spendResource(player));
 
     if (this.resourceCount > 0 && player.game.getVenusScaleLevel() < MAX_VENUS_SCALE) {
@@ -57,7 +57,7 @@ export class RotatorImpacts extends Card implements IActionCard {
       return this.addResource(player);
     }
 
-    if (player.canAfford({cost: 6, titanium: true})) {
+    if (player.canAfford({cost: 3, titanium: true})) {
       opts.push(addResource);
     } else {
       return this.spendResource(player);
@@ -67,7 +67,7 @@ export class RotatorImpacts extends Card implements IActionCard {
   }
 
   private addResource(player: IPlayer) {
-    player.game.defer(new SelectPaymentDeferred(player, 6, {canUseTitanium: true, title: TITLES.payForCardAction(this.name)}));
+    player.game.defer(new SelectPaymentDeferred(player, 3, {canUseTitanium: true, title: TITLES.payForCardAction(this.name)}));
     player.addResourceTo(this, {log: true});
     return undefined;
   }
