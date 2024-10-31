@@ -12,7 +12,7 @@ export class Midas extends CorporationCard {
 
       metadata: {
         cardNumber: 'R41',
-        description: 'You start with 120 M€. Lower your TR 7 steps.',
+        description: 'You start with 110 M€. Lower your TR 6 steps.',
         renderData: CardRenderer.builder((b) => {
           b.vSpace(Size.LARGE).br;
           b.megacredits(120, {size: Size.LARGE}).nbsp.nbsp.nbsp;

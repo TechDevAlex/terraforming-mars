@@ -19,7 +19,7 @@ export class CuriosityII extends CorporationCard {
     super({
       name: CardName.CURIOSITY_II,
       tags: [Tag.SCIENCE, Tag.BUILDING],
-      startingMegaCredits: 40,
+      startingMegaCredits: 42,
 
       behavior: {
         production: {steel: 2},
@@ -27,17 +27,17 @@ export class CuriosityII extends CorporationCard {
 
       metadata: {
         cardNumber: 'Y07',
-        description: 'You start with 40 M€ and 2 steel production.',
+        description: 'You start with 42 M€ and 2 steel production.',
         renderData: CardRenderer.builder((b) => {
           b.br.br;
-          b.megacredits(40).nbsp.production((pb) => pb.steel(2));
+          b.megacredits(42).nbsp.production((pb) => pb.steel(2));
           b.corpBox('effect', (ce) => {
             ce.vSpace();
             ce.effect(
               'When you place a tile on an area that has a RESOURCE placement bonus, ' +
-              'or on top of another tile, you may pay 2 M€ to draw a card.',
+              'or on top of another tile, you may pay 3 M€ to draw a card.',
               (eb) => {
-                eb.emptyTile('normal', {size: Size.SMALL}).nbsp.asterix().startEffect.megacredits(-2).cards(1);
+                eb.emptyTile('normal', {size: Size.SMALL}).nbsp.asterix().startEffect.megacredits(-3).cards(1);
               });
           });
         }),
@@ -58,11 +58,11 @@ export class CuriosityII extends CorporationCard {
   }
 
   private corpAction(player: IPlayer) {
-    if (!player.canAfford(2)) return undefined;
+    if (!player.canAfford(3)) return undefined;
 
     return new OrOptions(
-      new SelectOption('Pay 2 M€ to draw a card').andThen(() => {
-        player.game.defer(new SelectPaymentDeferred(player, 2, {title: TITLES.payForCardAction(this.name)}))
+      new SelectOption('Pay 3 M€ to draw a card').andThen(() => {
+        player.game.defer(new SelectPaymentDeferred(player, 3, {title: TITLES.payForCardAction(this.name)}))
           .andThen(() => player.game.defer(DrawCards.keepAll(player)));
         return undefined;
       }),

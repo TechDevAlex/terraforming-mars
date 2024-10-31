@@ -48,14 +48,14 @@ export class Eris extends CorporationCard {
       name: CardName.ERIS,
       tags: [Tag.BUILDING],
       initialActionText: 'Draw an Ares card',
-      startingMegaCredits: 46,
+      startingMegaCredits: 52,
 
       metadata: {
         cardNumber: 'R47',
-        description: 'You start with 46 M€. As your first action, draw an Ares card.',
+        description: 'You start with 52 M€. As your first action, draw an Ares card.',
         renderData: CardRenderer.builder((b) => {
           b.br.br;
-          b.megacredits(46).nbsp.cards(1, {secondaryTag: AltSecondaryTag.ARES});
+          b.megacredits(52).nbsp.cards(1, {secondaryTag: AltSecondaryTag.ARES});
           b.corpBox('action', (ce) => {
             ce.action('Place a new hazard tile adjacent to NO OTHER TILE, OR remove a hazard tile to gain 1 TR.', (eb) => {
               eb.empty().startAction.plus().hazardTile().slash().minus().hazardTile().colon().tr(1, {size: Size.SMALL});

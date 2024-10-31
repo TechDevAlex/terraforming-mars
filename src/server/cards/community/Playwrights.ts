@@ -17,7 +17,7 @@ export class Playwrights extends CorporationCard {
     super({
       name: CardName.PLAYWRIGHTS,
       tags: [Tag.POWER],
-      startingMegaCredits: 38,
+      startingMegaCredits: 40,
 
       behavior: {
         production: {energy: 1},
@@ -25,10 +25,10 @@ export class Playwrights extends CorporationCard {
 
       metadata: {
         cardNumber: 'R40',
-        description: 'You start with 38 M€ and 1 energy production.',
+        description: 'You start with 40 M€ and 1 energy production.',
         renderData: CardRenderer.builder((b) => {
           b.br.br;
-          b.megacredits(38).production((pb) => pb.energy(1));
+          b.megacredits(40).production((pb) => pb.energy(1));
           b.corpBox('action', (cb) => {
             cb.action('Replay a played event from any player (INCLUDING events that place special tiles) by paying its cost ONLY in M€ (discounts and rebates apply), then REMOVE IT FROM PLAY.', (eb) => {
               eb.megacredits(1, {text: '?'}).startAction;
