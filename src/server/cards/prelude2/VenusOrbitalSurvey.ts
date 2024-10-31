@@ -18,7 +18,8 @@ export class VenusOrbitalSurvey extends Card implements IActionCard {
       name: CardName.VENUS_ORBITAL_SURVEY,
       type: CardType.ACTIVE,
       tags: [Tag.VENUS, Tag.SPACE],
-      cost: 18,
+      cost: 30,
+      victoryPoints: 2,
 
       metadata: {
         cardNumber: 'P88',
