@@ -12,13 +12,13 @@ export class Odyssey extends CorporationCard implements IActionCard {
   constructor() {
     super({
       name: CardName.ODYSSEY,
-      startingMegaCredits: 33,
+      startingMegaCredits: 42,
 
       metadata: {
         cardNumber: 'PfC18',
-        description: 'You start with 33 M€.',
+        description: 'You start with 42 M€.',
         renderData: CardRenderer.builder((b) => {
-          b.br.br.br.br.br.br.megacredits(33).nbsp.nbsp.nbsp;
+          b.br.br.br.br.br.br.megacredits(42).nbsp.nbsp.nbsp;
           b.colon().cards(1, {secondaryTag: Tag.EVENT}).asterix().br;
           b.text('(Effect: Your event cards stay face up, and their tags are in use as if those were automated (green) cards.)',
             Size.TINY, false, false).br;

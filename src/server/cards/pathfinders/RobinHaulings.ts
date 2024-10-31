@@ -16,7 +16,7 @@ export class RobinHaulings extends CorporationCard {
     super({
       name: CardName.ROBIN_HAULINGS,
       tags: [Tag.MARS, Tag.VENUS],
-      startingMegaCredits: 39,
+      startingMegaCredits: 45,
       resourceType: CardResource.FLOATER,
 
       behavior: {
@@ -25,9 +25,9 @@ export class RobinHaulings extends CorporationCard {
 
       metadata: {
         cardNumber: 'PfC17',
-        description: 'You start with 39 M€.',
+        description: 'You start with 45 M€.',
         renderData: CardRenderer.builder((b) => {
-          b.megacredits(39).br;
+          b.megacredits(45).br;
           b.effect('Whenever you play a card with a Venus tag add 1 floater to ANY card.', (eb) => {
             eb.tag(Tag.VENUS).startEffect.resource(CardResource.FLOATER).asterix();
           });

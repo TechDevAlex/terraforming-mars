@@ -21,7 +21,7 @@ export class CollegiumCopernicus extends CorporationCard implements IActionCard 
     super({
       name: CardName.COLLEGIUM_COPERNICUS,
       tags: [Tag.SCIENCE, Tag.EARTH],
-      startingMegaCredits: 33,
+      startingMegaCredits: 35,
       resourceType: CardResource.DATA,
 
       behavior: {
@@ -35,10 +35,10 @@ export class CollegiumCopernicus extends CorporationCard implements IActionCard 
 
       metadata: {
         cardNumber: 'PfC16',
-        description: 'You start with 33 M€. As your first action, draw 2 cards with a science tag.',
+        description: 'You start with 35 M€. As your first action, draw 2 cards with a science tag.',
         renderData: CardRenderer.builder((b) => {
           b.br;
-          b.megacredits(33).cards(2, {secondaryTag: Tag.SCIENCE}).br;
+          b.megacredits(35).cards(2, {secondaryTag: Tag.SCIENCE}).br;
           b.effect('When you play a card with a science tag (including this) Add 1 data to ANY card.', (eb) => {
             eb.tag(Tag.SCIENCE).startEffect.resource(CardResource.DATA).asterix();
           }).br;

@@ -16,12 +16,12 @@ export class Aurorai extends CorporationCard {
       resourceType: CardResource.DATA,
 
       behavior: {
-        addResources: 2,
+        addResources: 5,
       },
 
       metadata: {
         cardNumber: 'PfC15',
-        description: 'You start with 33 M€. and 2 data on this card',
+        description: 'You start with 33 M€. and 5 data on this card',
         renderData: CardRenderer.builder((b) => {
           b.megacredits(33).resource(CardResource.DATA, 2).br;
           b.effect('Whenever you increase your terraform rating, add 1 data per step to ANY card.', (eb) => {

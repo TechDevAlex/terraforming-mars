@@ -19,14 +19,14 @@ export class Ambient extends CorporationCard {
       startingMegaCredits: 38,
 
       firstAction: {
-        text: 'Raise the Venus scale 2 steps.',
+        text: 'Raise the Venus scale 1 step.',
         //     LogHelper.logVenusIncrease(player, actual);
-        global: {venus: 2},
+        global: {venus: 1},
       },
 
       metadata: {
         cardNumber: 'PfC3',
-        description: 'You start with 38 M€. As your first action, raise the Venus scale 2 steps.',
+        description: 'You start with 38 M€. As your first action, raise the Venus scale 1 step.',
         renderData: CardRenderer.builder((b) => {
           b.megacredits(38).venus(2, {size: Size.SMALL}).br;
           b.effect('When you play a card with a Venus tag (including this) increase your heat production 1 step.', (eb) => {

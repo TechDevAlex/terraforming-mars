@@ -16,13 +16,13 @@ export class SoylentSeedlingSystems extends CorporationCard {
       resourceType: CardResource.SEED,
 
       behavior: {
-        addResources: 2,
+        addResources: 3,
       },
 
       metadata: {
         cardNumber: 'PfC8',
         renderData: CardRenderer.builder((b) => {
-          b.megacredits(38).resource(CardResource.SEED, 2).br;
+          b.megacredits(38).resource(CardResource.SEED, 3).br;
           b.effect('When you place a greenery tile, add 1 seed resource to this card.', (eb) => {
             eb.greenery().startEffect.resource(CardResource.SEED);
           }).br;
@@ -30,7 +30,7 @@ export class SoylentSeedlingSystems extends CorporationCard {
             eb.tag(Tag.PLANT).slash().greenery().startEffect.resource(CardResource.SEED).equals().megacredits(5);
           }).br;
         }),
-        description: 'You start with 38M€ and 2 seeds on this card.',
+        description: 'You start with 38M€ and 3 seeds on this card.',
       },
     });
   }

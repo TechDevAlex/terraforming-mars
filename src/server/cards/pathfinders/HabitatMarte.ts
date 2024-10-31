@@ -7,14 +7,14 @@ export class HabitatMarte extends CorporationCard {
   constructor() {
     super({
       name: CardName.HABITAT_MARTE,
-      tags: [Tag.MARS],
-      startingMegaCredits: 40,
+      tags: [Tag.MARS, Tag.MARS],
+      startingMegaCredits: 46,
 
       metadata: {
         cardNumber: 'PfC22',
-        description: 'You start with 40 M€.',
+        description: 'You start with 46 M€.',
         renderData: CardRenderer.builder((b) => {
-          b.megacredits(40);
+          b.megacredits(46);
           b.corpBox('effect', (ce) => {
             ce.effect('Mars tags also count as science tags.', (eb) => {
               eb.tag(Tag.MARS).startEffect.tag(Tag.SCIENCE);

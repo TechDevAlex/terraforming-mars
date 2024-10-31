@@ -8,7 +8,7 @@ export class Chimera extends CorporationCard {
     super({
       name: CardName.CHIMERA,
       tags: [Tag.WILD, Tag.WILD],
-      startingMegaCredits: 36,
+      startingMegaCredits: 42,
 
       behavior: {
         stock: {steel: 1, titanium: 1},
@@ -16,9 +16,9 @@ export class Chimera extends CorporationCard {
 
       metadata: {
         cardNumber: 'PfC5',
-        description: 'You start with 36 M€, 1 steel, and 1 titanium.',
+        description: 'You start with 42 M€, 1 steel, and 1 titanium.',
         renderData: CardRenderer.builder((b) => {
-          b.megacredits(36).steel(1).titanium(1);
+          b.megacredits(42).steel(1).titanium(1);
           b.corpBox('effect', (ce) => {
             ce.effect('When you perform an action, these wild tags count as any tags of your choice. ' +
               'For claiming milestones and funding awards, both symbols count as one. ' +

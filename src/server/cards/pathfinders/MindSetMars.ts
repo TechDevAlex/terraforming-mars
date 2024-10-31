@@ -19,14 +19,13 @@ export class MindSetMars extends CorporationCard {
       name: CardName.MIND_SET_MARS,
       startingMegaCredits: 44,
       resourceType: CardResource.AGENDA,
-
       behavior: {
-        addResources: 1,
+        addResources: 3,
       },
 
       metadata: {
         cardNumber: 'PfC21',
-        description: 'You start with 44 M€ and 1 agenda resource to this card.',
+        description: 'You start with 44 M€ and 3 agenda resource to this card.',
         renderData: CardRenderer.builder((b) => {
           b.br;
           b.megacredits(44).resource(CardResource.AGENDA).nbsp.tag(Tag.BUILDING).colon(Size.SMALL).resource(CardResource.AGENDA).br;

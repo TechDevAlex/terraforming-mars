@@ -9,7 +9,7 @@ export class MarsMaths extends CorporationCard {
     super({
       name: CardName.MARS_MATHS,
       tags: [Tag.SCIENCE],
-      startingMegaCredits: 40,
+      startingMegaCredits: 42,
 
       firstAction: {
         text: 'Draw 2 cards',
@@ -18,9 +18,9 @@ export class MarsMaths extends CorporationCard {
 
       metadata: {
         cardNumber: 'PfC10',
-        description: 'You start with 40 M€. As your first action, draw 2 cards',
+        description: 'You start with 42 M€. As your first action, draw 2 cards',
         renderData: CardRenderer.builder((b) => {
-          b.megacredits(40).nbsp.cards(2).br;
+          b.megacredits(42).nbsp.cards(2).br;
           b.effect('At the beginning of the Research phase, you draw 5 cards, but may STILL only buy 4 cards. If you are drafting, keep 2 cards for your first draft.', (eb) => {
             eb.empty().startEffect.plus().cards(1).asterix();
           }).br;
