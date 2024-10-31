@@ -11,7 +11,7 @@ export class PrivateSecurity extends Card implements IProjectCard {
     super({
       type: CardType.ACTIVE,
       name: CardName.PRIVATE_SECURITY,
-      cost: 8,
+      cost: 6,
       tags: [Tag.EARTH],
 
       metadata: {

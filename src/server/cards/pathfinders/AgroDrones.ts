@@ -15,7 +15,7 @@ export class AgroDrones extends Card implements IProjectCard, IActionCard {
     super({
       type: CardType.ACTIVE,
       name: CardName.AGRO_DRONES,
-      cost: 14,
+      cost: 8,
       tags: [Tag.PLANT, Tag.MARS],
 
       requirements: {temperature: -18},

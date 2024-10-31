@@ -10,7 +10,7 @@ export class ExpeditionToTheSurfaceVenus extends Card implements IProjectCard {
     super({
       type: CardType.EVENT,
       name: CardName.EXPEDITION_TO_THE_SURFACE_VENUS,
-      cost: 16,
+      cost: 15,
       tags: [Tag.VENUS],
 
       behavior: {

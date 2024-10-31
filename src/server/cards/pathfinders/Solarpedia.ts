@@ -12,10 +12,10 @@ export class Solarpedia extends ActionCard implements IProjectCard {
       name: CardName.SOLARPEDIA,
       type: CardType.ACTIVE,
       tags: [Tag.SPACE],
-      cost: 12,
+      cost: 10,
       requirements: [{tag: Tag.VENUS}, {tag: Tag.EARTH}, {tag: Tag.MARS}, {tag: Tag.JOVIAN}],
       resourceType: CardResource.DATA,
-      victoryPoints: {resourcesHere: {}, per: 6},
+      victoryPoints: {resourcesHere: {}, per: 4},
 
       behavior: {
         addResourcesToAnyCard: {type: CardResource.DATA, count: 2},
@@ -33,7 +33,7 @@ export class Solarpedia extends ActionCard implements IProjectCard {
           }).br;
           b.resource(CardResource.DATA, 2).asterix();
         }),
-        description: 'Requires 1 Venus, Earth, Mars, and Jovian Tag. Add 2 data to ANY card. 1 VP for every 6 data resources here.',
+        description: 'Requires 1 Venus, Earth, Mars, and Jovian Tag. Add 2 data to ANY card. 1 VP for every 4 data resources here.',
       },
     });
   }

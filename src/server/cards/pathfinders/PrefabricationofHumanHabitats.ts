@@ -12,7 +12,7 @@ export class PrefabricationofHumanHabitats extends Card implements IProjectCard 
     super({
       type: CardType.ACTIVE,
       name: CardName.PREFABRICATION_OF_HUMAN_HABITATS,
-      cost: 8,
+      cost: 6,
       tags: [Tag.BUILDING, Tag.CITY],
 
       requirements: {production: Resource.STEEL, count: 1},

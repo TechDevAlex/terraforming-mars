@@ -13,7 +13,7 @@ export class DysonScreens extends ActionCard {
       type: CardType.ACTIVE,
       name: CardName.DYSON_SCREENS,
       tags: [Tag.SCIENCE, Tag.VENUS, Tag.POWER, Tag.SPACE],
-      cost: 28,
+      cost: 22,
       victoryPoints: 1,
 
       behavior: {

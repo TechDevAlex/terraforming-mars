@@ -18,11 +18,11 @@ export class Wetlands extends Card implements IProjectCard {
       type: CardType.AUTOMATED,
       name: CardName.WETLANDS,
       tags: [Tag.PLANT, Tag.MARS],
-      cost: 20,
+      cost: 22,
       tr: {oxygen: 1, tr: 1},
       requirements: {oceans: 2},
       reserveUnits: {plants: 4},
-      victoryPoints: 1,
+      victoryPoints: 2,
 
       metadata: {
         cardNumber: 'Pf03',

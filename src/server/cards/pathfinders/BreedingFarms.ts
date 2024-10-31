@@ -11,7 +11,7 @@ export class BreedingFarms extends ActionCard implements IProjectCard {
     super({
       type: CardType.ACTIVE,
       name: CardName.BREEDING_FARMS,
-      cost: 16,
+      cost: 14,
       tags: [Tag.SCIENCE, Tag.ANIMAL, Tag.BUILDING],
 
       behavior: {

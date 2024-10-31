@@ -33,7 +33,7 @@ export class GeologicalExpedition extends Card implements IProjectCard {
     super({
       type: CardType.ACTIVE,
       name: CardName.GEOLOGICAL_EXPEDITION,
-      cost: 18,
+      cost: 16,
       tags: [Tag.MARS, Tag.SCIENCE],
       victoryPoints: 2,
 

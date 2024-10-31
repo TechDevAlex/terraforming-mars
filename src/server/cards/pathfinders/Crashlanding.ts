@@ -21,7 +21,7 @@ export class Crashlanding extends Card implements IProjectCard {
     super({
       type: CardType.EVENT,
       name: CardName.CRASHLANDING,
-      cost: 20,
+      cost: 12,
       tilesBuilt: [TileType.CRASHLANDING],
 
       behavior: {

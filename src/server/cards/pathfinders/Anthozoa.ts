@@ -14,7 +14,7 @@ export class Anthozoa extends Card implements IProjectCard, IActionCard {
     super({
       type: CardType.ACTIVE,
       name: CardName.ANTHOZOA,
-      cost: 9,
+      cost: 7,
       tags: [Tag.PLANT, Tag.ANIMAL, Tag.MARS],
       requirements: {oceans: 3},
       resourceType: CardResource.ANIMAL,

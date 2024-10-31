@@ -16,7 +16,7 @@ export class Cryptocurrency extends Card implements IProjectCard, IActionCard {
     super({
       type: CardType.ACTIVE,
       name: CardName.CRYPTOCURRENCY,
-      cost: 6,
+      cost: 4,
       tags: [Tag.POWER],
       resourceType: CardResource.DATA,
 

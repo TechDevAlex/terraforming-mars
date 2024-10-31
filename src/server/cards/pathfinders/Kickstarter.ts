@@ -14,7 +14,7 @@ export class Kickstarter extends Card implements IProjectCard, ICloneTagCard {
     super({
       type: CardType.AUTOMATED,
       name: CardName.KICKSTARTER,
-      cost: 12,
+      cost: 9,
 
       metadata: {
         cardNumber: 'Pf41',
