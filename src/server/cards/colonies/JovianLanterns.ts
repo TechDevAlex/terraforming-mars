@@ -21,7 +21,7 @@ export class JovianLanterns extends Card implements IProjectCard {
       requirements: {tag: Tag.JOVIAN},
 
       behavior: {
-        tr: 1,
+        tr: 2,
         addResourcesToAnyCard: {type: CardResource.FLOATER, count: 2},
       },
 
@@ -31,11 +31,11 @@ export class JovianLanterns extends Card implements IProjectCard {
           b.action('Spend 1 titanium to add 2 floaters here.', (eb) => {
             eb.titanium(1).startAction.resource(CardResource.FLOATER, 2);
           }).br;
-          b.tr(1).resource(CardResource.FLOATER, 2).asterix().br;
+          b.tr(2).resource(CardResource.FLOATER, 2).asterix().br;
           b.vpText('1 VP per 2 floaters here.');
         }),
         description: {
-          text: 'Requires 1 Jovian tag. Increase your TR 1 step. Add 2 floaters to ANY card.',
+          text: 'Requires 1 Jovian tag. Increase your TR 2 steps. Add 2 floaters to ANY card.',
           align: 'left',
         },
       },

@@ -9,7 +9,7 @@ import {Card} from '../Card';
 export class NitrogenFromTitan extends Card implements IProjectCard {
   constructor() {
     super({
-      cost: 25,
+      cost: 20,
       tags: [Tag.JOVIAN, Tag.SPACE],
       name: CardName.NITROGEN_FROM_TITAN,
       type: CardType.AUTOMATED,

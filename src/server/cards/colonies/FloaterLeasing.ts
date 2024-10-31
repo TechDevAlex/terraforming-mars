@@ -14,15 +14,15 @@ export class FloaterLeasing extends Card implements IProjectCard {
       type: CardType.AUTOMATED,
 
       behavior: {
-        production: {megacredits: {floaters: {}, per: 3}},
+        production: {megacredits: {floaters: {}, per: 2}},
       },
 
       metadata: {
         cardNumber: 'C10',
         renderData: CardRenderer.builder((b) => {
-          b.production((pb) => pb.megacredits(1)).slash().resource(CardResource.FLOATER, {amount: 3, digit});
+          b.production((pb) => pb.megacredits(1)).slash().resource(CardResource.FLOATER, {amount: 2, digit});
         }),
-        description: 'Increase your M€ production 1 step PER 3 floaters you have.',
+        description: 'Increase your M€ production 1 step PER 2 floaters you have.',
       },
     });
   }

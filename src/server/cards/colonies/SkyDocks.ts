@@ -8,7 +8,7 @@ import {Card} from '../Card';
 export class SkyDocks extends Card implements IProjectCard {
   constructor() {
     super({
-      cost: 18,
+      cost: 26,
       tags: [Tag.SPACE, Tag.EARTH],
       name: CardName.SKY_DOCKS,
       type: CardType.ACTIVE,
