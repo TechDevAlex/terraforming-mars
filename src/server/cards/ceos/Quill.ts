@@ -20,7 +20,7 @@ export class Quill extends CeoCard {
           b.opgArrow().text('ACTIVATE THE BELOW ABILITY').br;
           b.cards(1, {secondaryTag: AltSecondaryTag.FLOATER}).colon().resource(CardResource.FLOATER, 2).megacredits(1).asterix();
         }),
-        description: 'Once per game, add 2 floaters to each of your cards that collect floaters, then add 2 floaters to ANY card. Gain 1 M€ for every 2 floaters added this way.',
+        description: 'Once per game, add 2 floaters to each of your cards that collect floaters, then add 2 floaters to ANY card. Gain 1 M€ for every floater added this way.',
       },
     });
   }
@@ -37,7 +37,7 @@ export class Quill extends CeoCard {
     const resourceCards = player.getResourceCards(CardResource.FLOATER);
     resourceCards.forEach((card) => player.addResourceTo(card, {qty: 2, log: true}));
     player.game.defer(new AddResourcesToCard(player, CardResource.FLOATER, {count: 2}));
-    player.game.defer(new GainResources(player, Resource.MEGACREDITS, {count: resourceCards.length + 1, log: true}));
+    player.game.defer(new GainResources(player, Resource.MEGACREDITS, {count: (resourceCards.length + 1)*2, log: true}));
     return undefined;
   }
 }

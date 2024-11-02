@@ -17,10 +17,10 @@ export class Ingrid extends CeoCard {
         renderData: CardRenderer.builder((b) => {
           b.opgArrow().text('ACTIVATE THE BELOW ABILITY');
           b.br.br;
-          b.emptyTile('normal').asterix().nbsp.colon().nbsp.plus().cards(1);
+          b.emptyTile('normal').asterix().nbsp.colon().nbsp.plus().cards(2);
           b.br;
         }),
-        description: 'When you take an action that places a tile on Mars THIS GENERATION, draw a card.',
+        description: 'When you take an action that places a tile on Mars THIS GENERATION, draw 2 cards.',
       },
     });
   }
@@ -40,6 +40,6 @@ export class Ingrid extends CeoCard {
     if (cardOwner.id !== activePlayer.id) return;
     if (cardOwner.game.phase === Phase.SOLAR) return;
 
-    cardOwner.drawCard();
+    cardOwner.drawCard(2);
   }
 }

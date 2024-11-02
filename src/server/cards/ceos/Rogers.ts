@@ -19,9 +19,9 @@ export class Rogers extends CeoCard {
           b.br;
           b.tag(Tag.VENUS).colon().projectRequirements();
           b.br;
-          b.tag(Tag.VENUS).colon().megacredits(-3);
+          b.tag(Tag.VENUS).colon().megacredits(-4);
         }),
-        description: 'Ignore global requirements for your Venus cards THIS GENERATION. When you play a Venus tag THIS GENERATION, you pay 3 M€ less for it.',
+        description: 'Ignore global requirements for your Venus cards THIS GENERATION. When you play a Venus tag THIS GENERATION, you pay 4 M€ less for it.',
       },
     });
   }
@@ -42,6 +42,6 @@ export class Rogers extends CeoCard {
 
   public override getCardDiscount(_player: IPlayer, card: IProjectCard) {
     if (this.opgActionIsActive === false) return 0;
-    return card.tags.filter((tag) => tag === Tag.VENUS).length * 3;
+    return card.tags.filter((tag) => tag === Tag.VENUS).length * 4;
   }
 }

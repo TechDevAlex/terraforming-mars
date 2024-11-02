@@ -17,11 +17,11 @@ export class Caesar extends CeoCard {
       metadata: {
         cardNumber: 'L33',
         renderData: CardRenderer.builder((b) => {
-          b.opgArrow().text('X').hazardTile(1, {size: Size.LARGE}).br;
+          b.opgArrow().text('X + 1').hazardTile(1, {size: Size.LARGE}).br;
           b.minus().production((pb) => pb.wild(1, {all})).asterix();
           b.br;
         }),
-        description: 'Once per game, place X hazard tiles where X is the current generation number. Each opponent loses 1 unit of production of their choice, or 2 units if there are 6 or more hazard tiles.',
+        description: 'Once per game, place X + 1 hazard tiles where X is the current generation number. Each opponent loses 1 unit of production of their choice, or 2 units if there are 6 or more hazard tiles.',
       },
     });
   }
@@ -36,7 +36,7 @@ export class Caesar extends CeoCard {
   public action(player: IPlayer): PlayerInput | undefined {
     this.isDisabled = true;
     const game = player.game;
-    for (let i = 0; i < game.generation; i++) {
+    for (let i = 0; i < game.generation+1; i++) {
       game.defer(new PlaceHazardTile(player, TileType.EROSION_MILD));
     }
 

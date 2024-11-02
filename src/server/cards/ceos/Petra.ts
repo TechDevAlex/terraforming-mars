@@ -19,11 +19,11 @@ export class Petra extends CeoCard {
         renderData: CardRenderer.builder((b) => {
           b.opgArrow().text('ACTIVATE THE BELOW ABILITY');
           b.br;
-          b.text('REPLACE ALL NEUTRAL', Size.TINY).delegates(1).colon().megacredits(3).asterix();
+          b.text('REPLACE ALL NEUTRAL', Size.TINY).delegates(1).colon().megacredits(4).asterix();
           b.br.br;
           b.plus().delegates(3).asterix;
         }),
-        description: 'Once per game, replace all Neutral delegates with your delegates. Gain 3 M€ for each delegate replaced this way. Place 3 Neutral delegates.',
+        description: 'Once per game, replace all Neutral delegates with your delegates. Gain 4 M€ for each delegate replaced this way. Place 3 Neutral delegates.',
       },
     });
   }
@@ -74,7 +74,7 @@ export class Petra extends CeoCard {
     }
     // If we dont do this player will not get the bonus for POLITICAN Awards
     player.totalDelegatesPlaced += count;
-    player.stock.add(Resource.MEGACREDITS, count * 3, {log: true});
+    player.stock.add(Resource.MEGACREDITS, count * 4, {log: true});
 
     // Place 3 Neutral delegates
     const availableParties = turmoil.parties.map(toName);

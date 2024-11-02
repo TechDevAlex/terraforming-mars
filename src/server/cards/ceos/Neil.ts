@@ -20,7 +20,7 @@ export class Neil extends CeoCard {
           b.br.br;
           b.opgArrow().production((pb) => pb.megacredits(1, {text: '?'})).asterix();
         }),
-        description: 'Gain 1 M€ when any player plays a Moon tag. Once per game, increase your M€ production by the value of the LOWEST Moon rate.',
+        description: 'Gain 1 M€ when any player plays a Moon tag. Once per game, increase your M€ production by double the value of the LOWEST Moon rate.',
       },
     });
   }
@@ -41,7 +41,7 @@ export class Neil extends CeoCard {
       const lowestRate = Math.min(moonData.habitatRate, moonData.logisticRate, moonData.miningRate);
 
       if (lowestRate > 0) {
-        player.production.add(Resource.MEGACREDITS, lowestRate, {log: true});
+        player.production.add(Resource.MEGACREDITS, lowestRate*2, {log: true});
       }
     });
 

@@ -18,7 +18,7 @@ export class Gaia extends CeoCard {
           b.opgArrow().colon().adjacencyBonus().asterix();
           b.br;
         }),
-        description: 'Once per game, gain the Ares adjacency bonuses of all player-owned tiles on Mars.',
+        description: 'Once per game, gain the Ares adjacency bonuses of all player-owned tiles on Mars twice.',
       },
     });
   }
@@ -35,6 +35,7 @@ export class Gaia extends CeoCard {
     );
     tilesOnMars.forEach((space) => {
       AresHandler.ifAres(player.game, () => {
+        AresHandler.earnAdjacencyBonuses(player, space, {giveAresTileOwnerBonus: false});
         AresHandler.earnAdjacencyBonuses(player, space, {giveAresTileOwnerBonus: false});
       });
     });

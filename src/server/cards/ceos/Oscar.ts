@@ -5,6 +5,7 @@ import {CardRenderer} from '../render/CardRenderer';
 import {CeoCard} from './CeoCard';
 
 import {Turmoil} from '../../turmoil/Turmoil';
+import {Resource} from '../../../common/Resource';
 
 export class Oscar extends CeoCard {
   constructor() {
@@ -17,7 +18,7 @@ export class Oscar extends CeoCard {
           b.br.br;
           b.opgArrow().chairman();
         }),
-        description: 'You have +1 influence. Once per game, replace the Chairman with one of your delegates.',
+        description: 'You have +1 influence. Once per game, replace the Chairman with one of your delegates and gain 5 MC.',
       },
     });
   }
@@ -44,6 +45,7 @@ export class Oscar extends CeoCard {
     // If we dont do this player will not get the bonus for POLITICAN Awards
     player.totalDelegatesPlaced += 1;
     this.isDisabled = true;
+    player.stock.add(Resource.MEGACREDITS, 5);
     return undefined;
   }
 }

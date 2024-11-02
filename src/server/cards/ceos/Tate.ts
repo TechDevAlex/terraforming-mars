@@ -21,7 +21,7 @@ export class Tate extends CeoCard {
           b.opgArrow().text('5', Size.LARGE).cards(1, {secondaryTag: Tag.WILD}).asterix();
           b.br.br;
         }),
-        description: 'Once per game, name a tag. Reveal cards from the deck until you find 5 cards with that tag. BUY up to 2 cards and discard the rest.',
+        description: 'Once per game, name a tag. Reveal cards from the deck until you find 5 cards with that tag. BUY up to 5 cards and discard the rest.',
       },
     });
   }
@@ -37,7 +37,7 @@ export class Tate extends CeoCard {
     const options = tags.map((tag) => {
       return new SelectOption(message('Search for ${0} tags', (b) => b.string(tag)), 'Search').andThen(() => {
         game.log('${0} searched for ${1} tags', (b) => b.player(player).string(tag));
-        player.drawCardKeepSome(5, {keepMax: 2, tag: tag, paying: true, logDrawnCard: true});
+        player.drawCardKeepSome(5, {keepMax: 5, tag: tag, paying: true, logDrawnCard: true});
         return undefined;
       });
     });

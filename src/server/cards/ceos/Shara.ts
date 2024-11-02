@@ -24,7 +24,7 @@ export class Shara extends CeoCard {
           // b.planetaryTrack().text('2').nbsp.megacredits(0, {clone}).asterix().minus().megacredits(0, {multiplier}).asterix();
         }),
         // description: 'Once per game, choose a planet tag. This card counts as having immediately played 2 of that tag. Then gain M€ equal to that tags planety influence track minus the current generation.',
-        description: 'Once per game, choose a planet tag. This card counts as having immediately played 2 of that tag. Then gain M€ equal to that tags planety influence track.',
+        description: 'Once per game, choose a planet tag. This card counts as having immediately played 2 of that tag. Then gain M€ equal to that tags planety influence track * 2.',
       },
     });
   }
@@ -46,7 +46,7 @@ export class Shara extends CeoCard {
       .andThen((tag) => {
         // const value = data[tag] - player.game.generation;
         const value = data[tag];
-        player.stock.add(Resource.MEGACREDITS, value, {log: true});
+        player.stock.add(Resource.MEGACREDITS, value *2, {log: true});
       });
     return undefined;
   }

@@ -27,10 +27,10 @@ export class Faraday extends CeoCard {
         cardNumber: 'L27',
         renderData: CardRenderer.builder((b) => {
           b.br;
-          b.text('5', Size.LARGE).diverseTag(1).colon().megacredits(-3).cards(1, {secondaryTag: AltSecondaryTag.DIVERSE}).asterix();
+          b.text('4', Size.LARGE).diverseTag(1).colon().megacredits(-2).cards(1, {secondaryTag: AltSecondaryTag.DIVERSE}).asterix();
           b.br.br;
         }),
-        description: 'When you gain a multiple of 5 for any tag type IN PLAY, you may pay 3 M€ to draw a card with that tag. Wild tags do not count for this effect.',
+        description: 'When you gain a multiple of 4 for any tag type IN PLAY, you may pay 2 M€ to draw a card with that tag. Wild tags do not count for this effect.',
       },
     });
   }
@@ -55,7 +55,7 @@ export class Faraday extends CeoCard {
     // Modulo 5 what the tag count was before the card was played.
     // Sum that pre-played count with the new cards tags.  If this sum is >=5, offer a card draw.
     // this wont work if someone makes a card with > 5 tags of one type, but...
-    return priorTagCount % 5 + tagsOnCard >= 5;
+    return priorTagCount % 4 + tagsOnCard >= 4;
   }
 
   public onCardPlayed(player: IPlayer, card: IProjectCard) {
@@ -83,10 +83,10 @@ export class Faraday extends CeoCard {
   }
 
   public effectOptions(player: IPlayer, tag: Tag) {
-    if (!player.canAfford(3)) return;
+    if (!player.canAfford(2)) return;
     return new OrOptions(
-      new SelectOption(message('Pay 3 M€ to draw a ${1} card', (b) => b.string(tag))).andThen(() => {
-        player.game.defer(new SelectPaymentDeferred(player, 3, {title: TITLES.payForCardAction(this.name)}))
+      new SelectOption(message('Pay 2 M€ to draw a ${1} card', (b) => b.string(tag))).andThen(() => {
+        player.game.defer(new SelectPaymentDeferred(player, 2, {title: TITLES.payForCardAction(this.name)}))
           .andThen(() => player.drawCard(1, {tag: tag}));
         return undefined;
       }),

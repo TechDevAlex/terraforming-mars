@@ -17,10 +17,10 @@ export class Gordon extends CeoCard {
       metadata: {
         cardNumber: 'L07',
         renderData: CardRenderer.builder((b) => {
-          b.greenery().city().colon().megacredits(2).asterix();
+          b.greenery().city().colon().megacredits(3).asterix();
           b.br.br;
         }),
-        description: 'Ignore placement restrictions for greenery and city tiles on Mars. Gain 2 M€ when you place a greenery or city tile on Mars.',
+        description: 'Ignore placement restrictions for greenery and city tiles on Mars. Gain 3 M€ when you place a greenery or city tile on Mars.',
       },
     });
   }
@@ -35,7 +35,7 @@ export class Gordon extends CeoCard {
     if (cardOwner.game.phase === Phase.SOLAR) return;
 
     if (Board.isCitySpace(space) || Board.isGreenerySpace(space)) {
-      cardOwner.game.defer(new GainResources(cardOwner, Resource.MEGACREDITS, {count: 2, log: true}));
+      cardOwner.game.defer(new GainResources(cardOwner, Resource.MEGACREDITS, {count: 3, log: true}));
     }
     return;
   }

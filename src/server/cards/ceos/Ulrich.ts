@@ -13,9 +13,9 @@ export class Ulrich extends CeoCard {
       metadata: {
         cardNumber: 'L21',
         renderData: CardRenderer.builder((b) => {
-          b.opgArrow().oceans(1).colon().megacredits(1, {text: '4x'}).slash().megacredits(15).asterix();
+          b.opgArrow().oceans(1).colon().megacredits(1, {text: '5x'}).slash().megacredits(20).asterix();
         }),
-        description: 'Once per game, gain 4 M€ for each ocean placed. If all oceans are aleady placed, gain only 15 M€.',
+        description: 'Once per game, gain 5 M€ for each ocean placed. If all oceans are aleady placed, gain only 15 M€.',
       },
     });
   }
@@ -24,7 +24,7 @@ export class Ulrich extends CeoCard {
     this.isDisabled = true;
     const game = player.game;
     const oceansPlaced = game.board.getOceanSpaces().length;
-    const bonusCredits = oceansPlaced < MAX_OCEAN_TILES ? (oceansPlaced * 4) : 15;
+    const bonusCredits = oceansPlaced < MAX_OCEAN_TILES ? (oceansPlaced * 5) : 20;
     player.stock.add(Resource.MEGACREDITS, bonusCredits, {log: true});
     return undefined;
   }

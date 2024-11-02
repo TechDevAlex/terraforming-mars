@@ -12,9 +12,9 @@ export class Stefan extends CeoCard {
       metadata: {
         cardNumber: 'L19',
         renderData: CardRenderer.builder((b) => {
-          b.opgArrow().text('SELL').cards(1).colon().megacredits(3);
+          b.opgArrow().text('SELL').cards(1).colon().megacredits(5);
         }),
-        description: 'Once per game, sell any number of cards from your hand for 3 M€ each.',
+        description: 'Once per game, sell any number of cards from your hand for 5 M€ each.',
       },
     });
   }
@@ -35,7 +35,7 @@ export class Stefan extends CeoCard {
       player.cardsInHand,
       {min: 0, max: player.cardsInHand.length})
       .andThen((cards) => {
-        player.megaCredits += cards.length * 3;
+        player.megaCredits += cards.length * 5;
 
         cards.forEach((card) => {
           player.discardCardFromHand(card);
