@@ -12,14 +12,14 @@ export class SeptumTribus extends CorporationCard implements IActionCard {
     super({
       name: CardName.SEPTUM_TRIBUS,
       tags: [Tag.WILD],
-      startingMegaCredits: 36,
+      startingMegaCredits: 35,
 
       metadata: {
         cardNumber: 'R15',
-        description: 'You start with 36 M€. When you perform an action, the wild tag counts as any tag of your choice.',
+        description: 'You start with 35 M€. When you perform an action, the wild tag counts as any tag of your choice.',
         renderData: CardRenderer.builder((b) => {
           b.br;
-          b.megacredits(36);
+          b.megacredits(35);
           b.corpBox('action', (ce) => {
             ce.action('Gain 2 M€ for each party where you have at least 1 delegate.', (eb) => {
               eb.empty().startAction.megacredits(2).slash().delegates(1).asterix();
