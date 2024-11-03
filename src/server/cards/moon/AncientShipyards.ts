@@ -2,7 +2,7 @@ import {CardName} from '../../../common/cards/CardName';
 import {IPlayer} from '../../IPlayer';
 import {CardType} from '../../../common/cards/CardType';
 import {Tag} from '../../../common/cards/Tag';
-import {CardResource} from '../../../common/CardResource';
+// import {CardResource} from '../../../common/CardResource';
 import {Resource} from '../../../common/Resource';
 import {CardRenderer} from '../render/CardRenderer';
 import {Card} from '../Card';

@@ -4,7 +4,7 @@ import {IProjectCard} from '../IProjectCard';
 import {Tag} from '../../../common/cards/Tag';
 import {CardRenderer} from '../render/CardRenderer';
 import {Card} from '../Card';
-import {all} from '../Options';
+// import {all} from '../Options';
 
 export class LunaSenate extends Card implements IProjectCard {
   constructor() {
