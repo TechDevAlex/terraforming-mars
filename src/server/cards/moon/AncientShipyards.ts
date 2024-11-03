@@ -14,18 +14,17 @@ export class AncientShipyards extends Card {
       name: CardName.ANCIENT_SHIPYARDS,
       type: CardType.ACTIVE,
       tags: [Tag.MOON, Tag.SPACE],
-      cost: 6,
+      cost: 16,
 
-      resourceType: CardResource.RESOURCE_CUBE,
-      victoryPoints: {resourcesHere: {}, each: -1},
+      victoryPoints: -1,
       reserveUnits: {titanium: 3},
 
       metadata: {
-        description: 'Spend 3 titanium. -1 VP for every resource here.',
+        description: 'Spend 3 titanium.',
         cardNumber: 'M19',
         renderData: CardRenderer.builder((b) => {
-          b.action('Steal 2 M€ from each player and add a resource cube here.', (eb) => {
-            eb.empty().startAction.text('Steal').nbsp.megacredits(2, {all}).asterix().colon().resource(CardResource.RESOURCE_CUBE);
+          b.action('Steal 3 M€ from each player.', (eb) => {
+            eb.empty().startAction.text('Steal').nbsp.megacredits(3, {all});
           }).br.br;
           b.minus().titanium(3);
         }),
@@ -42,7 +41,7 @@ export class AncientShipyards extends Card {
     for (const target of player.getOpponents()) {
       target.maybeBlockAttack(player, (proceed) => {
         if (proceed) {
-          target.stock.steal(Resource.MEGACREDITS, 2, player);
+          target.stock.steal(Resource.MEGACREDITS, 3, player);
         }
         return undefined;
       });
@@ -50,7 +49,6 @@ export class AncientShipyards extends Card {
     if (game.isSoloMode()) {
       player.stock.add(Resource.MEGACREDITS, 2);
     }
-    player.addResourceTo(this, 1);
     return undefined;
   }
 }

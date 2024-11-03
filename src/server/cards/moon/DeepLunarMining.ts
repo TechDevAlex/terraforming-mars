@@ -9,7 +9,7 @@ export class DeepLunarMining extends Card {
     super({
       name: CardName.DEEP_LUNAR_MINING,
       type: CardType.AUTOMATED,
-      tags: [Tag.MOON],
+      tags: [Tag.MOON, Tag.SPACE],
       cost: 18,
       reserveUnits: {titanium: 1},
 

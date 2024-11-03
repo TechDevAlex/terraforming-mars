@@ -18,11 +18,11 @@ export class TheGrandLunaCapitalGroup extends CorporationCard {
     super({
       name: CardName.THE_GRAND_LUNA_CAPITAL_GROUP,
       tags: [Tag.CITY, Tag.MOON],
-      startingMegaCredits: 32,
+      startingMegaCredits: 38,
       victoryPoints: 'special',
 
       behavior: {
-        stock: {titanium: 1},
+        stock: {titanium: 2},
       },
 
       firstAction: {
@@ -32,16 +32,16 @@ export class TheGrandLunaCapitalGroup extends CorporationCard {
 
       metadata: {
         description: {
-          text: 'You start with 32 M€ and 1 titanium. As your first action, place a habitat tile on The Moon and raise the habitat rate 1 step.',
+          text: 'You start with 38 M€ and 2 titanium. As your first action, place a habitat tile on The Moon and raise the habitat rate 1 step.',
           align: 'left',
         },
         cardNumber: 'MC7',
         renderData: CardRenderer.builder((b) => {
-          b.megacredits(32).titanium(1).moonHabitat({secondaryTag: AltSecondaryTag.MOON_HABITAT_RATE}).br;
-          b.effect('When you place a habitat tile, gain 2 M€ for each adjacent habitat tile.', (eb) => {
+          b.megacredits(38).titanium(2).moonHabitat({secondaryTag: AltSecondaryTag.MOON_HABITAT_RATE}).br;
+          b.effect('When you place a habitat tile, gain 3 M€ for each adjacent habitat tile.', (eb) => {
             eb.moonHabitat({size: Size.SMALL, all}).moonHabitat({size: Size.SMALL}).asterix()
               .startEffect
-              .megacredits(2).slash().moonHabitat({size: Size.SMALL, all});
+              .megacredits(3).slash().moonHabitat({size: Size.SMALL, all});
           }).br,
           b.vpText('1 VP for each habitat tile adjacent to your habitat tiles.').br;
         }),
@@ -59,7 +59,7 @@ export class TheGrandLunaCapitalGroup extends CorporationCard {
     }
     const adjacentSpaces = MoonExpansion.moonData(cardOwner.game).moon.getAdjacentSpaces(space);
     const filtered = adjacentSpaces.filter((space) => MoonExpansion.spaceHasType(space, TileType.MOON_HABITAT));
-    cardOwner.stock.add(Resource.MEGACREDITS, filtered.length * 2, {log: true});
+    cardOwner.stock.add(Resource.MEGACREDITS, filtered.length * 3, {log: true});
   }
 
   public override getVictoryPoints(player: IPlayer) {

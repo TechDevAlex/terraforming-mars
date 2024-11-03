@@ -13,7 +13,7 @@ export class SteelMarketMonopolists extends MarketCard {
       {
         name: CardName.STEEL_MARKET_MONOPOLISTS,
         type: CardType.ACTIVE,
-        cost: 15,
+        cost: 5,
         requirements: {miningRate: 3},
 
         metadata: {

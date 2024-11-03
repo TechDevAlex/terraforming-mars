@@ -14,7 +14,7 @@ export class LunaProjectOffice extends Card implements IProjectCard {
       name: CardName.LUNA_PROJECT_OFFICE,
       type: CardType.AUTOMATED,
       tags: [Tag.SCIENCE],
-      cost: 4,
+      cost: 3,
       requirements: {tag: Tag.SCIENCE, count: 2},
 
       metadata: {

@@ -11,22 +11,19 @@ export class SubterraneanHabitats extends Card implements IProjectCard {
       name: CardName.SUBTERRANEAN_HABITATS,
       type: CardType.ACTIVE,
       tags: [Tag.MOON],
-      cost: 12,
-      reserveUnits: {steel: 2},
-
-      behavior: {
-        moon: {habitatRate: 1},
-      },
+      cost: 3,
+      reserveUnits: {titanium: 1},
+      victoryPoints: 1,
 
       metadata: {
-        description: 'Spend 2 steel. Raise the habitat rate 1 step.',
+        description: 'Spend 1 titanium.',
         cardNumber: 'M36',
         renderData: CardRenderer.builder((b) => {
           b.effect('When you build a habitat on THE MOON, you spend 1 titanium less.', (eb) => {
             eb.startEffect.moonHabitat().colon().minus().titanium(1);
           });
           b.br;
-          b.minus().steel(2).moonHabitatRate();
+          b.minus().titanium(1);
         }),
       },
     });

@@ -3,12 +3,14 @@ import {CardType} from '../../../common/cards/CardType';
 import {CardRenderer} from '../render/CardRenderer';
 import {Card} from '../Card';
 import {IProjectCard} from '../IProjectCard';
+import {Tag} from '../../../common/cards/Tag';
 
 export class UndergroundDetonators extends Card implements IProjectCard {
   constructor() {
     super({
       name: CardName.UNDERGROUND_DETONATORS,
       type: CardType.EVENT,
+      tags: [Tag.MOON],
       cost: 9,
 
       behavior: {

@@ -11,8 +11,9 @@ export class MooncrateBlockFactory extends Card implements IProjectCard {
       name: CardName.MOONCRATE_BLOCK_FACTORY,
       type: CardType.ACTIVE,
       tags: [Tag.BUILDING],
-      cost: 8,
+      cost: 6,
       requirements: {miningTiles: 1},
+      victoryPoints: 1,
 
       // Behavior is in MoonHabitatStandardProject, MoonMineStandardProject and MoonRoadStandardProject.
 

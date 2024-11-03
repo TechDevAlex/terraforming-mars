@@ -16,8 +16,8 @@ export class LunaEcumenopolis extends Card {
     super({
       name: CardName.LUNA_ECUMENOPOLIS,
       type: CardType.AUTOMATED,
-      tags: [Tag.CITY, Tag.CITY, Tag.MOON],
-      cost: 35,
+      tags: [Tag.CITY, Tag.CITY, Tag.MOON, Tag.SPACE],
+      cost: 25,
       reserveUnits: {titanium: 2},
 
       metadata: {

@@ -11,8 +11,8 @@ export class AristarchusRoadNetwork extends Card {
       name: CardName.ARISTARCHUS_ROAD_NETWORK,
       type: CardType.AUTOMATED,
       tags: [Tag.MOON],
-      cost: 15,
-      reserveUnits: {steel: 2},
+      cost: 13,
+      reserveUnits: {steel: 1},
 
       behavior: {
         production: {megacredits: 2},
@@ -22,11 +22,11 @@ export class AristarchusRoadNetwork extends Card {
       },
 
       metadata: {
-        description: 'Spend 2 steel. Increase your M€ production 2 steps. ' +
+        description: 'Spend 1 steel. Increase your M€ production 2 steps. ' +
         'Place a road tile on The Moon and raise the Logistics Rate 1 step.',
         cardNumber: 'M10',
         renderData: CardRenderer.builder((b) => {
-          b.minus().steel(2).nbsp.production((eb) => eb.megacredits(2)).br;
+          b.minus().steel(1).nbsp.production((eb) => eb.megacredits(2)).br;
           b.moonRoad({secondaryTag: AltSecondaryTag.MOON_LOGISTICS_RATE});
         }),
       },

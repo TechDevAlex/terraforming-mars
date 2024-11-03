@@ -17,9 +17,10 @@ export class LunaTradeFederation extends CorporationCard {
       name: CardName.LUNA_TRADE_FEDERATION,
       tags: [Tag.MOON, Tag.SPACE],
       startingMegaCredits: 15,
+      victoryPoints: 1,
 
       behavior: {
-        stock: {titanium: 10},
+        stock: {titanium: 15},
       },
       // firstAction: {
       //   text: 'Place a mine tile on The Moon.',
@@ -27,12 +28,12 @@ export class LunaTradeFederation extends CorporationCard {
       // },
 
       metadata: {
-        // description: 'You start with 15 M€ and 10 titanium. As your first action, place a mine tile on The Moon and raise the mining rate 1 step.',
-        description: 'You start with 15 M€ and 10 titanium.',
+        // description: 'You start with 15 M€ and 15 titanium. As your first action, place a mine tile on The Moon and raise the mining rate 1 step.',
+        description: 'You start with 15 M€ and 15 titanium.',
         cardNumber: 'MC9',
         renderData: CardRenderer.builder((b) => {
           // b.megacredits(15).titanium(10).moonMine({secondaryTag: AltSecondaryTag.MOON_MINING_RATE}).br;
-          b.megacredits(15).titanium(10).br;
+          b.megacredits(15).titanium(15).br;
           // b.effect('When any mine tile is placed on The Moon, raise your titanium production 1 step.', (eb) => {
           //   eb.moonMine({size: Size.SMALL, all}).startEffect.production((pb) => pb.titanium(1)).nbsp;
           // });

@@ -9,8 +9,8 @@ export class CrescentResearchAssociation extends CorporationCard {
   constructor() {
     super({
       name: CardName.CRESCENT_RESEARCH_ASSOCIATION,
-      tags: [Tag.SCIENCE, Tag.MOON],
-      startingMegaCredits: 50,
+      tags: [Tag.SCIENCE, Tag.MOON, Tag.MOON],
+      startingMegaCredits: 48,
 
       victoryPoints: {tag: Tag.MOON, per: 3},
 
@@ -19,8 +19,8 @@ export class CrescentResearchAssociation extends CorporationCard {
         cardNumber: 'MC5',
         renderData: CardRenderer.builder((b) => {
           b.megacredits(50).br;
-          b.effect('When you play a Moon tag, you pay 1 M€ less for each Moon tag you have.', (eb) => {
-            eb.tag(Tag.MOON).startEffect.megacredits(1).slash().tag(Tag.MOON);
+          b.effect('When you play a Moon tag, you pay 1 M€ less for each 2 Moon tags you have.', (eb) => {
+            eb.tag(Tag.MOON).startEffect.megacredits(1).slash().tag(Tag.MOON).tag(Tag.MOON);
           });
         }),
       },
@@ -31,6 +31,10 @@ export class CrescentResearchAssociation extends CorporationCard {
     if (card.tags.indexOf(Tag.MOON) === -1) {
       return 0;
     }
-    return player.tags.count(Tag.MOON);
+    if (player.tags.count(Tag.MOON) % 2 === 0) {
+      return player.tags.count(Tag.MOON)/2;
+    } else {
+      return (player.tags.count(Tag.MOON)-1)/2;
+    }
   }
 }

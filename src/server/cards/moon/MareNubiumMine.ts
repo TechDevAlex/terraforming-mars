@@ -12,7 +12,7 @@ export class MareNubiumMine extends Card {
       name: CardName.MARE_NUBIUM_MINE,
       type: CardType.AUTOMATED,
       tags: [Tag.MOON, Tag.BUILDING],
-      cost: 17,
+      cost: 16,
 
       behavior: {
         production: {titanium: 1},

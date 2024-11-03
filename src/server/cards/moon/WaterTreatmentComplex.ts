@@ -11,7 +11,7 @@ export class WaterTreatmentComplex extends Card {
       name: CardName.WATER_TREATMENT_COMPLEX,
       type: CardType.AUTOMATED,
       tags: [Tag.MOON],
-      cost: 12,
+      cost: 9,
       requirements: {habitatTiles: 1, all},
       reserveUnits: {titanium: 1},
 

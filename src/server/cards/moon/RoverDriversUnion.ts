@@ -18,15 +18,15 @@ export class RoverDriversUnion extends Card implements IProjectCard {
       requirements: {logisticRate: 2},
 
       behavior: {
-        moon: {logisticsRate: 1},
+        moon: {roadTile: {}},
       },
 
       metadata: {
-        description: 'Requires 2 logistic rate. Raise the logistic rate 1 step. Increase your M€ production 1 step per logistic rate.',
+        description: 'Requires 2 logistic rate. Place a road. Increase your M€ production 1 step per logistic rate.',
         cardNumber: 'M78',
         renderData: CardRenderer.builder((b) => {
-          b.moonLogisticsRate().br;
-          b.production((pb) => pb.megacredits(1)).slash().moonLogisticsRate();
+          b.production((pb) => pb.megacredits(1)).slash().moonLogisticsRate().br;
+          b.moonRoad;
         }),
       },
     });

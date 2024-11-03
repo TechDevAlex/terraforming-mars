@@ -10,7 +10,7 @@ export class TitaniumExtractionCenter extends Card {
       name: CardName.TITANIUM_EXTRACTION_CENTER,
       type: CardType.AUTOMATED,
       tags: [Tag.BUILDING],
-      cost: 14,
+      cost: 5,
       reserveUnits: {titanium: 2},
 
       behavior: {

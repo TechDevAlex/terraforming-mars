@@ -11,18 +11,18 @@ export class StagingStationBehemoth extends Card implements IProjectCard {
       name: CardName.STAGING_STATION_BEHEMOTH,
       type: CardType.AUTOMATED,
       tags: [Tag.SPACE],
-      cost: 24,
+      cost: 16,
 
       behavior: {
-        moon: {logisticsRate: 1},
+        moon: {roadTile: {}},
         colonies: {addTradeFleet: 2},
       },
 
       metadata: {
-        description: 'Gain 2 Trade Fleets. Raise the logistic rate 1 step.',
+        description: 'Gain 2 Trade Fleets. Place a road.',
         cardNumber: 'M68',
         renderData: CardRenderer.builder((b) => {
-          b.tradeFleet().tradeFleet().moonLogisticsRate();
+          b.tradeFleet().tradeFleet().moonRoad();
         }),
       },
     });

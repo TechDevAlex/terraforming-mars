@@ -14,7 +14,7 @@ export class IntragenSanctuaryHeadquarters extends CorporationCard {
     super({
       name: CardName.INTRAGEN_SANCTUARY_HEADQUARTERS,
       tags: [Tag.ANIMAL, Tag.MOON],
-      startingMegaCredits: 38,
+      startingMegaCredits: 42,
       resourceType: CardResource.ANIMAL,
       victoryPoints: {resourcesHere: {}, per: 2},
 
@@ -24,16 +24,18 @@ export class IntragenSanctuaryHeadquarters extends CorporationCard {
       },
 
       firstAction: {
-        text: 'Place a habitat tile on The Moon.',
+        text: 'Place a habitat tile on The Moon. Draw cards with 3 an animal tag.',
         moon: {habitatTile: {}},
+        drawCard: {count: 3, tag: Tag.ANIMAL},
       },
 
       metadata: {
         description: 'You start with 38 M€. ' +
-        'As your first action, place a habitat tile on The Moon and raise the habitat rate 1 step. 1 VP for every 2 animals on this card.',
+        'As your first action, place a habitat tile on The Moon and raise the habitat rate 1 step, then you draw 3 cards with an animal tag. 1 VP for every 2 animals on this card.',
         cardNumber: 'MC8',
         renderData: CardRenderer.builder((b) => {
           b.megacredits(38).moonHabitat({secondaryTag: AltSecondaryTag.MOON_HABITAT_RATE}).br;
+          b.cards(3),
           b.effect('When any player plays an animal tag (including this), add 1 animal on this card.', (eb) => {
             eb.tag(Tag.ANIMAL, {all}).startEffect.resource(CardResource.ANIMAL);
           }).br;

@@ -10,7 +10,7 @@ export class MiningRobotsManufCenter extends Card {
       name: CardName.MINING_ROBOTS_MANUF_CENTER,
       type: CardType.AUTOMATED,
       tags: [Tag.SCIENCE, Tag.BUILDING],
-      cost: 12,
+      cost: 10,
       reserveUnits: {titanium: 1},
 
       behavior: {

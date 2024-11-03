@@ -13,6 +13,7 @@ export class GrandLunaAcademy extends Card implements IProjectCard {
       type: CardType.AUTOMATED,
       tags: [Tag.MOON],
       cost: 13,
+      victoryPoints: 1,
 
       behavior: {
         drawCard: {count: {tag: Tag.MOON, per: 2}},

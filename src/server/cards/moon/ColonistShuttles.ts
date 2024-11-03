@@ -12,7 +12,7 @@ export class ColonistShuttles extends Card {
       name: CardName.COLONIST_SHUTTLES,
       type: CardType.AUTOMATED,
       tags: [Tag.SPACE],
-      cost: 12,
+      cost: 9,
       reserveUnits: {titanium: 1},
 
       behavior: {

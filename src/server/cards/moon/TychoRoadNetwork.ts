@@ -11,7 +11,7 @@ export class TychoRoadNetwork extends Card {
       name: CardName.TYCHO_ROAD_NETWORK,
       type: CardType.AUTOMATED,
       tags: [Tag.MOON],
-      cost: 15,
+      cost: 12,
 
       behavior: {
         production: {megacredits: 1},

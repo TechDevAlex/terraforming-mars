@@ -11,7 +11,7 @@ export class LunaFirstIncorporated extends CorporationCard {
   constructor() {
     super({
       name: CardName.LUNA_FIRST_INCORPORATED,
-      tags: [Tag.MOON],
+      tags: [Tag.MOON, Tag.SPACE, Tag.BUILDING],
       startingMegaCredits: 40,
 
       behavior: {

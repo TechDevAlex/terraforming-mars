@@ -11,7 +11,7 @@ export class LTFPrivileges extends Card implements IProjectCard {
       name: CardName.LTF_PRIVILEGES,
       type: CardType.ACTIVE,
       tags: [Tag.MOON],
-      cost: 21,
+      cost: 5,
 
       metadata: {
         cardNumber: 'M82',

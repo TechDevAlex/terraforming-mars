@@ -14,16 +14,16 @@ export class LunaTrainStation extends Card {
     super({
       name: CardName.LUNA_TRAIN_STATION,
       type: CardType.AUTOMATED,
-      tags: [Tag.BUILDING],
+      tags: [Tag.BUILDING, Tag.MOON],
       cost: 24,
       reserveUnits: {steel: 2},
       victoryPoints: 'special',
 
       behavior: {
-        production: {megacredits: 4},
+        production: {megacredits: 2},
         moon: {
           tile: {type: TileType.LUNA_TRAIN_STATION},
-          logisticsRate: 1,
+          roadTile: {},
         },
       },
 
@@ -31,13 +31,13 @@ export class LunaTrainStation extends Card {
 
       metadata: {
         description: 'Requires a logistic rate of 5 or higher. Spend 2 steel. ' +
-        'Increase your M€ production 4 steps. Place this tile on The Moon and raise the logistic rate 1 step. ' +
+        'Increase your M€ production 4 steps. Place this tile on The Moon and build road yeah! ' +
         '2 VP FOR EACH ROAD TILE ADJACENT TO THIS TILE.',
         cardNumber: 'M15',
         renderData: CardRenderer.builder((b) => {
           b.minus().steel(2, {digit});
-          b.production((pb) => pb.megacredits(4));
-          b.tile(TileType.LUNA_TRAIN_STATION, true).moonLogisticsRate();
+          b.production((pb) => pb.megacredits(2));
+          b.tile(TileType.LUNA_TRAIN_STATION, true).moonRoad();
         }),
         victoryPoints: CardRenderDynamicVictoryPoints.moonRoadTile(2, true),
       },

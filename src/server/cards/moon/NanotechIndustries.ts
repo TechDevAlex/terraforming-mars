@@ -13,12 +13,12 @@ export class NanotechIndustries extends CorporationCard implements IActionCard {
     super({
       name: CardName.NANOTECH_INDUSTRIES,
       tags: [Tag.SCIENCE, Tag.MOON],
-      startingMegaCredits: 42,
+      startingMegaCredits: 48,
       resourceType: CardResource.SCIENCE,
 
       firstAction: {
-        text: 'Draw 3 cards and keep 2.',
-        drawCard: {count: 3, keep: 2},
+        text: 'Draw 4 cards and keep 3.',
+        drawCard: {count: 4, keep: 3},
       },
 
       victoryPoints: {resourcesHere: {}, per: 2},

@@ -11,7 +11,8 @@ export class EarthEmbassy extends Card implements IProjectCard {
       name: CardName.EARTH_EMBASSY,
       type: CardType.ACTIVE,
       tags: [Tag.MOON, Tag.EARTH],
-      cost: 16,
+      cost: 10,
+      victoryPoints: 1,
 
       metadata: {
         cardNumber: 'M77',

@@ -13,14 +13,14 @@ export class ArchimedesHydroponicsStation extends Card {
       cost: 12,
 
       behavior: {
-        production: {energy: -1, megacredits: -1, plants: 2},
+        production: {energy: -1, plants: 2},
       },
 
       metadata: {
-        description: 'Decrease your energy production 1 step and your M€ production 1 step. Increase your plant production 2 steps.',
+        description: 'Decrease your energy production 1 step. Increase your plant production 2 steps.',
         cardNumber: 'M27',
         renderData: CardRenderer.builder((b) => {
-          b.production((pb) => pb.minus().energy(1).megacredits(1).nbsp.plus().plants(2));
+          b.production((pb) => pb.minus().energy(1).nbsp.plus().plants(2));
         }),
       },
     });

@@ -11,7 +11,7 @@ export class TheWomb extends Card {
       name: CardName.THE_WOMB,
       type: CardType.AUTOMATED,
       tags: [Tag.CITY, Tag.MOON],
-      cost: 16,
+      cost: 6,
 
       behavior: {
         production: {energy: -2, megacredits: 4},

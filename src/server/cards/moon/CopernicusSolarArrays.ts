@@ -10,7 +10,7 @@ export class CopernicusSolarArrays extends Card {
       name: CardName.COPERNICUS_SOLAR_ARRAYS,
       type: CardType.AUTOMATED,
       tags: [Tag.POWER, Tag.SPACE],
-      cost: 8,
+      cost: 4,
       reserveUnits: {titanium: 1},
 
       behavior: {

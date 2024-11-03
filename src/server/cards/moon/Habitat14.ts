@@ -11,22 +11,22 @@ export class Habitat14 extends Card {
       name: CardName.HABITAT_14,
       type: CardType.AUTOMATED,
       tags: [Tag.CITY, Tag.MOON],
-      cost: 5,
+      cost: 4,
 
       behavior: {
-        production: {energy: -1, megacredits: -1},
+        production: {energy: -1},
         moon: {habitatTile: {}},
       },
-      reserveUnits: {titanium: 1},
+      reserveUnits: {titanium: 2},
 
       metadata: {
-        description: 'Decrease your energy production 1 step and your M€ production 1 step. Spend 1 titanium. Place a habitat tile on The Moon and raise the habitat rate 1 step.',
+        description: 'Decrease your energy production 1 step. Spend 2 titanium. Place a habitat tile on The Moon and raise the habitat rate 1 step.',
         cardNumber: 'M05',
         renderData: CardRenderer.builder((b) => {
           b.production((pb) => {
-            pb.minus().energy(1).minus().megacredits(1);
+            pb.minus().energy(1);
           }).br;
-          b.minus().titanium(1).br;
+          b.minus().titanium(2).br;
           b.moonHabitat();
         }),
       },

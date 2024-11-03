@@ -16,18 +16,18 @@ export class LunarTradeFleet extends Card implements IProjectCard {
 
       behavior: {
         production: {megacredits: 1},
-        moon: {logisticsRate: 1},
+        moon: {roadTile: {}},
       },
 
       requirements: {production: Resource.TITANIUM, count: 2},
       metadata: {
         description: 'Requires that you have 2 titanium production. ' +
-        'Increase your M€ production 1 step. Raise the logistic rate 1 step.',
+        'Increase your M€ production 1 step. Place a road.',
         cardNumber: 'M35',
         renderData: CardRenderer.builder((b) => {
           b.production((pb) => pb.megacredits(1));
           b.br;
-          b.moonLogisticsRate();
+          b.moonRoad();
         }),
       },
     });

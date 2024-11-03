@@ -15,7 +15,7 @@ export class HeavyDutyRovers extends Card implements IProjectCard {
     super({
       type: CardType.AUTOMATED,
       name: CardName.HEAVY_DUTY_ROVERS,
-      cost: 12,
+      cost: 10,
 
       behavior: {
         moon: {logisticsRate: 1},

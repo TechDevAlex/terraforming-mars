@@ -11,7 +11,7 @@ export class SphereHabitats extends Card {
       name: CardName.SPHERE_HABITATS,
       type: CardType.AUTOMATED,
       tags: [Tag.CITY, Tag.MOON],
-      cost: 14,
+      cost: 12,
       reserveUnits: {titanium: 1},
 
       behavior: {

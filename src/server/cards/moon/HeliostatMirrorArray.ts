@@ -7,7 +7,7 @@ import {Card} from '../Card';
 export class HeliostatMirrorArray extends Card {
   constructor() {
     super({
-      cost: 10,
+      cost: 8,
       tags: [Tag.POWER],
       type: CardType.AUTOMATED,
       name: CardName.HELIOSTAT_MIRROR_ARRAY,

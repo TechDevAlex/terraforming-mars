@@ -12,10 +12,10 @@ export class CopernicusTower extends ActionCard {
     super({
       name: CardName.COPERNICUS_TOWER,
       type: CardType.ACTIVE,
-      tags: [Tag.SCIENCE, Tag.MOON],
+      tags: [Tag.SPACE, Tag.MOON],
       cost: 36,
 
-      resourceType: CardResource.SCIENCE,
+      resourceType: CardResource.ASTEROID,
       requirements: {production: Resource.TITANIUM, count: 2},
       victoryPoints: {tag: Tag.MOON},
 
@@ -25,12 +25,12 @@ export class CopernicusTower extends ActionCard {
           behaviors: [
             {
               spend: {resourcesHere: 1},
-              tr: 1,
-              title: 'Remove 1 science resource to increase TR 1 step',
+              tr: 2,
+              title: 'Remove 1 asteroid resource to increase TR 2 step',
             },
             {
               addResources: 1,
-              title: 'Add 1 science resource to this card',
+              title: 'Add 1 asteroid resource to this card',
             },
           ],
         },
@@ -40,8 +40,8 @@ export class CopernicusTower extends ActionCard {
         cardNumber: 'M72',
         renderData: CardRenderer.builder((b) => {
           b.text('Requires you have 2 titanium production.', Size.TINY, false, false).br;
-          b.action('Add 1 science resource here, or spend 1 science resource here to raise your TR 1 step.', (eb) => {
-            eb.empty().startAction.resource(CardResource.SCIENCE).nbsp.slash().nbsp.resource(CardResource.SCIENCE).arrow().tr(1);
+          b.action('Add 1 asteroid resource here, or spend 1 asteroid resource here to raise your TR 2 steps.', (eb) => {
+            eb.empty().startAction.resource(CardResource.ASTEROID).nbsp.slash().nbsp.resource(CardResource.ASTEROID).arrow().tr(2);
           });
           b.br;
           b.vpText('1 VP PER MOON TAG YOU HAVE.');

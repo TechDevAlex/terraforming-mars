@@ -12,7 +12,7 @@ export class MartianEmbassy extends Card implements IProjectCard {
     super({
       name: CardName.MARTIAN_EMBASSY,
       type: CardType.AUTOMATED,
-      tags: [Tag.MOON, Tag.MARS],
+      tags: [Tag.MOON, Tag.MARS, Tag.MARS],
       cost: 11,
 
       metadata: {

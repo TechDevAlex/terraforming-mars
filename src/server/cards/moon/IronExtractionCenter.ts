@@ -9,8 +9,8 @@ export class IronExtractionCenter extends Card {
     super({
       name: CardName.IRON_EXTRACTION_CENTER,
       type: CardType.AUTOMATED,
-      tags: [Tag.BUILDING],
-      cost: 10,
+      tags: [Tag.BUILDING, Tag.MOON],
+      cost: 4,
       reserveUnits: {titanium: 1},
 
       behavior: {

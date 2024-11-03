@@ -16,18 +16,18 @@ export class PreliminaryDarkside extends Card implements IProjectCard {
       name: CardName.PRELIMINARY_DARKSIDE,
       type: CardType.EVENT,
       tags: [Tag.MOON],
-      cost: 13,
+      cost: 15,
 
       behavior: {
-        moon: {miningRate: 1},
+        moon: {mineTile: {}},
       },
 
       metadata: {
-        description: 'Gain 3 titanium or 4 steel. Raise the mining rate 1 step.',
+        description: 'Gain 3 titanium or 4 steel. Place a mine.',
         cardNumber: 'M63',
         renderData: CardRenderer.builder((b) => {
           b.titanium(3, {digit}).or().steel(4, {digit}).br;
-          b.moonMiningRate();
+          b.moonMine();
         }),
       },
     });

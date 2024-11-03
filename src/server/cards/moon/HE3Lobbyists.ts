@@ -11,7 +11,7 @@ export class HE3Lobbyists extends Card implements IProjectCard {
       name: CardName.HE3_LOBBYISTS,
       type: CardType.AUTOMATED,
       tags: [Tag.MOON],
-      cost: 7,
+      cost: 8,
 
       behavior: {
         production: {megacredits: {tag: Tag.MOON}},

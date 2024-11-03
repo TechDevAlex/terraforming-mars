@@ -10,7 +10,7 @@ export class AlgaeBioreactors extends Card {
       name: CardName.ALGAE_BIOREACTORS,
       type: CardType.AUTOMATED,
       tags: [Tag.PLANT],
-      cost: 9,
+      cost: 5,
 
       behavior: {
         production: {plants: -1},

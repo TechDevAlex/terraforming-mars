@@ -13,7 +13,7 @@ export class TitaniumMarketMonopolists extends MarketCard {
       {
         name: CardName.TITANIUM_MARKET_MONOPOLISTS,
         type: CardType.ACTIVE,
-        cost: 21,
+        cost: 6,
 
         requirements: {miningRate: 3},
         metadata: {

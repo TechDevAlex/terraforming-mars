@@ -12,7 +12,7 @@ export class LunaHyperloopCorporation extends ActiveCorporationCard {
       startingMegaCredits: 38,
 
       behavior: {
-        stock: {steel: 4},
+        stock: {steel: 5},
       },
 
       action: {
@@ -22,10 +22,10 @@ export class LunaHyperloopCorporation extends ActiveCorporationCard {
       victoryPoints: {moon: {road: {}}, all},
 
       metadata: {
-        description: 'You start with 38 M€ and 4 steel.',
+        description: 'You start with 38 M€ and 5 steel.',
         cardNumber: 'MC4',
         renderData: CardRenderer.builder((b) => {
-          b.megacredits(38).steel(4).br;
+          b.megacredits(38).steel(5).br;
           b.action('Gain 1 M€ for each road tile on The Moon.', (eb) => {
             eb.empty().startAction.megacredits(1).slash().moonRoad({all});
           }).br,
