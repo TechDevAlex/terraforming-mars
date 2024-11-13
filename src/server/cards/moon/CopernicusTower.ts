@@ -13,11 +13,11 @@ export class CopernicusTower extends ActionCard {
       name: CardName.COPERNICUS_TOWER,
       type: CardType.ACTIVE,
       tags: [Tag.SPACE, Tag.MOON],
-      cost: 36,
+      cost: 28,
 
       resourceType: CardResource.ASTEROID,
       requirements: {production: Resource.TITANIUM, count: 2},
-      victoryPoints: {tag: Tag.MOON},
+      victoryPoints: {tag: Tag.MOON, per: 2},
 
       action: {
         or: {
@@ -44,7 +44,7 @@ export class CopernicusTower extends ActionCard {
             eb.empty().startAction.resource(CardResource.ASTEROID).nbsp.slash().nbsp.resource(CardResource.ASTEROID).arrow().tr(2);
           });
           b.br;
-          b.vpText('1 VP PER MOON TAG YOU HAVE.');
+          b.vpText('1 VP PER 2 MOON TAGS YOU HAVE.');
         }),
       },
     });
