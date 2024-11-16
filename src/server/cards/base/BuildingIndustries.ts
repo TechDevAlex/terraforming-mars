@@ -11,7 +11,8 @@ export class BuildingIndustries extends Card implements IProjectCard {
       type: CardType.AUTOMATED,
       name: CardName.BUILDING_INDUSTRIES,
       tags: [Tag.BUILDING],
-      cost: 6,
+      cost: 7,
+      victoryPoints: 1,
 
       behavior: {
         production: {energy: -1, steel: 2},

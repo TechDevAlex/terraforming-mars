@@ -11,13 +11,13 @@ export class CorporateStronghold extends Card implements IProjectCard {
       type: CardType.AUTOMATED,
       name: CardName.CORPORATE_STRONGHOLD,
       tags: [Tag.CITY, Tag.BUILDING],
-      cost: 11,
+      cost: 6,
 
       behavior: {
         production: {energy: -1, megacredits: 3},
         city: {},
       },
-      victoryPoints: -2,
+      victoryPoints: -3,
 
       metadata: {
         cardNumber: '182',

@@ -8,7 +8,7 @@ export class CaretakerContract extends ActionCard {
     super({
       type: CardType.ACTIVE,
       name: CardName.CARETAKER_CONTRACT,
-      cost: 3,
+      cost: 2,
       requirements: {temperature: -20},
 
       action: {

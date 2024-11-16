@@ -11,7 +11,7 @@ export class ArtificialPhotosynthesis extends Card implements IProjectCard {
     super({
       type: CardType.AUTOMATED,
       name: CardName.ARTIFICIAL_PHOTOSYNTHESIS,
-      tags: [Tag.SCIENCE],
+      tags: [Tag.SCIENCE, Tag.POWER],
       cost: 12,
 
       behavior: {
@@ -23,17 +23,17 @@ export class ArtificialPhotosynthesis extends Card implements IProjectCard {
               title: 'Increase your energy production 2 steps',
             },
             {
-              production: {plants: 1},
-              title: 'Increase your plant production 1 step',
+              production: {plants: 1, heat: 1},
+              title: 'Increase your plant and heat production 1 step',
             },
           ],
         },
       },
 
       metadata: {
-        description: 'Increase your plant production 1 step or your energy production 2 steps.',
+        description: 'Increase your plant and heat production 1 step or your energy production 2 steps.',
         cardNumber: '115',
-        renderData: CardRenderer.builder((b) => b.production((pb) => pb.plants(1).or(Size.SMALL).energy(2))),
+        renderData: CardRenderer.builder((b) => b.production((pb) => pb.plants(1).heat(1).or(Size.SMALL).energy(2))),
       },
     });
   }

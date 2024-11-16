@@ -15,7 +15,7 @@ export class LunarMineUrbanization extends Card implements IProjectCard {
       name: CardName.LUNAR_MINE_URBANIZATION,
       type: CardType.EVENT,
       tags: [Tag.MOON, Tag.BUILDING],
-      cost: 6,
+      cost: 12,
 
       behavior: {
         production: {megacredits: 1},

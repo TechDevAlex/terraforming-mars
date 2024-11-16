@@ -12,7 +12,7 @@ export class ArtificialLake extends Card implements IProjectCard {
       type: CardType.AUTOMATED,
       name: CardName.ARTIFICIAL_LAKE,
       tags: [Tag.BUILDING],
-      cost: 15,
+      cost: 10,
       victoryPoints: 1,
 
       behavior: {

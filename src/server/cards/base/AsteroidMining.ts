@@ -11,8 +11,9 @@ export class AsteroidMining extends Card implements IProjectCard {
       type: CardType.AUTOMATED,
       name: CardName.ASTEROID_MINING,
       tags: [Tag.JOVIAN, Tag.SPACE],
-      cost: 30,
-      victoryPoints: 2,
+      cost: 27,
+      victoryPoints: {tag: Tag.JOVIAN, per: 2},
+
 
       behavior: {
         production: {titanium: 2},

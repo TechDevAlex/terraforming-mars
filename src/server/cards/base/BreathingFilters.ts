@@ -10,7 +10,7 @@ export class BreathingFilters extends Card implements IProjectCard {
       type: CardType.AUTOMATED,
       name: CardName.BREATHING_FILTERS,
       tags: [Tag.SCIENCE],
-      cost: 11,
+      cost: 9,
       victoryPoints: 2,
 
       requirements: {oxygen: 7},

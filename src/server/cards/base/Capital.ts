@@ -18,7 +18,7 @@ export class Capital extends Card implements IProjectCard {
     metadata: CardMetadata = {
       cardNumber: '008',
       description: {
-        text: 'Requires 4 ocean tiles. Place this tile. Decrease your energy production 2 steps and increase your M€ production 5 steps.',
+        text: 'Requires 3 ocean tiles. Place this tile. Decrease your energy production 2 steps and increase your M€ production 5 steps.',
         align: 'left',
       },
       renderData: CardRenderer.builder((b) => {
@@ -35,7 +35,7 @@ export class Capital extends Card implements IProjectCard {
       type: CardType.AUTOMATED,
       name,
       tags: [Tag.CITY, Tag.BUILDING],
-      cost: 26,
+      cost: 22,
 
       behavior: {
         production: {energy: -2, megacredits: 5},
@@ -47,7 +47,7 @@ export class Capital extends Card implements IProjectCard {
         },
       },
 
-      requirements: {oceans: 4},
+      requirements: {oceans: 3},
       victoryPoints: 'special',
       metadata,
     });

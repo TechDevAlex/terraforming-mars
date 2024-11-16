@@ -12,7 +12,9 @@ export class AdvancedAlloys extends Card implements IProjectCard {
       type: CardType.ACTIVE,
       name: CardName.ADVANCED_ALLOYS,
       tags: [Tag.SCIENCE],
-      cost: 9,
+      victoryPoints: 1,
+      cost: 15,
+
 
       behavior: {
         steelValue: 1,

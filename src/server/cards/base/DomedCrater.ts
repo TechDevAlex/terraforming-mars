@@ -13,12 +13,12 @@ export class DomedCrater extends Card implements IProjectCard {
       type: CardType.AUTOMATED,
       name: CardName.DOMED_CRATER,
       tags: [Tag.CITY, Tag.BUILDING],
-      cost: 24,
-      victoryPoints: 1,
+      cost: 26,
+      victoryPoints: 2,
 
       behavior: {
         production: {energy: -1, megacredits: 3},
-        stock: {plants: 3},
+        stock: {plants: 4},
         city: {},
       },
 
@@ -26,14 +26,14 @@ export class DomedCrater extends Card implements IProjectCard {
       metadata: {
         cardNumber: '016',
         description: {
-          text: 'Oxygen must be 7% or less. Gain 3 plants. Place a city tile. Decrease your energy production 1 step and increase your M€ production 3 steps.',
+          text: 'Oxygen must be 7% or less. Gain 4 plants. Place a city tile. Decrease your energy production 1 step and increase your M€ production 3 steps.',
           align: 'left',
         },
         renderData: CardRenderer.builder((b) => {
           b.production((pb) => {
             pb.minus().energy(1).br;
             pb.plus().megacredits(3);
-          }).nbsp.city().plants(3, {digit}).br;
+          }).nbsp.city().plants(4, {digit}).br;
         }),
       },
     });

@@ -11,17 +11,17 @@ export class BribedCommittee extends Card implements IProjectCard {
       type: CardType.EVENT,
       name: CardName.BRIBED_COMMITTEE,
       tags: [Tag.EARTH],
-      cost: 7,
-      victoryPoints: -2,
+      cost: 9,
+      victoryPoints: -3,
 
       behavior: {
-        tr: 2,
+        tr: 3,
       },
 
       metadata: {
         cardNumber: '112',
-        description: 'Raise your TR 2 steps.',
-        renderData: CardRenderer.builder((b) => b.tr(2)),
+        description: 'Raise your TR 3 steps.',
+        renderData: CardRenderer.builder((b) => b.tr(3)),
       },
     });
   }

@@ -16,12 +16,11 @@ export class AsteroidMiningConsortium extends Card implements IProjectCard {
       type: CardType.AUTOMATED,
       name: CardName.ASTEROID_MINING_CONSORTIUM,
       tags: [Tag.JOVIAN],
-      cost: 13,
-      victoryPoints: 1,
+      cost: 8,
 
-      requirements: {production: Resource.TITANIUM, count: 1},
+      requirements: {production: Resource.TITANIUM, count: 1, tag: Tag.JOVIAN},
       metadata: {
-        description: 'Requires that you have titanium production. Decrease any titanium production 1 step and increase your own 1 step.',
+        description: 'Requires that you have titanium production and a Jovian tag. Decrease any titanium production 1 step and increase your own 1 step.',
         cardNumber: '002',
         renderData: CardRenderer.builder((b) => {
           b.production((pb) => {
