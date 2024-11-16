@@ -12,7 +12,7 @@ export class ElectroCatapult extends ActionCard implements IProjectCard {
       type: CardType.ACTIVE,
       name: CardName.ELECTRO_CATAPULT,
       tags: [Tag.BUILDING],
-      cost: 17,
+      cost: 11,
 
       behavior: {
         production: {energy: -1},
@@ -34,7 +34,6 @@ export class ElectroCatapult extends ActionCard implements IProjectCard {
         },
       },
 
-      victoryPoints: 1,
 
       requirements: {oxygen: 8, max},
       metadata: {

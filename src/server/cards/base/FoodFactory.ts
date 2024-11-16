@@ -11,22 +11,22 @@ export class FoodFactory extends Card implements IProjectCard {
       type: CardType.AUTOMATED,
       name: CardName.FOOD_FACTORY,
       tags: [Tag.BUILDING],
-      cost: 12,
+      cost: 15,
 
       behavior: {
-        production: {megacredits: 4, plants: -1},
+        production: {megacredits: 10, plants: -2},
       },
-      victoryPoints: 1,
+      victoryPoints: 2,
 
       metadata: {
         cardNumber: '041',
         renderData: CardRenderer.builder((b) => {
           b.production((pb) => {
-            pb.minus().plants(1).br;
-            pb.plus().megacredits(4);
+            pb.minus().plants(2).br;
+            pb.plus().megacredits(10);
           });
         }),
-        description: 'Decrease your plant production 1 step and increase your M€ production 4 steps.',
+        description: 'Decrease your plant production 2 steps and increase your M€ production 10 steps.',
       },
     });
   }

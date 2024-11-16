@@ -11,10 +11,10 @@ export class FuelFactory extends Card implements IProjectCard {
       type: CardType.AUTOMATED,
       name: CardName.FUEL_FACTORY,
       tags: [Tag.BUILDING],
-      cost: 6,
+      cost: 7,
 
       behavior: {
-        production: {energy: -1, megacredits: 1, titanium: 1},
+        production: {energy: -1, megacredits: 2, titanium: 1},
       },
 
       metadata: {
@@ -22,10 +22,10 @@ export class FuelFactory extends Card implements IProjectCard {
         renderData: CardRenderer.builder((b) => {
           b.production((pb) => {
             pb.minus().energy(1).br;
-            pb.plus().titanium(1).megacredits(1);
+            pb.plus().titanium(1).megacredits(2);
           });
         }),
-        description: 'Decrease your energy production 1 step and increase your titanium and your M€ production 1 step each.',
+        description: 'Decrease your energy production 1 step and increase your titanium production 1 step and your M€ production 2 steps.',
       },
     });
   }

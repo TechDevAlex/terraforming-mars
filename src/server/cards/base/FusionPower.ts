@@ -11,7 +11,8 @@ export class FusionPower extends Card implements IProjectCard {
       type: CardType.AUTOMATED,
       name: CardName.FUSION_POWER,
       tags: [Tag.SCIENCE, Tag.POWER, Tag.BUILDING],
-      cost: 12,
+      cost: 25,
+      victoryPoints: {tag: Tag.POWER, per: 1},
 
       behavior: {
         production: {energy: 3},
