@@ -11,7 +11,7 @@ export class Zeppelins extends Card implements IProjectCard {
     super({
       type: CardType.AUTOMATED,
       name: CardName.ZEPPELINS,
-      cost: 13,
+      cost: 11,
       victoryPoints: 1,
 
       behavior: {

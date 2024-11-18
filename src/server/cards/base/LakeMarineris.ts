@@ -9,7 +9,7 @@ export class LakeMarineris extends Card implements IProjectCard {
     super({
       type: CardType.AUTOMATED,
       name: CardName.LAKE_MARINERIS,
-      cost: 18,
+      cost: 16,
       requirements: {temperature: 0},
       victoryPoints: 2,
 

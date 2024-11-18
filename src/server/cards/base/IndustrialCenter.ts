@@ -18,8 +18,8 @@ export class IndustrialCenter extends ActionCard implements IProjectCard {
     metadata = {
       cardNumber: '123',
       renderData: CardRenderer.builder((b) => {
-        b.action('Spend 7 M€ to increase your steel production 1 step.', (eb) => {
-          eb.megacredits(7).startAction.production((pb) => pb.steel(1));
+        b.action('Spend 5 M€ to increase your steel production 1 step.', (eb) => {
+          eb.megacredits(5).startAction.production((pb) => pb.steel(1));
         }).br;
         b.tile(TileType.INDUSTRIAL_CENTER, true, false).asterix();
       }),
@@ -29,11 +29,11 @@ export class IndustrialCenter extends ActionCard implements IProjectCard {
       type: CardType.ACTIVE,
       name,
       tags: [Tag.BUILDING],
-      cost: 4,
+      cost: 6,
       adjacencyBonus,
 
       action: {
-        spend: {megacredits: 7},
+        spend: {megacredits: 5},
         production: {steel: 1},
       },
       metadata,

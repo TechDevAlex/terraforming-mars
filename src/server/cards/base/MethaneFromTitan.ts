@@ -11,16 +11,16 @@ export class MethaneFromTitan extends Card implements IProjectCard {
       type: CardType.AUTOMATED,
       name: CardName.METHANE_FROM_TITAN,
       tags: [Tag.JOVIAN, Tag.SPACE],
-      cost: 28,
+      cost: 23,
       victoryPoints: 2,
 
       behavior: {
         production: {heat: 2, plants: 2},
       },
 
-      requirements: {oxygen: 2},
+      requirements: {oxygen: 4},
       metadata: {
-        description: 'Requires 2% oxygen. Increase your heat production 2 steps and your plant production 2 steps.',
+        description: 'Requires 4% oxygen. Increase your heat production 2 steps and your plant production 2 steps.',
         cardNumber: '018',
         renderData: CardRenderer.builder((b) => b.production((pb) => {
           pb.heat(2).br;

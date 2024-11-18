@@ -11,9 +11,9 @@ export class PhobosSpaceHaven extends Card implements IProjectCard {
     super({
       type: CardType.AUTOMATED,
       name: CardName.PHOBOS_SPACE_HAVEN,
-      tags: [Tag.SPACE, Tag.CITY],
-      cost: 25,
-      victoryPoints: 4,
+      tags: [Tag.JOVIAN, Tag.SPACE, Tag.CITY],
+      cost: 21,
+      victoryPoints: 2,
 
       behavior: {
         production: {titanium: 1},

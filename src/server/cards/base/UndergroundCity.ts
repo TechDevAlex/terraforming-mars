@@ -11,7 +11,7 @@ export class UndergroundCity extends Card implements IProjectCard {
       type: CardType.AUTOMATED,
       name: CardName.UNDERGROUND_CITY,
       tags: [Tag.CITY, Tag.BUILDING],
-      cost: 18,
+      cost: 14,
 
       behavior: {
         production: {energy: -2, steel: 2},

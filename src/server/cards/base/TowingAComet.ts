@@ -14,7 +14,7 @@ export class TowingAComet extends Card implements IProjectCard {
       cost: 23,
 
       behavior: {
-        stock: {plants: 2},
+        stock: {plants: 3},
         global: {oxygen: 1},
         ocean: {},
       },
@@ -23,9 +23,9 @@ export class TowingAComet extends Card implements IProjectCard {
         cardNumber: '075',
         renderData: CardRenderer.builder((b) => {
           b.oxygen(1).oceans(1).br;
-          b.plants(2);
+          b.plants(3);
         }),
-        description: 'Gain 2 plants. Raise oxygen level 1 step and place an ocean tile.',
+        description: 'Gain 3 plants. Raise oxygen level 1 step and place an ocean tile.',
       },
     });
   }

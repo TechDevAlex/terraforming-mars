@@ -12,7 +12,8 @@ export class Insulation extends Card implements IProjectCard {
     super({
       type: CardType.AUTOMATED,
       name: CardName.INSULATION,
-      cost: 2,
+      cost: 4,
+      victoryPoints: 1,
 
       metadata: {
         cardNumber: '152',

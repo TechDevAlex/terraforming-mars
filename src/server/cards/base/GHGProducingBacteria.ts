@@ -14,7 +14,7 @@ export class GHGProducingBacteria extends ActionCard {
       cost: 8,
       resourceType: CardResource.MICROBE,
 
-      requirements: {oxygen: 4},
+      requirements: {oxygen: 3},
 
       action: {
         or: {
@@ -35,7 +35,7 @@ export class GHGProducingBacteria extends ActionCard {
       },
 
       metadata: {
-        description: 'Requires 4% oxygen.',
+        description: 'Requires 3% oxygen.',
         cardNumber: '034',
         renderData: CardRenderer.builder((b) => {
           b.action('Add 1 microbe to this card.', (eb) => {

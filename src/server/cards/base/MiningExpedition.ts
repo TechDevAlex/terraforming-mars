@@ -13,7 +13,7 @@ export class MiningExpedition extends Card implements IProjectCard {
       cost: 12,
 
       behavior: {
-        stock: {steel: 2},
+        stock: {steel: 3},
         global: {oxygen: 1},
         removeAnyPlants: 2,
       },
@@ -23,9 +23,9 @@ export class MiningExpedition extends Card implements IProjectCard {
         renderData: CardRenderer.builder((b) => {
           b.oxygen(1).br;
           b.minus().plants(-2, {all});
-          b.steel(2);
+          b.steel(3);
         }),
-        description: 'Raise oxygen 1 step. Remove 2 plants from any player. Gain 2 steel.',
+        description: 'Raise oxygen 1 step. Remove 2 plants from any player. Gain 3 steel.',
       },
     });
   }

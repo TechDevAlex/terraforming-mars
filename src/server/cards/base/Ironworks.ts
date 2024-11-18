@@ -13,6 +13,7 @@ export class Ironworks extends ActionCard implements IProjectCard {
       name: CardName.IRONWORKS,
       tags: [Tag.BUILDING],
       cost: 11,
+      victoryPoints: {tag: Tag.POWER, per: 3},
 
       action: {
         spend: {energy: 4},

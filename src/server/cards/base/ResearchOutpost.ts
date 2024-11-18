@@ -11,7 +11,8 @@ export class ResearchOutpost extends Card implements IProjectCard {
       type: CardType.ACTIVE,
       name: CardName.RESEARCH_OUTPOST,
       tags: [Tag.SCIENCE, Tag.CITY, Tag.BUILDING],
-      cost: 18,
+      cost: 19,
+      victoryPoints: -1,
 
       behavior: {
         city: {on: 'isolated'},

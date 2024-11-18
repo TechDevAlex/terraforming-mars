@@ -11,7 +11,7 @@ export class VestaShipyard extends Card implements IProjectCard {
       type: CardType.AUTOMATED,
       name: CardName.VESTA_SHIPYARD,
       tags: [Tag.JOVIAN, Tag.SPACE],
-      cost: 15,
+      cost: 13,
       victoryPoints: 1,
 
       behavior: {

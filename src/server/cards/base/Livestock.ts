@@ -12,7 +12,7 @@ export class Livestock extends ActionCard implements IProjectCard {
       type: CardType.ACTIVE,
       name: CardName.LIVESTOCK,
       tags: [Tag.ANIMAL],
-      cost: 13,
+      cost: 10,
 
       resourceType: CardResource.ANIMAL,
       victoryPoints: {resourcesHere: {}},

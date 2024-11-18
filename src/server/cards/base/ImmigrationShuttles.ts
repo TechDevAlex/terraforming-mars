@@ -11,7 +11,7 @@ export class ImmigrationShuttles extends Card implements IProjectCard {
       type: CardType.AUTOMATED,
       name: CardName.IMMIGRATION_SHUTTLES,
       tags: [Tag.EARTH, Tag.SPACE],
-      cost: 26,
+      cost: 24,
       victoryPoints: {cities: {}, all: true, per: 3},
 
       behavior: {

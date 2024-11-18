@@ -14,7 +14,7 @@ export class MagneticFieldDome extends Card implements IProjectCard {
       cost: 5,
 
       behavior: {
-        production: {energy: -2, plants: 1},
+        production: {energy: -2, plants: 2},
         tr: 1,
       },
 
@@ -23,11 +23,11 @@ export class MagneticFieldDome extends Card implements IProjectCard {
         renderData: CardRenderer.builder((b) => {
           b.production((pb) => {
             pb.minus().energy(2).br;
-            pb.plus().plants(1);
+            pb.plus().plants(2);
           });
           b.tr(1);
         }),
-        description: 'Decrease your energy production 2 steps and increase your plant production 1 step. Raise your TR 1 step.',
+        description: 'Decrease your energy production 2 steps and increase your plant production 2 steps. Raise your TR 1 step.',
       },
     });
   }

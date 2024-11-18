@@ -15,17 +15,17 @@ export class TropicalResort extends Card implements IProjectCard {
       victoryPoints: 2,
 
       behavior: {
-        production: { megacredits: 8, heat: -4 },
+        production: {megacredits: 8, heat: -4},
       },
       metadata: {
         cardNumber: '098',
         renderData: CardRenderer.builder((b) => {
           b.production((pb) =>{
-            pb.minus().heat(2).br;
-            pb.plus().megacredits(3);
+            pb.minus().heat(4).br;
+            pb.plus().megacredits(8);
           });
         }),
-        description: 'Reduce your heat production 2 steps and increase your M€ production 3 steps.',
+        description: 'Reduce your heat production 4 steps and increase your M€ production 8 steps.',
       },
     });
   }

@@ -13,6 +13,8 @@ export class OreProcessor extends ActionCard implements IProjectCard {
       name: CardName.ORE_PROCESSOR,
       tags: [Tag.BUILDING],
       cost: 13,
+      victoryPoints: {tag: Tag.POWER, per: 3},
+
 
       action: {
         spend: {energy: 4},

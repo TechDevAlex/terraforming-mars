@@ -15,7 +15,7 @@ export class TundraFarming extends Card implements IProjectCard {
       victoryPoints: 2,
 
       behavior: {
-        production: { megacredits: 1, plants: 2 },
+        production: {megacredits: 1, plants: 2},
         stock: {plants: 1},
       },
 
@@ -24,10 +24,10 @@ export class TundraFarming extends Card implements IProjectCard {
         cardNumber: '169',
         renderData: CardRenderer.builder((b) => {
           b.production((pb) =>{
-            pb.plants(1).megacredits(2);
+            pb.plants(2).megacredits(1);
           }).plants(1);
         }),
-        description: 'Requires -6° C or warmer. Increase your plant production 1 step and your M€ production 2 steps. Gain 1 plant.',
+        description: 'Requires -6° C or warmer. Increase your plant production 2 steps and your M€ production 1 step. Gain 1 plant.',
       },
     });
   }

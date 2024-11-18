@@ -19,7 +19,7 @@ export class SymbioticFungus extends ActionCard implements IProjectCard {
         // return new SelectCard('Select card to add microbe', 'Add microbe', availableCards, ([card]) => {
       },
 
-      requirements: {temperature: -14},
+      requirements: {temperature: -18},
       metadata: {
         cardNumber: '133',
         renderData: CardRenderer.builder((b) => {
@@ -27,7 +27,7 @@ export class SymbioticFungus extends ActionCard implements IProjectCard {
             eb.empty().startAction.resource(CardResource.MICROBE).asterix();
           });
         }),
-        description: 'Requires -14 C° or warmer.',
+        description: 'Requires -18 C° or warmer.',
       },
     });
   }

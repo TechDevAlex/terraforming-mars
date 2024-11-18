@@ -17,7 +17,7 @@ export class SearchForLife extends Card implements IActionCard, IProjectCard {
     super({
       type: CardType.ACTIVE,
       name: CardName.SEARCH_FOR_LIFE,
-      tags: [Tag.SCIENCE],
+      tags: [Tag.SCIENCE, Tag.MICROBE],
       cost: 3,
 
       resourceType: CardResource.SCIENCE,

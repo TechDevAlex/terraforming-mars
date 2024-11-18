@@ -8,12 +8,14 @@ import {DecreaseAnyProduction} from '../../deferredActions/DecreaseAnyProduction
 import {CardRenderer} from '../render/CardRenderer';
 import {all} from '../Options';
 import {GainProduction} from '../../deferredActions/GainProduction';
+import {Tag} from '../../../common/cards/Tag';
 
 export class GreatEscarpmentConsortium extends Card implements IProjectCard {
   constructor() {
     super({
       type: CardType.AUTOMATED,
       name: CardName.GREAT_ESCARPMENT_CONSORTIUM,
+      tags: [Tag.BUILDING],
       cost: 6,
 
       requirements: {production: Resource.STEEL, count: 1},

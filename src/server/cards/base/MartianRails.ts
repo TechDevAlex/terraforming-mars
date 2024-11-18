@@ -13,7 +13,9 @@ export class MartianRails extends ActionCard implements IProjectCard {
       type: CardType.ACTIVE,
       name: CardName.MARTIAN_RAILS,
       tags: [Tag.BUILDING],
-      cost: 10,
+      cost: 11,
+      victoryPoints: {tag: Tag.POWER, per: 3},
+
 
       action: {
         spend: {energy: 1},

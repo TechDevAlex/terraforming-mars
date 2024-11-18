@@ -12,7 +12,7 @@ export class GHGFactories extends Card implements IProjectCard {
       type: CardType.AUTOMATED,
       name: CardName.GHG_FACTORIES,
       tags: [Tag.BUILDING],
-      cost: 11,
+      cost: 10,
 
       behavior: {
         production: {energy: -1, heat: 4},
