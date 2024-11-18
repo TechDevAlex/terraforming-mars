@@ -7,7 +7,7 @@ import {CardName} from '../../../common/cards/CardName';
 import {CardRenderer} from '../render/CardRenderer';
 import {SelectPaymentDeferred} from '../../deferredActions/SelectPaymentDeferred';
 import {TITLES} from '../../inputs/titles';
-export const ACTION_COST = 3;
+export const ACTION_COST = 0;
 export class UnitedNationsMarsInitiative extends CorporationCard implements IActionCard, ICorporationCard {
   constructor() {
     super({
