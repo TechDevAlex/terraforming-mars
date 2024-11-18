@@ -21,14 +21,14 @@ export class DirectedImpactors extends Card implements IActionCard, IProjectCard
       type: CardType.ACTIVE,
       name: CardName.DIRECTED_IMPACTORS,
       tags: [Tag.SPACE],
-      cost: 8,
+      cost: 6,
       resourceType: CardResource.ASTEROID,
 
       metadata: {
         cardNumber: 'X19',
         renderData: CardRenderer.builder((b) => {
-          b.action('Spend 6 M€ to add 1 asteroid to ANY CARD (titanium may be used to pay for this).', (eb) => {
-            eb.megacredits(6).super((b) => b.titanium(1)).startAction.resource(CardResource.ASTEROID).asterix();
+          b.action('Spend 3 M€ to add 1 asteroid to ANY CARD (titanium may be used to pay for this).', (eb) => {
+            eb.megacredits(3).super((b) => b.titanium(1)).startAction.resource(CardResource.ASTEROID).asterix();
           }).br;
           b.or().br;
           b.action('Remove 1 asteroid here to raise temperature 1 step.', (eb) => {
@@ -41,7 +41,7 @@ export class DirectedImpactors extends Card implements IActionCard, IProjectCard
 
   public canAct(player: IPlayer): boolean {
     const cardHasResources = this.resourceCount > 0;
-    const canPayForAsteroid = player.canAfford({cost: 6, titanium: true});
+    const canPayForAsteroid = player.canAfford({cost: 3, titanium: true});
 
     if (player.game.getTemperature() === MAX_TEMPERATURE && cardHasResources) return true;
     if (canPayForAsteroid) return true;
@@ -53,7 +53,7 @@ export class DirectedImpactors extends Card implements IActionCard, IProjectCard
     const asteroidCards = player.getResourceCards(CardResource.ASTEROID);
     const opts = [];
 
-    const addResource = new SelectOption('Pay 6 M€ to add 1 asteroid to a card', 'Pay').andThen(() => this.addResource(player, asteroidCards));
+    const addResource = new SelectOption('Pay 3 M€ to add 1 asteroid to a card', 'Pay').andThen(() => this.addResource(player, asteroidCards));
     const spendResource = new SelectOption('Remove 1 asteroid to raise temperature 1 step', 'Remove asteroid').andThen(() => this.spendResource(player));
     const temperatureIsMaxed = player.game.getTemperature() === MAX_TEMPERATURE;
 
@@ -65,7 +65,7 @@ export class DirectedImpactors extends Card implements IActionCard, IProjectCard
       return this.addResource(player, asteroidCards);
     }
 
-    if (player.canAfford({cost: 6, titanium: true})) {
+    if (player.canAfford({cost: 3, titanium: true})) {
       opts.push(addResource);
     } else {
       return this.spendResource(player);
@@ -75,7 +75,7 @@ export class DirectedImpactors extends Card implements IActionCard, IProjectCard
   }
 
   private addResource(player: IPlayer, asteroidCards: ICard[]) {
-    player.game.defer(new SelectPaymentDeferred(player, 6, {canUseTitanium: true, title: TITLES.payForCardAction(this.name)}));
+    player.game.defer(new SelectPaymentDeferred(player, 3, {canUseTitanium: true, title: TITLES.payForCardAction(this.name)}));
 
     if (asteroidCards.length === 1) {
       player.addResourceTo(this, {log: true});

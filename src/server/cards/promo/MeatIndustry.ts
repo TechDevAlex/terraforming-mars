@@ -15,7 +15,7 @@ export class MeatIndustry extends Card implements IProjectCard {
       type: CardType.ACTIVE,
       name: CardName.MEAT_INDUSTRY,
       tags: [Tag.BUILDING],
-      cost: 9,
+      cost: 8,
 
       metadata: {
         cardNumber: 'X25',

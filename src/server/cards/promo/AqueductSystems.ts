@@ -14,9 +14,7 @@ export class AqueductSystems extends Card implements IProjectCard {
       type: CardType.AUTOMATED,
       name: CardName.AQUEDUCT_SYSTEMS,
       tags: [Tag.BUILDING],
-      cost: 9,
-
-      victoryPoints: 1,
+      cost: 4,
 
       behavior: {
         drawCard: {count: 3, tag: Tag.BUILDING},

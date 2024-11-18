@@ -20,7 +20,7 @@ export class CometAiming extends Card implements IActionCard, IProjectCard {
       type: CardType.ACTIVE,
       name: CardName.COMET_AIMING,
       tags: [Tag.SPACE],
-      cost: 17,
+      cost: 12,
       resourceType: CardResource.ASTEROID,
 
       metadata: {
