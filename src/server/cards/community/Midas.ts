@@ -8,22 +8,22 @@ export class Midas extends CorporationCard {
   constructor() {
     super({
       name: CardName.MIDAS,
-      startingMegaCredits: 120,
+      startingMegaCredits: 110,
 
       metadata: {
         cardNumber: 'R41',
         description: 'You start with 110 M€. Lower your TR 6 steps.',
         renderData: CardRenderer.builder((b) => {
           b.vSpace(Size.LARGE).br;
-          b.megacredits(120, {size: Size.LARGE}).nbsp.nbsp.nbsp;
-          b.minus().tr(7);
+          b.megacredits(110, {size: Size.LARGE}).nbsp.nbsp.nbsp;
+          b.minus().tr(6);
         }),
       },
     });
   }
 
   public override bespokePlay(player: IPlayer) {
-    player.decreaseTerraformRating(7);
+    player.decreaseTerraformRating(6);
     return undefined;
   }
 }

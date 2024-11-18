@@ -11,7 +11,7 @@ export class ThinkTank extends ActionCard {
     super({
       name: CardName.THINK_TANK,
       type: CardType.ACTIVE,
-      cost: 6,
+      cost: 4,
       tags: [Tag.MARS, Tag.VENUS, Tag.SCIENCE],
       resourceType: CardResource.DATA,
 

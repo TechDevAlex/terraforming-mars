@@ -13,13 +13,13 @@ export class Athena extends CorporationCard {
       name: CardName.ATHENA,
       tags: [Tag.EARTH],
       initialActionText: 'Place 2 hazard tiles adjacent to no other tiles.',
-      startingMegaCredits: 62,
+      startingMegaCredits: 64,
 
       metadata: {
         cardNumber: 'R52',
-        description: 'You start with 62 M€. As your first action, place 2 hazard tiles adjacent to no other tiles.',
+        description: 'You start with 64 M€. As your first action, place 2 hazard tiles adjacent to no other tiles.',
         renderData: CardRenderer.builder((b) => {
-          b.megacredits(62).hazardTile(1, {size: Size.LARGE}).hazardTile(1, {size: Size.LARGE});
+          b.megacredits(64).hazardTile(1, {size: Size.LARGE}).hazardTile(1, {size: Size.LARGE});
           b.corpBox('effect', (ce) => {
             ce.vSpace(Size.SMALL);
             ce.effect('You do not lose production when placing adjacent to hazard tiles.', (eb) => {

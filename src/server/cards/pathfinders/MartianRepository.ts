@@ -13,7 +13,7 @@ export class MartianRepository extends Card implements IProjectCard {
     super({
       type: CardType.ACTIVE,
       name: CardName.MARTIAN_REPOSITORY,
-      cost: 10,
+      cost: 8,
       tags: [Tag.MARS, Tag.MARS, Tag.BUILDING],
       resourceType: CardResource.DATA,
 

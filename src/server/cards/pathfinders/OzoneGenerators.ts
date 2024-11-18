@@ -10,9 +10,11 @@ export class OzoneGenerators extends ActionCard implements IProjectCard {
     super({
       type: CardType.ACTIVE,
       name: CardName.OZONE_GENERATORS,
-      cost: 12,
+      cost: 14,
       tags: [Tag.MARS, Tag.SPACE],
       requirements: {oxygen: 2},
+      victoryPoints: {tag: Tag.POWER, per: 3},
+
 
       action: {
         spend: {energy: 3},

@@ -20,7 +20,7 @@ export class SecretLabs extends Card implements IProjectCard {
     super({
       type: CardType.AUTOMATED,
       name: CardName.SECRET_LABS,
-      cost: 21,
+      cost: 20,
       tags: [Tag.JOVIAN, Tag.BUILDING, Tag.SPACE],
       requirements: [{tag: Tag.SCIENCE}, {tag: Tag.JOVIAN}],
       victoryPoints: 1,

@@ -12,14 +12,14 @@ export class UnitedNationsMissionOne extends CorporationCard {
     super({
       name: CardName.UNITED_NATIONS_MISSION_ONE,
       tags: [Tag.EARTH],
-      startingMegaCredits: 42, // +1 for the initial change in TR.
+      startingMegaCredits: 44, // +1 for the initial change in TR.
 
       metadata: {
         cardNumber: 'R50',
-        description: 'You start with 41 M€. Increase your TR 1 step.',
+        description: 'You start with 43 M€. Increase your TR 1 step.',
         renderData: CardRenderer.builder((b) => {
           b.br.br.br;
-          b.megacredits(41).nbsp.tr(1);
+          b.megacredits(43).nbsp.tr(1);
           b.corpBox('effect', (ce) => {
             ce.vSpace();
             ce.effect('When any player takes an action or plays a card that increases TR, including this, gain 1 M€ for each step.', (eb) => {

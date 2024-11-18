@@ -16,7 +16,7 @@ export class OumuamuaTypeObjectSurvey extends Card implements IProjectCard {
     super({
       type: CardType.AUTOMATED,
       name: CardName.OUMUAMUA_TYPE_OBJECT_SURVEY,
-      cost: 17,
+      cost: 16,
       tags: [Tag.SPACE, Tag.SCIENCE],
       requirements: [{tag: Tag.SPACE}, {tag: Tag.SCIENCE}],
 

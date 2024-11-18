@@ -12,7 +12,7 @@ export class MartianCulture extends ActionCard implements IProjectCard {
     super({
       type: CardType.ACTIVE,
       name: CardName.MARTIAN_CULTURE,
-      cost: 11,
+      cost: 10,
       tags: [Tag.MARS, Tag.MARS],
       resourceType: CardResource.DATA,
       requirements: {tag: Tag.MARS, count: 2, all},

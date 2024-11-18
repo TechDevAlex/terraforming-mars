@@ -10,8 +10,10 @@ export class AdvancedPowerGrid extends Card implements IProjectCard {
     super({
       type: CardType.AUTOMATED,
       name: CardName.ADVANCED_POWER_GRID,
-      cost: 17,
+      cost: 19,
       tags: [Tag.POWER, Tag.BUILDING, Tag.MARS],
+      victoryPoints: {tag: Tag.POWER, per: 3},
+
 
       behavior: {
         production: {megacredits: {tag: Tag.POWER}, energy: 2},

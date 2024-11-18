@@ -16,7 +16,7 @@ export class CharityDonation extends Card implements IProjectCard {
       type: CardType.EVENT,
       name: CardName.CHARITY_DONATION,
       tags: [Tag.MARS],
-      cost: 7,
+      cost: 6,
       victoryPoints: 1,
 
       metadata: {
