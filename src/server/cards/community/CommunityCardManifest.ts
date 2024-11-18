@@ -9,6 +9,7 @@ import {ExecutiveOrder} from './ExecutiveOrder';
 import {GlobalEventName} from '../../../common/turmoil/globalEvents/GlobalEventName';
 import {Incite} from './Incite';
 import {JunkVentures} from './JunkVentures';
+import {JovianResearch} from './JovianResearch';
 import {LeadershipSummit} from './LeadershipSummit';
 import {Midas} from './Midas';
 import {ModuleManifest} from '../ModuleManifest';
@@ -46,6 +47,7 @@ export const COMMUNITY_CARD_MANIFEST = new ModuleManifest({
   },
   projectCards: {
     [CardName.SPECIAL_DESIGN_PROXY]: {Factory: SpecialDesignProxy, instantiate: false},
+    [CardName.JOVIAN_RESEARCH]: {Factory: JovianResearch},
   },
   globalEvents: {
     [GlobalEventName.LEADERSHIP_SUMMIT]: {Factory: LeadershipSummit},

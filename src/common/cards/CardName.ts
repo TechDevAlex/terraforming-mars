@@ -584,6 +584,10 @@ export enum CardName {
   ERIS = 'Eris',
   ATHENA = 'Athena',
 
+  // Community Cards
+
+  JOVIAN_RESEARCH = 'Jovian Research',
+
   // Community preludes
   VALUABLE_GASES = 'Valuable Gases',
   RESEARCH_GRANT = 'Research Grant',
