@@ -16,7 +16,7 @@ export class SelfReplicatingRobots extends Card implements IProjectCard {
       name: CardName.SELF_REPLICATING_ROBOTS,
       cost: 7,
 
-      requirements: {tag: Tag.SCIENCE, count: 2},
+      requirements: {tag: Tag.SCIENCE, count: 1},
       metadata: {
         cardNumber: '210',
         renderData: CardRenderer.builder((b) => {
@@ -26,7 +26,7 @@ export class SelfReplicatingRobots extends Card implements IProjectCard {
           }).br;
           b.text('Effect: Card here may be played as if from hand with its cost reduced by the number of resources on it.', Size.TINY, true);
         }),
-        description: 'Requires 2 science tags.',
+        description: 'Requires 1 science tag.',
       },
     });
   }

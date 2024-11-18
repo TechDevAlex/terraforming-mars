@@ -12,7 +12,7 @@ export class OutdoorSports extends Card implements IProjectCard {
     super({
       type: CardType.AUTOMATED,
       name: CardName.OUTDOOR_SPORTS,
-      cost: 8,
+      cost: 7,
       victoryPoints: 1,
 
       behavior: {
