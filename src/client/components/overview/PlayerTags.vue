@@ -150,7 +150,14 @@ export default Vue.extend({
       // Calculate discount
       for (const discount of card.discount ?? []) {
         const tag = discount.tag ?? 'all';
-        details[tag].discount += discount.amount;
+        // Special case: Crescent Research Association halves Moon discounts
+        const isCrescentResearchAssociation = this.player.tableau.some(
+          (card) => card.name === CardName.CRESCENT_RESEARCH_ASSOCIATION);
+        if (isCrescentResearchAssociation && tag === Tag.MOON) {
+          details[tag].discount += discount.amount / 2; // Apply half the discount for Moon tags
+        } else {
+          details[tag].discount += discount.amount; // Normal discount logic
+        }
       }
 
       // Special case Cultivation of Venus & Venera Base.
