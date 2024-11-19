@@ -11,8 +11,8 @@ export class MagneticShield extends Card implements IProjectCard {
     super({
       type: CardType.AUTOMATED,
       name: CardName.MAGNETIC_SHIELD,
-      tags: [Tag.SPACE],
-      cost: 24,
+      tags: [Tag.SPACE, Tag.POWER],
+      cost: 25,
 
       behavior: {
         tr: 4,

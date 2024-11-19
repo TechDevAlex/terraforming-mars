@@ -17,7 +17,7 @@ export class UnitedNationsMarsInitiative extends CorporationCard implements IAct
 
       metadata: {
         cardNumber: 'R32',
-        description: 'You start with 45 M€. If you Terraform this gen, press cool button for 1 extra TR!',
+        description: 'You start with 50 M€. If you Terraform this gen, press cool button for 1 extra TR!',
         renderData: CardRenderer.builder((b) => {
           // TODO(chosta): find a not so hacky solutions to spacing
           b.br.br.br;

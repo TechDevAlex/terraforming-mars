@@ -20,14 +20,14 @@ export class StJosephOfCupertinoMission extends Card implements IActionCard {
     super({
       type: CardType.ACTIVE,
       name: CardName.ST_JOSEPH_OF_CUPERTINO_MISSION,
-      cost: 5,
+      cost: 7,
       victoryPoints: 'special',
 
       metadata: {
         cardNumber: 'X64',
         renderData: CardRenderer.builder((b) => {
-          b.action('Pay 5 M€ (STEEL MAY BE USED) to build  1 Cathedral in a city. Max 1 per city. City owner can pay 2 M€  to draw 1 card.', (eb) => {
-            eb.megacredits(5).super((b) => b.steel(1)).startAction.cathedral().asterix();
+          b.action('Pay 3 M€ (STEEL MAY BE USED) to build  1 Cathedral in a city. Max 1 per city. City owner can pay 2 M€  to draw 1 card.', (eb) => {
+            eb.megacredits(3).super((b) => b.steel(1)).startAction.cathedral().asterix();
           });
         }),
         description: '1 VP per City with a Cathedral in it.',
@@ -41,7 +41,7 @@ export class StJosephOfCupertinoMission extends Card implements IActionCard {
   }
 
   canAct(player: IPlayer): boolean {
-    return this.getEligibleCities(player.game).length > 0 && player.canAfford({cost: 5, steel: true});
+    return this.getEligibleCities(player.game).length > 0 && player.canAfford({cost: 3, steel: true});
   }
 
   action(player: IPlayer): undefined {
@@ -50,7 +50,7 @@ export class StJosephOfCupertinoMission extends Card implements IActionCard {
       return undefined;
     }
 
-    player.game.defer(new SelectPaymentDeferred(player, 5, {canUseSteel: true, title: TITLES.payForCardAction(this.name)}))
+    player.game.defer(new SelectPaymentDeferred(player, 3, {canUseSteel: true, title: TITLES.payForCardAction(this.name)}))
       .andThen(() => {
         player.defer(new SelectSpace(
           message('Select new space for ${0}', (b) => b.card(this)),

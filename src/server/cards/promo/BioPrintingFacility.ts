@@ -21,6 +21,8 @@ export class BioPrintingFacility extends Card implements IActionCard, IProjectCa
       name: CardName.BIO_PRINTING_FACILITY,
       tags: [Tag.BUILDING],
       cost: 7,
+      victoryPoints: {tag: Tag.POWER, per: 3},
+
 
       metadata: {
         cardNumber: 'X36',

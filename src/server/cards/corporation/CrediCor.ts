@@ -10,14 +10,14 @@ export class CrediCor extends CorporationCard {
   constructor() {
     super({
       name: CardName.CREDICOR,
-      startingMegaCredits: 57,
+      startingMegaCredits: 45,
 
       metadata: {
         cardNumber: 'R08',
-        description: 'You start with 40 M€.',
+        description: 'You start with 45 M€.',
         renderData: CardRenderer.builder((b) => {
           b.br.br.br;
-          b.megacredits(40);
+          b.megacredits(45);
           b.corpBox('effect', (ce) => {
             ce.effect('After you pay for a card or standard project with a basic cost of 20M€ or more, you gain 6 M€.', (eb) => {
               eb.minus().megacredits(20).startEffect.megacredits(6);

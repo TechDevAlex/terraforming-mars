@@ -18,7 +18,7 @@ export class TharsisRepublic extends CorporationCard {
     super({
       name: CardName.THARSIS_REPUBLIC,
       tags: [Tag.BUILDING],
-      startingMegaCredits: 40,
+      startingMegaCredits: 45,
 
       firstAction: {
         text: 'Place a city tile',
@@ -27,10 +27,10 @@ export class TharsisRepublic extends CorporationCard {
 
       metadata: {
         cardNumber: 'R31',
-        description: 'You start with 40 M€. As your first action in the game, place a city tile.',
+        description: 'You start with 45 M€. As your first action in the game, place a city tile.',
         renderData: CardRenderer.builder((b) => {
           b.br.br;
-          b.megacredits(40).nbsp.city();
+          b.megacredits(45).nbsp.city();
           b.corpBox('effect', (ce) => {
             ce.effect('When any city tile is placed ON MARS, increase your M€ production 1 step. When you place a city tile, gain 3 M€.', (eb) => {
               eb.city({size: Size.SMALL, all}).asterix().colon();
