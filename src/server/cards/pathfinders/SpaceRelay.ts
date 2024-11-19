@@ -12,7 +12,7 @@ export class SpaceRelay extends Card implements IProjectCard {
     super({
       type: CardType.ACTIVE,
       name: CardName.SPACE_RELAY,
-      cost: 13,
+      cost: 15,
       tags: [Tag.SPACE, Tag.JOVIAN],
 
       behavior: {

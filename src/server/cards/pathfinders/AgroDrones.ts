@@ -17,6 +17,8 @@ export class AgroDrones extends Card implements IProjectCard, IActionCard {
       name: CardName.AGRO_DRONES,
       cost: 8,
       tags: [Tag.PLANT, Tag.MARS],
+      victoryPoints: {tag: Tag.POWER, per: 3},
+
 
       requirements: {temperature: -18},
       metadata: {

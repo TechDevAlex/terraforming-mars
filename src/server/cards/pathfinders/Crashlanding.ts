@@ -15,12 +15,14 @@ import {SelectOption} from '../../inputs/SelectOption';
 import {Tile} from '../../Tile';
 import {CrashlandingBonus} from '../../pathfinders/CrashlandingBonus';
 import {message} from '../../logs/MessageBuilder';
+import {Tag} from '../../../common/cards/Tag';
 
 export class Crashlanding extends Card implements IProjectCard {
   constructor() {
     super({
       type: CardType.EVENT,
       name: CardName.CRASHLANDING,
+      tags: [Tag.MARS],
       cost: 12,
       tilesBuilt: [TileType.CRASHLANDING],
 
