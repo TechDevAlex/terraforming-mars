@@ -587,6 +587,7 @@ export enum CardName {
   // Community Cards
 
   JOVIAN_RESEARCH = 'Jovian Research',
+  MARTIAN_MYSTERY = 'Martian Mystery',
 
   // Community preludes
   VALUABLE_GASES = 'Valuable Gases',

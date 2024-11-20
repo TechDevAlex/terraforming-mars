@@ -21,6 +21,7 @@ import {SpecialDesignProxy} from './SpecialDesignProxy';
 import {TradeAdvance} from './TradeAdvance';
 import {UnitedNationsMissionOne} from './UnitedNationsMissionOne';
 import {ValuableGases} from './ValuableGases';
+import {MartianMystery} from './MartianMystery';
 
 export const COMMUNITY_CARD_MANIFEST = new ModuleManifest({
   module: 'community',
@@ -48,6 +49,8 @@ export const COMMUNITY_CARD_MANIFEST = new ModuleManifest({
   projectCards: {
     [CardName.SPECIAL_DESIGN_PROXY]: {Factory: SpecialDesignProxy, instantiate: false},
     [CardName.JOVIAN_RESEARCH]: {Factory: JovianResearch},
+    [CardName.MARTIAN_MYSTERY]: {Factory: MartianMystery},
+
   },
   globalEvents: {
     [GlobalEventName.LEADERSHIP_SUMMIT]: {Factory: LeadershipSummit},
