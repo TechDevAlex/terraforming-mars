@@ -25,7 +25,6 @@ export class VenusMagnetizer extends ActionCard implements IActionCard {
             eb.production((pb) => pb.energy(1)).startAction.venus(1);
           });
         }),
-        description: 'Requires Venus 10%.',
       },
     });
   }
