@@ -11,14 +11,13 @@ export class VenusMagnetizer extends ActionCard implements IActionCard {
       name: CardName.VENUS_MAGNETIZER,
       type: CardType.ACTIVE,
       tags: [Tag.VENUS],
-      cost: 7,
+      cost: 5,
 
       action: {
         production: {energy: -1},
         global: {venus: 1},
       },
 
-      requirements: {venus: 10},
       metadata: {
         cardNumber: '256',
         renderData: CardRenderer.builder((b) => {

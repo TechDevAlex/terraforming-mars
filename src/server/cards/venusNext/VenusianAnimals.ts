@@ -26,7 +26,7 @@ export class VenusianAnimals extends Card implements IProjectCard {
           }).br;
           b.vpText('1 VP per animal on this card.');
         }),
-        description: 'Requires Venus 18%',
+        description: 'Requires Venus 22%',
       },
     });
   }
