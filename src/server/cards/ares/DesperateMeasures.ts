@@ -16,7 +16,7 @@ export class DesperateMeasures extends Card implements IProjectCard {
       type: CardType.EVENT,
       name: CardName.DESPERATE_MEASURES,
       cost: 1,
-      victoryPoints: -2,
+      victoryPoints: -1,
 
       metadata: {
         cardNumber: 'A04',

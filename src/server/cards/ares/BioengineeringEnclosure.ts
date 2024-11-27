@@ -15,17 +15,18 @@ export class BioengineeringEnclosure extends Card implements IProjectCard, IActi
       type: CardType.ACTIVE,
       name: CardName.BIOENGINEERING_ENCLOSURE,
       tags: [Tag.ANIMAL],
-      cost: 7,
+      cost: 5,
       resourceType: CardResource.ANIMAL,
       protectedResources: true,
+      victoryPoints: {resourcesHere: {}, each: -1, per: 2},
 
       behavior: {
-        addResources: 2,
+        addResources: 4,
       },
 
       requirements: {tag: Tag.SCIENCE},
       metadata: {
-        description: 'Requires 1 science tag to play. Add 2 animals to this card. OTHERS MAY NOT REMOVE ANIMALS FROM THIS CARD.',
+        description: 'Requires 1 science tag to play. Add 4 animals to this card. -1VP per 2 animals on this card. OTHERS MAY NOT REMOVE ANIMALS FROM THIS CARD.',
         cardNumber: 'A01',
         renderData: CardRenderer.builder((b) => {
           b.action('Remove 1 animal from THIS card to add 1 animal to ANOTHER card.', (eb) => {

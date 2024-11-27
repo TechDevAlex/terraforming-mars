@@ -18,7 +18,7 @@ export class BiofertilizerFacility extends Card implements IProjectCard {
 
       behavior: {
         production: {plants: 1},
-        addResourcesToAnyCard: {count: 2, type: CardResource.MICROBE},
+        addResourcesToAnyCard: {count: 3, type: CardResource.MICROBE},
         tile: {
           type: TileType.BIOFERTILIZER_FACILITY,
           on: 'land',
@@ -29,12 +29,12 @@ export class BiofertilizerFacility extends Card implements IProjectCard {
       requirements: {tag: Tag.SCIENCE},
       metadata: {
         description: 'Requires 1 science tag. Increase your plant production 1 step. ' +
-                  'Add up to 2 microbes to ANY card. ' +
+                  'Add up to 3 microbes to ANY card. ' +
                   'Place this tile which grants an ADJACENCY BONUS of 1 plant and 1 microbe.',
         cardNumber: 'A02',
         renderData: CardRenderer.builder((b) => {
           b.production((pb) => pb.plants(1));
-          b.resource(CardResource.MICROBE, 2);
+          b.resource(CardResource.MICROBE, 3);
           b.br;
           b.tile(TileType.BIOFERTILIZER_FACILITY, false, true);
         }),

@@ -14,7 +14,7 @@ export class ButterflyEffect extends Card implements IProjectCard {
     super({
       type: CardType.EVENT,
       name: CardName.BUTTERFLY_EFFECT,
-      cost: 8,
+      cost: 4,
 
       behavior: {
         tr: 1,

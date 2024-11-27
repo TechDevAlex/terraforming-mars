@@ -19,18 +19,18 @@ export class Splice extends CorporationCard {
     super({
       name: CardName.SPLICE,
       tags: [Tag.MICROBE],
-      startingMegaCredits: 46, // 42 + 4 as card resolution when played
+      startingMegaCredits: 46, // 44 + 2 as card resolution when played
 
       firstAction: {
-        text: 'Draw a card with a microbe tag',
-        drawCard: {count: 2, tag: Tag.MICROBE},
+        text: 'Draw 3 cards with a microbe tag',
+        drawCard: {count: 3, tag: Tag.MICROBE},
       },
 
       metadata: {
         cardNumber: 'R28',
-        description: 'You start with 42 M€. As your first action, reveal cards until you have revealed 2 microbe tags. Take it and discard the rest.',
+        description: 'Start with 42 M€. First action, draw cards until 3 microbe tags, discard the rest.',
         renderData: CardRenderer.builder((b) => {
-          b.megacredits(44).nbsp.cards(1, {secondaryTag: Tag.MICROBE});
+          b.megacredits(42).nbsp.cards(3, {secondaryTag: Tag.MICROBE});
           b.corpBox('effect', (ce) => {
             ce.vSpace(Size.LARGE);
             ce.effect(undefined, (eb) => {
@@ -38,9 +38,9 @@ export class Splice extends CorporationCard {
               eb.megacredits(2, {all}).or().resource(CardResource.MICROBE, {all}).asterix();
             });
             ce.vSpace();
-            ce.effect('when a microbe tag is played, incl. this, THAT PLAYER gains 2 M€, or adds a microbe to THAT card, and you gain 4 M€.', (eb) => {
+            ce.effect('when a microbe tag is played, incl. this, THAT PLAYER gains 2 M€, or adds a microbe to THAT card, and you gain 2 M€.', (eb) => {
               eb.tag(Tag.MICROBE, {all}).startEffect;
-              eb.megacredits(4);
+              eb.megacredits(2);
             });
           });
         }),

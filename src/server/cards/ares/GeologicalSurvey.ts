@@ -15,7 +15,7 @@ export class GeologicalSurvey extends SurveyCard {
       type: CardType.ACTIVE,
       name: CardName.GEOLOGICAL_SURVEY,
       tags: [Tag.SCIENCE],
-      cost: 8,
+      cost: 4,
 
       requirements: {greeneries: 5, all, max},
       metadata: {
