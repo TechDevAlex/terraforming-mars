@@ -76,7 +76,7 @@ export class Splice extends CorporationCard {
 
     // Splice owner gets 2M€ per microbe tag
     const cardPlayer = game.getCardPlayerOrThrow(this.name);
-    game.defer(new GainResources(cardPlayer, Resource.MEGACREDITS, {count: gain*2, log: true, from: this}));
+    game.defer(new GainResources(cardPlayer, Resource.MEGACREDITS, {count: gain, log: true, from: this}));
 
     if (card.resourceType === CardResource.MICROBE) {
       // Card player chooses between 2 M€ and a microbe on card, if possible
