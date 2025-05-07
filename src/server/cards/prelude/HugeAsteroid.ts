@@ -9,7 +9,7 @@ export class HugeAsteroid extends PreludeCard {
     super({
       name: CardName.HUGE_ASTEROID,
 
-      startingMegacredits: -5,
+      startingMegacredits: -3,
 
       behavior: {
         global: {temperature: 3},

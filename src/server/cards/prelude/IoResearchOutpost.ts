@@ -11,7 +11,7 @@ export class IoResearchOutpost extends PreludeCard {
 
       behavior: {
         production: {titanium: 1},
-        drawCard: 1,
+        drawCard: 2,
       },
 
       metadata: {

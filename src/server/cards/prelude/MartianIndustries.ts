@@ -12,7 +12,7 @@ export class MartianIndustries extends PreludeCard implements IProjectCard {
 
       behavior: {
         production: {energy: 1, steel: 1},
-        stock: {megacredits: 6},
+        stock: {megacredits: 7},
       },
 
       metadata: {

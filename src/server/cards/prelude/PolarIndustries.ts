@@ -13,6 +13,7 @@ export class PolarIndustries extends PreludeCard implements IProjectCard {
       behavior: {
         production: {heat: 2},
         ocean: {},
+        stock: {megacredits: 3}
       },
 
       metadata: {

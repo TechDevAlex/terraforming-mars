@@ -26,7 +26,7 @@ export class BoardOfDirectors extends PreludeCard implements IActionCard {
         cardNumber: 'P45',
         renderData: CardRenderer.builder((b) => {
           b.plainText('ACTION: ').arrow().br;
-          b.plainText('DRAW 1 PRELUDE CARD: EITHER DISCARD IT, OR PAY 12 M€ AND REMOVE 1 DIRECTOR RESOURCE HERE TO PLAY IT.').br;
+          b.plainText('DRAW 1 PRELUDE CARD: EITHER DISCARD IT, OR PAY 10 M€ AND REMOVE 1 DIRECTOR RESOURCE HERE TO PLAY IT.').br;
           b.resource(CardResource.DIRECTOR, 4);
           b.br.plainText('This is not the director icon yet.');
         }),
@@ -36,7 +36,7 @@ export class BoardOfDirectors extends PreludeCard implements IActionCard {
   }
 
   public canAct(player: IPlayer) {
-    if (!player.canAfford(12)) {
+    if (!player.canAfford(10)) {
       this.warnings.add('cannotAffordBoardOfDirectors');
     }
     return this.resourceCount > 0 && player.game.preludeDeck.canDraw(1);
@@ -51,13 +51,13 @@ export class BoardOfDirectors extends PreludeCard implements IActionCard {
     const game = player.game;
     const prelude = game.preludeDeck.drawOrThrow(player.game);
 
-    if (player.canAfford(12)) {
+    if (player.canAfford(10)) {
       return new SelectCard(
-        message('Would you like pay 12 M€ and one Director to play ${0}', (b)=> b.card(prelude)),
+        message('Would you like pay 10 M€ and one Director to play ${0}', (b)=> b.card(prelude)),
         'Buy', [prelude], {min: 0, max: 1}).andThen((selected) => {
         if (selected.length === 1) {
           const card = selected[0];
-          game.defer(new SelectPaymentDeferred(player, 12, {title: 'Select how to pay 12 M€'})).andThen(() => {
+          game.defer(new SelectPaymentDeferred(player, 10, {title: 'Select how to pay 10 M€'})).andThen(() => {
             player.removeResourceFrom(this, 1);
             if (card.canPlay?.(player) === false) {
               PreludesExpansion.fizzle(player, card);

@@ -12,14 +12,14 @@ export class Mohole extends PreludeCard implements IProjectCard {
 
       behavior: {
         production: {heat: 3},
-        stock: {heat: 3},
+        stock: {heat: 6},
       },
 
       metadata: {
         cardNumber: 'P22',
         renderData: CardRenderer.builder((b) => {
           b.production((pb) => pb.heat(3)).br;
-          b.heat(3);
+          b.heat(6);
         }),
         description: 'Increase your heat production 3 steps. Gain 3 heat.',
       },

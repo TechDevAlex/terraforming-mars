@@ -9,8 +9,8 @@ export class Loan extends PreludeCard implements IProjectCard {
       name: CardName.LOAN,
 
       behavior: {
-        production: {megacredits: -2},
-        stock: {megacredits: 30},
+        production: {megacredits: -3},
+        stock: {megacredits: 39},
       },
 
       metadata: {
