@@ -10,7 +10,7 @@ export class BiosphereSupport extends PreludeCard {
       tags: [Tag.PLANT],
 
       behavior: {
-        production: {plants: 2, megacredits: -1},
+        production: {plants: 2},
       },
 
       metadata: {

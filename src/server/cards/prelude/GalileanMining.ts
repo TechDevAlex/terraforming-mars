@@ -14,7 +14,7 @@ export class GalileanMining extends PreludeCard {
       behavior: {
         production: {titanium: 2},
       },
-      startingMegacredits: -5,
+      startingMegacredits: -1,
 
       metadata: {
         cardNumber: 'P13',
