@@ -20,7 +20,7 @@ export class Biolab extends PreludeCard {
           b.production((pb) => pb.plants(1)).br;
           b.cards(4);
         }),
-        description: 'Increase your plant production 1 step. Draw 3 cards.',
+        description: 'Increase your plant production 1 step. Draw 4 cards.',
       },
     });
   }

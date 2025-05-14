@@ -24,7 +24,7 @@ export class GalileanMining extends PreludeCard {
           }).br;
           b.megacredits(-5);
         }),
-        description: 'Increase your titanium production 2 steps. Pay 5 M€.',
+        description: 'Increase your titanium production 2 steps. Pay 1 M€.',
       },
     });
   }

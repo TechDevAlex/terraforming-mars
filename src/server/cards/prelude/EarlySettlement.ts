@@ -11,7 +11,6 @@ export class EarlySettlement extends PreludeCard {
 
       behavior: {
         production: {plants: 1},
-        stock: {megacredits: 2},
         city: {},
       },
 
