@@ -10,14 +10,14 @@ export class JunkVentures extends CorporationCard {
     super({
       name: CardName.JUNK_VENTURES,
       initialActionText: 'Discard the top 3 cards of the deck',
-      startingMegaCredits: 43,
+      startingMegaCredits: 45,
 
       metadata: {
         cardNumber: 'R49',
-        description: 'You start with 43 M€. As your first action, discard the top 3 cards of the deck.',
+        description: 'You start with 45 M€. As your first action, discard the top 3 cards of the deck.',
         renderData: CardRenderer.builder((b) => {
           b.br.br;
-          b.megacredits(43).text('DECK: ').minus().cards(3);
+          b.megacredits(45).text('DECK: ').minus().cards(3);
           b.corpBox('action', (cb) => {
             cb.text('ACTION: SHUFFLE THE DISCARD PILE, THEN DRAW 3 CARDS FROM IT. KEEP 1 AND DISCARD THE OTHER 2.', Size.SMALL, true);
           });

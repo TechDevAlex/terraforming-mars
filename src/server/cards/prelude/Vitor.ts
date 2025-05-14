@@ -15,15 +15,15 @@ export class Vitor extends CorporationCard {
     super({
       name: CardName.VITOR,
       tags: [Tag.EARTH],
-      startingMegaCredits: 47, // It's 45 + 2 when this corp is played
+      startingMegaCredits: 49, // It's 47 + 2 when this corp is played
       initialActionText: 'Fund an award for free',
 
       metadata: {
         cardNumber: 'R35',
-        description: 'You start with 45 M€. As your first action, fund an award for free.',
+        description: 'You start with 47 M€. As your first action, fund an award for free.',
         renderData: CardRenderer.builder((b) => {
           b.br.br;
-          b.megacredits(45).nbsp.award();
+          b.megacredits(47).nbsp.award();
           b.corpBox('effect', (ce) => {
             ce.effect('When you play a card with a NON-NEGATIVE VP icon, including this, gain 2 M€.', (eb) => {
               eb.vpIcon().asterix().startEffect.megacredits(2);
