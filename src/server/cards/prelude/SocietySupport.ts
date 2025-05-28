@@ -8,7 +8,7 @@ export class SocietySupport extends PreludeCard {
       name: CardName.SOCIETY_SUPPORT,
 
       behavior: {
-        production: {plants: 2, energy: 2, heat: 2, megacredits: -2},
+        production: {plants: 2, energy: 2, heat: 2, megacredits: -3},
       },
 
       metadata: {
