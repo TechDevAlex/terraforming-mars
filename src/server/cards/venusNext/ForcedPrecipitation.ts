@@ -58,7 +58,7 @@ export class ForcedPrecipitation extends Card implements IActionCard {
     if (player.game.getVenusScaleLevel() === MAX_VENUS_SCALE) {
       spendResource.warnings = ['maxvenus'];
     }
-    if (this.resourceCount > 3 && player.canAfford({cost: 0, tr: {venus: 2}})) {
+    if (this.resourceCount > 2 && player.canAfford({cost: 0, tr: {venus: 2}})) {
       opts.push(spendResource);
     } else {
       return this.addResource(player);

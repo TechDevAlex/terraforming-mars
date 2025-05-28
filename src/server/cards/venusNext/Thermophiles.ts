@@ -12,7 +12,7 @@ export class Thermophiles extends ActionCard implements IActionCard {
       name: CardName.THERMOPHILES,
       type: CardType.ACTIVE,
       tags: [Tag.VENUS, Tag.MICROBE],
-      cost: 9,
+      cost: 6,
       resourceType: CardResource.MICROBE,
 
       action: {
@@ -21,7 +21,7 @@ export class Thermophiles extends ActionCard implements IActionCard {
           behaviors: [{
             title: 'Spend 2 microbes here to raise Venus 1 step.',
             spend: {resourcesHere: 2},
-            global: {venus: 2},
+            global: {venus: 1},
             // LogHelper.logRemoveResource(player, this, 2, 'raise oxygen 1 step');
           },
           {

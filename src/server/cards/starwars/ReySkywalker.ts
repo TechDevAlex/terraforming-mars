@@ -17,7 +17,7 @@ export class ReySkywalker extends Card implements IProjectCard {
       type: CardType.AUTOMATED,
       name: CardName.REY_SKYWALKER,
       tags: [Tag.BUILDING],
-      cost: 8,
+      cost: 6,
       victoryPoints: -2,
 
       behavior: {

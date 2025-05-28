@@ -32,7 +32,7 @@ export class CloneTroopers extends Card implements IActionCard, IProjectCard {
         renderData: CardRenderer.builder((b) => {
           b.arrow(Size.SMALL).resource(CardResource.CLONE_TROOPER).or().resource(CardResource.CLONE_TROOPER).arrow(Size.SMALL).text('STEAL', Size.SMALL).wild(1, {all});
           b.br;
-          b.text('(Action: Add one Clone Trooper to this card OR remove one Clone Trooper from this card to steal one standard resource from any player.)', Size.TINY, false, false);
+          b.text('(Action: Add one Clone Trooper to this card OR (available if u got a least 1 boiy) Add one Clone Trooper to this card to steal one standard resource from any player.)', Size.TINY, false, false);
         }),
         description: 'Requires 6 ocean tiles. 1 VP per Clone Trooper on this card.',
       },
@@ -68,7 +68,7 @@ export class CloneTroopers extends Card implements IActionCard, IProjectCard {
                 target.maybeBlockAttack(player, (proceed) => {
                   if (proceed) {
                     target.stock.steal(resource, 1, player);
-                    player.removeResourceFrom(this, 1);
+                    player.addResourceTo(this, 1);
                   }
                   return undefined;
                 });
