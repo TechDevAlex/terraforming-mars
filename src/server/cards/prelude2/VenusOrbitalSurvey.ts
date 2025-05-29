@@ -18,14 +18,15 @@ export class VenusOrbitalSurvey extends Card implements IActionCard {
       name: CardName.VENUS_ORBITAL_SURVEY,
       type: CardType.ACTIVE,
       tags: [Tag.VENUS, Tag.SPACE],
-      cost: 27,
+      requirements: {tag: Tag.SPACE, count: 3},
+      cost: 18,
       victoryPoints: 2,
 
       metadata: {
         cardNumber: 'P88',
         renderData: CardRenderer.builder((b) => {
           b.action(undefined, (ab) =>
-            ab.empty().startAction.empty()).br.text('Action: Reveal the top 2 cards, take any venus cards to hand for free. Any other card you either buy or discard', Size.SMALL, true);
+            ab.empty().startAction.empty()).br.text('Requires 3 space tags. Action: Reveal the top 2 cards, take any venus cards to hand for free. Any other card you either buy or discard', Size.SMALL, true);
         }),
       },
     });
