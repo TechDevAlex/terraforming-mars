@@ -16,16 +16,16 @@ export class GagarinMobileBase extends CorporationCard implements IActionCard {
   constructor() {
     super({
       name: CardName.GAGARIN_MOBILE_BASE,
-      tags: [Tag.SCIENCE],
-      startingMegaCredits: 46,
+      tags: [Tag.SCIENCE, Tag.MARS],
+      startingMegaCredits: 38,
       initialActionText: 'Place Gagarin Mobile Base on ANY space ON MARS',
 
       metadata: {
         cardNumber: 'PfC19',
-        description: 'You start with 46 M€. As your first action, put Gagarin Mobile Base on ANY area on Mars. Collect the bonus.',
+        description: 'You start with 38 M€. As your first action, put Gagarin Mobile Base on ANY area on Mars. Collect the bonus and move 3x.',
         renderData: CardRenderer.builder((b) => {
-          b.megacredits(46).br;
-          b.action('Move the Base to ANY nearest empty area where it has not yet been. Collect the bonus.', (ab) =>
+          b.megacredits(38).br;
+          b.action('Move the Base to ANY nearest empty area where it has not yet been. Collect the bonus 3x.', (ab) =>
             ab.empty().startAction.text('move').asterix());
           b.br;
           b.effect('When another player places a tile where the Base is, move the Base.', (eb) =>
