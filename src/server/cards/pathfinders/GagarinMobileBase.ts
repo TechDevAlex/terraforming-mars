@@ -24,7 +24,7 @@ export class GagarinMobileBase extends CorporationCard implements IActionCard {
         description: 'You start with 46 M€. As your first action, put Gagarin Mobile Base on ANY area on Mars. Collect the bonus.',
         renderData: CardRenderer.builder((b) => {
           b.megacredits(46).br;
-          b.action('Move the Base to ANY nearest empty area where it has not yet been. Collect the bonus.', (ab) =>
+          b.action('Move the Base to ANY nearest empty area where it has not yet been 3 times. Collect the bonus.', (ab) =>
             ab.empty().startAction.text('move').asterix());
           b.br;
           b.effect('When another player places a tile where the Base is, move the Base.', (eb) =>
@@ -82,7 +82,7 @@ export class GagarinMobileBase extends CorporationCard implements IActionCard {
   }
 
   public action(player: IPlayer) {
-    const spaces = this.availableSpaces(player);
+    let spaces = this.availableSpaces(player);
     if (spaces.length > 0) {
       return new SelectSpace(
         message('Select new space for ${0}', (b) => b.card(this)), this.availableSpaces(player))
@@ -92,6 +92,28 @@ export class GagarinMobileBase extends CorporationCard implements IActionCard {
           return undefined;
         });
     }
+    spaces = this.availableSpaces(player);
+    if (spaces.length > 0) {
+      return new SelectSpace(
+        message('Select new space for ${0}', (b) => b.card(this)), this.availableSpaces(player))
+        .andThen((space) => {
+          player.game.gagarinBase.unshift(space.id);
+          player.game.grantSpaceBonuses(player, space);
+          return undefined;
+        });
+    }
+    spaces = this.availableSpaces(player);
+    if (spaces.length > 0) {
+      return new SelectSpace(
+        message('Select new space for ${0}', (b) => b.card(this)), this.availableSpaces(player))
+        .andThen((space) => {
+          player.game.gagarinBase.unshift(space.id);
+          player.game.grantSpaceBonuses(player, space);
+          return undefined;
+        });
+    }
+ 
+ 
     return undefined;
   }
 
