@@ -2,27 +2,29 @@ import {CorporationCard} from '../corporation/CorporationCard';
 import {Tag} from '../../../common/cards/Tag';
 import {CardName} from '../../../common/cards/CardName';
 import {CardRenderer} from '../render/CardRenderer';
+import { IPlayer } from '@/server/IPlayer';
+import { ICard } from '../ICard';
 
 export class HabitatMarte extends CorporationCard {
   constructor() {
     super({
       name: CardName.HABITAT_MARTE,
-      tags: [Tag.MARS, Tag.MARS],
-      startingMegaCredits: 42,
+      tags: [Tag.MARS],
+      startingMegaCredits: 38,
 
       firstAction: {
-        text: 'Draw 2 cards with a Mars tag',
-        drawCard: {count: 2, tag: Tag.MARS},
+        text: 'When you play a Mars Tag, draw a card with a Mars Tag, enjoy milling.',
+        drawCard: {count: 1, tag: Tag.MARS},
       },
 
       metadata: {
         cardNumber: 'PfC22',
-        description: 'You start with 42 M€.',
+        description: 'You start with 38 M€.',
         renderData: CardRenderer.builder((b) => {
-          b.megacredits(42).nbsp.cards(2, {secondaryTag: Tag.MARS});
+          b.megacredits(38).nbsp.cards(1, {secondaryTag: Tag.MARS});
           b.corpBox('effect', (ce) => {
-            ce.effect('Mars tags also count as science tags.', (eb) => {
-              eb.tag(Tag.MARS).startEffect.tag(Tag.SCIENCE);
+            ce.effect('Mars tags draw more mars tags.', (eb) => {
+              eb.tag(Tag.MARS).startEffect.tag(Tag.MARS);
             });
           });
         }),
@@ -30,4 +32,13 @@ export class HabitatMarte extends CorporationCard {
     });
   }
   // Behavior in Player.getTagCount
+ public onCardPlayed(player: IPlayer, card: ICard) {
+    if (player.isCorporation(this.name)) {
+      const tagCount = player.tags.cardTagCount(card, Tag.MARS);
+      if (tagCount > 0) {
+        player.drawCard(tagCount, {tag: Tag.MARS});
+      }
+    }
+  }
+
 }
