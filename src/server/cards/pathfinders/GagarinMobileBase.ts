@@ -11,6 +11,7 @@ import {BoardType} from '../../boards/BoardType';
 import {Board} from '../../boards/Board';
 import {message} from '../../logs/MessageBuilder';
 
+
 export class GagarinMobileBase extends CorporationCard implements IActionCard {
   constructor() {
     super({
@@ -80,20 +81,26 @@ export class GagarinMobileBase extends CorporationCard implements IActionCard {
   public canAct(player: IPlayer): boolean {
     return this.availableSpaces(player).length > 0;
   }
-
   public action(player: IPlayer) {
+  const doMove = (remaining: number): any => {
     const spaces = this.availableSpaces(player);
-    if (spaces.length > 0) {
-      return new SelectSpace(
-        message('Select new space for ${0}', (b) => b.card(this)), this.availableSpaces(player))
-        .andThen((space) => {
-          player.game.gagarinBase.unshift(space.id);
-          player.game.grantSpaceBonuses(player, space);
-          return undefined;
-        });
-    }
-    return undefined;
-  }
+    if (remaining <= 0 || spaces.length === 0) return undefined;
+
+    return new SelectSpace(
+      message('Select new space for ${0}', (b) => b.card(this)), spaces
+    ).andThen((space) => {
+      player.game.gagarinBase.unshift(space.id);
+      player.game.grantSpaceBonuses(player, space);
+      return doMove(remaining - 1);
+    });
+  };
+
+  return doMove(3);
+}
+
+
+
+
 
   public initialAction(player: IPlayer) {
     return this.action(player);
@@ -107,8 +114,6 @@ export class GagarinMobileBase extends CorporationCard implements IActionCard {
       return;
     }
     if (space.id === activePlayer.game.gagarinBase[0]) {
-      cardOwner.defer(this.action(cardOwner));
-      cardOwner.defer(this.action(cardOwner));
       cardOwner.defer(this.action(cardOwner));
     }
   }
