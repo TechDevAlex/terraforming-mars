@@ -12,7 +12,7 @@ export class SubnauticPirates extends Card implements IProjectCard {
     super({
       name: CardName.SUBNAUTIC_PIRATES,
       type: CardType.EVENT,
-      cost: 3,
+      cost: 1,
 
       requirements: [{excavation: 1}, {corruption: 1}],
       victoryPoints: -1,

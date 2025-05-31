@@ -17,8 +17,9 @@ export class PlantTax extends Card implements IProjectCard {
     super({
       name: CardName.PLANT_TAX,
       type: CardType.EVENT,
-      cost: 7,
+      cost: 2,
       tags: [Tag.MARS],
+      victoryPoints: -1,
 
       behavior: {
         underworld: {markThisGeneration: {}},

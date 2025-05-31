@@ -15,14 +15,14 @@ export class EarthquakeMachine extends Card implements IProjectCard {
     super({
       type: CardType.ACTIVE,
       name: CardName.EARTHQUAKE_MACHINE,
-      tags: [Tag.SCIENCE],
-      cost: 15,
+      tags: [Tag.SCIENCE, Tag.MARS],
+      cost: 8,
       requirements: {tag: Tag.SCIENCE, count: 2},
-
+      victoryPoints: -1,
       behavior: {
         decreaseAnyProduction: {type: Resource.PLANTS, count: 1},
       },
-
+      
       metadata: {
         cardNumber: 'U55',
         renderData: CardRenderer.builder((b) => {

@@ -12,7 +12,7 @@ export class CraterSurvey extends Card implements IProjectCard {
     super({
       name: CardName.CRATER_SURVEY,
       type: CardType.EVENT,
-      cost: 5,
+      cost: 1,
       tags: [Tag.MARS],
 
       behavior: {

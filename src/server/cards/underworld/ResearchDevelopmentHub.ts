@@ -12,7 +12,7 @@ export class ResearchDevelopmentHub extends Card implements IProjectCard {
     super({
       name: CardName.RESEARCH_DEVELOPMENT_HUB,
       type: CardType.ACTIVE,
-      cost: 14,
+      cost: 7,
       tags: [Tag.SCIENCE, Tag.BUILDING],
       resourceType: CardResource.DATA,
 

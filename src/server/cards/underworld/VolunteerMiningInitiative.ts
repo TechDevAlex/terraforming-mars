@@ -15,15 +15,15 @@ export class VolunteerMiningInitiative extends Card implements IProjectCard {
       tags: [Tag.MARS],
 
       behavior: {
-        underworld: {excavate: {count: {cities: {}, all: true, per: 3}}},
+        underworld: {excavate: {count: {cities: {}, all: true, per: 2}}},
       },
 
       metadata: {
         cardNumber: 'U73',
         renderData: CardRenderer.builder((b) => {
-          b.excavate(1).slash().text('3').city({all});
+          b.excavate(1).slash().text('2').city({all});
         }),
-        description: 'Excavate 1 underground resource for every 3 cities in play.',
+        description: 'Excavate 1 underground resource for every 2 cities in play.',
       },
     });
   }

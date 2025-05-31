@@ -7,14 +7,16 @@ import {IPlayer} from '../../IPlayer';
 import {RemoveResourcesFromCard} from '../../deferredActions/RemoveResourcesFromCard';
 import {UnderworldExpansion} from '../../underworld/UnderworldExpansion';
 import {AddResourcesToCard} from '../../deferredActions/AddResourcesToCard';
+import { Tag } from '@/common/cards/Tag';
 
 export class CorporateTheft extends Card implements IProjectCard {
   constructor() {
     super({
       name: CardName.CORPORATE_THEFT,
       type: CardType.EVENT,
-      cost: 10,
-
+      cost: 1,
+      victoryPoints: -1,
+      tags:[Tag.EARTH],
       requirements: {corruption: 2},
 
       metadata: {

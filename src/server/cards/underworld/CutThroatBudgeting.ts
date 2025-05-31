@@ -9,8 +9,8 @@ export class CutThroatBudgeting extends Card implements IProjectCard {
     super({
       name: CardName.CUT_THROAT_BUDGETING,
       type: CardType.EVENT,
-      cost: 2,
-      victoryPoints: -2,
+      cost: 4,
+      victoryPoints: -1,
 
       requirements: {corruption: 1},
       behavior: {

@@ -12,7 +12,7 @@ export class Casino extends Card implements IProjectCard {
       type: CardType.AUTOMATED,
       name: CardName.CASINO,
       tags: [Tag.BUILDING],
-      cost: 12,
+      cost: 10,
 
       requirements: {cities: 1, all},
 

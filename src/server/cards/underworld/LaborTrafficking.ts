@@ -15,14 +15,14 @@ export class LaborTrafficking extends Card implements IProjectCard {
       type: CardType.ACTIVE,
       cost: 3,
       tags: [Tag.SPACE],
-      victoryPoints: -2,
+      victoryPoints: -1,
 
       metadata: {
         cardNumber: 'U14',
         renderData: CardRenderer.builder((b) => {
           b.effect('The first standard project action you take each generation, ' +
-              'except selling patents, costs 6 M€ less.', (eb) =>
-            eb.text('FIRST').plate('Standard projects').asterix().startEffect.megacredits(-6));
+              'except selling patents, costs 5 M€ less.', (eb) =>
+            eb.text('FIRST').plate('Standard projects').asterix().startEffect.megacredits(-5));
         }),
       },
     });
@@ -39,7 +39,7 @@ export class LaborTrafficking extends Card implements IProjectCard {
   public getStandardProjectDiscount(player: IPlayer, card: IStandardProjectCard): number {
     if (card.name !== CardName.SELL_PATENTS_STANDARD_PROJECT) {
       if (this.data.generation !== player.game.generation) {
-        return 6;
+        return 5;
       }
     }
     return 0;

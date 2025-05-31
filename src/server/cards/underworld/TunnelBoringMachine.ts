@@ -11,19 +11,19 @@ export class TunnelBoringMachine extends ActionCard implements IProjectCard {
     super({
       type: CardType.ACTIVE,
       name: CardName.TUNNEL_BORING_MACHINE,
-      tags: [Tag.BUILDING],
-      cost: 10,
+      tags: [Tag.BUILDING, Tag.MARS],
+      cost: 9,
 
       action: {
-        spend: {energy: 3},
+        spend: {energy: 2},
         underworld: {excavate: 2},
       },
 
       metadata: {
         cardNumber: 'U03',
         renderData: CardRenderer.builder((b) => {
-          b.action('Pay 3 energy to excavate 2 underground resources',
-            (ab) => ab.energy(3, {digit}).startAction.excavate(2));
+          b.action('Pay 2 energy to excavate 2 underground resources',
+            (ab) => ab.energy(2, {digit}).startAction.excavate(2));
         }),
       },
     });

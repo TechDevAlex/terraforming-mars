@@ -9,7 +9,7 @@ export class Scapegoat extends Card implements IProjectCard {
     super({
       name: CardName.SCAPEGOAT,
       type: CardType.EVENT,
-      cost: 5,
+      cost: 4,
 
       behavior: {
         underworld: {corruption: 1},

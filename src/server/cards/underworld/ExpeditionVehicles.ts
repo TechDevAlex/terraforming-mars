@@ -16,7 +16,7 @@ export class ExpeditionVehicles extends Card implements IProjectCard {
       name: CardName.EXPEDITION_VEHICLES,
       type: CardType.ACTIVE,
       cost: 10,
-      tags: [Tag.SCIENCE],
+      tags: [Tag.SCIENCE, Tag.MARS],
 
       victoryPoints: 1,
 

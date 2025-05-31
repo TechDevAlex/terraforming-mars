@@ -14,7 +14,7 @@ export class GuerillaEcologists extends Card implements IProjectCard {
     super({
       type: CardType.AUTOMATED,
       name: CardName.GUERILLA_ECOLOGISTS,
-      cost: 9,
+      cost: 8,
       tags: [Tag.PLANT],
 
       requirements: {corruption: 1},

@@ -9,18 +9,18 @@ export class PlanetaryRightsBuyout extends Card implements IProjectCard {
     super({
       name: CardName.PLANETARY_RIGHTS_BUYOUT,
       type: CardType.EVENT,
-      cost: 28,
+      cost: 33,
 
       requirements: {corruption: 5},
-      behavior: {tr: 7},
-      victoryPoints: -3,
+      behavior: {tr: 10},
+      victoryPoints: -4,
 
       metadata: {
         cardNumber: 'U85',
         renderData: CardRenderer.builder((b) => {
-          b.tr(7);
+          b.tr(10);
         }),
-        description: 'Requires 5 corruption. Gain 7 TR',
+        description: 'Requires 5 corruption. Gain 10 TR',
       },
     });
   }

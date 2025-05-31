@@ -11,7 +11,7 @@ export class FabricatedScandal extends Card implements IProjectCard {
     super({
       name: CardName.FABRICATED_SCANDAL,
       type: CardType.EVENT,
-      cost: 15,
+      cost: 10,
 
       behavior: {
         underworld: {corruption: 1},

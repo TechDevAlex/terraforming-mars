@@ -11,7 +11,7 @@ export class StagedProtests extends Card implements IProjectCard {
     super({
       name: CardName.STAGED_PROTESTS,
       type: CardType.EVENT,
-      cost: 6,
+      cost: 5,
 
       requirements: {corruption: 1},
 

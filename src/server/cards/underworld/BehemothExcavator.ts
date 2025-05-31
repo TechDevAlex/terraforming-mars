@@ -3,7 +3,6 @@ import {IProjectCard} from '../IProjectCard';
 import {CardName} from '../../../common/cards/CardName';
 import {CardRenderer} from '../render/CardRenderer';
 import {Card} from '../Card';
-import {Tag} from '../../../common/cards/Tag';
 import {digit} from '../Options';
 
 export class BehemothExcavator extends Card implements IProjectCard {
@@ -11,8 +10,7 @@ export class BehemothExcavator extends Card implements IProjectCard {
     super({
       type: CardType.AUTOMATED,
       name: CardName.BEHEMOTH_EXCAVATOR,
-      tags: [Tag.BUILDING],
-      cost: 13,
+      cost: 10,
 
       behavior: {
         underworld: {excavate: 3},

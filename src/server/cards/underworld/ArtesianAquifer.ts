@@ -14,7 +14,7 @@ export class ArtesianAquifer extends Card implements IProjectCard {
       type: CardType.AUTOMATED,
       name: CardName.ARTESIAN_AQUIFER,
       tags: [Tag.BUILDING],
-      cost: 16,
+      cost: 13,
 
       metadata: {
         cardNumber: 'U59',

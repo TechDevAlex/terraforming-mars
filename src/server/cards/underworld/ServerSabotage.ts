@@ -14,7 +14,7 @@ export class ServerSabotage extends Card implements IProjectCard {
     super({
       type: CardType.EVENT,
       name: CardName.SERVER_SABOTAGE,
-      cost: 7,
+      cost: 6,
 
       behavior: {
         underworld: {corruption: 1},

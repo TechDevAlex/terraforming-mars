@@ -13,7 +13,7 @@ export class PrivateInvestigator extends Card implements IProjectCard {
     super({
       name: CardName.PRIVATE_INVESTIGATOR,
       type: CardType.EVENT,
-      cost: 8,
+      cost: 5,
       victoryPoints: 'special',
 
       behavior: {

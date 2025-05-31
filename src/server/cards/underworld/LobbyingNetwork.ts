@@ -11,7 +11,7 @@ export class LobbyingNetwork extends Card implements IProjectCard {
       type: CardType.AUTOMATED,
       name: CardName.LOBBYING_NETWORK,
       tags: [Tag.EARTH],
-      cost: 5,
+      cost: 4,
 
       behavior: {
         underworld: {corruption: 1},

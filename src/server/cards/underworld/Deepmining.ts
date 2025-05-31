@@ -13,7 +13,7 @@ export class Deepmining extends MiningCard {
   constructor() {
     super(
       CardName.DEEPMINING,
-      11,
+      9,
       {
         cardNumber: 'U29',
         renderData: CardRenderer.builder((b) => {

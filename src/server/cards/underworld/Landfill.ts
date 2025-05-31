@@ -13,9 +13,9 @@ export class Landfill extends Card implements IProjectCard {
       type: CardType.AUTOMATED,
       name: CardName.LANDFILL,
       tags: [Tag.BUILDING],
-      cost: 2,
+      cost: 3,
 
-      victoryPoints: -2,
+      victoryPoints: -1,
 
       metadata: {
         cardNumber: 'U36',

@@ -12,11 +12,11 @@ export class Whales extends Card implements IProjectCard {
     super({
       type: CardType.ACTIVE,
       name: CardName.WHALES,
-      cost: 10,
-      tags: [Tag.ANIMAL],
+      cost: 3,
+      tags: [Tag.ANIMAL, Tag.MARS],
       resourceType: CardResource.ANIMAL,
       victoryPoints: {resourcesHere: 1},
-      requirements: {oceans: 6},
+      requirements: {oceans: 8},
 
       metadata: {
         cardNumber: 'U88',
@@ -24,7 +24,7 @@ export class Whales extends Card implements IProjectCard {
           b.effect('Whenever you would gain an ocean when there are already 9 oceans on the board, add an animal to this card',
             (b) => b.oceans(1).text('(9)', Size.SMALL, true).startEffect.resource(CardResource.ANIMAL));
         }),
-        description: 'Requires 6 oceans. 1 VP for each animal on this card.',
+        description: 'Requires 8 oceans. 1 VP for each animal on this card.',
       },
     });
   }

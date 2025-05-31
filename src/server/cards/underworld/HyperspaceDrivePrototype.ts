@@ -13,7 +13,7 @@ export class HyperspaceDrivePrototype extends Card implements IProjectCard {
     super({
       type: CardType.AUTOMATED,
       name: CardName.HYPERSPACE_DRIVE_PROTOTYPE,
-      cost: 11,
+      cost: 10,
       tags: [Tag.SCIENCE, Tag.SPACE],
 
       requirements: {tag: Tag.SCIENCE, count: 3},

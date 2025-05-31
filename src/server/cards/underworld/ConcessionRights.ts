@@ -12,7 +12,7 @@ export class ConcessionRights extends Card implements IProjectCard {
     super({
       name: CardName.CONCESSION_RIGHTS,
       type: CardType.AUTOMATED,
-      cost: 8,
+      cost: 4,
       tags: [Tag.MARS],
       requirements: {tag: Tag.EARTH},
       victoryPoints: -1,

@@ -12,7 +12,7 @@ export class GeologicalSurvey extends Card implements IProjectCard {
     super({
       name: CardName.GEOLOGICAL_SURVEY_UNDERWORLD,
       type: CardType.EVENT,
-      cost: 2,
+      cost: 1,
       tags: [Tag.MARS, Tag.SCIENCE],
 
       behavior: {

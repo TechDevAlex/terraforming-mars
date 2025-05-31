@@ -18,20 +18,20 @@ export class UndergroundResearchCenter extends Card implements IProjectCard {
     super({
       type: CardType.AUTOMATED,
       name: CardName.UNDERGROUND_RESEARCH_CENTER,
-      tags: [Tag.BUILDING],
-      cost: 18,
+      tags: [Tag.BUILDING, Tag.MARS],
+      cost: 15,
 
       requirements: {excavation: 5},
 
       metadata: {
         cardNumber: 'U62',
         renderData: CardRenderer.builder((b) => {
-          b.production((pb) => pb.minus().energy(1)).excavate().cards(2).asterix();
+          b.production((pb) => pb.minus().energy(1)).excavate().cards(3).asterix();
         }),
 
         description: 'Requires 5 excavation markers. Decrease your energy production 1 step. ' +
         'Excavate an underground resource. Choose a tag that is not the wild tag or clone tag. ' +
-        'Draw 2 cards with that tag.',
+        'Draw 3 cards with that tag.',
       },
     });
   }
@@ -59,7 +59,7 @@ export class UndergroundResearchCenter extends Card implements IProjectCard {
 
     const options = tags.map((tag) => {
       return new SelectOption(tag).andThen(() => {
-        player.drawCard(2, {tag: tag});
+        player.drawCard(3, {tag: tag});
         return undefined;
       });
     });

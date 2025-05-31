@@ -11,7 +11,7 @@ export class OrbitalLaserDrill extends Card implements IProjectCard {
       type: CardType.AUTOMATED,
       name: CardName.ORBITAL_LASER_DRILL,
       tags: [Tag.SCIENCE, Tag.SPACE],
-      cost: 15,
+      cost: 12,
 
       requirements: {tag: Tag.SCIENCE, count: 2},
       victoryPoints: 1,

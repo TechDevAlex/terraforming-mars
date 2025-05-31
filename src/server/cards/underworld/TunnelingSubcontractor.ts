@@ -9,7 +9,7 @@ export class TunnelingSubcontractor extends Card implements IProjectCard {
     super({
       type: CardType.AUTOMATED,
       name: CardName.TUNNELING_SUBCONTRACTOR,
-      cost: 9,
+      cost: 8,
 
       behavior: {
         underworld: {corruption: 1, excavate: 1},

@@ -46,7 +46,7 @@ export class StarVegas extends Card {
     super({
       type: CardType.AUTOMATED,
       name: CardName.STAR_VEGAS,
-      cost: 32,
+      cost: 15,
       tags: [Tag.SPACE, Tag.CITY],
       requirements: {cities: 3, all: true},
 

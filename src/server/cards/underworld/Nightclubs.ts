@@ -10,7 +10,7 @@ export class Nightclubs extends Card implements IProjectCard {
     super({
       type: CardType.AUTOMATED,
       name: CardName.NIGHTCLUBS,
-      cost: 11,
+      cost: 9,
       tags: [Tag.BUILDING],
 
       requirements: {cities: 1},

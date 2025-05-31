@@ -13,7 +13,7 @@ export class GeologistTeam extends ActionCard implements IProjectCard {
     super({
       type: CardType.ACTIVE,
       name: CardName.GEOLOGIST_TEAM,
-      cost: 6,
+      cost: 5,
       tags: [Tag.MARS, Tag.SCIENCE],
 
       action: {

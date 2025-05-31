@@ -12,10 +12,10 @@ export class Neutrinograph extends Card implements IProjectCard {
       type: CardType.ACTIVE,
       name: CardName.NEUTRINOGRAPH,
       tags: [Tag.SCIENCE],
-      cost: 10,
+      cost: 5,
 
       requirements: {tag: Tag.SCIENCE, count: 4},
-      victoryPoints: 2,
+      victoryPoints: 1,
 
       behavior: {
         underworld: {identify: 2},

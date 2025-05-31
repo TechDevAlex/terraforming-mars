@@ -13,7 +13,7 @@ export class UndergroundShelters extends Card implements IProjectCard {
     super({
       type: CardType.AUTOMATED,
       name: CardName.UNDERGROUND_SHELTERS,
-      cost: 14,
+      cost: 12,
       tags: [Tag.MARS, Tag.BUILDING],
       victoryPoints: 'special',
 

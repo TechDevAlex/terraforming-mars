@@ -16,7 +16,6 @@ export class PatentManipulation extends Card implements IProjectCard {
       cost: 7,
 
       requirements: {corruption: 1},
-      victoryPoints: -2,
 
       metadata: {
         cardNumber: 'U26',

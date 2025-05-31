@@ -15,7 +15,7 @@ export class VoltaicMetallurgy extends Card implements IProjectCard, IActionCard
     super({
       name: CardName.VOLTAIC_METALLURGY,
       type: CardType.ACTIVE,
-      cost: 8,
+      cost: 4,
       tags: [Tag.SCIENCE, Tag.POWER],
 
       requirements: {tag: Tag.SCIENCE, count: 1},

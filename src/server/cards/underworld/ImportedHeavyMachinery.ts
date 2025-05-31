@@ -11,7 +11,7 @@ export class ImportedHeavyMachinery extends Card implements IProjectCard {
       type: CardType.AUTOMATED,
       name: CardName.IMPORTED_HEAVY_MACHINERY,
       tags: [Tag.EARTH, Tag.SPACE],
-      cost: 9,
+      cost: 6,
 
       behavior: {
         underworld: {excavate: 2},

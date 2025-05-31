@@ -19,7 +19,7 @@ export class Microgravimetry extends Card implements IProjectCard {
       tags: [Tag.POWER, Tag.SCIENCE],
       cost: 5,
       resourceType: CardResource.DATA,
-      victoryPoints: {resourcesHere: {}, per: 4},
+      victoryPoints: {resourcesHere: {}, per: 3},
 
       metadata: {
         cardNumber: 'U42',

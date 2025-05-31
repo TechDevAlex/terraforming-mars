@@ -14,7 +14,7 @@ export class StemFieldSubsidies extends Card implements IProjectCard {
     super({
       type: CardType.ACTIVE,
       name: CardName.STEM_FIELD_SUBSIDIES,
-      cost: 10,
+      cost: 4,
       tags: [Tag.SCIENCE],
       victoryPoints: {resourcesHere: {}, per: 3},
       resourceType: CardResource.DATA,

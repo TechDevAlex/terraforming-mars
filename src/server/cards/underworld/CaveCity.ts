@@ -12,7 +12,7 @@ export class CaveCity extends Card implements IProjectCard {
     super({
       name: CardName.CAVE_CITY,
       type: CardType.AUTOMATED,
-      cost: 14,
+      cost: 13,
       tags: [Tag.MARS, Tag.BUILDING, Tag.CITY],
 
       requirements: {excavation: 1},

@@ -13,7 +13,7 @@ export class ThiolavaVents extends Card implements IProjectCard {
     super({
       type: CardType.ACTIVE,
       name: CardName.THIOLAVA_VENTS,
-      cost: 13,
+      cost: 12,
       tags: [Tag.MICROBE],
       resourceType: CardResource.MICROBE,
 

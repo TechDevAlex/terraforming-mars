@@ -13,7 +13,7 @@ export class SubterraneanSea extends Card implements IProjectCard {
       name: CardName.SUBTERRANEAN_SEA,
       type: CardType.AUTOMATED,
       cost: 10,
-      tags: [Tag.BUILDING],
+      tags: [Tag.BUILDING, Tag.MARS],
 
       tr: {oceans: 1},
 

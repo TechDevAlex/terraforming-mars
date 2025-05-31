@@ -13,9 +13,9 @@ export class Monopoly extends Card implements IProjectCard {
     super({
       type: CardType.EVENT,
       name: CardName.MONOPOLY,
-      cost: 12,
+      cost: 7,
       requirements: {corruption: 3},
-      victoryPoints: -2,
+      victoryPoints: -1,
 
       metadata: {
         cardNumber: 'U65',

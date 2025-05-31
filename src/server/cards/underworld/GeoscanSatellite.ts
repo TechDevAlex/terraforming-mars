@@ -14,7 +14,7 @@ export class GeoscanSatellite extends Card implements IProjectCard {
     super({
       type: CardType.AUTOMATED,
       name: CardName.GEOSCAN_SATELLITE,
-      cost: 6,
+      cost: 4,
       tags: [Tag.SCIENCE, Tag.SPACE],
 
       behavior: {

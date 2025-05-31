@@ -12,7 +12,7 @@ export class UndergroundRailway extends Card implements IProjectCard {
       type: CardType.AUTOMATED,
       name: CardName.UNDERGROUND_RAILWAY,
       cost: 12,
-      tags: [Tag.BUILDING],
+      tags: [Tag.BUILDING,Tag.MARS],
 
       behavior: {
         production: {energy: -1},
