@@ -19,7 +19,7 @@ export class HabitatMarte extends CorporationCard {
 
       metadata: {
         cardNumber: 'PfC22',
-        description: 'You start with 46 M€, draw 1 card with a Mars tag.',
+        description: 'You start with 46 M€, draw 1 card with a Mars tag (not including this).',
         renderData: CardRenderer.builder((b) => {
           b.megacredits(46).nbsp.cards(1, {secondaryTag: Tag.MARS});
           b.corpBox('effect', (ce) => {
