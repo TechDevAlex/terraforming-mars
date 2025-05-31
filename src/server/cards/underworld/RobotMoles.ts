@@ -25,7 +25,7 @@ export class RobotMoles extends ActionCard implements IProjectCard {
       metadata: {
         cardNumber: 'U45',
         renderData: CardRenderer.builder((b) => {
-          b.action('Spend 1 steel to add 1 data to this card and identify 2 underground resources.',
+          b.action('Spend 1 steel to add 2 data to this card and identify 1 underground resources.',
             (ab) => ab.steel(1).startAction.resource(CardResource.DATA).resource(CardResource.DATA).identify(1));
         }),
         description: '1 VP per 3 data resources on this card.',
