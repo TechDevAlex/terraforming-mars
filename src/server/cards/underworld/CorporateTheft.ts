@@ -7,7 +7,7 @@ import {IPlayer} from '../../IPlayer';
 import {RemoveResourcesFromCard} from '../../deferredActions/RemoveResourcesFromCard';
 import {UnderworldExpansion} from '../../underworld/UnderworldExpansion';
 import {AddResourcesToCard} from '../../deferredActions/AddResourcesToCard';
-import { Tag } from '@/common/cards/Tag';
+import {Tag} from '../../../common/cards/Tag';
 
 export class CorporateTheft extends Card implements IProjectCard {
   constructor() {
