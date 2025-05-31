@@ -10,8 +10,8 @@ export class InterstellarColonyShip extends Card implements IProjectCard {
       type: CardType.EVENT,
       name: CardName.INTERSTELLAR_COLONY_SHIP,
       tags: [Tag.EARTH, Tag.SPACE],
-      cost: 24,
-      victoryPoints: 4,
+      cost: 26,
+      victoryPoints: 5,
 
       requirements: {tag: Tag.SCIENCE, count: 5},
       metadata: {

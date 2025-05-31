@@ -10,22 +10,22 @@ import {SelectPaymentDeferred} from '../../deferredActions/SelectPaymentDeferred
 import {CardRenderer} from '../render/CardRenderer';
 import {TITLES} from '../../inputs/titles';
 
-const ACTION_COST = 9;
+const ACTION_COST = 7;
 export class WaterImportFromEuropa extends Card implements IActionCard, IProjectCard {
   constructor() {
     super({
       type: CardType.ACTIVE,
       name: CardName.WATER_IMPORT_FROM_EUROPA,
       tags: [Tag.JOVIAN, Tag.SPACE],
-      cost: 16,
+      cost: 17,
 
       victoryPoints: {tag: Tag.JOVIAN, per: 2},
 
       metadata: {
         cardNumber: '012',
         renderData: CardRenderer.builder((b) => {
-          b.action('Pay 9 M€ to place an ocean tile. TITANIUM MAY BE USED as if playing a space card.', (eb) => {
-            eb.megacredits(9).super((b) => b.titanium(1)).startAction.oceans(1);
+          b.action('Pay 7 M€ to place an ocean tile. TITANIUM MAY BE USED as if playing a space card.', (eb) => {
+            eb.megacredits(7).super((b) => b.titanium(1)).startAction.oceans(1);
           }).br;
           b.vpText('1 VP for each 2 Jovian tags you have.');
         }),

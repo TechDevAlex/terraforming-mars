@@ -14,7 +14,7 @@ export class EconomicEspionage extends ActionCard implements IProjectCard {
       cost: 4,
       tags: [Tag.EARTH],
       resourceType: CardResource.DATA,
-      victoryPoints: {resourcesHere: {}, per: 3},
+      victoryPoints: {resourcesHere: {}, per: 2},
 
       action: {
         spend: {megacredits: 2},
@@ -28,7 +28,7 @@ export class EconomicEspionage extends ActionCard implements IProjectCard {
             eb.megacredits(2).startAction.resource(CardResource.DATA).asterix();
           }).br;
         }),
-        description: '1VP for every 3 data here.',
+        description: '1VP for every 2 data here.',
       },
     });
   }

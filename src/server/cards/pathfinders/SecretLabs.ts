@@ -28,13 +28,13 @@ export class SecretLabs extends Card implements IProjectCard {
       metadata: {
         cardNumber: 'Pf26',
         renderData: CardRenderer.builder((b) => {
-          b.oceans(1).resource(CardResource.MICROBE, {amount: 2, digit}).asterix().or().temperature(1).br;
-          b.plants(3, {digit}).or().oxygen(1).resource(CardResource.FLOATER, {amount: 2, digit}).asterix().br;
+          b.oceans(1).resource(CardResource.MICROBE, {amount: 3, digit}).asterix().or().temperature(1).br;
+          b.plants(4, {digit}).or().oxygen(1).resource(CardResource.FLOATER, {amount: 3, digit}).asterix().br;
         }),
         description: 'Requires 1 science tag and 1 Jovian tag. ' +
-          'Place an ocean tile. Add 2 microbes to ANY card. ' +
-          'OR Raise temperature 1 step. Gain 3 plants. ' +
-          'OR Raise oxygen level 1 step. Add 2 floaters to ANY card.',
+          'Place an ocean tile. Add 3 microbes to ANY card. ' +
+          'OR Raise temperature 1 step. Gain 4 plants. ' +
+          'OR Raise oxygen level 1 step. Add 3 floaters to ANY card.',
       },
     });
   }

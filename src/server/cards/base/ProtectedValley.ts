@@ -11,7 +11,7 @@ export class ProtectedValley extends Card implements IProjectCard {
       type: CardType.AUTOMATED,
       name: CardName.PROTECTED_VALLEY,
       tags: [Tag.PLANT, Tag.BUILDING],
-      cost: 21,
+      cost: 20,
 
       behavior: {
         production: {megacredits: 2},

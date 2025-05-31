@@ -13,7 +13,7 @@ export class DustStorm extends Card implements IProjectCard {
     super({
       type: CardType.EVENT,
       name: CardName.DUST_STORM,
-      cost: 16,
+      cost: 15,
       tags: [Tag.MARS],
 
       behavior: {

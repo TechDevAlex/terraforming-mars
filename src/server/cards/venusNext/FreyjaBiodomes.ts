@@ -27,11 +27,11 @@ export class FreyjaBiodomes extends Card implements IProjectCard {
       metadata: {
         cardNumber: '227',
         renderData: CardRenderer.builder((b) => {
-          b.resource(CardResource.MICROBE, {amount: 2, secondaryTag: Tag.VENUS}).or().resource(CardResource.ANIMAL, {amount: 2, secondaryTag: Tag.VENUS}).br;
+          b.resource(CardResource.MICROBE, {amount: 2}).or().resource(CardResource.ANIMAL, {amount: 2}).br;
           b.production((pb) => pb.minus().energy(1).nbsp.plus().megacredits(2));
         }),
         description: {
-          text: 'Requires 10% on the Venus track. Add 2 microbes or 2 animals to another Venus card. Production: energy -1, M€ +2.',
+          text: 'Requires 10% on the Venus track. Add 2 microbes or 2 animals to another card. Production: energy -1, M€ +2.',
           align: 'left',
         },
       },
@@ -40,7 +40,7 @@ export class FreyjaBiodomes extends Card implements IProjectCard {
   public getResCards(player: IPlayer): ICard[] {
     let resourceCards = player.getResourceCards(CardResource.ANIMAL);
     resourceCards = resourceCards.concat(player.getResourceCards(CardResource.MICROBE));
-    return resourceCards.filter((card) => card.tags.includes(Tag.VENUS));
+    return resourceCards;
   }
 
   public override bespokePlay(player: IPlayer) {

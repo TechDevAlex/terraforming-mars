@@ -11,7 +11,7 @@ export class JovianEmbassy extends Card implements IProjectCard {
       type: CardType.AUTOMATED,
       name: CardName.JOVIAN_EMBASSY,
       tags: [Tag.JOVIAN, Tag.BUILDING],
-      cost: 22,
+      cost: 20,
       victoryPoints: {tag: Tag.JOVIAN, per: 2},
 
       behavior: {

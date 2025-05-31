@@ -11,7 +11,7 @@ export class CorroderSuits extends Card implements IProjectCard {
       name: CardName.CORRODER_SUITS,
       type: CardType.AUTOMATED,
       tags: [Tag.VENUS],
-      cost: 8,
+      cost: 7,
 
       behavior: {
         production: {megacredits: 2},

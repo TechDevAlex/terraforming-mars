@@ -17,13 +17,13 @@ export class Worms extends Card implements IProjectCard {
         production: {plants: {tag: Tag.MICROBE, per: 2}},
       },
 
-      requirements: {oxygen: 2},
+      requirements: {oxygen: 4},
       metadata: {
         cardNumber: '130',
         renderData: CardRenderer.builder((b) => {
           b.production((pb) => pb.plants(1).slash().tag(Tag.MICROBE, 2));
         }),
-        description: '2% Oxygen. 1 Plantprod/2microbe tags, including this.',
+        description: '4% Oxygen. 1 Plantprod/2microbe tags, including this.',
       },
     });
   }

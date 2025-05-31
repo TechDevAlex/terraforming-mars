@@ -16,15 +16,15 @@ export class ThinkTank extends ActionCard {
       resourceType: CardResource.DATA,
 
       action: {
-        spend: {megacredits: 2},
+        spend: {megacredits: 1},
         addResourcesToAnyCard: {count: 1, type: CardResource.DATA},
       },
 
       metadata: {
         cardNumber: 'Pf49',
         renderData: CardRenderer.builder((b) => {
-          b.action('Spend 2 M€ to place 1 data on any card.', (ab) => {
-            ab.megacredits(2).startAction.resource(CardResource.DATA).asterix();
+          b.action('Spend 1 M€ to place 1 data on any card.', (ab) => {
+            ab.megacredits(1).startAction.resource(CardResource.DATA).asterix();
           }).br;
           b.effect(
             'When playing a card, you can remove data from this card to ' +

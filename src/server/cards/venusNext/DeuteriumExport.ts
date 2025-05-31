@@ -12,7 +12,7 @@ export class DeuteriumExport extends ActionCard {
       name: CardName.DEUTERIUM_EXPORT,
       type: CardType.ACTIVE,
       tags: [Tag.SPACE, Tag.VENUS, Tag.POWER],
-      cost: 11,
+      cost: 10,
       resourceType: CardResource.FLOATER,
 
       action: {
@@ -24,16 +24,17 @@ export class DeuteriumExport extends ActionCard {
             production: {energy: 1},
           },
           {
-            title: 'Add 1 floater to this card',
-            addResources: 1,
-          }],
+            title: 'Add 1 floater to any card',
+            addResourcesToAnyCard: {count: 1, type: CardResource.FLOATER, mustHaveCard: true},
+          },
+          ],
         },
       },
 
       metadata: {
         cardNumber: '221',
         renderData: CardRenderer.builder((b) => {
-          b.action('Add 1 floater to this card.', (eb) => {
+          b.action('Add 1 floater to any card.', (eb) => {
             eb.empty().startAction.resource(CardResource.FLOATER);
           }).br;
           b.or(Size.SMALL).br;

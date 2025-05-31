@@ -19,7 +19,7 @@ export class Atmoscoop extends Card implements IProjectCard {
     super({
       type: CardType.AUTOMATED,
       name: CardName.ATMOSCOOP,
-      cost: 22,
+      cost: 18,
       tags: [Tag.JOVIAN, Tag.SPACE],
 
       requirements: {tag: Tag.SCIENCE, count: 3},

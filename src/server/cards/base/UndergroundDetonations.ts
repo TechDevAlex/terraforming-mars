@@ -11,10 +11,10 @@ export class UndergroundDetonations extends ActionCard implements IProjectCard {
       type: CardType.ACTIVE,
       name: CardName.UNDERGROUND_DETONATIONS,
       tags: [Tag.BUILDING],
-      cost: 10,
+      cost: 12,
 
       action: {
-        spend: {megacredits: 5},
+        spend: {megacredits: 3},
         production: {heat: 3},
       },
 
@@ -22,7 +22,7 @@ export class UndergroundDetonations extends ActionCard implements IProjectCard {
         cardNumber: '202',
         renderData: CardRenderer.builder((b) => {
           b.action('Spend 5M€ to increase your heat production 3 steps.', (eb) => {
-            eb.megacredits(5).startAction.production((pb)=>pb.heat(3));
+            eb.megacredits(3).startAction.production((pb)=>pb.heat(3));
           });
         }),
       },

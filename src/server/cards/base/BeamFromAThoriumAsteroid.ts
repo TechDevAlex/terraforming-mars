@@ -12,8 +12,8 @@ export class BeamFromAThoriumAsteroid extends Card implements IProjectCard {
       type: CardType.AUTOMATED,
       name: CardName.BEAM_FROM_A_THORIUM_ASTEROID,
       tags: [Tag.JOVIAN, Tag.SPACE, Tag.POWER],
-      cost: 24,
-      victoryPoints: {tag: Tag.JOVIAN, per: 3},
+      cost: 22,
+      victoryPoints: {tag: Tag.JOVIAN, per: 2},
 
 
       behavior: {

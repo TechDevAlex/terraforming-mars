@@ -19,18 +19,18 @@ export class CeresSpaceport extends Card implements IProjectCard {
         drawCard: 1,
         ocean: {},
         city: {space: SpaceName.CERES_SPACEPORT},
-        production: {megacredits: 2, titanium: {tag: Tag.JOVIAN, per: 2}},
+        production: {megacredits: 4, titanium: {tag: Tag.JOVIAN, per: 2}},
       },
 
       metadata: {
         cardNumber: 'Pf14',
         renderData: CardRenderer.builder((b) => {
-          b.production((pb) => pb.megacredits(2))
+          b.production((pb) => pb.megacredits(4))
             .production((pb) => pb.titanium(1).slash().tag(Tag.JOVIAN, 2))
             .br
             .cards(1).oceans(1).city().asterix().br;
         }),
-        description: 'Increase your M€ production 2 steps, and titanium production 1 step for every 2 Jovian tags (including these.) ' +
+        description: 'Increase your M€ production 4 steps, and titanium production 1 step for every 2 Jovian tags (including these.) ' +
           'Draw a card. Place an ocean tile. Place a city tile ON THE RESERVED AREA.',
       },
     });

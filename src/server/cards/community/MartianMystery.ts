@@ -16,7 +16,7 @@ export class MartianMystery extends Card implements IProjectCard {
     super({
       type: CardType.AUTOMATED,
       name: CardName.MARTIAN_MYSTERY,
-      cost: 16,
+      cost: 13,
       tags: [Tag.WILD],
       requirements: [{tag: Tag.BUILDING}, {tag: Tag.MICROBE}, {tag: Tag.POWER}, {tag: Tag.SCIENCE}, {tag: Tag.SPACE}],
 

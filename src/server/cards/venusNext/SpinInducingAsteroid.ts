@@ -11,8 +11,8 @@ export class SpinInducingAsteroid extends Card implements IProjectCard {
     super({
       type: CardType.EVENT,
       name: CardName.SPIN_INDUCING_ASTEROID,
-      cost: 16,
-      tags: [Tag.SPACE],
+      cost: 15,
+      tags: [Tag.SPACE, Tag.VENUS],
 
       behavior: {
         global: {venus: 2},

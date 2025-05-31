@@ -12,7 +12,7 @@ export class Dirigibles extends ActionCard implements IActionCard {
       name: CardName.DIRIGIBLES,
       type: CardType.ACTIVE,
       tags: [Tag.VENUS],
-      cost: 11,
+      cost: 10,
       resourceType: CardResource.FLOATER,
 
       action: {

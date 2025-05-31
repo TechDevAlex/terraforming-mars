@@ -17,7 +17,7 @@ export class TerralabsResearch extends CorporationCard {
         description: 'You start with 20 M€. Lower your TR 0 steps xD.',
         renderData: CardRenderer.builder((b) => {
           b.br;
-          b.megacredits(14).nbsp.minus().tr(0);
+          b.megacredits(20).nbsp.minus().tr(0);
           b.corpBox('effect', (ce) => {
             ce.effect('Buying cards to hand costs 1 M€.', (eb) => {
               eb.cards(1).startEffect.megacredits(1);

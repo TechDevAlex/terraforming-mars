@@ -12,16 +12,16 @@ export class CaretakerContract extends ActionCard {
       requirements: {temperature: -20},
 
       action: {
-        spend: {heat: 8},
+        spend: {heat: 6},
         tr: 1,
       },
 
       metadata: {
         cardNumber: '154',
-        description: 'Stall the heat track by converting 8 heat into a TR',
+        description: 'Stall the heat track by converting 6 heat into a TR',
         renderData: CardRenderer.builder((b) => {
-          b.action('Spend 8 heat to increase your terraform rating 1 step.', (eb) => {
-            eb.heat(8).startAction.tr(1);
+          b.action('Spend 6 heat to increase your terraform rating 1 step.', (eb) => {
+            eb.heat(6).startAction.tr(1);
           });
         }),
       },

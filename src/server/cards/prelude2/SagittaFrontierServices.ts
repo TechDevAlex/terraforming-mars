@@ -25,11 +25,11 @@ export class SagittaFrontierServices extends CorporationCard {
         hasExternalHelp: true,
         renderData: CardRenderer.builder((b) => {
           // TODO(kberg): provide reasonable secondary tag. It's not rendered on CardRenderItemComponent.
-          b.megacredits(29).production((pb) => pb.energy(1).megacredits(2)).cards(1, {secondaryTag: AltSecondaryTag.NO_TAGS}).br;
+          b.megacredits(29).production((pb) => pb.energy(1).megacredits(2)).cards(2, {secondaryTag: AltSecondaryTag.NO_TAGS}).br;
           b.effect('When you play a card with no tags, including this, gain 4 M€.', (eb) => eb.noTags().startEffect.megacredits(4)).br;
           b.effect('When you play a card with EXACTLY 1 TAG, you gain 1 M€.', (eb) => eb.emptyTag().asterix().startEffect.megacredits(1)).br;
         }),
-        description: 'You start with 29 M€. Increase energy production 1 step and M€ production 2 steps. Draw a card that has no tag.',
+        description: 'You start with 29 M€. Increase energy production 1 step and M€ production 2 steps. Draw 2 cards that have no tags.',
       },
     });
   }
@@ -39,7 +39,7 @@ export class SagittaFrontierServices extends CorporationCard {
     player.stock.megacredits += 4;
     player.game.log('${0} gained 4 M€ for playing a card with no tags.', (b) => b.player(player));
 
-    player.drawCard(1, {include: (c) => c.tags.length === 0 && c.type !== CardType.EVENT});
+    player.drawCard(2, {include: (c) => c.tags.length === 0 && c.type !== CardType.EVENT});
     return undefined;
   }
 

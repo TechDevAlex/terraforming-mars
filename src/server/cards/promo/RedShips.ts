@@ -13,9 +13,9 @@ export class RedShips extends Card implements IActionCard {
     super({
       type: CardType.ACTIVE,
       name: CardName.RED_SHIPS,
-      cost: 2,
+      cost: 5,
 
-      requirements: {oxygen: 4},
+      requirements: {oxygen: 8},
 
       metadata: {
         cardNumber: 'X62',
