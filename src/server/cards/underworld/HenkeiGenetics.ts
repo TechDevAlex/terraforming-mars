@@ -14,7 +14,7 @@ export class HenkeiGenetics extends ActiveCorporationCard {
       startingMegaCredits: 47,
 
       behavior: {
-        underworld: {corruption: 1},
+        underworld: {corruption: 3},
       },
 
       action: {
@@ -24,14 +24,14 @@ export class HenkeiGenetics extends ActiveCorporationCard {
 
       metadata: {
         cardNumber: 'UC04',
-        description: 'You start with 47 M€ and 1 corruption.',
+        description: 'You start with 47 M€ and 3 corruption.',
         renderData: CardRenderer.builder((b) => {
           b.megacredits(47).corruption(1).br;
           b.effect('After you play a microbe card that can hold microbes, add 2 microbes to it.', (eb) => {
             eb.tag(Tag.MICROBE).startEffect.resource(CardResource.MICROBE, 2);
           }).br;
           b.action('Pay 1 corruption to draw a card with a microbe tag.', (ab) => {
-            ab.corruption(1).startAction.cards(1, {secondaryTag: Tag.MICROBE});
+            ab.corruption(3).startAction.cards(1, {secondaryTag: Tag.MICROBE});
           });
         }),
       },

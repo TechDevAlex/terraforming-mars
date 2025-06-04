@@ -15,7 +15,7 @@ export class AeronGenomics extends ActiveCorporationCard {
     super({
       name: CardName.AERON_GENOMICS,
       tags: [Tag.ANIMAL],
-      startingMegaCredits: 35,
+      startingMegaCredits: 45,
       resourceType: CardResource.ANIMAL,
 
       victoryPoints: {resourcesHere: {}, per: 3},
@@ -27,9 +27,9 @@ export class AeronGenomics extends ActiveCorporationCard {
 
       metadata: {
         cardNumber: 'UC07',
-        description: 'You start with 35 M€, 5 steel, and 1 animal resource on this card. 1 VP per 3 animals on this card.',
+        description: 'You start with 45 M€, 5 steel, and 1 animal resource on this card. 1 VP per 3 animals on this card.',
         renderData: CardRenderer.builder((b) => {
-          b.megacredits(35).steel(5, {digit}).resource(CardResource.ANIMAL).br;
+          b.megacredits(45).steel(5, {digit}).resource(CardResource.ANIMAL).br;
           b.effect('After you excavate an underground resource, put an animal on this card.', (eb) => {
             eb.excavate(1).startEffect.resource(CardResource.ANIMAL);
           }).br;

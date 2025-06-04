@@ -12,7 +12,7 @@ export class JensonBoyleCo extends ActiveCorporationCard {
       startingMegaCredits: 46,
 
       behavior: {
-        underworld: {corruption: 2},
+        underworld: {corruption: 3},
       },
 
       action: {
@@ -44,9 +44,9 @@ export class JensonBoyleCo extends ActiveCorporationCard {
 
       metadata: {
         cardNumber: 'UC03',
-        description: 'You start with 46 M€ and 2 corruption.',
+        description: 'You start with 46 M€ and 3 corruption.',
         renderData: CardRenderer.builder((b) => {
-          b.megacredits(46).corruption(2).br.br;
+          b.megacredits(46).corruption(3).br.br;
           b.corruption(1).arrow()
             .steel(4, {digit}).or()
             .titanium(3, {digit}).br;

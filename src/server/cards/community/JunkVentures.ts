@@ -9,17 +9,17 @@ export class JunkVentures extends CorporationCard {
   constructor() {
     super({
       name: CardName.JUNK_VENTURES,
-      initialActionText: 'Discard the top 3 cards of the deck',
-      startingMegaCredits: 45,
+      initialActionText: 'Discard the top 5 cards of the deck',
+      startingMegaCredits: 43,
 
       metadata: {
         cardNumber: 'R49',
-        description: 'You start with 45 M€. As your first action, discard the top 3 cards of the deck.',
+        description: 'You start with 43 M€. As your first action, discard the top 5 cards of the deck.',
         renderData: CardRenderer.builder((b) => {
           b.br.br;
-          b.megacredits(45).text('DECK: ').minus().cards(3);
+          b.megacredits(43).text('DECK: ').minus().cards(5);
           b.corpBox('action', (cb) => {
-            cb.text('ACTION: SHUFFLE THE DISCARD PILE, THEN DRAW 3 CARDS FROM IT. KEEP 1 AND DISCARD THE OTHER 2.', Size.SMALL, true);
+            cb.text('ACTION: SHUFFLE THE DISCARD PILE, THEN DRAW 5 CARDS FROM IT. KEEP 1 AND DISCARD THE OTHER 2.', Size.SMALL, true);
           });
         }),
       },
@@ -27,7 +27,7 @@ export class JunkVentures extends CorporationCard {
   }
 
   public initialAction(player: IPlayer) {
-    const cards = player.game.projectDeck.drawN(player.game, 3);
+    const cards = player.game.projectDeck.drawN(player.game, 5);
     for (const card of cards) {
       player.game.projectDeck.discard(card);
     }
@@ -35,7 +35,7 @@ export class JunkVentures extends CorporationCard {
   }
 
   public canAct(player: IPlayer): boolean {
-    return player.game.projectDeck.discardPile.length >= 3;
+    return player.game.projectDeck.discardPile.length >= 5;
   }
 
   public action(player: IPlayer) {
@@ -43,7 +43,7 @@ export class JunkVentures extends CorporationCard {
     game.projectDeck.shuffleDiscardPile();
 
     const cards = [];
-    for (let idx = 0; idx < 3; idx++) {
+    for (let idx = 0; idx < 5; idx++) {
       const card = player.game.projectDeck.discardPile.pop();
       if (card === undefined) {
         break;

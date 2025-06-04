@@ -18,7 +18,7 @@ export class TheGrandLunaCapitalGroup extends CorporationCard {
     super({
       name: CardName.THE_GRAND_LUNA_CAPITAL_GROUP,
       tags: [Tag.CITY, Tag.MOON],
-      startingMegaCredits: 38,
+      startingMegaCredits: 41,
       victoryPoints: 'special',
 
       behavior: {
@@ -32,12 +32,12 @@ export class TheGrandLunaCapitalGroup extends CorporationCard {
 
       metadata: {
         description: {
-          text: 'You start with 38 M€ and 2 titanium. As your first action, place a habitat tile on The Moon and raise the habitat rate 1 step.',
+          text: 'You start with 41 M€ and 2 titanium. As your first action, place a habitat tile on The Moon and raise the habitat rate 1 step.',
           align: 'left',
         },
         cardNumber: 'MC7',
         renderData: CardRenderer.builder((b) => {
-          b.megacredits(38).titanium(2).moonHabitat({secondaryTag: AltSecondaryTag.MOON_HABITAT_RATE}).br;
+          b.megacredits(41).titanium(2).moonHabitat({secondaryTag: AltSecondaryTag.MOON_HABITAT_RATE}).br;
           b.effect('When you place a habitat tile, gain 3 M€ for each adjacent habitat tile.', (eb) => {
             eb.moonHabitat({size: Size.SMALL, all}).moonHabitat({size: Size.SMALL}).asterix()
               .startEffect
