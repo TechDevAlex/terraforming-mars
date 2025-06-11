@@ -11,7 +11,7 @@ export class PreservationProgram extends PreludeCard {
       name: CardName.PRESERVATION_PROGRAM,
 
       behavior: {
-        tr: 5,
+        tr: 8,
       },
 
       metadata: {
@@ -20,9 +20,9 @@ export class PreservationProgram extends PreludeCard {
           b.effect('SKIP THE FIRST TR YOU GAIN IN EACH GENERATION\'S ACTION PHASE.', (eb) => {
             eb.empty().startEffect.tr(1, {size: Size.SMALL, cancelled});
           }).br;
-          b.tr(5, {digit});
+          b.tr(8, {digit});
         }),
-        description: 'Raise your TR 5 steps.',
+        description: 'Raise your TR 8 steps.',
       },
     });
   }
