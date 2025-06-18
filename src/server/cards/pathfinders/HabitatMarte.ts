@@ -10,7 +10,7 @@ export class HabitatMarte extends CorporationCard {
     super({
       name: CardName.HABITAT_MARTE,
       tags: [Tag.MARS],
-      startingMegaCredits: 30,
+      startingMegaCredits: 36,
 
       firstAction: {
         text: 'When you play a Mars Tag (not including this one), draw a card with a Mars Tag (per tag), enjoy milling.',
@@ -19,9 +19,9 @@ export class HabitatMarte extends CorporationCard {
 
       metadata: {
         cardNumber: 'PfC22',
-        description: 'You start with 30 M€, draw 1 card with a Mars tag (not including this).',
+        description: 'You start with 36 M€, draw 1 card with a Mars tag (not including this).',
         renderData: CardRenderer.builder((b) => {
-          b.megacredits(30).nbsp.cards(1, {secondaryTag: Tag.MARS});
+          b.megacredits(36).nbsp.cards(1, {secondaryTag: Tag.MARS});
           b.corpBox('effect', (ce) => {
             ce.effect('Mars tags draw more mars tags.', (eb) => {
               eb.tag(Tag.MARS).startEffect.tag(Tag.MARS);
