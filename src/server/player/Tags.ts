@@ -106,12 +106,7 @@ export class Tags {
   public cardHasTag(card: ICard, target: Tag): boolean {
     for (const tag of card.tags) {
       if (tag === target) return true;
-      if (tag === Tag.MARS &&
-        target === Tag.SCIENCE &&
-        this.player.isCorporation(CardName.HABITAT_MARTE)) {
-        return true;
       }
-    }
     if (target === Tag.EVENT && card.type === CardType.EVENT) {
       return true;
     }
@@ -125,9 +120,6 @@ export class Tags {
       if (tag === target) {
         count++;
       } else if (Array.isArray(target) && target.includes(tag)) {
-        count++;
-      } else if (tag === Tag.MARS && target === Tag.SCIENCE &&
-        this.player.isCorporation(CardName.HABITAT_MARTE)) {
         count++;
       }
     }
