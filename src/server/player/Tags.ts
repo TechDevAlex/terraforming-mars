@@ -85,13 +85,6 @@ export class Tags {
       }
     }
 
-    // Habitat Marte hook
-    if (mode !== 'raw') {
-      if (tag === Tag.SCIENCE && this.player.isCorporation(CardName.HABITAT_MARTE)) {
-        tagCount += this.rawCount(Tag.MARS, includeEvents);
-      }
-    }
-
     // Chimera hook
     if (this.player.isCorporation(CardName.CHIMERA)) {
       // Awards do not count wild tags, so in this case one will be added.
