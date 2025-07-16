@@ -16,10 +16,10 @@ export class Loan extends PreludeCard implements IProjectCard {
       metadata: {
         cardNumber: 'P17',
         renderData: CardRenderer.builder((b) => {
-          b.production((pb) => pb.minus().megacredits(2)).br;
-          b.megacredits(30);
+          b.production((pb) => pb.minus().megacredits(3)).br;
+          b.megacredits(39);
         }),
-        description: 'Gain 30 M€. Decrease your M€ production 2 steps.',
+        description: 'Gain 39 M€. Decrease your M€ production 3 steps.',
       },
     });
   }
