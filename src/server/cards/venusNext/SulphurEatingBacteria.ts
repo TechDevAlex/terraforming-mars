@@ -16,7 +16,7 @@ export class SulphurEatingBacteria extends Card implements IActionCard {
       name: CardName.SULPHUR_EATING_BACTERIA,
       type: CardType.ACTIVE,
       tags: [Tag.VENUS, Tag.MICROBE],
-      cost: 6,
+      cost: 4,
       resourceType: CardResource.MICROBE,
 
       requirements: {venus: 6},
@@ -28,7 +28,7 @@ export class SulphurEatingBacteria extends Card implements IActionCard {
           }).br;
           b.or().br;
           b.action('Spend any number of microbes here to gain triple amount of M€.', (eb) => {
-            eb.text('x').resource(CardResource.MICROBE).startAction.megacredits(1, {text: '3x'});
+            eb.text('x').resource(CardResource.MICROBE).startAction.megacredits(1, {text: '2x'});
           });
         }),
         description: 'Requires Venus 6%',
@@ -45,7 +45,7 @@ export class SulphurEatingBacteria extends Card implements IActionCard {
       player.addResourceTo(this, {log: true});
       return undefined;
     });
-    const spendResource = new SelectAmount('Remove any number of microbes to gain 3 M€ per microbe removed', 'Remove microbes', 1, this.resourceCount, true)
+    const spendResource = new SelectAmount('Remove any number of microbes to gain 2 M€ per microbe removed', 'Remove microbes', 1, this.resourceCount, true)
       .andThen((amount) => this.spendResource(player, amount));
 
     opts.push(addResource);
@@ -63,7 +63,7 @@ export class SulphurEatingBacteria extends Card implements IActionCard {
   private spendResource(player: IPlayer, amount: number) {
     player.removeResourceFrom(this, amount, {log: false});
 
-    const megaCreditsGained = 3 * amount;
+    const megaCreditsGained = 2 * amount;
     player.megaCredits += megaCreditsGained;
 
     player.game.log('${0} removed ${1} microbes from ${2} to gain ${3} M€', (b) =>

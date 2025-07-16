@@ -11,7 +11,7 @@ export class ControlledBloom extends Card implements IProjectCard {
     super({
       type: CardType.EVENT,
       name: CardName.CONTROLLED_BLOOM,
-      cost: 13,
+      cost: 10,
       tags: [Tag.MICROBE, Tag.PLANT],
       victoryPoints: 1,
 
