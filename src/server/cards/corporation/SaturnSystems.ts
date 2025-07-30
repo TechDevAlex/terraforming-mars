@@ -13,7 +13,7 @@ export class SaturnSystems extends CorporationCard {
     super({
       name: CardName.SATURN_SYSTEMS,
       tags: [Tag.JOVIAN],
-      startingMegaCredits: 40,
+      startingMegaCredits: 44,
 
       behavior: {
         // The 1MC is for the card effect related to itself.

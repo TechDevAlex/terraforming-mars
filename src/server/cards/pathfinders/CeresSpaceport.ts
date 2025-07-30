@@ -12,7 +12,7 @@ export class CeresSpaceport extends Card implements IProjectCard {
       type: CardType.AUTOMATED,
       name: CardName.CERES_SPACEPORT,
       tags: [Tag.JOVIAN, Tag.JOVIAN, Tag.CITY, Tag.SPACE],
-      cost: 36,
+      cost: 34,
       victoryPoints: 1,
 
       behavior: {
