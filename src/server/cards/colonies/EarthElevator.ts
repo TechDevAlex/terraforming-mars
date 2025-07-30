@@ -22,7 +22,7 @@ export class EarthElevator extends Card implements IProjectCard {
         description: 'Increase your titanium production 5 steps.',
         cardNumber: 'C08',
         renderData: CardRenderer.builder((b) => {
-          b.production((pb) => pb.titanium(3));
+          b.production((pb) => pb.titanium(5));
         }),
       },
     });
