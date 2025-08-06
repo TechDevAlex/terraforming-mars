@@ -11,6 +11,7 @@ export class JovianEmbassy extends Card implements IProjectCard {
       type: CardType.AUTOMATED,
       name: CardName.JOVIAN_EMBASSY,
       tags: [Tag.JOVIAN, Tag.BUILDING],
+      requirements: {tag: Tag.JOVIAN, count: 2},
       cost: 20,
       victoryPoints: {tag: Tag.JOVIAN, per: 2},
 
@@ -21,9 +22,9 @@ export class JovianEmbassy extends Card implements IProjectCard {
       metadata: {
         cardNumber: 'X23',
         renderData: CardRenderer.builder((b) => {
-          b.tr(1);
+          b.tr(3);
         }),
-        description: 'Raise your TR 1 step.',
+        description: 'Requires 3 Jovian Tags. Raise your TR 3 steps.',
       },
     });
   }
