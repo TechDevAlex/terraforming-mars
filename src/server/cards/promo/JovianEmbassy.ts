@@ -16,15 +16,15 @@ export class JovianEmbassy extends Card implements IProjectCard {
       victoryPoints: {tag: Tag.JOVIAN, per: 2},
 
       behavior: {
-        tr: 1,
+        tr: 2,
       },
 
       metadata: {
         cardNumber: 'X23',
         renderData: CardRenderer.builder((b) => {
-          b.tr(3);
+          b.tr(2);
         }),
-        description: 'Requires 3 Jovian Tags. Raise your TR 3 steps.',
+        description: 'Requires 2 Jovian Tags. Raise your TR 2 steps.',
       },
     });
   }
