@@ -10,6 +10,7 @@ import {GlobalEventName} from '../../../common/turmoil/globalEvents/GlobalEventN
 import {Incite} from './Incite';
 import {JunkVentures} from './JunkVentures';
 import {JovianResearch} from './JovianResearch';
+import {GanymedeExpedition} from './GanymedeExpedition';
 import {LeadershipSummit} from './LeadershipSummit';
 import {Midas} from './Midas';
 import {ModuleManifest} from '../ModuleManifest';
@@ -50,6 +51,7 @@ export const COMMUNITY_CARD_MANIFEST = new ModuleManifest({
     [CardName.SPECIAL_DESIGN_PROXY]: {Factory: SpecialDesignProxy, instantiate: false},
     [CardName.JOVIAN_RESEARCH]: {Factory: JovianResearch},
     [CardName.MARTIAN_MYSTERY]: {Factory: MartianMystery},
+    [CardName.GANYMEDE_EXPEDITION]: {Factory: GanymedeExpedition},
 
   },
   globalEvents: {
