@@ -30,6 +30,7 @@ export class FlatMarsTheory extends Card implements IProjectCard {
   public override bespokePlay(player: IPlayer) {
     const generation = player.game.generation;
     player.production.add(Resource.MEGACREDITS, generation, {log: true});
+    player.production.add(Resource.MEGACREDITS, generation, {log: true});
     return undefined;
   }
 }
