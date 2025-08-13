@@ -14,7 +14,7 @@ export class Thorgate extends CorporationCard {
         production: {energy: 1},
       },
 
-      cardDiscount: {tag: Tag.POWER, amount: 3},
+      cardDiscount: {tag: Tag.POWER, amount: 4},
       metadata: {
         cardNumber: 'R13',
         description: 'You start with 1 energy production and 47 M€.',

@@ -13,7 +13,7 @@ export class ResearchNetwork extends PreludeCard implements IProjectCard {
       behavior: {
         production: {megacredits: 1},
         drawCard: 3,
-        stock: {megacredits: 4},
+        stock: {megacredits: 3},
       },
 
       metadata: {
@@ -21,9 +21,9 @@ export class ResearchNetwork extends PreludeCard implements IProjectCard {
         renderData: CardRenderer.builder((b) => {
           b.production((pb) => pb.megacredits(1)).br;
           b.cards(3);
-          b.megacredits(3);
+          b.megacredits(4);
         }),
-        description: 'Increase your M€ production 1 step. Draw 3 cards. After being played, when you perform an action, the wild tag counts as any tag of your choice.',
+        description: 'Increase your M€ production 1 step. Draw 3 cards, gain 3 mc. After being played, when you perform an action, the wild tag counts as any tag of your choice.',
       },
     });
   }

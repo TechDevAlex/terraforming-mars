@@ -13,7 +13,7 @@ export class UnitedNationsMarsInitiative extends CorporationCard implements IAct
     super({
       name: CardName.UNITED_NATIONS_MARS_INITIATIVE,
       tags: [Tag.EARTH],
-      startingMegaCredits: 50,
+      startingMegaCredits: 46,
 
       metadata: {
         cardNumber: 'R32',
