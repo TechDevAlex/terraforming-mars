@@ -19,7 +19,7 @@ export class AntiTrustCrackdown extends Card implements IProjectCard {
       requirements: {corruption: 0, max},
 
       metadata: {
-        cardNumber: 'U64',
+        cardNumber: 'U064',
         renderData: CardRenderer.builder((b) => {
           b.text('-1').corruption(1, {all}).asterix().br;
           b.plainText('Requires that you have no more than 0 corruption. ALL players lose 1 corruption each.');
@@ -29,7 +29,7 @@ export class AntiTrustCrackdown extends Card implements IProjectCard {
   }
 
   public override bespokePlay(player: IPlayer) {
-    player.game.getPlayersInGenerationOrder().forEach((p) => {
+    player.game.playersInGenerationOrder.forEach((p) => {
       if (p !== player) {
         const loss = Math.min(p.underworldData.corruption, 1);
         if (loss > 0) {

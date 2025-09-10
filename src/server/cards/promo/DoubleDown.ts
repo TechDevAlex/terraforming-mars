@@ -4,7 +4,7 @@ import {CardName} from '../../../common/cards/CardName';
 import {CardRenderer} from '../render/CardRenderer';
 import {Size} from '../../../common/cards/render/Size';
 import {PreludesExpansion} from '../../preludes/PreludesExpansion';
-import {IPreludeCard, isPreludeCard} from '../prelude/IPreludeCard';
+import {IPreludeCard} from '../prelude/IPreludeCard';
 
 export class DoubleDown extends PreludeCard {
   constructor() {
@@ -22,7 +22,7 @@ export class DoubleDown extends PreludeCard {
   }
 
   private cloneablePreludes(player: IPlayer) {
-    const cards = player.playedCards.filter(isPreludeCard)
+    const cards = player.playedCards.preludes()
       .filter((card) => card.name !== this.name)
       .filter((card) => card.canPlay(player));
     if (player.lastCardPlayed === CardName.NEW_PARTNER) {
@@ -45,6 +45,7 @@ export class DoubleDown extends PreludeCard {
       PreludesExpansion.fizzle(player, this);
       return undefined;
     }
-    return PreludesExpansion.selectPreludeToPlay(player, preludes, undefined, 'action-only');
+    player.game.inDoubleDown = true;
+    return PreludesExpansion.selectPreludeToPlay(player, preludes, undefined, 'double-down');
   }
 }

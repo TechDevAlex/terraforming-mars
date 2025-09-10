@@ -18,7 +18,7 @@ export class Landfill extends Card implements IProjectCard {
       victoryPoints: -1,
 
       metadata: {
-        cardNumber: 'U36',
+        cardNumber: 'U036',
         renderData: CardRenderer.builder((b) => {
           b.production((pb) => pb.megacredits(1, {text: '?'})).asterix();
         }),

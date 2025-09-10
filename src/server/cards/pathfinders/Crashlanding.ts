@@ -66,7 +66,7 @@ export class Crashlanding extends Card implements IProjectCard {
           card: this.name,
         };
         player.game.addTile(player, space, tile);
-        const orOptions = new OrOptions(
+        return new OrOptions(
           new SelectOption('Leave as it is').andThen(() => {
             tile.rotated = undefined;
             this.grantPlacementBonuses(player, space);
@@ -77,9 +77,7 @@ export class Crashlanding extends Card implements IProjectCard {
             this.grantPlacementBonuses(player, space);
             return undefined;
           }),
-        );
-        orOptions.title = 'Orient Crashlanding';
-        return orOptions;
+        ).setTitle('Orient Crashlanding');
       });
   }
 

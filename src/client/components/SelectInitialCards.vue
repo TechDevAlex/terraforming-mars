@@ -9,7 +9,7 @@
       <div v-i18n>These are the colony tiles Aridor may choose from:</div>
       <div class="discarded-colonies-for-aridor">
         <div class="player_home_colony small_colony" v-for="colonyName in playerView.game.discardedColonies" :key="colonyName">
-          <colony :colony="getColony(colonyName)"></colony>
+          <colony :colony="getColony(colonyName)" :active="getColony(colonyName).isActive"></colony>
         </div>
       </div>
     </div>
@@ -201,6 +201,12 @@ export default (Vue as WithRefs<Refs>).extend({
       let starting = corporation.startingMegaCredits ?? 0;
       const cardCost = corporation.cardCost === undefined ? constants.CARD_COST : corporation.cardCost;
       starting -= this.selectedCards.length * cardCost;
+
+      if (corpName === CardName.SAGITTA_FRONTIER_SERVICES) {
+        // Effect for playing itself.
+        starting += 4;
+      }
+
       return starting;
     },
     saveIfConfirmed() {

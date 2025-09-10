@@ -13,7 +13,7 @@ export class PreludesExpansion {
       // be moved from hand to play area. So, wait until this action finishes and
       // then follow up with cleanup.
       inplaceRemove(player.preludeCardsInHand, card);
-      inplaceRemove(player.playedCards, card);
+      player.playedCards.remove(card);
       player.game.preludeDeck.discard(card);
     });
   }
@@ -33,6 +33,9 @@ export class PreludesExpansion {
       card.warnings.clear();
       if (!card.canPlay(player)) {
         card.warnings.add('preludeFizzle');
+      }
+      if (card.behavior?.addResources && player.game.inDoubleDown) {
+        card.warnings.add('ineffectiveDoubleDown');
       }
     }
 

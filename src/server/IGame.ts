@@ -1,20 +1,17 @@
 import {MarsBoard} from './boards/MarsBoard';
 import {CardName} from '../common/cards/CardName';
-import {CardType} from '../common/cards/CardType';
 import {ClaimedMilestone} from './milestones/ClaimedMilestone';
 import {IColony} from './colonies/IColony';
 import {Color} from '../common/Color';
 import {FundedAward} from './awards/FundedAward';
 import {IAward} from './awards/IAward';
 import {IMilestone} from './milestones/IMilestone';
-import {IProjectCard} from './cards/IProjectCard';
 import {Space} from './boards/Space';
 import {LogMessageBuilder} from './logs/LogMessageBuilder';
 import {LogMessage} from '../common/logs/LogMessage';
 import {Phase} from '../common/Phase';
 import {IPlayer} from './IPlayer';
 import {PlayerId, GameId, SpectatorId, SpaceId, isGameId} from '../common/Types';
-import {CardResource} from '../common/CardResource';
 import {AndThen, DeferredAction} from './deferredActions/DeferredAction';
 import {Priority} from './deferredActions/Priority';
 import {DeferredActionsQueue} from './deferredActions/DeferredActionsQueue';
@@ -34,6 +31,7 @@ import {Logger} from './logs/Logger';
 import {GlobalParameter} from '../common/GlobalParameter';
 import {UnderworldData} from './underworld/UnderworldData';
 import {OrOptions} from './inputs/OrOptions';
+import {IStandardProjectCard} from './cards/IStandardProjectCard';
 
 export interface Score {
   corporation: String;
@@ -55,6 +53,9 @@ export interface IGame extends Logger {
   inputsThisRound: number;
   resettable: boolean;
   generation: number;
+  readonly players: ReadonlyArray<IPlayer>;
+  readonly playersInGenerationOrder: ReadonlyArray<IPlayer>;
+
   /**
    * Stores the state of each global parameter at the end of each generation.
    *
@@ -67,7 +68,7 @@ export interface IGame extends Logger {
   ceoDeck: CeoDeck;
   corporationDeck: CorporationDeck;
   board: MarsBoard;
-  activePlayer: PlayerId;
+  activePlayer: IPlayer;
   claimedMilestones: Array<ClaimedMilestone>;
   milestones: Array<IMilestone>;
   fundedAwards: Array<FundedAward>;
@@ -76,15 +77,18 @@ export interface IGame extends Logger {
   colonies: Array<IColony>;
   discardedColonies: Array<IColony>; // Not serialized
   turmoil: Turmoil | undefined;
+  // True when resolving Turmoil phase. Does not need to be serialized since the turmoil phase isn't saved in between.
+  inTurmoil: boolean;
   aresData: AresData | undefined;
   moonData: MoonData | undefined;
   pathfindersData: PathfindersData | undefined;
   underworldData: UnderworldData;
 
   // Card-specific data
-  // Mons Insurance promo corp
-  monsInsuranceOwner?: PlayerId; // Not serialized
-  // Crash Site promo project
+
+  /* An optimization to see if anyone owns Mons Insurance */
+  monsInsuranceOwner: IPlayer | undefined; // Not serialized
+  /* For the promo Crash Site. */
   someoneHasRemovedOtherPlayersPlants: boolean;
   // Syndicate Pirate Raids
   syndicatePirateRaider?: PlayerId;
@@ -99,25 +103,27 @@ export interface IGame extends Logger {
   stJosephCathedrals: Array<SpaceId>;
   // Mars Nomads
   nomadSpace: SpaceId | undefined;
-  // Trade Embargo
+  /** When true, players may not trade for the rest of this generation. */
   tradeEmbargo: boolean;
   /** True when Behold The Emperor is in effect this coming Turmoil phase */
   beholdTheEmperor: boolean;
+  /** Double Down: tracking when an action is due to double down. Does not need to be serialized. */
+  inDoubleDown: boolean;
+  /** If Vermin is in play and it has 10 or more animals */
+  verminInEffect: boolean;
+  /** If Exploitation of Venus is in effect */
+  exploitationOfVenusInEffect: boolean;
 
   /** The set of tags available in this game. */
   readonly tags: ReadonlyArray<Tag>;
-  // Function use to properly start the game: with project draft or with research phase
-  gotoInitialPhase(): void;
   /** Initiates the first research phase, which is when a player chooses their starting hand, corps and preludes. */
   gotoInitialResearchPhase(): void;
   gotoResearchPhase(): void;
   save(): void;
   serialize(): SerializedGame;
   isSoloMode() :boolean;
-  // Retrieve a player by it's id
+  // Retrieve a player by its id
   getPlayerById(id: PlayerId): IPlayer;
-  // Return an array of players from an array of player ids
-  getPlayersById(ids: Array<PlayerId>): ReadonlyArray<IPlayer>;
   defer<T>(action: DeferredAction<T>, priority?: Priority): AndThen<T>;
   milestoneClaimed(milestone: IMilestone): boolean;
   marsIsTerraformed(): boolean;
@@ -137,7 +143,6 @@ export interface IGame extends Logger {
   readonly first: IPlayer;
   gameIsOver(): boolean;
   isDoneWithFinalProduction(): boolean;
-  doneWorldGovernmentTerraforming(): void;
   playerHasPassed(player: IPlayer): void;
   hasResearched(player: IPlayer): boolean;
   playerIsFinishedWithResearchPhase(player: IPlayer): void;
@@ -161,7 +166,7 @@ export interface IGame extends Logger {
    * If nobody can add a greenery, end the game.
    */
   /* for testing */ takeNextFinalGreeneryAction(): void;
-  /* for testing */ worldGovernmentTerraforming(player: IPlayer): void;
+  /* for testing */ worldGovernmentTerraforming(): void;
   /* for World Government Advisor */
   worldGovernmentTerraformingInput(player: IPlayer): OrOptions;
   increaseOxygenLevel(player: IPlayer, increments: -2 | -1 | 1 | 2): void;
@@ -203,9 +208,7 @@ export interface IGame extends Logger {
   canRemoveOcean(): boolean;
   addOcean(player: IPlayer, space: Space): void;
   removeTile(spaceId: string): void;
-  getPlayers(): ReadonlyArray<IPlayer>;
-  // Players returned in play order starting with first player this generation.
-  getPlayersInGenerationOrder(): ReadonlyArray<IPlayer>;
+
   /**
    * Returns the Player holding this card, or throws.
    */
@@ -214,23 +217,22 @@ export interface IGame extends Logger {
    * Returns the Player holding this card, or returns undefined.
    */
   getCardPlayerOrUndefined(name: CardName): IPlayer | undefined;
-  // Returns the player holding a card in hand. Return undefined when nobody has that card in hand.
-  getCardHolder(name: CardName): [IPlayer | undefined, IProjectCard | undefined];
-  getCardsInHandByResource(player: IPlayer, resourceType: CardResource): void;
-  getCardsInHandByType(player: IPlayer, cardType: CardType): void;
+  /**
+   * Returns the list of standard project cards used in this game, sorted by cost.
+   */
+  getStandardProjects(): Array<IStandardProjectCard>;
+
   log(message: string, f?: (builder: LogMessageBuilder) => void, options?: {reservedFor?: IPlayer}): void;
   discardForCost(cardCount: 1 | 2, toPlace: TileType): number;
-  getSpaceByOffset(direction: -1 | 1, toPlace: TileType, cardCount?: 1 | 2): Space;
   expectedPurgeTimeMs(): number;
   logIllegalState(description: string, metadata: {}): void;
 
   /**
-   * Drafting before the first generation goes through 3 iterations:
+   * Drafting before the first generation goes through up to 4 iterations:
    * 1. first 5 project cards,
    * 2. second 5 project cards
-   * 3. [optional] preludes.
-   *
-   * This works, but makes it hard to add a CEO draft.
+   * 3. [optional] preludes
+   * 4. [optional] CEOs
    */
   initialDraftIteration: number;
   /**
@@ -241,6 +243,9 @@ export interface IGame extends Logger {
   draftRound: number;
   getPlayerAfter(player: IPlayer): IPlayer;
   getPlayerBefore(player: IPlayer): IPlayer;
+
+  underworldDraftEnabled: boolean;
+  getActionCount(): number;
 }
 
 export function isIGame(object: any): object is IGame {

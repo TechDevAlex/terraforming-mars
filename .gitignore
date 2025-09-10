@@ -27,4 +27,4 @@ node_modules/
 
 # misc
 .gitconfig
-logs/
+./logs/

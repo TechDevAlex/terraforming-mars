@@ -38,11 +38,19 @@ export class RotatorImpacts extends Card implements IActionCard {
     });
   }
 
-  public canAct(player: IPlayer): boolean {
-    const venusMaxed = player.game.getVenusScaleLevel() === MAX_VENUS_SCALE;
-    const canSpendResource = this.resourceCount > 0 && !venusMaxed;
+  private canAddResource(player: IPlayer) {
+    return player.canAfford({cost: 6, titanium: true});
+  }
 
-    return player.canAfford({cost: 6, titanium: true}) || (canSpendResource && player.canAfford({cost: 0, tr: {venus: 1}}));
+  private canSpendResource(player: IPlayer) {
+    return this.resourceCount > 0 && player.canAfford({cost: 0, tr: {venus: 1}});
+  }
+
+  public canAct(player: IPlayer): boolean {
+    if (player.game.getVenusScaleLevel() === MAX_VENUS_SCALE) {
+      this.warnings.add('maxvenus');
+    }
+    return this.canAddResource(player) || this.canSpendResource(player);
   }
 
   public action(player: IPlayer) {
@@ -51,18 +59,17 @@ export class RotatorImpacts extends Card implements IActionCard {
     const addResource = new SelectOption('Pay 3 M€ to add 1 asteroid to this card', 'Pay').andThen(() => this.addResource(player));
     const spendResource = new SelectOption('Remove 1 asteroid to raise Venus 1 step', 'Remove asteroid').andThen(() => this.spendResource(player));
 
-    if (this.resourceCount > 0 && player.game.getVenusScaleLevel() < MAX_VENUS_SCALE) {
+    if (this.canSpendResource(player)) {
       opts.push(spendResource);
-    } else {
-      return this.addResource(player);
     }
 
-    if (player.canAfford({cost: 3, titanium: true})) {
+    if (this.canAddResource(player)) {
       opts.push(addResource);
-    } else {
-      return this.spendResource(player);
     }
 
+    if (opts.length === 1) {
+      return opts[0].cb(undefined);
+    }
     return new OrOptions(...opts);
   }
 

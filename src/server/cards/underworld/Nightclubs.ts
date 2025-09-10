@@ -11,7 +11,7 @@ export class Nightclubs extends Card implements IProjectCard {
       type: CardType.AUTOMATED,
       name: CardName.NIGHTCLUBS,
       cost: 9,
-      tags: [Tag.BUILDING],
+      tags: [Tag.BUILDING, Tag.CRIME],
 
       requirements: {cities: 1},
 
@@ -21,7 +21,7 @@ export class Nightclubs extends Card implements IProjectCard {
       },
 
       metadata: {
-        cardNumber: 'U08',
+        cardNumber: 'U008',
         renderData: CardRenderer.builder((b) => {
           b.corruption(1).production((pb) => pb.megacredits(2));
         }),

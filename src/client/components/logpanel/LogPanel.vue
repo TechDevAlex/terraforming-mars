@@ -10,7 +10,7 @@
           {{ n }}
         </div>
       </div>
-      <span class="label-additional" v-if="players.length === 1"><span :class="lastGenerationClass" v-i18n>of {{this.lastSoloGeneration}}</span></span>
+      <span class="label-additional" v-if="players.length === 1"><span :class="lastGenerationClass" v-i18n>of {{lastSoloGeneration}}</span></span>
     </div>
     <div class="panel log-panel">
       <div id="logpanel-scrollable" class="panel-body">
@@ -146,7 +146,7 @@ export default Vue.extend({
     },
     getTitleClasses(): string {
       const classes = ['log-title'];
-      classes.push(playerColorClass(this.color.toLowerCase(), 'shadow'));
+      classes.push(playerColorClass(this.color, 'shadow'));
       return classes.join(' ');
     },
     lastGenerationClass(): string {

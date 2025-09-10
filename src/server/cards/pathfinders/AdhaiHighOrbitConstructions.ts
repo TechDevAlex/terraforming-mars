@@ -8,19 +8,17 @@ import {IProjectCard} from '../IProjectCard';
 import {isPlanetaryTag} from '../../pathfinders/PathfindersData';
 import {Size} from '../../../common/cards/render/Size';
 import {AltSecondaryTag} from '../../../common/cards/render/AltSecondaryTag';
+import {IStandardProjectCard} from '../IStandardProjectCard';
+import {ICorporationCard} from '../corporation/ICorporationCard';
+import {ICard} from '../ICard';
 
-export class AdhaiHighOrbitConstructions extends CorporationCard {
+export class AdhaiHighOrbitConstructions extends CorporationCard implements ICorporationCard {
   constructor() {
     super({
       name: CardName.ADHAI_HIGH_ORBIT_CONSTRUCTIONS,
       tags: [Tag.SPACE],
       startingMegaCredits: 40,
       resourceType: CardResource.ORBITAL,
-
-      behavior: {
-        // This is the onCardPlayed effect.
-        addResources: 1,
-      },
 
       metadata: {
         cardNumber: 'PfC23',
@@ -40,7 +38,7 @@ export class AdhaiHighOrbitConstructions extends CorporationCard {
   }
 
 
-  private matchingTags(tags: Array<Tag>): boolean {
+  private matchingTags(tags: ReadonlyArray<Tag>): boolean {
     let spaceTag = false;
     for (const tag of tags) {
       if (tag === Tag.SPACE) spaceTag = true;
@@ -49,18 +47,24 @@ export class AdhaiHighOrbitConstructions extends CorporationCard {
     return spaceTag;
   }
 
-  public onCardPlayed(player: IPlayer, card: IProjectCard) {
-    if (player.isCorporation(CardName.ADHAI_HIGH_ORBIT_CONSTRUCTIONS) && this.matchingTags(card.tags)) {
+  public onCardPlayedForCorps(player: IPlayer, card: ICard) {
+    if (this.matchingTags(card.tags)) {
       player.addResourceTo(this, 1);
     }
   }
 
-  // TODO(kberg): it's not possible to make this a cardDiscount type, which just means rendering is tricky.
-  public override getCardDiscount(player: IPlayer, card: IProjectCard) {
-    if (player.isCorporation(CardName.ADHAI_HIGH_ORBIT_CONSTRUCTIONS) && this.matchingTags(card.tags)) {
+  public override getCardDiscount(_player: IPlayer, card: IProjectCard) {
+    if (this.matchingTags(card.tags)) {
       return Math.floor(this.resourceCount / 1);
     } else {
       return 0;
     }
+  }
+
+  public getStandardProjectDiscount(_player: IPlayer, card: IStandardProjectCard): number {
+    if (card.name === CardName.BUILD_COLONY_STANDARD_PROJECT) {
+      return Math.floor(this.resourceCount / 1);
+    }
+    return 0;
   }
 }
