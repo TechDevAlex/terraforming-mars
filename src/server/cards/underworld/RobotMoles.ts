@@ -14,7 +14,6 @@ export class RobotMoles extends Card implements IProjectCard {
       cost: 8,
       tags: [Tag.BUILDING],
 
-<<<<<<< HEAD
       action: {
         spend: {steel: 1},
         addResources: 2,

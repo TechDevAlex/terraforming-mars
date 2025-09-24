@@ -1209,12 +1209,7 @@ export class Game implements IGame, Logger {
     // Check for Aphrodite corporation
     const aphrodite = this.players.find((player) => player.tableau.has(CardName.APHRODITE));
     if (aphrodite !== undefined) {
-<<<<<<< HEAD
-      // changed Aphrodite money per step to 3
-      aphrodite.megaCredits += steps * 3;
-=======
-      aphrodite.stock.add(Resource.MEGACREDITS, 2 * steps, {log: true, from: {card: CardName.APHRODITE}});
->>>>>>> upstream/main
+      aphrodite.stock.add(Resource.MEGACREDITS, 3 * steps, {log: true, from: {card: CardName.APHRODITE}});
     }
 
     this.venusScaleLevel += steps * 2;

@@ -12,7 +12,6 @@ export class Neutrinograph extends Card implements IProjectCard {
       type: CardType.AUTOMATED,
       name: CardName.NEUTRINOGRAPH,
       tags: [Tag.SCIENCE],
-<<<<<<< HEAD
       cost: 8,
 
       requirements: {tag: Tag.SCIENCE, count: 5},

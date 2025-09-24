@@ -35,7 +35,6 @@ export class HenkeiGenetics extends CorporationCard implements ICorporationCard,
 
       metadata: {
         cardNumber: 'UC04',
-<<<<<<< HEAD
         description: 'You start with 47 M€ and 3 corruption.',
         renderData: CardRenderer.builder((b) => {
           b.megacredits(47).corruption(3).cards(2, {secondaryTag: Tag.MICROBE}).br;

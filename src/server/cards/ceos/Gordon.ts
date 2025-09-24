@@ -17,7 +17,6 @@ export class Gordon extends CeoCard {
       metadata: {
         cardNumber: 'L07',
         renderData: CardRenderer.builder((b) => {
-<<<<<<< HEAD
           b.greenery().city().colon().megacredits(3).asterix();
           b.br.br;
         }),

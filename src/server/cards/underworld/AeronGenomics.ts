@@ -30,7 +30,6 @@ export class AeronGenomics extends CorporationCard implements ICorporationCard {
 
       metadata: {
         cardNumber: 'UC07',
-<<<<<<< HEAD
         description: 'You start with 45 M€, 5 steel, and 1 animal resource on this card. 1 VP per 3 animals on this card.',
         renderData: CardRenderer.builder((b) => {
           b.megacredits(45).steel(5, {digit}).resource(CardResource.ANIMAL, 2).br;

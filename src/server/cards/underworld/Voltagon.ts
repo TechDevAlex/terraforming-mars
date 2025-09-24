@@ -40,7 +40,6 @@ export class Voltagon extends ActiveCorporationCard {
         cardNumber: 'UC09',
         description: 'You start with 38 M€ and 2 energy production.',
         renderData: CardRenderer.builder((b) => {
-<<<<<<< HEAD
           b.megacredits(38).production((pb) => pb.energy(2)).br;
           b.effect('After you excavate an underground resource, gain 2 energy.', (eb) => {
             eb.excavate(1).startEffect.energy(2);
