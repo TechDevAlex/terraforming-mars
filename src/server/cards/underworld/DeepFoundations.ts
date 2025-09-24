@@ -20,9 +20,9 @@ export class DeepFoundations extends Card implements IActionCard {
       metadata: {
         cardNumber: 'U100',
         renderData: CardRenderer.builder((b) => {
-          b.action('Pay 20 M€ (STEEL MAY BE USED). Pick a valid space for a city on Mars. ' +
+          b.action('Pay 18 M€ (STEEL MAY BE USED). Pick a valid space for a city on Mars. ' +
             'Excavate the underground resource in that space, if possible. Then place a city there.',
-          (ab) => ab.megacredits(20).super((sb) => sb.steel(1)).startAction.excavate(1).asterix().city());
+          (ab) => ab.megacredits(18).super((sb) => sb.steel(1)).startAction.excavate(1).asterix().city());
         }),
       },
     });
@@ -33,7 +33,7 @@ export class DeepFoundations extends Card implements IActionCard {
   }
 
   public canAct(player: IPlayer): boolean {
-    return player.canAfford({cost: 20, steel: true}) && this.getCandidateSpaces(player).length > 0;
+    return player.canAfford({cost: 18, steel: true}) && this.getCandidateSpaces(player).length > 0;
   }
 
   public action(player: IPlayer) {
@@ -43,9 +43,9 @@ export class DeepFoundations extends Card implements IActionCard {
     }
 
     player.game.defer(new SelectPaymentDeferred(
-      player, 20, {
+      player, 18, {
         canUseSteel: true,
-        title: 'Spend 20 M€ for to excavate a space and place a city',
+        title: 'Spend 18 M€ for to excavate a space and place a city',
       })
       .andThen(() => {
         player.defer(new SelectSpace('Select space for city', availableSpaces).andThen((space) => {
