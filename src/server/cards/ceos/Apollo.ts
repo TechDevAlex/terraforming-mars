@@ -18,7 +18,7 @@ export class Apollo extends CeoCard {
         renderData: CardRenderer.builder((b) => {
           b.opgArrow().text('ACTIVATE THE BELOW ABILITY');
           b.br.br;
-          b.moonHabitat({all}).moonMine({all}).moonRoad({all}).nbsp.colon().megacredits(4);
+          b.moonHabitat({all}).moonMine({all}).moonRoad({all}).nbsp.colon().megacredits(3);
           b.br.br;
         }),
         description: 'Once per game, gain 3 M€ for each tile on The Moon.',
@@ -29,7 +29,7 @@ export class Apollo extends CeoCard {
   public action(player: IPlayer): PlayerInput | undefined {
     this.isDisabled = true;
     const moonSpacesCount = MoonExpansion.spaces(player.game, undefined, {surfaceOnly: true}).length;
-    player.stock.add(Resource.MEGACREDITS, moonSpacesCount * 4, {log: true});
+    player.stock.add(Resource.MEGACREDITS, moonSpacesCount * 3, {log: true});
     return undefined;
   }
 }

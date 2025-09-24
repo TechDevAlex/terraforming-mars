@@ -21,7 +21,7 @@ export class Duncan extends CeoCard {
           b.br;
         }),
         victoryPoints: questionmark(),
-        description: 'Once per game, gain 7-X VP and 4X M€, where X is the current generation number.',
+        description: 'Once per game, gain 8-X VP and 4X M€, where X is the current generation number.',
       },
     });
   }
@@ -37,7 +37,7 @@ export class Duncan extends CeoCard {
 
   public override getVictoryPoints(): number {
     if (this.isDisabled === true && this.generationUsed !== undefined) {
-      return 7 - this.generationUsed;
+      return 8 - this.generationUsed;
     }
     return 0;
   }

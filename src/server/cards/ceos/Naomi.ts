@@ -18,8 +18,8 @@ export class Naomi extends CeoCard implements ICeoCard {
         cardNumber: 'L14',
         renderData: CardRenderer.builder((b) => {
           b.br;
-          b.effect('When you build a colony, gain 2 energy and 3 M€.', (eb) => {
-            eb.colonies(1).startEffect.energy(2).megacredits(3);
+          b.effect('When you build a colony, gain 3 energy and 3 M€.', (eb) => {
+            eb.colonies(1).startEffect.energy(3).megacredits(3);
           });
           b.br.br.br;
           b.opgArrow().text('SET ALL').colonies(1).asterix();
@@ -55,7 +55,7 @@ export class Naomi extends CeoCard implements ICeoCard {
 
   public onColonyAddedByAnyPlayer(cardOwner: IPlayer, colonyOwner: IPlayer) {
     if (colonyOwner === cardOwner) {
-      cardOwner.stock.add(Resource.ENERGY, 2, {log: true});
+      cardOwner.stock.add(Resource.ENERGY, 3, {log: true});
       cardOwner.stock.add(Resource.MEGACREDITS, 3, {log: true});
     }
   }

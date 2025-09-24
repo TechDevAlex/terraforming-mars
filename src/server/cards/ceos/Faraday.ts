@@ -26,10 +26,10 @@ export class Faraday extends CeoCard {
         cardNumber: 'L27',
         renderData: CardRenderer.builder((b) => {
           b.br;
-          b.text('4', Size.LARGE).diverseTag(1).colon().megacredits(-2).cards(1, {secondaryTag: AltSecondaryTag.DIVERSE}).asterix();
+          b.text('4', Size.LARGE).diverseTag(1).colon().megacredits(-3).cards(1, {secondaryTag: AltSecondaryTag.DIVERSE}).asterix();
           b.br.br;
         }),
-        description: 'When you gain a multiple of 4 for any tag type IN PLAY, you may pay 2 M€ to draw a card with that tag. Wild tags do not count for this effect.',
+        description: 'When you gain a multiple of 4 for any tag type IN PLAY, you may pay 3 M€ to draw a card with that tag. Wild tags do not count for this effect.',
       },
     });
   }
@@ -81,7 +81,7 @@ export class Faraday extends CeoCard {
     }
     if (!player.canAfford(3)) {
       player.game.log(
-        '${0} cannot afford to take advantage of the ${1} effect to draw a ${2} card',
+        '${0} cannot afford to take advantage of the ${1} effect to draw a ${3} card',
         (b) => b.player(player).card(this).string(tag));
       return;
     }

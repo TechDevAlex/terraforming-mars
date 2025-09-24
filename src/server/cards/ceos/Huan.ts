@@ -17,13 +17,15 @@ export class Huan extends CeoCard {
           b.trade({all, cancelled}).asterix().tradeFleet();
           b.br.br;
         }),
-        description: 'ALL OPPONENTS CANNOT TRADE NEXT GENERATION. Gain 1 Trade Fleet.',
+        description: 'ALL OPPONENTS CANNOT TRADE NEXT GENERATION. Gain 3 Trade Fleets.',
       },
     });
   }
 
   public action(player: Player): PlayerInput | undefined {
     const game = player.game;
+    player.colonies.increaseFleetSize();
+    player.colonies.increaseFleetSize();
     player.colonies.increaseFleetSize();
     game.syndicatePirateRaider = player.id;
 

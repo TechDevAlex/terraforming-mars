@@ -15,11 +15,11 @@ export class Will extends CeoCard {
         cardNumber: 'L23',
         renderData: CardRenderer.builder((b) => {
           b.opgArrow().text('GAIN THESE RESOURCES').br;
-          b.resource(CardResource.ANIMAL).resource(CardResource.ANIMAL).resource(CardResource.MICROBE).resource(CardResource.MICROBE).br;
-          b.resource(CardResource.FLOATER).resource(CardResource.FLOATER).wild(1).wild(1);
+          b.resource(CardResource.ANIMAL).resource(CardResource.ANIMAL).resource(CardResource.MICROBE).resource(CardResource.MICROBE).resource(CardResource.MICROBE).resource(CardResource.MICROBE).br;
+          b.resource(CardResource.FLOATER).resource(CardResource.FLOATER).resource(CardResource.FLOATER).resource(CardResource.FLOATER).wild(1).wild(1);
           b.br;
         }),
-        description: 'Once per game, add the following resources to your cards: 2 animals, 2 microbes, 2 floaters, 2 wild.',
+        description: 'Once per game, add the following resources to your cards: 2 animals, 4 microbes, 4 floaters, 2 wild.',
       },
     });
   }
@@ -27,8 +27,8 @@ export class Will extends CeoCard {
   public action(player: IPlayer): PlayerInput | undefined {
     this.isDisabled = true;
     player.game.defer(new AddResourcesToCard(player, CardResource.ANIMAL, {count: 2}));
-    player.game.defer(new AddResourcesToCard(player, CardResource.MICROBE, {count: 2}));
-    player.game.defer(new AddResourcesToCard(player, CardResource.FLOATER, {count: 2}));
+    player.game.defer(new AddResourcesToCard(player, CardResource.MICROBE, {count: 4}));
+    player.game.defer(new AddResourcesToCard(player, CardResource.FLOATER, {count: 4}));
     player.game.defer(new AddResourcesToCard(player, undefined, {count: 2}));
 
     return undefined;

@@ -17,7 +17,7 @@ export class Gordon extends CeoCard {
       metadata: {
         cardNumber: 'L07',
         renderData: CardRenderer.builder((b) => {
-          b.greenery().city().colon().megacredits(3).asterix();
+          b.greenery().city().colon().megacredits(4).asterix();
           b.br.br;
         }),
       },
@@ -43,7 +43,7 @@ export class Gordon extends CeoCard {
     }
 
     if (Board.isCitySpace(space) || Board.isGreenerySpace(space)) {
-      cardOwner.game.defer(new GainResources(cardOwner, Resource.MEGACREDITS, {count: 3, log: true}));
+      cardOwner.game.defer(new GainResources(cardOwner, Resource.MEGACREDITS, {count: 4, log: true}));
     }
     return;
   }

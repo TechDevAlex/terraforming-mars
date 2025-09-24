@@ -13,7 +13,7 @@ export class Jansson extends CeoCard {
         renderData: CardRenderer.builder((b) => {
           b.opgArrow().emptyTile().wild(1).asterix();
         }),
-        description: 'Once per game, gain all placement bonuses under your tiles on Mars twice.',
+        description: 'Once per game, gain all placement bonuses under your tiles on Mars thrice.',
       },
     });
   }
@@ -22,6 +22,7 @@ export class Jansson extends CeoCard {
     this.isDisabled = true;
     const spaces = player.game.board.spaces.filter((space) => space.tile !== undefined && space.player === player);
     spaces.forEach((space) => {
+      player.game.grantSpaceBonuses(player, space);
       player.game.grantSpaceBonuses(player, space);
       player.game.grantSpaceBonuses(player, space);
     });
