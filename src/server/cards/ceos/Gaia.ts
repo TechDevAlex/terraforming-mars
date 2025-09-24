@@ -37,7 +37,7 @@ export class Gaia extends CeoCard {
       for (const space of tilesOnMars) {
         AresHandler.earnAdjacencyBonuses(player, space, {giveAresTileOwnerBonus: false});
         AresHandler.earnAdjacencyBonuses(player, space, {giveAresTileOwnerBonus: false});
-      });
+      }
     });
     return undefined;
   }
