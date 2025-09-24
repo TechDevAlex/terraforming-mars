@@ -34,7 +34,7 @@ export class HabitatMarte extends CorporationCard implements ICorporationCard {
   }
   // Behavior in Player.getTagCount
  public onCardPlayedForCorps(player: IPlayer, card: ICard) {
-    if (player.isCorporation(this.name)) {
+    if (player.tableau.has(this.name)) {
       const tagCount = player.tags.cardTagCount(card, Tag.MARS);
       if (tagCount > 0) {
         player.drawCard(tagCount, {tag: Tag.MARS});

@@ -26,14 +26,14 @@ export class HAL9000 extends CeoCard {
   public action(player: IPlayer): PlayerInput | undefined {
     this.isDisabled = true;
     // For every Unit type, if it can be reduced one unit, do so, and give the player
-    // 4 of that resource.
+    // 5 of that resource.
     for (const type of Units.keys) {
       const adjustment = Units.of({});
       adjustment[type] = -1;
       if (player.production.canAdjust(adjustment)) {
         player.production.adjust(adjustment, {log: true});
         adjustment[type] = 5;
-        player.stock.addUnits(adjustment, {log: true});
+        player.stock.adjust(adjustment, {log: true});
       }
     }
     return undefined;

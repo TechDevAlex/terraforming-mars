@@ -36,9 +36,9 @@ export class Greta extends CeoCard implements ICeoCard {
 
   public onIncreaseTerraformRatingByAnyPlayer(cardOwner: IPlayer, player: IPlayer) {
     const game = player.game;
-    if (this.opgActionIsActive === true && this.effectTriggerCount < 8) {
+    if (this.opgActionIsActive === true && this.data.effectTriggerCount < 8) {
       if (player === cardOwner && game.phase === Phase.ACTION) {
-        player.stock.add(Resource.MEGACREDITS, 5, {log: true, from: {card: this}});
+        player.stock.add(Resource.MEGACREDITS, 5, {log: true, from: {card: this.name}});
         this.data.effectTriggerCount++;
       }
     }

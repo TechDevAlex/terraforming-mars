@@ -7,6 +7,7 @@ import {IPlayer} from '../../IPlayer';
 import {RemoveResources} from '../../deferredActions/RemoveResources';
 import {Resource} from '../../../common/Resource';
 import {all} from '../Options';
+import {Tag} from "@/common/cards/Tag";
 
 export class PlantTax extends Card implements IProjectCard {
   public generationUsed: number = -1;
