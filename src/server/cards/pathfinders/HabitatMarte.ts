@@ -3,6 +3,8 @@ import {Tag} from '../../../common/cards/Tag';
 import {CardName} from '../../../common/cards/CardName';
 import {CardRenderer} from '../render/CardRenderer';
 import {ICorporationCard} from '../corporation/ICorporationCard';
+import {ICard} from "@/server/cards/ICard";
+import {IPlayer} from "@/server/IPlayer";
 
 export class HabitatMarte extends CorporationCard implements ICorporationCard {
   constructor() {
@@ -31,7 +33,7 @@ export class HabitatMarte extends CorporationCard implements ICorporationCard {
     });
   }
   // Behavior in Player.getTagCount
- public onCardPlayed(player: IPlayer, card: ICard) {
+ public onCardPlayedForCorps(player: IPlayer, card: ICard) {
     if (player.isCorporation(this.name)) {
       const tagCount = player.tags.cardTagCount(card, Tag.MARS);
       if (tagCount > 0) {
