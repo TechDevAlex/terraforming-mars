@@ -12,11 +12,11 @@ export class AerobrakedAmmoniaAsteroid extends Card implements IProjectCard {
       type: CardType.EVENT,
       name: CardName.AEROBRAKED_AMMONIA_ASTEROID,
       tags: [Tag.SPACE],
-      cost: 25,
+      cost: 21,
 
       behavior: {
-        production: {heat: 3, plants: 2},
-        addResourcesToAnyCard: {count: 4, type: CardResource.MICROBE},
+        production: {heat: 3, plants: 1},
+        addResourcesToAnyCard: {count: 2, type: CardResource.MICROBE},
       },
 
       metadata: {
