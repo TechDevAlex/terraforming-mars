@@ -13,12 +13,13 @@ export class TerraformingDeal extends PreludeCard implements IPreludeCard {
     super({
       name: CardName.TERRAFORMING_DEAL,
       tags: [Tag.EARTH],
+      stock: {megacredits: 8},
 
       metadata: {
         cardNumber: 'P64',
         renderData: CardRenderer.builder((b) => {
-          b.effect('Each step your TR is raised, you gain 2 M€.', (eb) => {
-            eb.tr(1).startEffect.megacredits(2);
+          b.effect('Each step your TR is raised, you gain 1 M€. And get 8 cash', (eb) => {
+            eb.tr(1).startEffect.megacredits(1);
           });
         }),
       },
@@ -30,7 +31,7 @@ export class TerraformingDeal extends PreludeCard implements IPreludeCard {
     if (cardOwner === player) {
       const phase = player.game.phase;
       if (phase === Phase.ACTION || phase === Phase.PRELUDES || player.game.inTurmoil) {
-        cardOwner.stock.add(Resource.MEGACREDITS, 2 * steps, {log: true, from: {card: this}});
+        cardOwner.stock.add(Resource.MEGACREDITS, 1 * steps, {log: true, from: {card: this}});
       }
     }
   }

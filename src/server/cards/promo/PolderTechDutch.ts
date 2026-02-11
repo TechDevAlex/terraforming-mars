@@ -17,7 +17,7 @@ export class PolderTechDutch extends CorporationCard implements ICorporationCard
     super({
       name: CardName.POLDERTECH_DUTCH,
       tags: [Tag.EARTH],
-      startingMegaCredits: 33,
+      startingMegaCredits: 37,
 
       initialActionText: 'Place an ocean tile and a greenery tile next to each other',
 
@@ -25,9 +25,9 @@ export class PolderTechDutch extends CorporationCard implements ICorporationCard
         cardNumber: 'X-3',
         description: 'You start with 35 M€. As your first action, place an ocean tile and a greenery tile next to each other. Raise oxygen 1 step.',
         renderData: CardRenderer.builder((b) => {
-          b.megacredits(35).oceans(1, {size: Size.SMALL}).greenery({size: Size.SMALL}).asterix().br;
-          b.effect('When you place an ocean tile, gain 1 energy.', (eb) => eb.oceans(1, {size: Size.SMALL}).startEffect.energy(1)).br;
-          b.effect('When you place a greenery, gain 1 plant.', (eb) => eb.greenery({size: Size.SMALL}).startEffect.plants(1)).br;
+          b.megacredits(37).oceans(1, {size: Size.SMALL}).greenery({size: Size.SMALL}).asterix().br;
+          b.effect('When you place an ocean tile, gain 4 energy.', (eb) => eb.oceans(1, {size: Size.SMALL}).startEffect.energy(4)).br;
+          b.effect('When you place a greenery, gain 2 plant.', (eb) => eb.greenery({size: Size.SMALL}).startEffect.plants(2)).br;
         }),
       },
     });

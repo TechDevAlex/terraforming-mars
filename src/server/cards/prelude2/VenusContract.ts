@@ -14,19 +14,18 @@ export class VenusContract extends PreludeCard {
       tags: [Tag.VENUS],
 
       behavior: {
-        drawCard: {count: 1, tag: Tag.VENUS},
-        tr: 1,
+        drawCard: {count: 2, tag: Tag.VENUS},
       },
 
       metadata: {
         cardNumber: 'P65',
-        description: 'Draw 1 Venus card. Raise your TR 1 step.',
+        description: 'Draw 2 Venus cards.',
         renderData: CardRenderer.builder((b) => {
           b.effect('Each step you raise Venus, gain 3 M€.', (eb) => {
-            eb.venus(1).startEffect.megacredits(3);
+            eb.venus(2).startEffect.megacredits(3);
           });
           b.br;
-          b.cards(1, {secondaryTag: Tag.VENUS}).tr(1);
+          b.cards(2, {secondaryTag: Tag.VENUS});
         }),
       },
     });

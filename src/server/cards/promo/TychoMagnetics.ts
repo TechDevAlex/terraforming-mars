@@ -12,17 +12,17 @@ export class TychoMagnetics extends CorporationCard implements ICorporationCard 
     super({
       name: CardName.TYCHO_MAGNETICS,
       tags: [Tag.POWER, Tag.SCIENCE],
-      startingMegaCredits: 32,
+      startingMegaCredits: 37,
       behavior: {
         production: {energy: 2},
       },
 
       metadata: {
         cardNumber: 'XC02', // Rename
-        description: 'You start with 33 M€. Increase your energy production 2 steps.',
+        description: 'You start with 37 M€. Increase your energy production 2 steps.',
         renderData: CardRenderer.builder((b) => {
           b.br.br;
-          b.production((pb) => pb.energy(2)).nbsp.megacredits(33);
+          b.production((pb) => pb.energy(2)).nbsp.megacredits(37);
           b.corpBox('action', (cb) => {
             cb.action('Spend any amount of energy to draw the that many cards. Keep 1 and discard the rest.', (ab) => {
               ab.text('X').energy(1).startAction.text('X').cards(1).text('KEEP 1');
