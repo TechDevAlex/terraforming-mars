@@ -19,15 +19,15 @@ export class Merger extends PreludeCard {
       metadata: {
         cardNumber: 'X41',
         renderData: CardRenderer.builder((b) => {
-          b.corporation().asterix().nbsp.megacredits(-42, {size: Size.SMALL});
+          b.corporation().asterix().nbsp.megacredits(-44, {size: Size.SMALL});
           b.br.br;
         }),
-        description: 'Draw 4 corporation cards. Play one of them and discard the other 3. Then pay 42 M€.',
+        description: 'Draw 4 corporation cards. Play one of them and discard the other 3. Then pay 44 M€.',
       },
     });
   }
 
-  public static readonly mergerCost = 42;
+  public static readonly mergerCost = 44;
 
   public override bespokePlay(player: IPlayer) {
     const game = player.game;

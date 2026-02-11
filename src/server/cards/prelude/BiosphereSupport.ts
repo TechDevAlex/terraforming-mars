@@ -7,21 +7,21 @@ export class BiosphereSupport extends PreludeCard {
   constructor() {
     super({
       name: CardName.BIOSPHERE_SUPPORT,
-      tags: [Tag.PLANT],
-
+      tags: [Tag.PLANT, Tag.ANIMAL],
       behavior: {
         production: {plants: 2},
+        drawCard: {count: 1, tag: Tag.ANIMAL},
       },
 
       metadata: {
         cardNumber: 'P05',
         renderData: CardRenderer.builder((b) => {
           b.production((pb) => {
-            pb.minus().megacredits(1).br;
             pb.plants(2);
+            b.cards(1, {secondaryTag: Tag.ANIMAL});
           });
         }),
-        description: 'Increase your plant production 2 steps. Decrease your M€ production 1 step.',
+        description: 'Increase your plant production 2 steps and draw an animal card.',
       },
     });
   }

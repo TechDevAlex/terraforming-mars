@@ -13,19 +13,19 @@ export class AquiferTurbines extends PreludeCard {
       tags: [Tag.POWER],
 
       behavior: {
-        production: {energy: 2},
+        production: {energy: 3},
         ocean: {},
       },
 
-      startingMegacredits: -3,
+      startingMegacredits: -5,
 
       metadata: {
         cardNumber: 'P02',
         renderData: CardRenderer.builder((b) => {
-          b.oceans(1).production((pb) => pb.energy(2)).br;
-          b.megacredits(-3);
+          b.oceans(1).production((pb) => pb.energy(3)).br;
+          b.megacredits(-5);
         }),
-        description: 'Place an ocean tile. Increase your energy production 2 steps. Pay 3 M€.',
+        description: 'Place an ocean tile. Increase your energy production 3 steps. Pay 5 M€.',
       },
     });
   }

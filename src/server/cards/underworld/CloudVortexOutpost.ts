@@ -17,14 +17,14 @@ export class CloudVortexOutpost extends PreludeCard {
 
       behavior: {
         global: {venus: 2},
-        addResources: 3,
+        addResources: 6,
       },
 
       metadata: {
         cardNumber: 'UP15',
         renderData: CardRenderer.builder((b) => {
-          b.venus(2, {digit}).resource(CardResource.FLOATER, {amount: 3, digit}).br;
-          b.plainText('Raise Venus 2 steps. Place 3 floaters on this card.').br;
+          b.venus(2, {digit}).resource(CardResource.FLOATER, {amount: 6, digit}).br;
+          b.plainText('Raise Venus 2 steps. Place 6 floaters on this card.').br;
           b.action('Remove 1 floater from THIS card to add 1 floater to ANOTHER card', (ab) => {
             ab.resource(CardResource.FLOATER).asterix().startAction.resource(CardResource.FLOATER).asterix();
           });

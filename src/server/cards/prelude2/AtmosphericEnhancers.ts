@@ -29,9 +29,9 @@ export class AtmosphericEnhancers extends PreludeCard {
         cardNumber: 'P44',
         renderData: CardRenderer.builder((b) => {
           b.temperature(2, {digit}).slash().oxygen(2, {digit}).br.slash().venus(2, {digit}).br;
-          b.cards(2, {secondaryTag: AltSecondaryTag.FLOATER});
+          b.cards(3, {secondaryTag: AltSecondaryTag.FLOATER});
         }),
-        description: 'Raise temperature 2 steps, or raise oxygen 2 steps, or raise Venus 2 steps. Draw 2 cards with floater icons.',
+        description: 'Raise temperature 2 steps, or raise oxygen 2 steps, or raise Venus 2 steps. Draw 3 cards with floater icons.',
       },
     });
   }
@@ -48,7 +48,7 @@ export class AtmosphericEnhancers extends PreludeCard {
   }
 
   public override bespokePlay(player: IPlayer) {
-    player.drawCard(2, {
+    player.drawCard(3, {
       include: (card) => floaterCards.has(card.name) || card.resourceType === CardResource.FLOATER,
     });
     return undefined;

@@ -23,7 +23,7 @@ export class PolderTechDutch extends CorporationCard implements ICorporationCard
 
       metadata: {
         cardNumber: 'X-3',
-        description: 'You start with 35 M€. As your first action, place an ocean tile and a greenery tile next to each other. Raise oxygen 1 step.',
+        description: 'You start with 37 M€. As your first action, place an ocean tile and a greenery tile next to each other. Raise oxygen 1 step.',
         renderData: CardRenderer.builder((b) => {
           b.megacredits(37).oceans(1, {size: Size.SMALL}).greenery({size: Size.SMALL}).asterix().br;
           b.effect('When you place an ocean tile, gain 4 energy.', (eb) => eb.oceans(1, {size: Size.SMALL}).startEffect.energy(4)).br;

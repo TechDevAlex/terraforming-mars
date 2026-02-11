@@ -18,6 +18,7 @@ export class FloatingTradeHub extends PreludeCard implements IActionCard {
       name: CardName.FLOATING_TRADE_HUB,
       tags: [Tag.SPACE],
       resourceType: CardResource.FLOATER,
+      addResources: 2,
 
       metadata: {
         cardNumber: 'P49',
@@ -26,6 +27,7 @@ export class FloatingTradeHub extends PreludeCard implements IActionCard {
           b.action('Remove any number of floaters here to gain that many of one standard resource.', (ab) => {
             ab.text('X').resource(CardResource.FLOATER).startAction.text('X').wild(1);
           }).br;
+          b.plainText('Add 2 floaters to this card.').br;
         }),
       },
     });
@@ -55,4 +57,5 @@ export class FloatingTradeHub extends PreludeCard implements IActionCard {
     }
     return new OrOptions(add2Floaters, removeFloaters);
   }
+
 }
