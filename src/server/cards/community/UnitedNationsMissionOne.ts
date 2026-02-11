@@ -13,18 +13,18 @@ export class UnitedNationsMissionOne extends CorporationCard implements ICorpora
     super({
       name: CardName.UNITED_NATIONS_MISSION_ONE,
       tags: [Tag.EARTH],
-      startingMegaCredits: 44, // +1 for the initial change in TR.
+      startingMegaCredits: 40, // +4 for the initial change in TR.
 
       metadata: {
         cardNumber: 'R50',
-        description: 'You start with 43 M€. Increase your TR 1 step.',
+        description: 'You start with 36 M€. Increase your TR 1 step.',
         renderData: CardRenderer.builder((b) => {
           b.br.br.br;
-          b.megacredits(43).nbsp.tr(1);
+          b.megacredits(46).nbsp.tr(2);
           b.corpBox('effect', (ce) => {
             ce.vSpace();
-            ce.effect('When any player takes an action or plays a card that increases TR, including this, gain 1 M€ for each step.', (eb) => {
-              eb.tr(1, {all}).startEffect.megacredits(1);
+            ce.effect('When you take an action or play a card that increases TR, including this, gain 2 M€ for each step.', (eb) => {
+              eb.tr(1, {all}).startEffect.megacredits(2);
             });
           });
         }),
@@ -34,6 +34,7 @@ export class UnitedNationsMissionOne extends CorporationCard implements ICorpora
 
   public override bespokePlay(player: IPlayer): undefined {
     player.increaseTerraformRating();
+    player.increaseTerraformRating();
     return undefined;
   }
 
@@ -42,7 +43,8 @@ export class UnitedNationsMissionOne extends CorporationCard implements ICorpora
     cardOwner: IPlayer, player: IPlayer, steps: number) {
     const game = player.game;
 
-    if (game.phase === Phase.ACTION || game.phase === Phase.PRELUDES) {
+    if (player === cardOwner && (game.phase === Phase.ACTION || game.phase === Phase.PRELUDES)) {
+      cardOwner.stock.add(Resource.MEGACREDITS, steps, {log: true, from: {card: this}});
       cardOwner.stock.add(Resource.MEGACREDITS, steps, {log: true, from: {card: this}});
     }
   }
