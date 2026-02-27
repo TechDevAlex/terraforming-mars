@@ -1,19 +1,21 @@
 
-import {Tag} from '../../../common/cards/Tag';
-import {CardName} from '../../../common/cards/CardName';
-import {CardRenderer} from '../render/CardRenderer';
-import {IPlayer} from '../../IPlayer';
-import {Phase} from '../../../common/Phase';
-import {Resource} from '../../../common/Resource';
-import {PreludeCard} from '../prelude/PreludeCard';
-import {IPreludeCard} from '../prelude/IPreludeCard';
+import { Tag } from '../../../common/cards/Tag';
+import { CardName } from '../../../common/cards/CardName';
+import { CardRenderer } from '../render/CardRenderer';
+import { IPlayer } from '../../IPlayer';
+import { Phase } from '../../../common/Phase';
+import { Resource } from '../../../common/Resource';
+import { PreludeCard } from '../prelude/PreludeCard';
+import { IPreludeCard } from '../prelude/IPreludeCard';
 
 export class TerraformingDeal extends PreludeCard implements IPreludeCard {
   constructor() {
     super({
       name: CardName.TERRAFORMING_DEAL,
       tags: [Tag.EARTH],
-      stock: {megacredits: 8},
+      behavior: {
+        addResources: 2,
+      },
 
       metadata: {
         cardNumber: 'P64',
@@ -31,7 +33,7 @@ export class TerraformingDeal extends PreludeCard implements IPreludeCard {
     if (cardOwner === player) {
       const phase = player.game.phase;
       if (phase === Phase.ACTION || phase === Phase.PRELUDES || player.game.inTurmoil) {
-        cardOwner.stock.add(Resource.MEGACREDITS, 1 * steps, {log: true, from: {card: this}});
+        cardOwner.stock.add(Resource.MEGACREDITS, 1 * steps, { log: true, from: { card: this } });
       }
     }
   }

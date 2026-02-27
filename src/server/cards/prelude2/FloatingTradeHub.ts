@@ -18,7 +18,9 @@ export class FloatingTradeHub extends PreludeCard implements IActionCard {
       name: CardName.FLOATING_TRADE_HUB,
       tags: [Tag.SPACE],
       resourceType: CardResource.FLOATER,
-      addResources: 2,
+      behavior: {
+        addResources: 2,
+      },
 
       metadata: {
         cardNumber: 'P49',
