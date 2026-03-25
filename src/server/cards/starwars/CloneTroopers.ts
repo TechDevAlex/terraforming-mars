@@ -1,20 +1,20 @@
-import {Card} from '../Card';
-import {CardType} from '../../../common/cards/CardType';
-import {IActionCard} from '../ICard';
-import {IProjectCard} from '../IProjectCard';
-import {Tag} from '../../../common/cards/Tag';
-import {Player} from '../../Player';
-import {CardName} from '../../../common/cards/CardName';
-import {ALL_RESOURCES} from '../../../common/Resource';
-import {CardRenderer} from '../render/CardRenderer';
-import {all} from '../Options';
-import {CardResource} from '../../../common/CardResource';
-import {OrOptions} from '../../inputs/OrOptions';
-import {SelectOption} from '../../inputs/SelectOption';
-import {Size} from '../../../common/cards/render/Size';
-import {message} from '../../logs/MessageBuilder';
-import {SelectResource} from '../../inputs/SelectResource';
-import {Units} from '../../../common/Units';
+import { Card } from '../Card';
+import { CardType } from '../../../common/cards/CardType';
+import { IActionCard } from '../ICard';
+import { IProjectCard } from '../IProjectCard';
+import { Tag } from '../../../common/cards/Tag';
+import { Player } from '../../Player';
+import { CardName } from '../../../common/cards/CardName';
+import { ALL_RESOURCES } from '../../../common/Resource';
+import { CardRenderer } from '../render/CardRenderer';
+import { all } from '../Options';
+import { CardResource } from '../../../common/CardResource';
+import { OrOptions } from '../../inputs/OrOptions';
+import { SelectOption } from '../../inputs/SelectOption';
+import { Size } from '../../../common/cards/render/Size';
+import { message } from '../../logs/MessageBuilder';
+import { SelectResource } from '../../inputs/SelectResource';
+import { Units } from '../../../common/Units';
 
 export class CloneTroopers extends Card implements IActionCard, IProjectCard {
   constructor() {
@@ -24,13 +24,13 @@ export class CloneTroopers extends Card implements IActionCard, IProjectCard {
       tags: [Tag.SCIENCE],
       cost: 12,
       resourceType: CardResource.CLONE_TROOPER,
-      requirements: {oceans: 6},
-      victoryPoints: {resourcesHere: {}},
+      requirements: { oceans: 6 },
+      victoryPoints: { resourcesHere: {} },
 
       metadata: {
         cardNumber: 'SW02',
         renderData: CardRenderer.builder((b) => {
-          b.arrow(Size.SMALL).resource(CardResource.CLONE_TROOPER).or().resource(CardResource.CLONE_TROOPER).arrow(Size.SMALL).text('STEAL', Size.SMALL).wild(1, {all});
+          b.arrow(Size.SMALL).resource(CardResource.CLONE_TROOPER).or().resource(CardResource.CLONE_TROOPER).arrow(Size.SMALL).text('STEAL', Size.SMALL).wild(1, { all });
           b.br;
           b.text('(Action: Add one Clone Trooper to this card OR (available if u got a least 1 boiy) Add one Clone Trooper to this card to steal one standard resource from any player.)', Size.TINY, false, false);
         }),
@@ -47,7 +47,7 @@ export class CloneTroopers extends Card implements IActionCard, IProjectCard {
     if (this.resourceCount > 0) {
       const options = new OrOptions();
       options.options.push(new SelectOption('Add a Clone Trooper to this card').andThen(() => {
-        player.addResourceTo(this, {log: true});
+        player.addResourceTo(this, { log: true });
         return undefined;
       }));
       if (player.game.isSoloMode()) {
@@ -65,9 +65,9 @@ export class CloneTroopers extends Card implements IActionCard, IProjectCard {
             }
             options.options.push(new SelectOption(
               message('Steal 1 ${0} from ${1}', (b) => b.string(resource).player(target)), 'steal').andThen(() => {
-              target.attack(player, resource, 1, {log: true, stealing: true});
-              return undefined;
-            }));
+                target.attack(player, resource, 1, { log: true, stealing: true });
+                return undefined;
+              }));
           }
         }
       }
@@ -77,7 +77,7 @@ export class CloneTroopers extends Card implements IActionCard, IProjectCard {
     }
 
     // Fallback.
-    player.addResourceTo(this, {log: true});
+    player.addResourceTo(this, { log: true });
     return undefined;
   }
 }
