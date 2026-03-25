@@ -82,24 +82,21 @@ export class GagarinMobileBase extends CorporationCard implements ICorporationCa
     return this.availableSpaces(player).length > 0;
   }
   public action(player: IPlayer) {
-  const doMove = (remaining: number): any => {
-    const spaces = this.availableSpaces(player);
-    if (remaining <= 0 || spaces.length === 0) return undefined;
+    const doMove = (remaining: number): any => {
+      const spaces = this.availableSpaces(player);
+      if (remaining <= 0 || spaces.length === 0) return undefined;
 
-    return new SelectSpace(
-      message('Select new space for ${0}', (b) => b.card(this)), spaces
-    ).andThen((space) => {
-      player.game.gagarinBase.unshift(space.id);
-      player.game.grantSpaceBonuses(player, space);
-      return doMove(remaining - 1);
-    });
-  };
+      return new SelectSpace(
+        message('Select new space for ${0}', (b) => b.card(this)), spaces,
+      ).andThen((space) => {
+        player.game.gagarinBase.unshift(space.id);
+        player.game.grantSpaceBonuses(player, space);
+        return doMove(remaining - 1);
+      });
+    };
 
-  return doMove(3);
-}
-
-
-
+    return doMove(3);
+  }
 
 
   public override initialAction(player: IPlayer) {

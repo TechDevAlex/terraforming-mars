@@ -117,7 +117,7 @@ export class Tags {
   public cardHasTag(card: ICard, target: Tag): boolean {
     for (const tag of card.tags) {
       if (tag === target) return true;
-      }
+    }
     if (target === Tag.EVENT && card.type === CardType.EVENT) {
       return true;
     }

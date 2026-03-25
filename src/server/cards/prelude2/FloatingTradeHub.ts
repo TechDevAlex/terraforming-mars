@@ -59,5 +59,4 @@ export class FloatingTradeHub extends PreludeCard implements IActionCard {
     }
     return new OrOptions(add2Floaters, removeFloaters);
   }
-
 }
