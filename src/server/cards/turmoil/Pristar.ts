@@ -11,14 +11,10 @@ export class Pristar extends CorporationCard implements ICorporationCard {
   constructor() {
     super({
       name: CardName.PRISTAR,
-      startingMegaCredits: 53,
+      startingMegaCredits: 56,
       resourceType: CardResource.PRESERVATION,
 
       victoryPoints: {resourcesHere: {}},
-
-      behavior: {
-        tr: -2,
-      },
 
       metadata: {
         cardNumber: 'R07',
