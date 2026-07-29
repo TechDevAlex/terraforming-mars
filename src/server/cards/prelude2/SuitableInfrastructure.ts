@@ -12,18 +12,18 @@ export class SuitableInfrastructure extends PreludeCard {
       tags: [Tag.BUILDING],
 
       behavior: {
-        stock: {steel: 5},
+        stock: {steel: 8},
       },
 
       metadata: {
         cardNumber: 'P63',
-        description: 'Gain 5 steel.',
+        description: 'Gain 8 steel.',
         renderData: CardRenderer.builder((b) => {
-          b.effect('Once per action you take, gain 2 M€ if you increase any productions.', (eb) => {
-            eb.production((pb) => pb.wild(1)).asterix().startEffect.megacredits(2);
+          b.effect('Once per action you take, gain 1 M€ if you increase any productions.', (eb) => {
+            eb.production((pb) => pb.wild(1)).asterix().startEffect.megacredits(1);
           });
           b.br;
-          b.steel(5);
+          b.steel(8);
         }),
       },
     });
@@ -39,9 +39,9 @@ export class SuitableInfrastructure extends PreludeCard {
     }
     const actionCount = player.game.getActionCount();
     if (this.lastAction !== actionCount) {
-      player.stock.add(Resource.MEGACREDITS, 2);
+      player.stock.add(Resource.MEGACREDITS, 1);
       player.game.log('${0} gained ${1} ${2} from ${3}',
-        (b) => b.player(player).number(2).string('M€').card(this));
+        (b) => b.player(player).number(1).string('M€').card(this));
       this.lastAction = actionCount;
     }
   }

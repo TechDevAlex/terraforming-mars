@@ -12,7 +12,7 @@ export class SecurityFleet extends ActionCard implements IProjectCard {
       type: CardType.ACTIVE,
       name: CardName.SECURITY_FLEET,
       tags: [Tag.SPACE],
-      cost: 5,
+      cost: 9,
       resourceType: CardResource.FIGHTER,
 
       victoryPoints: {resourcesHere: {}},

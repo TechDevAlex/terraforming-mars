@@ -17,7 +17,7 @@ export class MainBeltAsteroids extends ActivePreludeCard implements IActionCard 
       resourceType: CardResource.ASTEROID,
       victoryPoints: {resourcesHere: {}, per: 2},
 
-      startingMegacredits: -5,
+      startingMegacredits: -1,
 
       action: {
         addResourcesToAnyCard: {type: CardResource.ASTEROID, count: 1},
@@ -30,9 +30,9 @@ export class MainBeltAsteroids extends ActivePreludeCard implements IActionCard 
             ab.empty().startAction.resource(CardResource.ASTEROID).asterix();
           }).nbsp.effect('When gaining an asteroid HERE, gain 1 titanium.', (ab) => {
             ab.resource(CardResource.ASTEROID).startEffect.titanium(1);
-          }).br.megacredits(-5);
+          }).br.megacredits(-1);
         }),
-        description: 'Lose 5 M€. 1 VP per 2 asteroids here.',
+        description: 'Lose 1 M€. 1 VP per 2 asteroids here.',
       },
     });
   }
@@ -44,7 +44,7 @@ export class MainBeltAsteroids extends ActivePreludeCard implements IActionCard 
   }
 
   public override bespokeCanPlay(player: IPlayer) {
-    return player.canAfford(5);
+    return player.canAfford(1);
   }
 
   public override bespokePlay(player: IPlayer) {

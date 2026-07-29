@@ -13,14 +13,14 @@ export class IndustrialComplex extends PreludeCard {
       name: CardName.INDUSTRIAL_COMPLEX,
       tags: [Tag.BUILDING],
 
-      startingMegacredits: -18,
+      startingMegacredits: -15,
 
       metadata: {
         cardNumber: 'P52',
         renderData: CardRenderer.builder((b) => {
-          b.megacredits(-18).production((pb) => pb.one(1)).asterix();
+          b.megacredits(-15).production((pb) => pb.one(1)).asterix();
         }),
-        description: 'Lose 18 M€. INCREASE ALL YOUR PRODUCTIONS THAT ARE LOWER THAN 1, TO 1.',
+        description: 'Lose 15 M€. INCREASE ALL YOUR PRODUCTIONS THAT ARE LOWER THAN 1, TO 1.',
       },
     });
   }

@@ -15,7 +15,7 @@ export class GalileanMining extends PreludeCard {
       behavior: {
         production: {titanium: 2},
       },
-      startingMegacredits: -1,
+      startingMegacredits: -3,
 
       metadata: {
         cardNumber: 'P13',
@@ -23,14 +23,14 @@ export class GalileanMining extends PreludeCard {
           b.production((pb) => {
             pb.titanium(2);
           }).br;
-          b.megacredits(-5);
+          b.megacredits(-3);
         }),
-        description: 'Increase your titanium production 2 steps. Pay 1 M€.',
+        description: 'Increase your titanium production 2 steps. Pay 3 M€.',
       },
     });
   }
   public override bespokeCanPlay(player: IPlayer) {
-    return player.canAfford(5);
+    return player.canAfford(3);
   }
   public override bespokePlay(player: IPlayer) {
     player.game.defer(new SelectPaymentDeferred(player, -this.startingMegaCredits)).andThen(() => {

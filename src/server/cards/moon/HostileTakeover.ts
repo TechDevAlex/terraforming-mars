@@ -15,21 +15,21 @@ export class HostileTakeover extends Card {
       name: CardName.HOSTILE_TAKEOVER,
       type: CardType.EVENT,
       tags: [Tag.CITY, Tag.MOON],
-      cost: 24,
+      cost: 28,
       requirements: [{habitatRate: 2}, {miningRate: 4}],
 
       behavior: {
-        production: {megacredits: 1},
+        production: {megacredits: 4},
       },
 
       metadata: {
         cardNumber: 'M64',
         renderData: CardRenderer.builder((b) => {
-          b.moonHabitat().asterix().moonMine().asterix().production((pb) => pb.megacredits(1));
+          b.moonHabitat().asterix().moonMine().asterix().production((pb) => pb.megacredits(4));
         }),
         description: 'Requires a habitat rate of 2 or higher, and a mining rate of 4 or higher. ' +
           'Add your player marker to a habitat tile and a mining tile owned by any opponent. ' +
-          'Those now also count as yours. Increase your M€ production -1 steps.',
+          'Those now also count as yours. Increase your M€ production 4 steps.',
       },
     });
   }

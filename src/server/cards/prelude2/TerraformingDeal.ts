@@ -14,13 +14,13 @@ export class TerraformingDeal extends PreludeCard implements IPreludeCard {
       name: CardName.TERRAFORMING_DEAL,
       tags: [Tag.EARTH],
       behavior: {
-        addResources: 2,
+        stock: {megacredits: 9},
       },
 
       metadata: {
         cardNumber: 'P64',
         renderData: CardRenderer.builder((b) => {
-          b.effect('Each step your TR is raised, you gain 1 M€. And get 8 cash', (eb) => {
+          b.effect('Each step your TR is raised, you gain 1 M€. And get 9 cash', (eb) => {
             eb.tr(1).startEffect.megacredits(1);
           });
         }),
