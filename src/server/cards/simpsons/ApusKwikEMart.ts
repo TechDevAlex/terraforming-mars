@@ -1,0 +1,37 @@
+import {IProjectCard} from '../IProjectCard';
+import {Tag} from '../../../common/cards/Tag';
+import {Card} from '../Card';
+import {CardType} from '../../../common/cards/CardType';
+import {IPlayer} from '../../IPlayer';
+import {ICard} from '../ICard';
+import {Resource} from '../../../common/Resource';
+import {CardName} from '../../../common/cards/CardName';
+import {CardRenderer} from '../render/CardRenderer';
+
+export class ApusKwikEMart extends Card implements IProjectCard {
+  constructor() {
+    super({
+      type: CardType.ACTIVE,
+      name: CardName.APUS_KWIK_E_MART,
+      tags: [Tag.EARTH, Tag.BUILDING],
+      cost: 10,
+
+      metadata: {
+        cardNumber: 'SI16',
+        renderData: CardRenderer.builder((b) => {
+          b.effect('When you play a building tag, gain 1 steel.', (eb) => {
+            eb.tag(Tag.BUILDING).startEffect.steel(1);
+          });
+        }),
+        description: 'Effect: When you play a building tag, gain 1 steel.',
+      },
+    });
+  }
+
+  public onCardPlayed(player: IPlayer, card: ICard) {
+    const buildingTags = card.tags.filter((tag) => tag === Tag.BUILDING).length;
+    if (buildingTags > 0) {
+      player.stock.add(Resource.STEEL, buildingTags, {log: true});
+    }
+  }
+}

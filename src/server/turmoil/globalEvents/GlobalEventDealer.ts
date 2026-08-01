@@ -69,6 +69,7 @@ export class GlobalEventDealer {
       pathfinders: gameOptions.pathfindersExpansion,
       ceo: gameOptions.ceoExtension,
       starwars: gameOptions.starWarsExpansion,
+      simpsons: gameOptions.simpsonsExpansion,
       underworld: gameOptions.underworldExpansion,
     };
 

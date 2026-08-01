@@ -926,6 +926,28 @@ export enum CardName {
   REY_SKYWALKER = 'Rey ... Skywalker?! (IX)',
   DEATH_STAR = 'Death Star (X)',
 
+  // Simpsons
+  SPRINGFIELD_NUCLEAR_PLANT = 'Springfield Nuclear Plant',
+  KRUSTY_BURGER_FRANCHISE = 'Krusty Burger Franchise',
+  PROFESSOR_FRINKS_LAB = 'Professor Frink\'s Lab',
+  ITCHY_AND_SCRATCHY_STUDIOS = 'Itchy & Scratchy Studios',
+  MOES_TAVERN = 'Moe\'s Tavern',
+  MONORAIL_SYSTEM = 'Monorail System',
+  MR_BURNS_FORTUNE = 'Mr. Burns\' Fortune',
+  SPRINGFIELD_GORGE = 'Springfield Gorge',
+  RADIOACTIVE_MAN = 'Radioactive Man',
+  DUFF_BREWERY = 'Duff Brewery',
+  BARTS_SLINGSHOT = 'Bart\'s Slingshot',
+  LISAS_SAXOPHONE = 'Lisa\'s Saxophone',
+  HOMERS_ODYSSEY = 'Homer\'s Odyssey',
+  SHELBYVILLE_RIVALRY = 'Shelbyville Rivalry',
+  STONECUTTERS_LODGE = 'Stonecutters Lodge',
+  APUS_KWIK_E_MART = 'Apu\'s Kwik-E-Mart',
+  TREEHOUSE_OF_HORROR = 'Treehouse of Horror',
+  LARD_LAD_DONUTS = 'Lard Lad Donuts',
+  MAGGIES_PACIFIER = 'Maggie\'s Pacifier',
+  SPACE_COYOTE_VISION = 'Space Coyote Vision',
+
   // Underworld
   GEOLOGIST_TEAM = 'Geologist Team',
   GEOSCAN_SATELLITE = 'Geoscan Satellite',

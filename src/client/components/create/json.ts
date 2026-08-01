@@ -19,4 +19,5 @@ export const MOONEXPANSION = 'moonExpansion';
 export const PATHFINDERSEXPANSION = 'pathfindersExpansion';
 export const CEOEXTENSION = 'ceoExtension';
 export const STARWARSEXPANSION = 'starWarsExpansion';
+export const SIMPSONSEXPANSION = 'simpsonsExpansion';
 export const UNDERWORLDEXPANSION = 'underworldExpansion';

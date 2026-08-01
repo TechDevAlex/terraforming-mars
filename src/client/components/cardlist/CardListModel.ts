@@ -37,6 +37,7 @@ const MODULE_ABBREVIATIONS: Record<GameModule, string> = {
   pathfinders: 'P',
   ceo: 'l', // ceo abbreviation is 'l' for leader, since 'c' and 'C' are already taken
   starwars: 'w',
+  simpsons: 'S',
   underworld: 'u',
 };
 
@@ -96,6 +97,7 @@ export function hashToModel(windowLocationHash: string): CardListModel {
       pathfinders: true,
       ceo: true,
       starwars: true,
+      simpsons: true,
       underworld: true,
     },
     types: {

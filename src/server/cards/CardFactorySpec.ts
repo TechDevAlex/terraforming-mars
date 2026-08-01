@@ -45,6 +45,8 @@ export function isCompatibleWith(cf: CardFactorySpec<any>, gameOptions: GameOpti
       return gameOptions.ceoExtension;
     case 'starwars':
       return gameOptions.starWarsExpansion;
+    case 'simpsons':
+      return gameOptions.simpsonsExpansion;
     case 'underworld':
       return gameOptions.underworldExpansion;
     }

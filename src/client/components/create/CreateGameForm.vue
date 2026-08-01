@@ -164,6 +164,12 @@
                                 <span v-i18n>Star Wars</span><span> </span>&nbsp;<a href="https://github.com/terraforming-mars/terraforming-mars/wiki/StarWars" class="tooltip" target="_blank">&#9432;</a>
                             </label>
 
+                            <input type="checkbox" name="simpsons" id="simpsons-checkbox" v-model="expansions.simpsons">
+                            <label for="simpsons-checkbox" class="expansion-button">
+                                <div class="create-game-expansion-icon expansion-icon-simpsons"></div>
+                                <span v-i18n>The Simpsons</span>
+                            </label>
+
                             <input type="checkbox" name="ceo" id="underworld-checkbox" v-model="expansions.underworld">
                             <label for="underworld-checkbox" class="expansion-button">
                                 <div class="create-game-expansion-icon expansion-icon-underworld"></div>
@@ -798,6 +804,7 @@ export default (Vue as WithRefs<Refs>).extend({
               pathfinders: json_constants.PATHFINDERSEXPANSION,
               ceo: json_constants.CEOEXTENSION,
               starwars: json_constants.STARWARSEXPANSION,
+              simpsons: json_constants.SIMPSONSEXPANSION,
               underworld: json_constants.UNDERWORLDEXPANSION,
             } as const;
             for (const expansion of Object.keys(oldFields)) {
