@@ -27,13 +27,11 @@ export class DeathStar extends Card implements IActionCard, IProjectCard {
       metadata: {
         cardNumber: 'SW10',
         renderData: CardRenderer.builder((b) => {
-          b.action('Pay 1 titanium to add 1 Clone Trooper to this card, OR remove 2 Clone Troopers to fire the laser: all opponents lose GEN+2 TR. This cannot be blocked. The laser may only be fired twice per game.', (ab) => {
-            ab.titanium(1).startAction.resource(CardResource.CLONE_TROOPER);
-            ab.or();
-            ab.resource(CardResource.CLONE_TROOPER, 2).startAction.minus().tr(1, {all}).text('GEN+2');
-          });
+          b.titanium(1).arrow(Size.SMALL).resource(CardResource.CLONE_TROOPER).or().resource(CardResource.CLONE_TROOPER, 2).arrow(Size.SMALL).minus().tr(1, {all}).text('GEN+2');
           b.br;
-          b.text('FIRE DA LASOR (max 2x per game)', Size.SMALL, true);
+          b.text('(Action: Pay 1 titanium to add 1 Clone Trooper, OR remove 2 Clone Troopers: all opponents lose GEN+2 TR. Cannot be blocked. Max 2x per game.)', Size.TINY, false, false);
+          b.br;
+          b.text('FIRE DA LASOR', Size.SMALL, true);
         }),
         description: 'Action: Pay 1 titanium to add 1 Clone Trooper to this card, OR remove 2 Clone Troopers: all opponents lose TR equal to the current generation number + 2. THIS CANNOT BE BLOCKED. The laser may only be fired twice per game.',
       },
