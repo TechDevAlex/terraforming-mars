@@ -4,6 +4,7 @@ import {ToscheStation} from './ToscheStation';
 import {CloudCity} from './CloudCity';
 import {TradeEmbargo} from './TradeEmbargo';
 import {CloneTroopers} from './CloneTroopers';
+import {DeathStar} from './DeathStar';
 import {BeholdTheEmperor} from './BeholdTheEmperor';
 import {ForestMoon} from './ForestMoon';
 import {TakondaCastle} from './TakondaCastle';
@@ -22,5 +23,6 @@ export const STAR_WARS_CARD_MANIFEST = new ModuleManifest({
     [CardName.TAKONDA_CASTLE]: {Factory: TakondaCastle},
     [CardName.TOOL_WITH_THE_FIRST_ORDER]: {Factory: ToolWithTheFirstOrder},
     [CardName.REY_SKYWALKER]: {Factory: ReySkywalker},
+    [CardName.DEATH_STAR]: {Factory: DeathStar},
   },
 });
