@@ -11,7 +11,7 @@ export class WarGames extends Card implements IActionCard, IProjectCard {
     super({
       type: CardType.ACTIVE, name: CardName.WAR_GAMES, tags: [Tag.MARS], cost: 6,
       metadata: {cardNumber: 'MY350', renderData: CardRenderer.builder((b) => {b.action('Gain 1 steel and 1 titanium.', (ab) => {ab.empty().startAction.text('?');});}),
-        description: 'Action: Gain 1 steel and 1 titanium. (The mystery deepens.)'},
+        description: 'Action: Gain 1 steel and 1 titanium.. (The mystery deepens.)'},
     });
   }
   public canAct(_player: Player): boolean {return true;}

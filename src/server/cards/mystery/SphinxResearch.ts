@@ -8,7 +8,7 @@ export class SphinxResearch extends CorporationCard implements ICorporationCard 
     super({
       name: CardName.SPHINX_RESEARCH, tags: [Tag.SCIENCE, Tag.SPACE], startingMegaCredits: 40,
       firstAction: {text: 'Initial action', drawCard: 1, production: {titanium: 1}},
-      metadata: {cardNumber: 'MYCORP25', description: 'You start with 40 M€.',
+      metadata: {cardNumber: 'MYCORP25', description: 'You start with 40 M€. As your first action, draw 1 card.',
         renderData: CardRenderer.builder((b) => {b.br.megacredits(40);})
       },
     });

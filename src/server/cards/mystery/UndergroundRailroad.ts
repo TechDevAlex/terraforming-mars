@@ -12,7 +12,7 @@ export class UndergroundRailroad extends Card implements IActionCard, IProjectCa
       type: CardType.ACTIVE, name: CardName.UNDERGROUND_RAILROAD, tags: [Tag.JOVIAN, Tag.EARTH], cost: 11,
       victoryPoints: 3,
       metadata: {cardNumber: 'MY196', renderData: CardRenderer.builder((b) => {b.action('Draw 1 card.', (ab) => {ab.empty().startAction.text('?');});}),
-        description: 'Action: Draw 1 card. (Space warps.)'},
+        description: 'Action: Draw 1 card.. 3 VP. (Space warps.)'},
     });
   }
   public canAct(_player: Player): boolean {return true;}

@@ -9,7 +9,7 @@ export class AmbushPoint extends Card implements IProjectCard {
       type: CardType.EVENT, name: CardName.AMBUSH_POINT, tags: [], cost: 22,
       behavior: {drawCard: 2},
       metadata: {cardNumber: 'MY223', renderData: CardRenderer.builder((b) => {b.text('Draw cards.');}),
-        description: 'Draw cards. (Shadows hide secrets.)'},
+        description: 'Draw 2 cards. (Shadows hide secrets.)'},
     });
   }
 }

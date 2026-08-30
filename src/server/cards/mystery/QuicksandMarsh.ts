@@ -11,7 +11,7 @@ export class QuicksandMarsh extends Card implements IActionCard, IProjectCard {
     super({
       type: CardType.ACTIVE, name: CardName.QUICKSAND_MARSH, tags: [Tag.BUILDING, Tag.MARS], cost: 9,
       metadata: {cardNumber: 'MY140', renderData: CardRenderer.builder((b) => {b.action('Draw 1 card.', (ab) => {ab.empty().startAction.text('?');});}),
-        description: 'Action: Draw 1 card. (The mystery deepens.)'},
+        description: 'Action: Draw 1 card.. (The mystery deepens.)'},
     });
   }
   public canAct(_player: Player): boolean {return true;}

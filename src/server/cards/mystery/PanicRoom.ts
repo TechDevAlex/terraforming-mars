@@ -11,7 +11,7 @@ export class PanicRoom extends Card implements IActionCard, IProjectCard {
     super({
       type: CardType.ACTIVE, name: CardName.PANIC_ROOM, tags: [Tag.EARTH, Tag.POWER], cost: 20,
       metadata: {cardNumber: 'MY115', renderData: CardRenderer.builder((b) => {b.action('Gain 1 steel and 1 titanium.', (ab) => {ab.empty().startAction.text('?');});}),
-        description: 'Action: Gain 1 steel and 1 titanium. (Shadows hide secrets.)'},
+        description: 'Action: Gain 1 steel and 1 titanium.. (Shadows hide secrets.)'},
     });
   }
   public canAct(_player: Player): boolean {return true;}

@@ -10,7 +10,7 @@ export class FalloutShelter extends Card implements IProjectCard {
       victoryPoints: 1,
       behavior: {production: {energy: 2}},
       metadata: {cardNumber: 'MY117', renderData: CardRenderer.builder((b) => {b.text('Adjust production.');}),
-        description: 'Adjust production. (Time bends.)'},
+        description: '1 VP. (Time bends.)'},
     });
   }
 }

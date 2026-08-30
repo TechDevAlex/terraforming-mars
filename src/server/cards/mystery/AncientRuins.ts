@@ -10,7 +10,7 @@ export class AncientRuins extends Card implements IProjectCard {
       type: CardType.EVENT, name: CardName.ANCIENT_RUINS, tags: [Tag.SCIENCE], cost: 22,
       behavior: {tr: 2},
       metadata: {cardNumber: 'MY213', renderData: CardRenderer.builder((b) => {b.text('Raise TR.');}),
-        description: 'Raise TR. (The unknown beckons.)'},
+        description: 'Raise your TR 2 steps. (The unknown beckons.)'},
     });
   }
 }

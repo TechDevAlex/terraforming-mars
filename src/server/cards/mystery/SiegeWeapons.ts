@@ -11,7 +11,7 @@ export class SiegeWeapons extends Card implements IActionCard, IProjectCard {
     super({
       type: CardType.ACTIVE, name: CardName.SIEGE_WEAPONS, tags: [Tag.SCIENCE, Tag.BUILDING], cost: 10,
       metadata: {cardNumber: 'MY225', renderData: CardRenderer.builder((b) => {b.action('Gain 1 steel and 1 titanium.', (ab) => {ab.empty().startAction.text('?');});}),
-        description: 'Action: Gain 1 steel and 1 titanium. (Nothing is as it seems.)'},
+        description: 'Action: Gain 1 steel and 1 titanium.. (Nothing is as it seems.)'},
     });
   }
   public canAct(_player: Player): boolean {return true;}

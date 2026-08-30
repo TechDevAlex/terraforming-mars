@@ -12,7 +12,7 @@ export class MysteryCard388 extends Card implements IActionCard, IProjectCard {
       type: CardType.ACTIVE, name: CardName.MYSTERY_CARD_388, tags: [Tag.PLANT], cost: 12,
       victoryPoints: 1,
       metadata: {cardNumber: 'MY388', renderData: CardRenderer.builder((b) => {b.action('Gain 2 plants.', (ab) => {ab.empty().startAction.text('?');});}),
-        description: 'Action: Gain 2 plants. (Progress demands sacrifice.)'},
+        description: 'Action: Gain 2 plants.. 1 VP. (Progress demands sacrifice.)'},
     });
   }
   public canAct(_player: Player): boolean {return true;}

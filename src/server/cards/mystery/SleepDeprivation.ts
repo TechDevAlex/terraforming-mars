@@ -11,7 +11,7 @@ export class SleepDeprivation extends Card implements IActionCard, IProjectCard 
     super({
       type: CardType.ACTIVE, name: CardName.SLEEP_DEPRIVATION, tags: [Tag.PLANT], cost: 19,
       metadata: {cardNumber: 'MY338', renderData: CardRenderer.builder((b) => {b.action('Gain 2 plants.', (ab) => {ab.empty().startAction.text('?');});}),
-        description: 'Action: Gain 2 plants. (Space warps.)'},
+        description: 'Action: Gain 2 plants.. (Space warps.)'},
     });
   }
   public canAct(_player: Player): boolean {return true;}

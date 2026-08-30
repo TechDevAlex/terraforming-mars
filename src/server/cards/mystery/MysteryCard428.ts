@@ -12,7 +12,7 @@ export class MysteryCard428 extends Card implements IActionCard, IProjectCard {
       type: CardType.ACTIVE, name: CardName.MYSTERY_CARD_428, tags: [Tag.BUILDING], cost: 8,
       victoryPoints: 2,
       metadata: {cardNumber: 'MY428', renderData: CardRenderer.builder((b) => {b.action('Spend 3 MC to gain 6 MC.', (ab) => {ab.empty().startAction.text('?');});}),
-        description: 'Action: Spend 3 MC to gain 6 MC. (The mystery deepens.)'},
+        description: 'Action: Spend 3 MC to gain 6 MC.. 2 VP. (The mystery deepens.)'},
     });
   }
   public canAct(player: Player): boolean {return player.canAfford(3);}

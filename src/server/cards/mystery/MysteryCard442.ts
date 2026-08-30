@@ -11,7 +11,7 @@ export class MysteryCard442 extends Card implements IActionCard, IProjectCard {
     super({
       type: CardType.ACTIVE, name: CardName.MYSTERY_CARD_442, tags: [Tag.BUILDING, Tag.POWER], cost: 16,
       metadata: {cardNumber: 'MY442', renderData: CardRenderer.builder((b) => {b.action('Gain 2 plants.', (ab) => {ab.empty().startAction.text('?');});}),
-        description: 'Action: Gain 2 plants. (Progress demands sacrifice.)'},
+        description: 'Action: Gain 2 plants.. (Progress demands sacrifice.)'},
     });
   }
   public canAct(_player: Player): boolean {return true;}

@@ -10,7 +10,7 @@ export class MysteryCard396 extends Card implements IProjectCard {
       type: CardType.EVENT, name: CardName.MYSTERY_CARD_396, tags: [Tag.SCIENCE], cost: 12,
       behavior: {drawCard: 2},
       metadata: {cardNumber: 'MY396', renderData: CardRenderer.builder((b) => {b.text('Draw cards.');}),
-        description: 'Draw cards. (Nothing is as it seems.)'},
+        description: 'Draw 2 cards. (Nothing is as it seems.)'},
     });
   }
 }

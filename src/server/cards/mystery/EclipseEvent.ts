@@ -11,7 +11,7 @@ export class EclipseEvent extends Card implements IProjectCard {
       victoryPoints: -2,
       behavior: {greenery: {}},
       metadata: {cardNumber: 'MY270', renderData: CardRenderer.builder((b) => {b.text('Place greenery.');}),
-        description: 'Place greenery. (A whisper in the void.)'},
+        description: '-2 VP. (A whisper in the void.)'},
     });
   }
 }

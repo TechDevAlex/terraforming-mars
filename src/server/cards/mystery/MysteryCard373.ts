@@ -11,7 +11,7 @@ export class MysteryCard373 extends Card implements IActionCard, IProjectCard {
     super({
       type: CardType.ACTIVE, name: CardName.MYSTERY_CARD_373, tags: [Tag.SPACE, Tag.MARS], cost: 12,
       metadata: {cardNumber: 'MY373', renderData: CardRenderer.builder((b) => {b.action('Draw 1 card.', (ab) => {ab.empty().startAction.text('?');});}),
-        description: 'Action: Draw 1 card. (Steel and will forge the path.)'},
+        description: 'Action: Draw 1 card.. (Steel and will forge the path.)'},
     });
   }
   public canAct(_player: Player): boolean {return true;}

@@ -12,7 +12,7 @@ export class MysteryCard404 extends Card implements IActionCard, IProjectCard {
       type: CardType.ACTIVE, name: CardName.MYSTERY_CARD_404, tags: [Tag.EARTH, Tag.SCIENCE], cost: 15,
       victoryPoints: 3,
       metadata: {cardNumber: 'MY404', renderData: CardRenderer.builder((b) => {b.action('Gain 2 heat.', (ab) => {ab.empty().startAction.text('?');});}),
-        description: 'Action: Gain 2 heat. (Space warps.)'},
+        description: 'Action: Gain 2 heat.. 3 VP. (Space warps.)'},
     });
   }
   public canAct(_player: Player): boolean {return true;}

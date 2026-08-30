@@ -11,7 +11,7 @@ export class RealityAnchor extends Card implements IProjectCard {
       victoryPoints: 3,
       behavior: {drawCard: 1},
       metadata: {cardNumber: 'MY315', renderData: CardRenderer.builder((b) => {b.text('Draw cards.');}),
-        description: 'Draw cards. (The frontier expands.)'},
+        description: 'Draw 1 card. 3 VP. (The frontier expands.)'},
     });
   }
 }

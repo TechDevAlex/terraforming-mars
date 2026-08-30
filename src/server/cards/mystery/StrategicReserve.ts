@@ -11,7 +11,7 @@ export class StrategicReserve extends Card implements IProjectCard {
       victoryPoints: -1,
       behavior: {production: {plants: 1, titanium: 2}},
       metadata: {cardNumber: 'MY233', renderData: CardRenderer.builder((b) => {b.text('Adjust production.');}),
-        description: 'Adjust production. (The veil lifts.)'},
+        description: '-1 VP. (The veil lifts.)'},
     });
   }
 }

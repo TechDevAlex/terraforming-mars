@@ -10,7 +10,7 @@ export class MysteryCard526 extends Card implements IProjectCard {
       type: CardType.EVENT, name: CardName.MYSTERY_CARD_526, tags: [Tag.SPACE, Tag.PLANT], cost: 20,
       behavior: {drawCard: 1},
       metadata: {cardNumber: 'MY526', renderData: CardRenderer.builder((b) => {b.text('Draw cards.');}),
-        description: 'Draw cards. (Darkness falls.)'},
+        description: 'Draw 1 card. (Darkness falls.)'},
     });
   }
 }

@@ -11,7 +11,7 @@ export class GeneticMemory extends Card implements IProjectCard {
       victoryPoints: -1,
       behavior: {production: {titanium: 1, steel: 1}},
       metadata: {cardNumber: 'MY344', renderData: CardRenderer.builder((b) => {b.text('Adjust production.');}),
-        description: 'Adjust production. (Shadows hide secrets.)'},
+        description: '-1 VP. (Shadows hide secrets.)'},
     });
   }
 }

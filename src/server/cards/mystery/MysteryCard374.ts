@@ -12,7 +12,7 @@ export class MysteryCard374 extends Card implements IActionCard, IProjectCard {
       type: CardType.ACTIVE, name: CardName.MYSTERY_CARD_374, tags: [Tag.ANIMAL], cost: 18,
       victoryPoints: 3,
       metadata: {cardNumber: 'MY374', renderData: CardRenderer.builder((b) => {b.action('Gain 3 MC.', (ab) => {ab.empty().startAction.text('?');});}),
-        description: 'Action: Gain 3 MC. (Secrets have power.)'},
+        description: 'Action: Gain 3 MC.. 3 VP. (Secrets have power.)'},
     });
   }
   public canAct(_player: Player): boolean {return true;}

@@ -10,7 +10,7 @@ export class SummoningGate extends Card implements IProjectCard {
       type: CardType.EVENT, name: CardName.SUMMONING_GATE, tags: [Tag.EARTH], cost: 8,
       behavior: {tr: 2},
       metadata: {cardNumber: 'MY076', renderData: CardRenderer.builder((b) => {b.text('Raise TR.');}),
-        description: 'Raise TR. (Reality shifts.)'},
+        description: 'Raise your TR 2 steps. (Reality shifts.)'},
     });
   }
 }

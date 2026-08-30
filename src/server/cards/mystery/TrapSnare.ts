@@ -10,7 +10,7 @@ export class TrapSnare extends Card implements IActionCard, IProjectCard {
     super({
       type: CardType.ACTIVE, name: CardName.TRAP_SNARE, tags: [], cost: 0,
       metadata: {cardNumber: 'TRAP030', renderData: CardRenderer.builder((b) => {b.action('TRAP: If generation 5+, gain 3 heat and 3 energy.', (ab) => {ab.empty().startAction.text('TRAP');});}),
-        description: 'TRAP: If generation 5+, gain 3 heat and 3 energy. (Triggers once automatically.)'},
+        description: 'Action: TRAP: If generation 5+, gain 3 heat and 3 energy. (Triggers once automatically.)'},
     });
   }
   private triggered = false;

@@ -11,7 +11,7 @@ export class QuantumEntanglement extends Card implements IActionCard, IProjectCa
     super({
       type: CardType.ACTIVE, name: CardName.QUANTUM_ENTANGLEMENT, tags: [Tag.CITY, Tag.JOVIAN], cost: 13,
       metadata: {cardNumber: 'MY271', renderData: CardRenderer.builder((b) => {b.action('Gain 1 steel and 1 titanium.', (ab) => {ab.empty().startAction.text('?');});}),
-        description: 'Action: Gain 1 steel and 1 titanium. (Knowledge is the ultimate currency.)'},
+        description: 'Action: Gain 1 steel and 1 titanium.. (Knowledge is the ultimate currency.)'},
     });
   }
   public canAct(_player: Player): boolean {return true;}

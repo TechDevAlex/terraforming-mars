@@ -11,7 +11,7 @@ export class DecoyArray extends Card implements IActionCard, IProjectCard {
       type: CardType.ACTIVE, name: CardName.DECOY_ARRAY, tags: [], cost: 7,
       victoryPoints: 1,
       metadata: {cardNumber: 'MY095', renderData: CardRenderer.builder((b) => {b.action('Gain 1 steel and 1 titanium.', (ab) => {ab.empty().startAction.text('?');});}),
-        description: 'Action: Gain 1 steel and 1 titanium. (Nature finds a way.)'},
+        description: 'Action: Gain 1 steel and 1 titanium.. 1 VP. (Nature finds a way.)'},
     });
   }
   public canAct(_player: Player): boolean {return true;}

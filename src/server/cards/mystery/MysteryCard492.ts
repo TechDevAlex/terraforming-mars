@@ -11,7 +11,7 @@ export class MysteryCard492 extends Card implements IProjectCard {
       victoryPoints: -1,
       behavior: {greenery: {}},
       metadata: {cardNumber: 'MY492', renderData: CardRenderer.builder((b) => {b.text('Place greenery.');}),
-        description: 'Place greenery. (Time bends.)'},
+        description: '-1 VP. (Time bends.)'},
     });
   }
 }

@@ -11,7 +11,7 @@ export class MysteryCard471 extends Card implements IProjectCard {
       victoryPoints: -2,
       behavior: {tr: 2},
       metadata: {cardNumber: 'MY471', renderData: CardRenderer.builder((b) => {b.text('Raise TR.');}),
-        description: 'Raise TR. (Innovation breeds opportunity.)'},
+        description: 'Raise your TR 2 steps. -2 VP. (Innovation breeds opportunity.)'},
     });
   }
 }

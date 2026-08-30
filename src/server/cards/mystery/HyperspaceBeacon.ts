@@ -11,7 +11,7 @@ export class HyperspaceBeacon extends Card implements IProjectCard {
       victoryPoints: 1,
       behavior: {tr: 1, production: {titanium: 2}},
       metadata: {cardNumber: 'MY366', renderData: CardRenderer.builder((b) => {b.text('TR and production.');}),
-        description: 'TR and production. (The veil lifts.)'},
+        description: 'Raise your TR 1 step. 1 VP. (The veil lifts.)'},
     });
   }
 }

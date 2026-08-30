@@ -11,7 +11,7 @@ export class NectarOfOblivion extends Card implements IProjectCard {
       victoryPoints: 1,
       behavior: {greenery: {}},
       metadata: {cardNumber: 'MY086', renderData: CardRenderer.builder((b) => {b.text('Place greenery.');}),
-        description: 'Place greenery. (Time bends.)'},
+        description: '1 VP. (Time bends.)'},
     });
   }
 }

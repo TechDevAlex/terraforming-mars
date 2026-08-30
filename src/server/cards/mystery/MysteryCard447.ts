@@ -10,7 +10,7 @@ export class MysteryCard447 extends Card implements IProjectCard {
       type: CardType.EVENT, name: CardName.MYSTERY_CARD_447, tags: [Tag.MICROBE], cost: 20,
       behavior: {tr: 2},
       metadata: {cardNumber: 'MY447', renderData: CardRenderer.builder((b) => {b.text('Raise TR.');}),
-        description: 'Raise TR. (Time bends.)'},
+        description: 'Raise your TR 2 steps. (Time bends.)'},
     });
   }
 }

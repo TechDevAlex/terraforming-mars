@@ -11,7 +11,7 @@ export class SummitMeeting extends Card implements IProjectCard {
       victoryPoints: 1,
       behavior: {production: {plants: 2}},
       metadata: {cardNumber: 'MY209', renderData: CardRenderer.builder((b) => {b.text('Adjust production.');}),
-        description: 'Adjust production. (Every clue matters.)'},
+        description: '1 VP. (Every clue matters.)'},
     });
   }
 }

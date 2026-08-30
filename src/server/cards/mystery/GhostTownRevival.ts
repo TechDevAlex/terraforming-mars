@@ -10,7 +10,7 @@ export class GhostTownRevival extends Card implements IProjectCard {
       type: CardType.EVENT, name: CardName.GHOST_TOWN_REVIVAL, tags: [Tag.POWER, Tag.JOVIAN], cost: 4,
       behavior: {global: {temperature: 1}},
       metadata: {cardNumber: 'MY152', renderData: CardRenderer.builder((b) => {b.text('Raise global parameter.');}),
-        description: 'Raise global parameter. (Nothing is as it seems.)'},
+        description: 'Raise temperature 1 step. (Nothing is as it seems.)'},
     });
   }
 }

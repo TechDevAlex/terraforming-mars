@@ -11,7 +11,7 @@ export class DoubleAgent extends Card implements IProjectCard {
       victoryPoints: 3,
       behavior: {tr: 1, production: {steel: 1}},
       metadata: {cardNumber: 'MY006', renderData: CardRenderer.builder((b) => {b.text('TR and production.');}),
-        description: 'TR and production. (Innovation breeds opportunity.)'},
+        description: 'Raise your TR 1 step. 3 VP. (Innovation breeds opportunity.)'},
     });
   }
 }

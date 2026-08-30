@@ -11,7 +11,7 @@ export class LeydenJar extends Card implements IActionCard, IProjectCard {
     super({
       type: CardType.ACTIVE, name: CardName.LEYDEN_JAR, tags: [Tag.MICROBE], cost: 6,
       metadata: {cardNumber: 'MY279', renderData: CardRenderer.builder((b) => {b.action('Gain 2 plants.', (ab) => {ab.empty().startAction.text('?');});}),
-        description: 'Action: Gain 2 plants. (The plot thickens.)'},
+        description: 'Action: Gain 2 plants.. (The plot thickens.)'},
     });
   }
   public canAct(_player: Player): boolean {return true;}

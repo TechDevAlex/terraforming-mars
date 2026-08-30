@@ -10,7 +10,7 @@ export class InterrogationRoom extends Card implements IProjectCard {
       victoryPoints: 3,
       behavior: {production: {steel: 1, megacredits: 2}},
       metadata: {cardNumber: 'MY016', renderData: CardRenderer.builder((b) => {b.text('Adjust production.');}),
-        description: 'Adjust production. (Space warps.)'},
+        description: '3 VP. (Space warps.)'},
     });
   }
 }

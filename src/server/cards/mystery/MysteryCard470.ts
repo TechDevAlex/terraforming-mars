@@ -11,7 +11,7 @@ export class MysteryCard470 extends Card implements IActionCard, IProjectCard {
     super({
       type: CardType.ACTIVE, name: CardName.MYSTERY_CARD_470, tags: [Tag.BUILDING, Tag.EARTH], cost: 18,
       metadata: {cardNumber: 'MY470', renderData: CardRenderer.builder((b) => {b.action('Gain 1 titanium.', (ab) => {ab.empty().startAction.text('?');});}),
-        description: 'Action: Gain 1 titanium. (The stars align.)'},
+        description: 'Action: Gain 1 titanium.. (The stars align.)'},
     });
   }
   public canAct(_player: Player): boolean {return true;}

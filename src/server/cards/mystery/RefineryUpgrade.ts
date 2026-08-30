@@ -12,7 +12,7 @@ export class RefineryUpgrade extends Card implements IActionCard, IProjectCard {
       type: CardType.ACTIVE, name: CardName.REFINERY_UPGRADE, tags: [Tag.SCIENCE], cost: 8,
       victoryPoints: 1,
       metadata: {cardNumber: 'MY170', renderData: CardRenderer.builder((b) => {b.action('Spend 2 MC to draw a card.', (ab) => {ab.empty().startAction.text('?');});}),
-        description: 'Action: Spend 2 MC to draw a card. (The veil lifts.)'},
+        description: 'Action: Spend 2 MC to draw a card.. 1 VP. (The veil lifts.)'},
     });
   }
   public canAct(player: Player): boolean {return player.canAfford(2);}

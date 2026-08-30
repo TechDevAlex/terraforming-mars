@@ -10,7 +10,7 @@ export class TrapSystemCrash extends Card implements IActionCard, IProjectCard {
     super({
       type: CardType.ACTIVE, name: CardName.TRAP_SYSTEM_CRASH, tags: [], cost: 0,
       metadata: {cardNumber: 'TRAP042', renderData: CardRenderer.builder((b) => {b.action('TRAP: If temperature reached -10C, gain 1 TR.', (ab) => {ab.empty().startAction.text('TRAP');});}),
-        description: 'TRAP: If temperature reached -10C, gain 1 TR. (Triggers once automatically.)'},
+        description: 'Action: TRAP: If temperature reached -10C, gain 1 TR. (Triggers once automatically.)'},
     });
   }
   private triggered = false;

@@ -10,7 +10,7 @@ export class TrapMoleAgent extends Card implements IActionCard, IProjectCard {
     super({
       type: CardType.ACTIVE, name: CardName.TRAP_MOLE_AGENT, tags: [], cost: 0,
       metadata: {cardNumber: 'TRAP023', renderData: CardRenderer.builder((b) => {b.action('TRAP: If 3+ oceans placed, gain 4 plants.', (ab) => {ab.empty().startAction.text('TRAP');});}),
-        description: 'TRAP: If 3+ oceans placed, gain 4 plants. (Triggers once automatically.)'},
+        description: 'Action: TRAP: If 3+ oceans placed, gain 4 plants. (Triggers once automatically.)'},
     });
   }
   private triggered = false;

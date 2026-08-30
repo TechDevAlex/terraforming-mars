@@ -11,7 +11,7 @@ export class MysteryCard406 extends Card implements IActionCard, IProjectCard {
     super({
       type: CardType.ACTIVE, name: CardName.MYSTERY_CARD_406, tags: [Tag.ANIMAL, Tag.JOVIAN], cost: 9,
       metadata: {cardNumber: 'MY406', renderData: CardRenderer.builder((b) => {b.action('Gain 1 titanium.', (ab) => {ab.empty().startAction.text('?');});}),
-        description: 'Action: Gain 1 titanium. (The plot thickens.)'},
+        description: 'Action: Gain 1 titanium.. (The plot thickens.)'},
     });
   }
   public canAct(_player: Player): boolean {return true;}

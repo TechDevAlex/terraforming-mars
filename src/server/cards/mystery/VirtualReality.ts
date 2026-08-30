@@ -11,7 +11,7 @@ export class VirtualReality extends Card implements IActionCard, IProjectCard {
     super({
       type: CardType.ACTIVE, name: CardName.VIRTUAL_REALITY, tags: [Tag.MICROBE], cost: 10,
       metadata: {cardNumber: 'MY352', renderData: CardRenderer.builder((b) => {b.action('Gain 1 energy.', (ab) => {ab.empty().startAction.text('?');});}),
-        description: 'Action: Gain 1 energy. (Steel and will forge the path.)'},
+        description: 'Action: Gain 1 energy.. (Steel and will forge the path.)'},
     });
   }
   public canAct(_player: Player): boolean {return true;}

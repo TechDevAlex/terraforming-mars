@@ -12,7 +12,7 @@ export class JumpGate extends Card implements IActionCard, IProjectCard {
       type: CardType.ACTIVE, name: CardName.JUMP_GATE, tags: [Tag.MARS], cost: 19,
       victoryPoints: -1,
       metadata: {cardNumber: 'MY367', renderData: CardRenderer.builder((b) => {b.action('Gain 3 MC.', (ab) => {ab.empty().startAction.text('?');});}),
-        description: 'Action: Gain 3 MC. (Nature finds a way.)'},
+        description: 'Action: Gain 3 MC.. -1 VP. (Nature finds a way.)'},
     });
   }
   public canAct(_player: Player): boolean {return true;}

@@ -10,7 +10,7 @@ export class AnonymousDonor extends Card implements IProjectCard {
       type: CardType.EVENT, name: CardName.ANONYMOUS_DONOR, tags: [Tag.EARTH, Tag.MARS], cost: 18,
       behavior: {drawCard: 3},
       metadata: {cardNumber: 'MY247', renderData: CardRenderer.builder((b) => {b.text('Draw cards.');}),
-        description: 'Draw cards. (Innovation breeds opportunity.)'},
+        description: 'Draw 3 cards. (Innovation breeds opportunity.)'},
     });
   }
 }

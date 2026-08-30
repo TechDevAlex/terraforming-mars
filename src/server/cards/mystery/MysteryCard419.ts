@@ -11,7 +11,7 @@ export class MysteryCard419 extends Card implements IActionCard, IProjectCard {
     super({
       type: CardType.ACTIVE, name: CardName.MYSTERY_CARD_419, tags: [Tag.SPACE, Tag.EARTH], cost: 19,
       metadata: {cardNumber: 'MY419', renderData: CardRenderer.builder((b) => {b.action('Gain 2 heat.', (ab) => {ab.empty().startAction.text('?');});}),
-        description: 'Action: Gain 2 heat. (Progress demands sacrifice.)'},
+        description: 'Action: Gain 2 heat.. (Progress demands sacrifice.)'},
     });
   }
   public canAct(_player: Player): boolean {return true;}

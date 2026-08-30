@@ -11,7 +11,7 @@ export class FirewallBreach extends Card implements IProjectCard {
       victoryPoints: 2,
       behavior: {drawCard: 1},
       metadata: {cardNumber: 'MY105', renderData: CardRenderer.builder((b) => {b.text('Draw cards.');}),
-        description: 'Draw cards. (Darkness falls.)'},
+        description: 'Draw 1 card. 2 VP. (Darkness falls.)'},
     });
   }
 }

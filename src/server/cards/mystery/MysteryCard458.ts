@@ -11,7 +11,7 @@ export class MysteryCard458 extends Card implements IProjectCard {
       victoryPoints: 3,
       behavior: {production: {megacredits: 1, heat: 2}},
       metadata: {cardNumber: 'MY458', renderData: CardRenderer.builder((b) => {b.text('Adjust production.');}),
-        description: 'Adjust production. (Steel and will forge the path.)'},
+        description: '3 VP. (Steel and will forge the path.)'},
     });
   }
 }

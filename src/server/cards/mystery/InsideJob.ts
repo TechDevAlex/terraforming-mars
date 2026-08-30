@@ -10,7 +10,7 @@ export class InsideJob extends Card implements IProjectCard {
       type: CardType.EVENT, name: CardName.INSIDE_JOB, tags: [Tag.BUILDING, Tag.EARTH], cost: 22,
       behavior: {drawCard: 1},
       metadata: {cardNumber: 'MY024', renderData: CardRenderer.builder((b) => {b.text('Draw cards.');}),
-        description: 'Draw cards. (The truth is out there.)'},
+        description: 'Draw 1 card. (The truth is out there.)'},
     });
   }
 }

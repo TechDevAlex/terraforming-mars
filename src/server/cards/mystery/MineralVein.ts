@@ -10,7 +10,7 @@ export class MineralVein extends Card implements IActionCard, IProjectCard {
     super({
       type: CardType.ACTIVE, name: CardName.MINERAL_VEIN, tags: [], cost: 8,
       metadata: {cardNumber: 'MY134', renderData: CardRenderer.builder((b) => {b.action('Gain 2 heat.', (ab) => {ab.empty().startAction.text('?');});}),
-        description: 'Action: Gain 2 heat. (A whisper in the void.)'},
+        description: 'Action: Gain 2 heat.. (A whisper in the void.)'},
     });
   }
   public canAct(_player: Player): boolean {return true;}

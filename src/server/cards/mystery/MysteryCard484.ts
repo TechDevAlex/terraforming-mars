@@ -11,7 +11,7 @@ export class MysteryCard484 extends Card implements IActionCard, IProjectCard {
     super({
       type: CardType.ACTIVE, name: CardName.MYSTERY_CARD_484, tags: [Tag.SCIENCE], cost: 11,
       metadata: {cardNumber: 'MY484', renderData: CardRenderer.builder((b) => {b.action('Spend 2 MC to draw a card.', (ab) => {ab.empty().startAction.text('?');});}),
-        description: 'Action: Spend 2 MC to draw a card. (A whisper in the void.)'},
+        description: 'Action: Spend 2 MC to draw a card.. (A whisper in the void.)'},
     });
   }
   public canAct(player: Player): boolean {return player.canAfford(2);}

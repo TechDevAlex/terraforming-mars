@@ -11,7 +11,7 @@ export class DirtyMoney extends Card implements IProjectCard {
       victoryPoints: 2,
       behavior: {drawCard: 1},
       metadata: {cardNumber: 'MY019', renderData: CardRenderer.builder((b) => {b.text('Draw cards.');}),
-        description: 'Draw cards. (Trust no one.)'},
+        description: 'Draw 1 card. 2 VP. (Trust no one.)'},
     });
   }
 }

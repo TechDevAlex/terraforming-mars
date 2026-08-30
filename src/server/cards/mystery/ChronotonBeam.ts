@@ -11,7 +11,7 @@ export class ChronotonBeam extends Card implements IProjectCard {
       victoryPoints: 3,
       behavior: {production: {titanium: 1, megacredits: 2}},
       metadata: {cardNumber: 'MY361', renderData: CardRenderer.builder((b) => {b.text('Adjust production.');}),
-        description: 'Adjust production. (Shadows hide secrets.)'},
+        description: '3 VP. (Shadows hide secrets.)'},
     });
   }
 }

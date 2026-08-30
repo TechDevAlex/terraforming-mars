@@ -8,7 +8,7 @@ export class EnigmaCorp extends CorporationCard implements ICorporationCard {
     super({
       name: CardName.ENIGMA_CORP, tags: [Tag.SCIENCE], startingMegaCredits: 42,
       firstAction: {text: 'Initial action', drawCard: 2},
-      metadata: {cardNumber: 'MYCORP01', description: 'You start with 42 M€.',
+      metadata: {cardNumber: 'MYCORP01', description: 'You start with 42 M€. As your first action, draw 2 cards.',
         renderData: CardRenderer.builder((b) => {b.br.megacredits(42);})
       },
     });

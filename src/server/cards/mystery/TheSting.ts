@@ -11,7 +11,7 @@ export class TheSting extends Card implements IActionCard, IProjectCard {
     super({
       type: CardType.ACTIVE, name: CardName.THE_STING, tags: [Tag.JOVIAN], cost: 7,
       metadata: {cardNumber: 'MY013', renderData: CardRenderer.builder((b) => {b.action('Draw 1 card.', (ab) => {ab.empty().startAction.text('?');});}),
-        description: 'Action: Draw 1 card. (Progress demands sacrifice.)'},
+        description: 'Action: Draw 1 card.. (Progress demands sacrifice.)'},
     });
   }
   public canAct(_player: Player): boolean {return true;}

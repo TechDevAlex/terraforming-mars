@@ -10,7 +10,7 @@ export class FreightTerminal extends Card implements IProjectCard {
       type: CardType.EVENT, name: CardName.FREIGHT_TERMINAL, tags: [Tag.MARS], cost: 5,
       behavior: {drawCard: 2},
       metadata: {cardNumber: 'MY168', renderData: CardRenderer.builder((b) => {b.text('Draw cards.');}),
-        description: 'Draw cards. (Nothing is as it seems.)'},
+        description: 'Draw 2 cards. (Nothing is as it seems.)'},
     });
   }
 }

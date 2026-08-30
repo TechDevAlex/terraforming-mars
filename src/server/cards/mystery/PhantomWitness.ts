@@ -12,7 +12,7 @@ export class PhantomWitness extends Card implements IActionCard, IProjectCard {
       type: CardType.ACTIVE, name: CardName.PHANTOM_WITNESS, tags: [Tag.ANIMAL], cost: 5,
       victoryPoints: 3,
       metadata: {cardNumber: 'MY010', renderData: CardRenderer.builder((b) => {b.action('Spend 2 MC to draw a card.', (ab) => {ab.empty().startAction.text('?');});}),
-        description: 'Action: Spend 2 MC to draw a card. (The mystery deepens.)'},
+        description: 'Action: Spend 2 MC to draw a card.. 3 VP. (The mystery deepens.)'},
     });
   }
   public canAct(player: Player): boolean {return player.canAfford(2);}

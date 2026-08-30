@@ -11,7 +11,7 @@ export class DeadLetter extends Card implements IActionCard, IProjectCard {
     super({
       type: CardType.ACTIVE, name: CardName.DEAD_LETTER, tags: [Tag.POWER], cost: 13,
       metadata: {cardNumber: 'MY258', renderData: CardRenderer.builder((b) => {b.action('Gain 1 titanium.', (ab) => {ab.empty().startAction.text('?');});}),
-        description: 'Action: Gain 1 titanium. (Time bends.)'},
+        description: 'Action: Gain 1 titanium.. (Time bends.)'},
     });
   }
   public canAct(_player: Player): boolean {return true;}

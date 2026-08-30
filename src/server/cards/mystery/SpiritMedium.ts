@@ -11,7 +11,7 @@ export class SpiritMedium extends Card implements IProjectCard {
       victoryPoints: 1,
       behavior: {production: {steel: 1}},
       metadata: {cardNumber: 'MY064', renderData: CardRenderer.builder((b) => {b.text('Adjust production.');}),
-        description: 'Adjust production. (Nothing is as it seems.)'},
+        description: '1 VP. (Nothing is as it seems.)'},
     });
   }
 }

@@ -10,7 +10,7 @@ export class TrapSleeperCell extends Card implements IActionCard, IProjectCard {
     super({
       type: CardType.ACTIVE, name: CardName.TRAP_SLEEPER_CELL, tags: [], cost: 0,
       metadata: {cardNumber: 'TRAP026', renderData: CardRenderer.builder((b) => {b.action('TRAP: If generation 3+, draw 2 cards.', (ab) => {ab.empty().startAction.text('TRAP');});}),
-        description: 'TRAP: If generation 3+, draw 2 cards. (Triggers once automatically.)'},
+        description: 'Action: TRAP: If generation 3+, draw 2 cards. (Triggers once automatically.)'},
     });
   }
   private triggered = false;

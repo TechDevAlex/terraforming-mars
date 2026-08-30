@@ -10,7 +10,7 @@ export class ReconMission extends Card implements IProjectCard {
       victoryPoints: -2,
       behavior: {production: {steel: 2, plants: 1}},
       metadata: {cardNumber: 'MY222', renderData: CardRenderer.builder((b) => {b.text('Adjust production.');}),
-        description: 'Adjust production. (Secrets have power.)'},
+        description: '-2 VP. (Secrets have power.)'},
     });
   }
 }

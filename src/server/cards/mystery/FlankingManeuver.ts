@@ -11,7 +11,7 @@ export class FlankingManeuver extends Card implements IProjectCard {
       victoryPoints: 2,
       behavior: {stock: {plants: 2}},
       metadata: {cardNumber: 'MY224', renderData: CardRenderer.builder((b) => {b.text('Gain resources.');}),
-        description: 'Gain resources. (Progress demands sacrifice.)'},
+        description: '2 VP. (Progress demands sacrifice.)'},
     });
   }
 }

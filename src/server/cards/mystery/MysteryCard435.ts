@@ -11,7 +11,7 @@ export class MysteryCard435 extends Card implements IProjectCard {
       victoryPoints: -1,
       behavior: {tr: 2},
       metadata: {cardNumber: 'MY435', renderData: CardRenderer.builder((b) => {b.text('Raise TR.');}),
-        description: 'Raise TR. (Trust no one.)'},
+        description: 'Raise your TR 2 steps. -1 VP. (Trust no one.)'},
     });
   }
 }

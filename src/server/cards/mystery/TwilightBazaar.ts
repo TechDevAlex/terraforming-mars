@@ -12,7 +12,7 @@ export class TwilightBazaar extends Card implements IActionCard, IProjectCard {
       type: CardType.ACTIVE, name: CardName.TWILIGHT_BAZAAR, tags: [Tag.MICROBE, Tag.ANIMAL], cost: 14,
       victoryPoints: 3,
       metadata: {cardNumber: 'MY089', renderData: CardRenderer.builder((b) => {b.action('Gain 2 heat.', (ab) => {ab.empty().startAction.text('?');});}),
-        description: 'Action: Gain 2 heat. (A whisper in the void.)'},
+        description: 'Action: Gain 2 heat.. 3 VP. (A whisper in the void.)'},
     });
   }
   public canAct(_player: Player): boolean {return true;}

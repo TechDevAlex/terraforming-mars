@@ -12,7 +12,7 @@ export class AugmentedReality extends Card implements IActionCard, IProjectCard 
       type: CardType.ACTIVE, name: CardName.AUGMENTED_REALITY, tags: [Tag.SPACE, Tag.JOVIAN], cost: 17,
       victoryPoints: 2,
       metadata: {cardNumber: 'MY353', renderData: CardRenderer.builder((b) => {b.action('Gain 1 titanium.', (ab) => {ab.empty().startAction.text('?');});}),
-        description: 'Action: Gain 1 titanium. (A whisper in the void.)'},
+        description: 'Action: Gain 1 titanium.. 2 VP. (A whisper in the void.)'},
     });
   }
   public canAct(_player: Player): boolean {return true;}

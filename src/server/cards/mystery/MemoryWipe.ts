@@ -11,7 +11,7 @@ export class MemoryWipe extends Card implements IActionCard, IProjectCard {
     super({
       type: CardType.ACTIVE, name: CardName.MEMORY_WIPE, tags: [Tag.SPACE, Tag.JOVIAN], cost: 16,
       metadata: {cardNumber: 'MY107', renderData: CardRenderer.builder((b) => {b.action('Draw 1 card.', (ab) => {ab.empty().startAction.text('?');});}),
-        description: 'Action: Draw 1 card. (Reality shifts.)'},
+        description: 'Action: Draw 1 card.. (Reality shifts.)'},
     });
   }
   public canAct(_player: Player): boolean {return true;}

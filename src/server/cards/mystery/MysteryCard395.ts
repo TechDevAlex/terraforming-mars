@@ -11,7 +11,7 @@ export class MysteryCard395 extends Card implements IActionCard, IProjectCard {
     super({
       type: CardType.ACTIVE, name: CardName.MYSTERY_CARD_395, tags: [Tag.BUILDING], cost: 20,
       metadata: {cardNumber: 'MY395', renderData: CardRenderer.builder((b) => {b.action('Spend 3 MC to gain 6 MC.', (ab) => {ab.empty().startAction.text('?');});}),
-        description: 'Action: Spend 3 MC to gain 6 MC. (Steel and will forge the path.)'},
+        description: 'Action: Spend 3 MC to gain 6 MC.. (Steel and will forge the path.)'},
     });
   }
   public canAct(player: Player): boolean {return player.canAfford(3);}

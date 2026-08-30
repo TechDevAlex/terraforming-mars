@@ -11,7 +11,7 @@ export class LaserArray extends Card implements IProjectCard {
       victoryPoints: 1,
       behavior: {production: {megacredits: 2, titanium: 2}},
       metadata: {cardNumber: 'MY284', renderData: CardRenderer.builder((b) => {b.text('Adjust production.');}),
-        description: 'Adjust production. (Time bends.)'},
+        description: '1 VP. (Time bends.)'},
     });
   }
 }

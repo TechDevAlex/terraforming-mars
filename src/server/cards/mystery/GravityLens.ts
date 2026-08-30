@@ -11,7 +11,7 @@ export class GravityLens extends Card implements IProjectCard {
       victoryPoints: -1,
       behavior: {production: {energy: 1}},
       metadata: {cardNumber: 'MY059', renderData: CardRenderer.builder((b) => {b.text('Adjust production.');}),
-        description: 'Adjust production. (Trust no one.)'},
+        description: '-1 VP. (Trust no one.)'},
     });
   }
 }

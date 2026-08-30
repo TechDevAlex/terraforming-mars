@@ -12,7 +12,7 @@ export class MysteryCard529 extends Card implements IActionCard, IProjectCard {
       type: CardType.ACTIVE, name: CardName.MYSTERY_CARD_529, tags: [Tag.JOVIAN], cost: 7,
       victoryPoints: 1,
       metadata: {cardNumber: 'MY529', renderData: CardRenderer.builder((b) => {b.action('Draw 1 card.', (ab) => {ab.empty().startAction.text('?');});}),
-        description: 'Action: Draw 1 card. (Innovation breeds opportunity.)'},
+        description: 'Action: Draw 1 card.. 1 VP. (Innovation breeds opportunity.)'},
     });
   }
   public canAct(_player: Player): boolean {return true;}

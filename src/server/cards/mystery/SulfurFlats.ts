@@ -11,7 +11,7 @@ export class SulfurFlats extends Card implements IProjectCard {
       victoryPoints: 1,
       behavior: {ocean: {}},
       metadata: {cardNumber: 'MY144', renderData: CardRenderer.builder((b) => {b.text('Place an ocean.');}),
-        description: 'Place an ocean. (Steel and will forge the path.)'},
+        description: '1 VP. (Steel and will forge the path.)'},
     });
   }
 }

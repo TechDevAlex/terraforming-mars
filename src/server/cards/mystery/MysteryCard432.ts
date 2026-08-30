@@ -11,7 +11,7 @@ export class MysteryCard432 extends Card implements IProjectCard {
       victoryPoints: -2,
       behavior: {production: {energy: 1}},
       metadata: {cardNumber: 'MY432', renderData: CardRenderer.builder((b) => {b.text('Adjust production.');}),
-        description: 'Adjust production. (The frontier expands.)'},
+        description: '-2 VP. (The frontier expands.)'},
     });
   }
 }

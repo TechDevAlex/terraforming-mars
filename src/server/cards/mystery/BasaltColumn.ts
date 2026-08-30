@@ -11,7 +11,7 @@ export class BasaltColumn extends Card implements IActionCard, IProjectCard {
     super({
       type: CardType.ACTIVE, name: CardName.BASALT_COLUMN, tags: [Tag.POWER], cost: 10,
       metadata: {cardNumber: 'MY146', renderData: CardRenderer.builder((b) => {b.action('Spend 2 MC to draw a card.', (ab) => {ab.empty().startAction.text('?');});}),
-        description: 'Action: Spend 2 MC to draw a card. (Darkness falls.)'},
+        description: 'Action: Spend 2 MC to draw a card.. (Darkness falls.)'},
     });
   }
   public canAct(player: Player): boolean {return player.canAfford(2);}

@@ -11,7 +11,7 @@ export class TransformerStation extends Card implements IActionCard, IProjectCar
     super({
       type: CardType.ACTIVE, name: CardName.TRANSFORMER_STATION, tags: [Tag.JOVIAN, Tag.MICROBE], cost: 5,
       metadata: {cardNumber: 'MY176', renderData: CardRenderer.builder((b) => {b.action('Draw 1 card.', (ab) => {ab.empty().startAction.text('?');});}),
-        description: 'Action: Draw 1 card. (Knowledge is the ultimate currency.)'},
+        description: 'Action: Draw 1 card.. (Knowledge is the ultimate currency.)'},
     });
   }
   public canAct(_player: Player): boolean {return true;}

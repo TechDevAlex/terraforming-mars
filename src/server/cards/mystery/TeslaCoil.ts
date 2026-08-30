@@ -11,7 +11,7 @@ export class TeslaCoil extends Card implements IProjectCard {
       victoryPoints: -1,
       behavior: {stock: {steel: 4}},
       metadata: {cardNumber: 'MY276', renderData: CardRenderer.builder((b) => {b.text('Gain resources.');}),
-        description: 'Gain resources. (The stars align.)'},
+        description: '-1 VP. (The stars align.)'},
     });
   }
 }

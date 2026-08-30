@@ -11,7 +11,7 @@ export class FalseWall extends Card implements IProjectCard {
       victoryPoints: 3,
       behavior: {production: {plants: 2, heat: 1}},
       metadata: {cardNumber: 'MY254', renderData: CardRenderer.builder((b) => {b.text('Adjust production.');}),
-        description: 'Adjust production. (Space warps.)'},
+        description: '3 VP. (Space warps.)'},
     });
   }
 }

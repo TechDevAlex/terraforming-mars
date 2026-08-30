@@ -11,7 +11,7 @@ export class MatrioshkaBrain extends Card implements IProjectCard {
       victoryPoints: -1,
       behavior: {production: {energy: 2}, drawCard: 1},
       metadata: {cardNumber: 'MY309', renderData: CardRenderer.builder((b) => {b.text('Production and draw.');}),
-        description: 'Production and draw. (Progress demands sacrifice.)'},
+        description: '-1 VP. (Progress demands sacrifice.)'},
     });
   }
 }

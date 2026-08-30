@@ -11,7 +11,7 @@ export class NuclearPulse extends Card implements IProjectCard {
       victoryPoints: 3,
       behavior: {ocean: {}},
       metadata: {cardNumber: 'MY305', renderData: CardRenderer.builder((b) => {b.text('Place an ocean.');}),
-        description: 'Place an ocean. (The truth is out there.)'},
+        description: '3 VP. (The truth is out there.)'},
     });
   }
 }

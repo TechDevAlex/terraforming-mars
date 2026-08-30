@@ -11,7 +11,7 @@ export class BioluminescentCave extends Card implements IProjectCard {
       victoryPoints: 1,
       behavior: {production: {energy: 2}, drawCard: 1},
       metadata: {cardNumber: 'MY124', renderData: CardRenderer.builder((b) => {b.text('Production and draw.');}),
-        description: 'Production and draw. (Time bends.)'},
+        description: '1 VP. (Time bends.)'},
     });
   }
 }

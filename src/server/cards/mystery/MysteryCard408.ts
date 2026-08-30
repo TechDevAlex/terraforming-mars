@@ -10,7 +10,7 @@ export class MysteryCard408 extends Card implements IProjectCard {
       type: CardType.EVENT, name: CardName.MYSTERY_CARD_408, tags: [Tag.JOVIAN, Tag.BUILDING], cost: 3,
       behavior: {drawCard: 1},
       metadata: {cardNumber: 'MY408', renderData: CardRenderer.builder((b) => {b.text('Draw cards.');}),
-        description: 'Draw cards. (Steel and will forge the path.)'},
+        description: 'Draw 1 card. (Steel and will forge the path.)'},
     });
   }
 }

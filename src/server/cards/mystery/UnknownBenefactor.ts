@@ -11,7 +11,7 @@ export class UnknownBenefactor extends Card implements IProjectCard {
       victoryPoints: -1,
       behavior: {city: {}, production: {megacredits: 1}},
       metadata: {cardNumber: 'MY250', renderData: CardRenderer.builder((b) => {b.text('Place city, gain production.');}),
-        description: 'Place city, gain production. (Trust no one.)'},
+        description: '-1 VP. (Trust no one.)'},
     });
   }
 }

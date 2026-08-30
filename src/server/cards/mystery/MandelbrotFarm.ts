@@ -11,7 +11,7 @@ export class MandelbrotFarm extends Card implements IActionCard, IProjectCard {
     super({
       type: CardType.ACTIVE, name: CardName.MANDELBROT_FARM, tags: [Tag.ANIMAL], cost: 15,
       metadata: {cardNumber: 'MY322', renderData: CardRenderer.builder((b) => {b.action('Spend 3 MC to gain 6 MC.', (ab) => {ab.empty().startAction.text('?');});}),
-        description: 'Action: Spend 3 MC to gain 6 MC. (Knowledge is the ultimate currency.)'},
+        description: 'Action: Spend 3 MC to gain 6 MC.. (Knowledge is the ultimate currency.)'},
     });
   }
   public canAct(player: Player): boolean {return player.canAfford(3);}

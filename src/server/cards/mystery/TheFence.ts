@@ -11,7 +11,7 @@ export class TheFence extends Card implements IProjectCard {
       victoryPoints: -2,
       behavior: {stock: {titanium: 3}},
       metadata: {cardNumber: 'MY025', renderData: CardRenderer.builder((b) => {b.text('Gain resources.');}),
-        description: 'Gain resources. (Progress demands sacrifice.)'},
+        description: '-2 VP. (Progress demands sacrifice.)'},
     });
   }
 }

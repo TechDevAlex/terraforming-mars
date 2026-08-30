@@ -11,7 +11,7 @@ export class CellularAutomaton extends Card implements IActionCard, IProjectCard
     super({
       type: CardType.ACTIVE, name: CardName.CELLULAR_AUTOMATON, tags: [Tag.SPACE], cost: 5,
       metadata: {cardNumber: 'MY323', renderData: CardRenderer.builder((b) => {b.action('Spend 1 MC to draw a card.', (ab) => {ab.empty().startAction.text('?');});}),
-        description: 'Action: Spend 1 MC to draw a card. (Knowledge is the ultimate currency.)'},
+        description: 'Action: Spend 1 MC to draw a card.. (Knowledge is the ultimate currency.)'},
     });
   }
   public canAct(player: Player): boolean {return player.canAfford(1);}

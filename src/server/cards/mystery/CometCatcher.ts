@@ -11,7 +11,7 @@ export class CometCatcher extends Card implements IActionCard, IProjectCard {
     super({
       type: CardType.ACTIVE, name: CardName.COMET_CATCHER, tags: [Tag.PLANT], cost: 15,
       metadata: {cardNumber: 'MY050', renderData: CardRenderer.builder((b) => {b.action('Spend 2 MC to draw a card.', (ab) => {ab.empty().startAction.text('?');});}),
-        description: 'Action: Spend 2 MC to draw a card. (The unknown beckons.)'},
+        description: 'Action: Spend 2 MC to draw a card.. (The unknown beckons.)'},
     });
   }
   public canAct(player: Player): boolean {return player.canAfford(2);}

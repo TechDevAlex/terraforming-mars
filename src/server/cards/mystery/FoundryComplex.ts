@@ -11,7 +11,7 @@ export class FoundryComplex extends Card implements IProjectCard {
       victoryPoints: 2,
       behavior: {production: {energy: 2, megacredits: 2}},
       metadata: {cardNumber: 'MY160', renderData: CardRenderer.builder((b) => {b.text('Adjust production.');}),
-        description: 'Adjust production. (The truth is out there.)'},
+        description: '2 VP. (The truth is out there.)'},
     });
   }
 }

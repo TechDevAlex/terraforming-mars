@@ -11,7 +11,7 @@ export class MindShield extends Card implements IActionCard, IProjectCard {
     super({
       type: CardType.ACTIVE, name: CardName.MIND_SHIELD, tags: [Tag.CITY], cost: 5,
       metadata: {cardNumber: 'MY334', renderData: CardRenderer.builder((b) => {b.action('Spend 2 MC to draw a card.', (ab) => {ab.empty().startAction.text('?');});}),
-        description: 'Action: Spend 2 MC to draw a card. (Reality shifts.)'},
+        description: 'Action: Spend 2 MC to draw a card.. (Reality shifts.)'},
     });
   }
   public canAct(player: Player): boolean {return player.canAfford(2);}

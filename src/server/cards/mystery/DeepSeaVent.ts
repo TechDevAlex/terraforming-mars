@@ -11,7 +11,7 @@ export class DeepSeaVent extends Card implements IActionCard, IProjectCard {
     super({
       type: CardType.ACTIVE, name: CardName.DEEP_SEA_VENT, tags: [Tag.EARTH], cost: 6,
       metadata: {cardNumber: 'MY131', renderData: CardRenderer.builder((b) => {b.action('Spend 3 MC to gain 6 MC.', (ab) => {ab.empty().startAction.text('?');});}),
-        description: 'Action: Spend 3 MC to gain 6 MC. (Progress demands sacrifice.)'},
+        description: 'Action: Spend 3 MC to gain 6 MC.. (Progress demands sacrifice.)'},
     });
   }
   public canAct(player: Player): boolean {return player.canAfford(3);}

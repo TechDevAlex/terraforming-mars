@@ -11,7 +11,7 @@ export class PetrifiedForest extends Card implements IProjectCard {
       victoryPoints: -1,
       behavior: {stock: {megacredits: 5}},
       metadata: {cardNumber: 'MY138', renderData: CardRenderer.builder((b) => {b.text('Gain resources.');}),
-        description: 'Gain resources. (Shadows hide secrets.)'},
+        description: '-1 VP. (Shadows hide secrets.)'},
     });
   }
 }

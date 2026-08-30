@@ -12,7 +12,7 @@ export class VoltaicPile extends Card implements IActionCard, IProjectCard {
       type: CardType.ACTIVE, name: CardName.VOLTAIC_PILE, tags: [Tag.PLANT], cost: 13,
       victoryPoints: -2,
       metadata: {cardNumber: 'MY281', renderData: CardRenderer.builder((b) => {b.action('Draw 1 card.', (ab) => {ab.empty().startAction.text('?');});}),
-        description: 'Action: Draw 1 card. (Secrets have power.)'},
+        description: 'Action: Draw 1 card.. -2 VP. (Secrets have power.)'},
     });
   }
   public canAct(_player: Player): boolean {return true;}

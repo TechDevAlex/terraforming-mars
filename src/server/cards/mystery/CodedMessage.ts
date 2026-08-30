@@ -11,7 +11,7 @@ export class CodedMessage extends Card implements IProjectCard {
       victoryPoints: -1,
       behavior: {production: {energy: 3, heat: 2}},
       metadata: {cardNumber: 'MY257', renderData: CardRenderer.builder((b) => {b.text('Adjust production.');}),
-        description: 'Adjust production. (The truth is out there.)'},
+        description: '-1 VP. (The truth is out there.)'},
     });
   }
 }

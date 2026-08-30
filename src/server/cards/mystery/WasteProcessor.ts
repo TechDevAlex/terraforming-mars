@@ -11,7 +11,7 @@ export class WasteProcessor extends Card implements IActionCard, IProjectCard {
     super({
       type: CardType.ACTIVE, name: CardName.WASTE_PROCESSOR, tags: [Tag.SCIENCE], cost: 16,
       metadata: {cardNumber: 'MY157', renderData: CardRenderer.builder((b) => {b.action('Spend 1 MC to draw a card.', (ab) => {ab.empty().startAction.text('?');});}),
-        description: 'Action: Spend 1 MC to draw a card. (The plot thickens.)'},
+        description: 'Action: Spend 1 MC to draw a card.. (The plot thickens.)'},
     });
   }
   public canAct(player: Player): boolean {return player.canAfford(1);}

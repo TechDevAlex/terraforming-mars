@@ -10,7 +10,7 @@ export class CrystalCavern extends Card implements IProjectCard {
       victoryPoints: -1,
       behavior: {tr: 2},
       metadata: {cardNumber: 'MY135', renderData: CardRenderer.builder((b) => {b.text('Raise TR.');}),
-        description: 'Raise TR. (Secrets have power.)'},
+        description: 'Raise your TR 2 steps. -1 VP. (Secrets have power.)'},
     });
   }
 }

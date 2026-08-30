@@ -11,7 +11,7 @@ export class LeakInvestigation extends Card implements IActionCard, IProjectCard
     super({
       type: CardType.ACTIVE, name: CardName.LEAK_INVESTIGATION, tags: [Tag.SPACE, Tag.EARTH], cost: 15,
       metadata: {cardNumber: 'MY187', renderData: CardRenderer.builder((b) => {b.action('Gain 3 MC.', (ab) => {ab.empty().startAction.text('?');});}),
-        description: 'Action: Gain 3 MC. (Reality shifts.)'},
+        description: 'Action: Gain 3 MC.. (Reality shifts.)'},
     });
   }
   public canAct(_player: Player): boolean {return true;}

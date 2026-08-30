@@ -11,7 +11,7 @@ export class Helium3Mining extends Card implements IProjectCard {
       victoryPoints: 3,
       behavior: {production: {titanium: 2, megacredits: 2}},
       metadata: {cardNumber: 'MY296', renderData: CardRenderer.builder((b) => {b.text('Adjust production.');}),
-        description: 'Adjust production. (The stars align.)'},
+        description: '3 VP. (The stars align.)'},
     });
   }
 }

@@ -10,7 +10,7 @@ export class MysteryCard513 extends Card implements IProjectCard {
       type: CardType.AUTOMATED, name: CardName.MYSTERY_CARD_513, tags: [Tag.BUILDING], cost: 9,
       behavior: {tr: 1, production: {titanium: 1}},
       metadata: {cardNumber: 'MY513', renderData: CardRenderer.builder((b) => {b.text('TR and production.');}),
-        description: 'TR and production. (Darkness falls.)'},
+        description: 'Raise your TR 1 step. (Darkness falls.)'},
     });
   }
 }

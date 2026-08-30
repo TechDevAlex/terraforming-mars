@@ -11,7 +11,7 @@ export class ThoughtPrison extends Card implements IProjectCard {
       victoryPoints: 1,
       behavior: {production: {heat: 2, titanium: 1, megacredits: 1}},
       metadata: {cardNumber: 'MY335', renderData: CardRenderer.builder((b) => {b.text('Adjust production.');}),
-        description: 'Adjust production. (The truth is out there.)'},
+        description: '1 VP. (The truth is out there.)'},
     });
   }
 }

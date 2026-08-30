@@ -9,7 +9,7 @@ export class DeuteriumExtraction extends Card implements IProjectCard {
       type: CardType.AUTOMATED, name: CardName.DEUTERIUM_EXTRACTION, tags: [], cost: 6,
       behavior: {tr: 1, production: {titanium: 2}},
       metadata: {cardNumber: 'MY295', renderData: CardRenderer.builder((b) => {b.text('TR and production.');}),
-        description: 'TR and production. (The frontier expands.)'},
+        description: 'Raise your TR 1 step. (The frontier expands.)'},
     });
   }
 }

@@ -11,7 +11,7 @@ export class MysteryCard528 extends Card implements IActionCard, IProjectCard {
     super({
       type: CardType.ACTIVE, name: CardName.MYSTERY_CARD_528, tags: [Tag.SCIENCE], cost: 20,
       metadata: {cardNumber: 'MY528', renderData: CardRenderer.builder((b) => {b.action('Gain 1 energy.', (ab) => {ab.empty().startAction.text('?');});}),
-        description: 'Action: Gain 1 energy. (Progress demands sacrifice.)'},
+        description: 'Action: Gain 1 energy.. (Progress demands sacrifice.)'},
     });
   }
   public canAct(_player: Player): boolean {return true;}

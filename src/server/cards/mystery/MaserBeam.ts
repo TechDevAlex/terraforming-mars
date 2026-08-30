@@ -12,7 +12,7 @@ export class MaserBeam extends Card implements IActionCard, IProjectCard {
       type: CardType.ACTIVE, name: CardName.MASER_BEAM, tags: [Tag.ANIMAL, Tag.EARTH], cost: 19,
       victoryPoints: 1,
       metadata: {cardNumber: 'MY285', renderData: CardRenderer.builder((b) => {b.action('Spend 3 MC to gain 6 MC.', (ab) => {ab.empty().startAction.text('?');});}),
-        description: 'Action: Spend 3 MC to gain 6 MC. (Secrets have power.)'},
+        description: 'Action: Spend 3 MC to gain 6 MC.. 1 VP. (Secrets have power.)'},
     });
   }
   public canAct(player: Player): boolean {return player.canAfford(3);}

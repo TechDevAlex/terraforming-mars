@@ -11,7 +11,7 @@ export class StarEater extends Card implements IActionCard, IProjectCard {
     super({
       type: CardType.ACTIVE, name: CardName.STAR_EATER, tags: [Tag.PLANT], cost: 10,
       metadata: {cardNumber: 'MY032', renderData: CardRenderer.builder((b) => {b.action('Draw 1 card.', (ab) => {ab.empty().startAction.text('?');});}),
-        description: 'Action: Draw 1 card. (Space warps.)'},
+        description: 'Action: Draw 1 card.. (Space warps.)'},
     });
   }
   public canAct(_player: Player): boolean {return true;}

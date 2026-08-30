@@ -11,7 +11,7 @@ export class AlienArtifact extends Card implements IProjectCard {
       victoryPoints: 1,
       behavior: {city: {}, production: {megacredits: 3}},
       metadata: {cardNumber: 'MY053', renderData: CardRenderer.builder((b) => {b.text('Place city, gain production.');}),
-        description: 'Place city, gain production. (Knowledge is the ultimate currency.)'},
+        description: '1 VP. (Knowledge is the ultimate currency.)'},
     });
   }
 }

@@ -11,7 +11,7 @@ export class MysteryCard434 extends Card implements IProjectCard {
       victoryPoints: -1,
       behavior: {city: {}, production: {megacredits: 2}},
       metadata: {cardNumber: 'MY434', renderData: CardRenderer.builder((b) => {b.text('Place city, gain production.');}),
-        description: 'Place city, gain production. (Space warps.)'},
+        description: '-1 VP. (Space warps.)'},
     });
   }
 }

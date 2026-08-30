@@ -11,7 +11,7 @@ export class BloodPact extends Card implements IActionCard, IProjectCard {
     super({
       type: CardType.ACTIVE, name: CardName.BLOOD_PACT, tags: [Tag.MARS], cost: 7,
       metadata: {cardNumber: 'MY062', renderData: CardRenderer.builder((b) => {b.action('Gain 1 steel and 1 titanium.', (ab) => {ab.empty().startAction.text('?');});}),
-        description: 'Action: Gain 1 steel and 1 titanium. (The frontier expands.)'},
+        description: 'Action: Gain 1 steel and 1 titanium.. (The frontier expands.)'},
     });
   }
   public canAct(_player: Player): boolean {return true;}

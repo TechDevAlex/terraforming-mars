@@ -12,7 +12,7 @@ export class NightmareFuel extends Card implements IActionCard, IProjectCard {
       type: CardType.ACTIVE, name: CardName.NIGHTMARE_FUEL, tags: [Tag.BUILDING], cost: 7,
       victoryPoints: -1,
       metadata: {cardNumber: 'MY088', renderData: CardRenderer.builder((b) => {b.action('Gain 2 heat.', (ab) => {ab.empty().startAction.text('?');});}),
-        description: 'Action: Gain 2 heat. (The mystery deepens.)'},
+        description: 'Action: Gain 2 heat.. -1 VP. (The mystery deepens.)'},
     });
   }
   public canAct(_player: Player): boolean {return true;}

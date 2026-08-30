@@ -11,7 +11,7 @@ export class PsionicAmplifier extends Card implements IProjectCard {
       victoryPoints: 2,
       behavior: {production: {titanium: 2}, drawCard: 1},
       metadata: {cardNumber: 'MY333', renderData: CardRenderer.builder((b) => {b.text('Production and draw.');}),
-        description: 'Production and draw. (Innovation breeds opportunity.)'},
+        description: '2 VP. (Innovation breeds opportunity.)'},
     });
   }
 }

@@ -10,7 +10,7 @@ export class TrapSupplyIntercept extends Card implements IActionCard, IProjectCa
     super({
       type: CardType.ACTIVE, name: CardName.TRAP_SUPPLY_INTERCEPT, tags: [], cost: 0,
       metadata: {cardNumber: 'TRAP046', renderData: CardRenderer.builder((b) => {b.action('TRAP: If generation 3+, draw 2 cards.', (ab) => {ab.empty().startAction.text('TRAP');});}),
-        description: 'TRAP: If generation 3+, draw 2 cards. (Triggers once automatically.)'},
+        description: 'Action: TRAP: If generation 3+, draw 2 cards. (Triggers once automatically.)'},
     });
   }
   private triggered = false;

@@ -11,7 +11,7 @@ export class MysteryCard446 extends Card implements IProjectCard {
       victoryPoints: -2,
       behavior: {production: {titanium: 2, plants: 2}},
       metadata: {cardNumber: 'MY446', renderData: CardRenderer.builder((b) => {b.text('Adjust production.');}),
-        description: 'Adjust production. (Nature finds a way.)'},
+        description: '-2 VP. (Nature finds a way.)'},
     });
   }
 }

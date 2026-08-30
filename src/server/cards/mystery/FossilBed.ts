@@ -10,7 +10,7 @@ export class FossilBed extends Card implements IProjectCard {
       type: CardType.EVENT, name: CardName.FOSSIL_BED, tags: [Tag.ANIMAL], cost: 7,
       behavior: {global: {oxygen: 1}},
       metadata: {cardNumber: 'MY137', renderData: CardRenderer.builder((b) => {b.text('Raise global parameter.');}),
-        description: 'Raise global parameter. (Reality shifts.)'},
+        description: 'Raise oxygen 1 step. (Reality shifts.)'},
     });
   }
 }

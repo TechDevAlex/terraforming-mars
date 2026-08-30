@@ -11,7 +11,7 @@ export class CrimeScene extends Card implements IProjectCard {
       victoryPoints: 1,
       behavior: {city: {}, production: {megacredits: 3}},
       metadata: {cardNumber: 'MY017', renderData: CardRenderer.builder((b) => {b.text('Place city, gain production.');}),
-        description: 'Place city, gain production. (The stars align.)'},
+        description: '1 VP. (The stars align.)'},
     });
   }
 }

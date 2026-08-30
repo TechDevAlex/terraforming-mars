@@ -11,7 +11,7 @@ export class TarPit extends Card implements IProjectCard {
       victoryPoints: 2,
       behavior: {production: {plants: 2, steel: 2}},
       metadata: {cardNumber: 'MY139', renderData: CardRenderer.builder((b) => {b.text('Adjust production.');}),
-        description: 'Adjust production. (The stars align.)'},
+        description: '2 VP. (The stars align.)'},
     });
   }
 }

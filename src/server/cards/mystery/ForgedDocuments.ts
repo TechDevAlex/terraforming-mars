@@ -12,7 +12,7 @@ export class ForgedDocuments extends Card implements IActionCard, IProjectCard {
       type: CardType.ACTIVE, name: CardName.FORGED_DOCUMENTS, tags: [Tag.CITY], cost: 7,
       victoryPoints: 3,
       metadata: {cardNumber: 'MY026', renderData: CardRenderer.builder((b) => {b.action('Gain 2 heat.', (ab) => {ab.empty().startAction.text('?');});}),
-        description: 'Action: Gain 2 heat. (Trust no one.)'},
+        description: 'Action: Gain 2 heat.. 3 VP. (Trust no one.)'},
     });
   }
   public canAct(_player: Player): boolean {return true;}

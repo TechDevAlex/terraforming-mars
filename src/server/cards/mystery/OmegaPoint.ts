@@ -12,7 +12,7 @@ export class OmegaPoint extends Card implements IActionCard, IProjectCard {
       type: CardType.ACTIVE, name: CardName.OMEGA_POINT, tags: [Tag.SCIENCE], cost: 14,
       victoryPoints: 1,
       metadata: {cardNumber: 'MY311', renderData: CardRenderer.builder((b) => {b.action('Spend 2 MC to draw a card.', (ab) => {ab.empty().startAction.text('?');});}),
-        description: 'Action: Spend 2 MC to draw a card. (Nothing is as it seems.)'},
+        description: 'Action: Spend 2 MC to draw a card.. 1 VP. (Nothing is as it seems.)'},
     });
   }
   public canAct(player: Player): boolean {return player.canAfford(2);}

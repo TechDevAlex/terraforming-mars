@@ -10,7 +10,7 @@ export class TurbineFarm extends Card implements IProjectCard {
       type: CardType.EVENT, name: CardName.TURBINE_FARM, tags: [Tag.MICROBE, Tag.POWER], cost: 21,
       behavior: {drawCard: 2},
       metadata: {cardNumber: 'MY173', renderData: CardRenderer.builder((b) => {b.text('Draw cards.');}),
-        description: 'Draw cards. (Nothing is as it seems.)'},
+        description: 'Draw 2 cards. (Nothing is as it seems.)'},
     });
   }
 }

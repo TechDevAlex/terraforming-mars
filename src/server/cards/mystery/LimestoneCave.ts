@@ -11,7 +11,7 @@ export class LimestoneCave extends Card implements IActionCard, IProjectCard {
     super({
       type: CardType.ACTIVE, name: CardName.LIMESTONE_CAVE, tags: [Tag.BUILDING], cost: 13,
       metadata: {cardNumber: 'MY149', renderData: CardRenderer.builder((b) => {b.action('Gain 1 steel and 1 titanium.', (ab) => {ab.empty().startAction.text('?');});}),
-        description: 'Action: Gain 1 steel and 1 titanium. (The stars align.)'},
+        description: 'Action: Gain 1 steel and 1 titanium.. (The stars align.)'},
     });
   }
   public canAct(_player: Player): boolean {return true;}

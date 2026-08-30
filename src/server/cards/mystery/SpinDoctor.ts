@@ -11,7 +11,7 @@ export class SpinDoctor extends Card implements IActionCard, IProjectCard {
     super({
       type: CardType.ACTIVE, name: CardName.SPIN_DOCTOR, tags: [Tag.PLANT, Tag.SCIENCE], cost: 13,
       metadata: {cardNumber: 'MY189', renderData: CardRenderer.builder((b) => {b.action('Gain 3 MC.', (ab) => {ab.empty().startAction.text('?');});}),
-        description: 'Action: Gain 3 MC. (The stars align.)'},
+        description: 'Action: Gain 3 MC.. (The stars align.)'},
     });
   }
   public canAct(_player: Player): boolean {return true;}

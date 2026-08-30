@@ -11,7 +11,7 @@ export class MysteryCard387 extends Card implements IProjectCard {
       victoryPoints: 2,
       behavior: {tr: 1, production: {titanium: 1}},
       metadata: {cardNumber: 'MY387', renderData: CardRenderer.builder((b) => {b.text('TR and production.');}),
-        description: 'TR and production. (Knowledge is the ultimate currency.)'},
+        description: 'Raise your TR 1 step. 2 VP. (Knowledge is the ultimate currency.)'},
     });
   }
 }

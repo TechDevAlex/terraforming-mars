@@ -11,7 +11,7 @@ export class MysteryCard522 extends Card implements IProjectCard {
       victoryPoints: -1,
       behavior: {stock: {megacredits: 5}},
       metadata: {cardNumber: 'MY522', renderData: CardRenderer.builder((b) => {b.text('Gain resources.');}),
-        description: 'Gain resources. (Space warps.)'},
+        description: '-1 VP. (Space warps.)'},
     });
   }
 }

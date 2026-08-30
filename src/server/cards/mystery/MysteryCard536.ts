@@ -11,7 +11,7 @@ export class MysteryCard536 extends Card implements IActionCard, IProjectCard {
     super({
       type: CardType.ACTIVE, name: CardName.MYSTERY_CARD_536, tags: [Tag.PLANT, Tag.CITY], cost: 17,
       metadata: {cardNumber: 'MY536', renderData: CardRenderer.builder((b) => {b.action('Gain 2 plants.', (ab) => {ab.empty().startAction.text('?');});}),
-        description: 'Action: Gain 2 plants. (The mystery deepens.)'},
+        description: 'Action: Gain 2 plants.. (The mystery deepens.)'},
     });
   }
   public canAct(_player: Player): boolean {return true;}

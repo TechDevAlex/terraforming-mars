@@ -11,7 +11,7 @@ export class LastStand extends Card implements IProjectCard {
       victoryPoints: 1,
       behavior: {production: {titanium: 1, heat: 1, plants: 1}},
       metadata: {cardNumber: 'MY235', renderData: CardRenderer.builder((b) => {b.text('Adjust production.');}),
-        description: 'Adjust production. (The truth is out there.)'},
+        description: '1 VP. (The truth is out there.)'},
     });
   }
 }

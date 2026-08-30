@@ -11,7 +11,7 @@ export class SkeletonKey extends Card implements IProjectCard {
       victoryPoints: 3,
       behavior: {tr: 1, production: {megacredits: 2}},
       metadata: {cardNumber: 'MY261', renderData: CardRenderer.builder((b) => {b.text('TR and production.');}),
-        description: 'TR and production. (Steel and will forge the path.)'},
+        description: 'Raise your TR 1 step. 3 VP. (Steel and will forge the path.)'},
     });
   }
 }

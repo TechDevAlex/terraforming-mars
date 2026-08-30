@@ -11,7 +11,7 @@ export class GalacticTide extends Card implements IProjectCard {
       victoryPoints: 2,
       behavior: {production: {megacredits: 1, plants: 2}},
       metadata: {cardNumber: 'MY056', renderData: CardRenderer.builder((b) => {b.text('Adjust production.');}),
-        description: 'Adjust production. (The frontier expands.)'},
+        description: '2 VP. (The frontier expands.)'},
     });
   }
 }

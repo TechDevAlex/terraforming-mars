@@ -11,7 +11,7 @@ export class ShadowNetwork extends Card implements IActionCard, IProjectCard {
     super({
       type: CardType.ACTIVE, name: CardName.SHADOW_NETWORK, tags: [Tag.SCIENCE], cost: 6,
       metadata: {cardNumber: 'MY099', renderData: CardRenderer.builder((b) => {b.action('Gain 3 MC.', (ab) => {ab.empty().startAction.text('?');});}),
-        description: 'Action: Gain 3 MC. (Space warps.)'},
+        description: 'Action: Gain 3 MC.. (Space warps.)'},
     });
   }
   public canAct(_player: Player): boolean {return true;}

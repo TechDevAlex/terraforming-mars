@@ -10,7 +10,7 @@ export class MysteryCard468 extends Card implements IProjectCard {
       type: CardType.EVENT, name: CardName.MYSTERY_CARD_468, tags: [Tag.MICROBE], cost: 18,
       behavior: {global: {oxygen: 1}},
       metadata: {cardNumber: 'MY468', renderData: CardRenderer.builder((b) => {b.text('Raise global parameter.');}),
-        description: 'Raise global parameter. (Secrets have power.)'},
+        description: 'Raise oxygen 1 step. (Secrets have power.)'},
     });
   }
 }

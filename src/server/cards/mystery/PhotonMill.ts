@@ -11,7 +11,7 @@ export class PhotonMill extends Card implements IActionCard, IProjectCard {
     super({
       type: CardType.ACTIVE, name: CardName.PHOTON_MILL, tags: [Tag.CITY], cost: 16,
       metadata: {cardNumber: 'MY058', renderData: CardRenderer.builder((b) => {b.action('Gain 1 titanium.', (ab) => {ab.empty().startAction.text('?');});}),
-        description: 'Action: Gain 1 titanium. (The mystery deepens.)'},
+        description: 'Action: Gain 1 titanium.. (The mystery deepens.)'},
     });
   }
   public canAct(_player: Player): boolean {return true;}

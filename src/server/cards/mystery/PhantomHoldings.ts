@@ -8,7 +8,7 @@ export class PhantomHoldings extends CorporationCard implements ICorporationCard
     super({
       name: CardName.PHANTOM_HOLDINGS, tags: [Tag.EARTH], startingMegaCredits: 45,
       firstAction: {text: 'Initial action', drawCard: 1},
-      metadata: {cardNumber: 'MYCORP03', description: 'You start with 45 M€.',
+      metadata: {cardNumber: 'MYCORP03', description: 'You start with 45 M€. As your first action, draw 1 card.',
         renderData: CardRenderer.builder((b) => {b.br.megacredits(45);})
       },
     });

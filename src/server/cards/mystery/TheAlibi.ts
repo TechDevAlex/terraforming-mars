@@ -10,7 +10,7 @@ export class TheAlibi extends Card implements IProjectCard {
       type: CardType.AUTOMATED, name: CardName.THE_ALIBI, tags: [Tag.BUILDING], cost: 8,
       behavior: {tr: 1, production: {steel: 2}},
       metadata: {cardNumber: 'MY008', renderData: CardRenderer.builder((b) => {b.text('TR and production.');}),
-        description: 'TR and production. (Space warps.)'},
+        description: 'Raise your TR 1 step. (Space warps.)'},
     });
   }
 }

@@ -10,7 +10,7 @@ export class PrimalFear extends Card implements IProjectCard {
       type: CardType.AUTOMATED, name: CardName.PRIMAL_FEAR, tags: [Tag.MICROBE, Tag.SPACE], cost: 6,
       behavior: {tr: 1, production: {titanium: 2}},
       metadata: {cardNumber: 'MY342', renderData: CardRenderer.builder((b) => {b.text('TR and production.');}),
-        description: 'TR and production. (Knowledge is the ultimate currency.)'},
+        description: 'Raise your TR 1 step. (Knowledge is the ultimate currency.)'},
     });
   }
 }

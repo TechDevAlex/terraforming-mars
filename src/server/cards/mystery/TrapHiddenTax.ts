@@ -10,7 +10,7 @@ export class TrapHiddenTax extends Card implements IActionCard, IProjectCard {
     super({
       type: CardType.ACTIVE, name: CardName.TRAP_HIDDEN_TAX, tags: [], cost: 0,
       metadata: {cardNumber: 'TRAP035', renderData: CardRenderer.builder((b) => {b.action('TRAP: If oxygen at 4%+, gain 2 titanium.', (ab) => {ab.empty().startAction.text('TRAP');});}),
-        description: 'TRAP: If oxygen at 4%+, gain 2 titanium. (Triggers once automatically.)'},
+        description: 'Action: TRAP: If oxygen at 4%+, gain 2 titanium. (Triggers once automatically.)'},
     });
   }
   private triggered = false;

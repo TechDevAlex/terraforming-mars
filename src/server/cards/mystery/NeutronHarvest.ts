@@ -11,7 +11,7 @@ export class NeutronHarvest extends Card implements IActionCard, IProjectCard {
     super({
       type: CardType.ACTIVE, name: CardName.NEUTRON_HARVEST, tags: [Tag.ANIMAL, Tag.POWER], cost: 18,
       metadata: {cardNumber: 'MY041', renderData: CardRenderer.builder((b) => {b.action('Spend 1 MC to draw a card.', (ab) => {ab.empty().startAction.text('?');});}),
-        description: 'Action: Spend 1 MC to draw a card. (Every clue matters.)'},
+        description: 'Action: Spend 1 MC to draw a card.. (Every clue matters.)'},
     });
   }
   public canAct(player: Player): boolean {return player.canAfford(1);}

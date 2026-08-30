@@ -11,7 +11,7 @@ export class RelayTower extends Card implements IActionCard, IProjectCard {
     super({
       type: CardType.ACTIVE, name: CardName.RELAY_TOWER, tags: [Tag.SCIENCE], cost: 5,
       metadata: {cardNumber: 'MY177', renderData: CardRenderer.builder((b) => {b.action('Spend 3 MC to gain 6 MC.', (ab) => {ab.empty().startAction.text('?');});}),
-        description: 'Action: Spend 3 MC to gain 6 MC. (Every clue matters.)'},
+        description: 'Action: Spend 3 MC to gain 6 MC.. (Every clue matters.)'},
     });
   }
   public canAct(player: Player): boolean {return player.canAfford(3);}

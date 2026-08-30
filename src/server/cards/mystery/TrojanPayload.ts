@@ -11,7 +11,7 @@ export class TrojanPayload extends Card implements IActionCard, IProjectCard {
     super({
       type: CardType.ACTIVE, name: CardName.TROJAN_PAYLOAD, tags: [Tag.EARTH], cost: 7,
       metadata: {cardNumber: 'MY103', renderData: CardRenderer.builder((b) => {b.action('Spend 1 MC to draw a card.', (ab) => {ab.empty().startAction.text('?');});}),
-        description: 'Action: Spend 1 MC to draw a card. (The mystery deepens.)'},
+        description: 'Action: Spend 1 MC to draw a card.. (The mystery deepens.)'},
     });
   }
   public canAct(player: Player): boolean {return player.canAfford(1);}

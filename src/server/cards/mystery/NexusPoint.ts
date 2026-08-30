@@ -10,7 +10,7 @@ export class NexusPoint extends Card implements IProjectCard {
       type: CardType.AUTOMATED, name: CardName.NEXUS_POINT, tags: [Tag.PLANT], cost: 9,
       behavior: {tr: 1, production: {steel: 2}},
       metadata: {cardNumber: 'MY370', renderData: CardRenderer.builder((b) => {b.text('TR and production.');}),
-        description: 'TR and production. (Nature finds a way.)'},
+        description: 'Raise your TR 1 step. (Nature finds a way.)'},
     });
   }
 }

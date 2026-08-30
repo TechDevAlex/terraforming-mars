@@ -11,7 +11,7 @@ export class SlagHeap extends Card implements IActionCard, IProjectCard {
     super({
       type: CardType.ACTIVE, name: CardName.SLAG_HEAP, tags: [Tag.ANIMAL], cost: 19,
       metadata: {cardNumber: 'MY158', renderData: CardRenderer.builder((b) => {b.action('Gain 1 steel and 1 titanium.', (ab) => {ab.empty().startAction.text('?');});}),
-        description: 'Action: Gain 1 steel and 1 titanium. (Space warps.)'},
+        description: 'Action: Gain 1 steel and 1 titanium.. (Space warps.)'},
     });
   }
   public canAct(_player: Player): boolean {return true;}

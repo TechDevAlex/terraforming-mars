@@ -10,7 +10,7 @@ export class TrapEnergyBlackout extends Card implements IActionCard, IProjectCar
     super({
       type: CardType.ACTIVE, name: CardName.TRAP_ENERGY_BLACKOUT, tags: [], cost: 0,
       metadata: {cardNumber: 'TRAP005', renderData: CardRenderer.builder((b) => {b.action('TRAP: If oxygen at 4%+, gain 2 titanium.', (ab) => {ab.empty().startAction.text('TRAP');});}),
-        description: 'TRAP: If oxygen at 4%+, gain 2 titanium. (Triggers once automatically.)'},
+        description: 'Action: TRAP: If oxygen at 4%+, gain 2 titanium. (Triggers once automatically.)'},
     });
   }
   private triggered = false;

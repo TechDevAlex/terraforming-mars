@@ -11,7 +11,7 @@ export class EctoplasmHarvest extends Card implements IProjectCard {
       victoryPoints: -1,
       behavior: {production: {heat: 2}, drawCard: 1},
       metadata: {cardNumber: 'MY077', renderData: CardRenderer.builder((b) => {b.text('Production and draw.');}),
-        description: 'Production and draw. (The veil lifts.)'},
+        description: '-1 VP. (The veil lifts.)'},
     });
   }
 }

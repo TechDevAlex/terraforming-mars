@@ -11,7 +11,7 @@ export class MysteryCard508 extends Card implements IActionCard, IProjectCard {
     super({
       type: CardType.ACTIVE, name: CardName.MYSTERY_CARD_508, tags: [Tag.POWER, Tag.BUILDING], cost: 15,
       metadata: {cardNumber: 'MY508', renderData: CardRenderer.builder((b) => {b.action('Draw 1 card.', (ab) => {ab.empty().startAction.text('?');});}),
-        description: 'Action: Draw 1 card. (The plot thickens.)'},
+        description: 'Action: Draw 1 card.. (The plot thickens.)'},
     });
   }
   public canAct(_player: Player): boolean {return true;}

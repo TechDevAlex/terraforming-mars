@@ -10,7 +10,7 @@ export class MysteryCard506 extends Card implements IActionCard, IProjectCard {
     super({
       type: CardType.ACTIVE, name: CardName.MYSTERY_CARD_506, tags: [], cost: 16,
       metadata: {cardNumber: 'MY506', renderData: CardRenderer.builder((b) => {b.action('Spend 3 MC to gain 6 MC.', (ab) => {ab.empty().startAction.text('?');});}),
-        description: 'Action: Spend 3 MC to gain 6 MC. (Shadows hide secrets.)'},
+        description: 'Action: Spend 3 MC to gain 6 MC.. (Shadows hide secrets.)'},
     });
   }
   public canAct(player: Player): boolean {return player.canAfford(3);}

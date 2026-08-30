@@ -11,7 +11,7 @@ export class PolicyInstitute extends Card implements IActionCard, IProjectCard {
     super({
       type: CardType.ACTIVE, name: CardName.POLICY_INSTITUTE, tags: [Tag.MARS], cost: 10,
       metadata: {cardNumber: 'MY192', renderData: CardRenderer.builder((b) => {b.action('Gain 1 energy.', (ab) => {ab.empty().startAction.text('?');});}),
-        description: 'Action: Gain 1 energy. (The veil lifts.)'},
+        description: 'Action: Gain 1 energy.. (The veil lifts.)'},
     });
   }
   public canAct(_player: Player): boolean {return true;}

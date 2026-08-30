@@ -11,7 +11,7 @@ export class MysteryCard375 extends Card implements IActionCard, IProjectCard {
     super({
       type: CardType.ACTIVE, name: CardName.MYSTERY_CARD_375, tags: [Tag.SPACE], cost: 14,
       metadata: {cardNumber: 'MY375', renderData: CardRenderer.builder((b) => {b.action('Gain 1 steel and 1 titanium.', (ab) => {ab.empty().startAction.text('?');});}),
-        description: 'Action: Gain 1 steel and 1 titanium. (The veil lifts.)'},
+        description: 'Action: Gain 1 steel and 1 titanium.. (The veil lifts.)'},
     });
   }
   public canAct(_player: Player): boolean {return true;}

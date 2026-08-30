@@ -11,7 +11,7 @@ export class PhantomRelay extends Card implements IActionCard, IProjectCard {
     super({
       type: CardType.ACTIVE, name: CardName.PHANTOM_RELAY, tags: [Tag.SPACE], cost: 6,
       metadata: {cardNumber: 'MY098', renderData: CardRenderer.builder((b) => {b.action('Spend 2 MC to draw a card.', (ab) => {ab.empty().startAction.text('?');});}),
-        description: 'Action: Spend 2 MC to draw a card. (Every clue matters.)'},
+        description: 'Action: Spend 2 MC to draw a card.. (Every clue matters.)'},
     });
   }
   public canAct(player: Player): boolean {return player.canAfford(2);}

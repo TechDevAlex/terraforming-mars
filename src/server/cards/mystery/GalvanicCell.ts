@@ -12,7 +12,7 @@ export class GalvanicCell extends Card implements IActionCard, IProjectCard {
       type: CardType.ACTIVE, name: CardName.GALVANIC_CELL, tags: [Tag.BUILDING], cost: 18,
       victoryPoints: -1,
       metadata: {cardNumber: 'MY280', renderData: CardRenderer.builder((b) => {b.action('Spend 2 MC to draw a card.', (ab) => {ab.empty().startAction.text('?');});}),
-        description: 'Action: Spend 2 MC to draw a card. (Nature finds a way.)'},
+        description: 'Action: Spend 2 MC to draw a card.. -1 VP. (Nature finds a way.)'},
     });
   }
   public canAct(player: Player): boolean {return player.canAfford(2);}

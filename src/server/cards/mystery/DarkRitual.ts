@@ -11,7 +11,7 @@ export class DarkRitual extends Card implements IActionCard, IProjectCard {
     super({
       type: CardType.ACTIVE, name: CardName.DARK_RITUAL, tags: [Tag.SPACE, Tag.MICROBE], cost: 11,
       metadata: {cardNumber: 'MY069', renderData: CardRenderer.builder((b) => {b.action('Gain 2 plants.', (ab) => {ab.empty().startAction.text('?');});}),
-        description: 'Action: Gain 2 plants. (Progress demands sacrifice.)'},
+        description: 'Action: Gain 2 plants.. (Progress demands sacrifice.)'},
     });
   }
   public canAct(_player: Player): boolean {return true;}

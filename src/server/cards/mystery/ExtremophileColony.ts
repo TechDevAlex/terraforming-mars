@@ -11,7 +11,7 @@ export class ExtremophileColony extends Card implements IProjectCard {
       victoryPoints: 3,
       behavior: {tr: 1, production: {megacredits: 2}},
       metadata: {cardNumber: 'MY130', renderData: CardRenderer.builder((b) => {b.text('TR and production.');}),
-        description: 'TR and production. (Every clue matters.)'},
+        description: 'Raise your TR 1 step. 3 VP. (Every clue matters.)'},
     });
   }
 }

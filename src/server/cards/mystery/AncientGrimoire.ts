@@ -10,7 +10,7 @@ export class AncientGrimoire extends Card implements IProjectCard {
       type: CardType.EVENT, name: CardName.ANCIENT_GRIMOIRE, tags: [Tag.MICROBE, Tag.EARTH], cost: 4,
       behavior: {drawCard: 2},
       metadata: {cardNumber: 'MY074', renderData: CardRenderer.builder((b) => {b.text('Draw cards.');}),
-        description: 'Draw cards. (Progress demands sacrifice.)'},
+        description: 'Draw 2 cards. (Progress demands sacrifice.)'},
     });
   }
 }

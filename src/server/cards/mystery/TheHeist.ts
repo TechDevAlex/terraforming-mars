@@ -11,7 +11,7 @@ export class TheHeist extends Card implements IProjectCard {
       victoryPoints: -2,
       behavior: {greenery: {}},
       metadata: {cardNumber: 'MY022', renderData: CardRenderer.builder((b) => {b.text('Place greenery.');}),
-        description: 'Place greenery. (Every clue matters.)'},
+        description: '-2 VP. (Every clue matters.)'},
     });
   }
 }

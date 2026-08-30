@@ -11,7 +11,7 @@ export class DeepCover extends Card implements IActionCard, IProjectCard {
     super({
       type: CardType.ACTIVE, name: CardName.DEEP_COVER, tags: [Tag.SPACE, Tag.PLANT], cost: 9,
       metadata: {cardNumber: 'MY030', renderData: CardRenderer.builder((b) => {b.action('Gain 1 energy.', (ab) => {ab.empty().startAction.text('?');});}),
-        description: 'Action: Gain 1 energy. (Every clue matters.)'},
+        description: 'Action: Gain 1 energy.. (Every clue matters.)'},
     });
   }
   public canAct(_player: Player): boolean {return true;}

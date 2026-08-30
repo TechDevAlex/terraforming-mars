@@ -11,7 +11,7 @@ export class CipherWheel extends Card implements IProjectCard {
       victoryPoints: 1,
       behavior: {production: {megacredits: 2, steel: 1}},
       metadata: {cardNumber: 'MY245', renderData: CardRenderer.builder((b) => {b.text('Adjust production.');}),
-        description: 'Adjust production. (Steel and will forge the path.)'},
+        description: '1 VP. (Steel and will forge the path.)'},
     });
   }
 }

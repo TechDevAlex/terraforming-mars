@@ -11,7 +11,7 @@ export class SteganographyLab extends Card implements IProjectCard {
       victoryPoints: -2,
       behavior: {production: {energy: 1}},
       metadata: {cardNumber: 'MY112', renderData: CardRenderer.builder((b) => {b.text('Adjust production.');}),
-        description: 'Adjust production. (The stars align.)'},
+        description: '-2 VP. (The stars align.)'},
     });
   }
 }

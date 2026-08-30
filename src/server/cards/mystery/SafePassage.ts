@@ -10,7 +10,7 @@ export class SafePassage extends Card implements IProjectCard {
       type: CardType.EVENT, name: CardName.SAFE_PASSAGE, tags: [Tag.PLANT], cost: 15,
       behavior: {drawCard: 2},
       metadata: {cardNumber: 'MY198', renderData: CardRenderer.builder((b) => {b.text('Draw cards.');}),
-        description: 'Draw cards. (Innovation breeds opportunity.)'},
+        description: 'Draw 2 cards. (Innovation breeds opportunity.)'},
     });
   }
 }

@@ -11,7 +11,7 @@ export class SporeCloud extends Card implements IActionCard, IProjectCard {
     super({
       type: CardType.ACTIVE, name: CardName.SPORE_CLOUD, tags: [Tag.MICROBE], cost: 5,
       metadata: {cardNumber: 'MY123', renderData: CardRenderer.builder((b) => {b.action('Spend 2 MC to draw a card.', (ab) => {ab.empty().startAction.text('?');});}),
-        description: 'Action: Spend 2 MC to draw a card. (Darkness falls.)'},
+        description: 'Action: Spend 2 MC to draw a card.. (Darkness falls.)'},
     });
   }
   public canAct(player: Player): boolean {return player.canAfford(2);}

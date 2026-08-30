@@ -11,7 +11,7 @@ export class MysteryCard453 extends Card implements IProjectCard {
       victoryPoints: 1,
       behavior: {production: {heat: 2, titanium: 2}},
       metadata: {cardNumber: 'MY453', renderData: CardRenderer.builder((b) => {b.text('Adjust production.');}),
-        description: 'Adjust production. (The plot thickens.)'},
+        description: '1 VP. (The plot thickens.)'},
     });
   }
 }

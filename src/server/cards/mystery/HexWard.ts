@@ -11,7 +11,7 @@ export class HexWard extends Card implements IProjectCard {
       victoryPoints: 1,
       behavior: {production: {megacredits: 2}},
       metadata: {cardNumber: 'MY065', renderData: CardRenderer.builder((b) => {b.text('Adjust production.');}),
-        description: 'Adjust production. (Time bends.)'},
+        description: '1 VP. (Time bends.)'},
     });
   }
 }

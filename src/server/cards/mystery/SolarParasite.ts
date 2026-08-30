@@ -11,7 +11,7 @@ export class SolarParasite extends Card implements IActionCard, IProjectCard {
     super({
       type: CardType.ACTIVE, name: CardName.SOLAR_PARASITE, tags: [Tag.EARTH], cost: 20,
       metadata: {cardNumber: 'MY042', renderData: CardRenderer.builder((b) => {b.action('Gain 2 plants.', (ab) => {ab.empty().startAction.text('?');});}),
-        description: 'Action: Gain 2 plants. (The mystery deepens.)'},
+        description: 'Action: Gain 2 plants.. (The mystery deepens.)'},
     });
   }
   public canAct(_player: Player): boolean {return true;}

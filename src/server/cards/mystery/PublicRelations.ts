@@ -11,7 +11,7 @@ export class PublicRelations extends Card implements IProjectCard {
       victoryPoints: 3,
       behavior: {tr: 1},
       metadata: {cardNumber: 'MY182', renderData: CardRenderer.builder((b) => {b.text('Raise TR.');}),
-        description: 'Raise TR. (The stars align.)'},
+        description: 'Raise your TR 1 step. 3 VP. (The stars align.)'},
     });
   }
 }

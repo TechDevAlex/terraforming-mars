@@ -11,7 +11,7 @@ export class AsteroidCult extends Card implements IActionCard, IProjectCard {
     super({
       type: CardType.ACTIVE, name: CardName.ASTEROID_CULT, tags: [Tag.SCIENCE, Tag.CITY], cost: 12,
       metadata: {cardNumber: 'MY049', renderData: CardRenderer.builder((b) => {b.action('Gain 2 heat.', (ab) => {ab.empty().startAction.text('?');});}),
-        description: 'Action: Gain 2 heat. (Reality shifts.)'},
+        description: 'Action: Gain 2 heat.. (Reality shifts.)'},
     });
   }
   public canAct(_player: Player): boolean {return true;}

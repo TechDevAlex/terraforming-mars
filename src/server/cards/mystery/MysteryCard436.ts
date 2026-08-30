@@ -11,7 +11,7 @@ export class MysteryCard436 extends Card implements IProjectCard {
       victoryPoints: -1,
       behavior: {ocean: {}},
       metadata: {cardNumber: 'MY436', renderData: CardRenderer.builder((b) => {b.text('Place an ocean.');}),
-        description: 'Place an ocean. (Shadows hide secrets.)'},
+        description: '-1 VP. (Shadows hide secrets.)'},
     });
   }
 }

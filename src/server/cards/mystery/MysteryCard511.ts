@@ -11,7 +11,7 @@ export class MysteryCard511 extends Card implements IProjectCard {
       victoryPoints: 2,
       behavior: {city: {}, production: {megacredits: 2}},
       metadata: {cardNumber: 'MY511', renderData: CardRenderer.builder((b) => {b.text('Place city, gain production.');}),
-        description: 'Place city, gain production. (Secrets have power.)'},
+        description: '2 VP. (Secrets have power.)'},
     });
   }
 }

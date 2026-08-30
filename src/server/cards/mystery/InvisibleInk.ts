@@ -9,7 +9,7 @@ export class InvisibleInk extends Card implements IProjectCard {
       type: CardType.AUTOMATED, name: CardName.INVISIBLE_INK, tags: [], cost: 24,
       behavior: {tr: 1, production: {titanium: 1}},
       metadata: {cardNumber: 'MY256', renderData: CardRenderer.builder((b) => {b.text('TR and production.');}),
-        description: 'TR and production. (The stars align.)'},
+        description: 'Raise your TR 1 step. (The stars align.)'},
     });
   }
 }

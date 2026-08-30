@@ -11,7 +11,7 @@ export class MysteryCard441 extends Card implements IActionCard, IProjectCard {
     super({
       type: CardType.ACTIVE, name: CardName.MYSTERY_CARD_441, tags: [Tag.MARS, Tag.JOVIAN], cost: 12,
       metadata: {cardNumber: 'MY441', renderData: CardRenderer.builder((b) => {b.action('Gain 2 plants.', (ab) => {ab.empty().startAction.text('?');});}),
-        description: 'Action: Gain 2 plants. (The truth is out there.)'},
+        description: 'Action: Gain 2 plants.. (The truth is out there.)'},
     });
   }
   public canAct(_player: Player): boolean {return true;}

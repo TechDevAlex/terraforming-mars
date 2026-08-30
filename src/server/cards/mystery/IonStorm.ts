@@ -11,7 +11,7 @@ export class IonStorm extends Card implements IActionCard, IProjectCard {
     super({
       type: CardType.ACTIVE, name: CardName.ION_STORM, tags: [Tag.POWER], cost: 15,
       metadata: {cardNumber: 'MY047', renderData: CardRenderer.builder((b) => {b.action('Gain 3 MC.', (ab) => {ab.empty().startAction.text('?');});}),
-        description: 'Action: Gain 3 MC. (Progress demands sacrifice.)'},
+        description: 'Action: Gain 3 MC.. (Progress demands sacrifice.)'},
     });
   }
   public canAct(_player: Player): boolean {return true;}

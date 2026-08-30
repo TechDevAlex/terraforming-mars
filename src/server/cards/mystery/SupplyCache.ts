@@ -11,7 +11,7 @@ export class SupplyCache extends Card implements IActionCard, IProjectCard {
     super({
       type: CardType.ACTIVE, name: CardName.SUPPLY_CACHE, tags: [Tag.SCIENCE], cost: 16,
       metadata: {cardNumber: 'MY218', renderData: CardRenderer.builder((b) => {b.action('Gain 2 plants.', (ab) => {ab.empty().startAction.text('?');});}),
-        description: 'Action: Gain 2 plants. (Progress demands sacrifice.)'},
+        description: 'Action: Gain 2 plants.. (Progress demands sacrifice.)'},
     });
   }
   public canAct(_player: Player): boolean {return true;}

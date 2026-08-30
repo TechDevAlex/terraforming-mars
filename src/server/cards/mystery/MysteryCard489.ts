@@ -10,7 +10,7 @@ export class MysteryCard489 extends Card implements IProjectCard {
       type: CardType.EVENT, name: CardName.MYSTERY_CARD_489, tags: [Tag.EARTH], cost: 5,
       behavior: {drawCard: 1},
       metadata: {cardNumber: 'MY489', renderData: CardRenderer.builder((b) => {b.text('Draw cards.');}),
-        description: 'Draw cards. (Steel and will forge the path.)'},
+        description: 'Draw 1 card. (Steel and will forge the path.)'},
     });
   }
 }

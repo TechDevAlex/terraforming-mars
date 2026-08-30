@@ -11,7 +11,7 @@ export class MysteryCard454 extends Card implements IActionCard, IProjectCard {
     super({
       type: CardType.ACTIVE, name: CardName.MYSTERY_CARD_454, tags: [Tag.MICROBE, Tag.BUILDING], cost: 8,
       metadata: {cardNumber: 'MY454', renderData: CardRenderer.builder((b) => {b.action('Gain 2 heat.', (ab) => {ab.empty().startAction.text('?');});}),
-        description: 'Action: Gain 2 heat. (Nature finds a way.)'},
+        description: 'Action: Gain 2 heat.. (Nature finds a way.)'},
     });
   }
   public canAct(_player: Player): boolean {return true;}

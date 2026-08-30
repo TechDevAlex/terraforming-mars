@@ -11,7 +11,7 @@ export class MysteryCard517 extends Card implements IActionCard, IProjectCard {
     super({
       type: CardType.ACTIVE, name: CardName.MYSTERY_CARD_517, tags: [Tag.JOVIAN], cost: 9,
       metadata: {cardNumber: 'MY517', renderData: CardRenderer.builder((b) => {b.action('Spend 2 MC to draw a card.', (ab) => {ab.empty().startAction.text('?');});}),
-        description: 'Action: Spend 2 MC to draw a card. (Knowledge is the ultimate currency.)'},
+        description: 'Action: Spend 2 MC to draw a card.. (Knowledge is the ultimate currency.)'},
     });
   }
   public canAct(player: Player): boolean {return player.canAfford(2);}

@@ -11,7 +11,7 @@ export class RevenantProtocol extends Card implements IProjectCard {
       victoryPoints: -2,
       behavior: {greenery: {}},
       metadata: {cardNumber: 'MY085', renderData: CardRenderer.builder((b) => {b.text('Place greenery.');}),
-        description: 'Place greenery. (Nature finds a way.)'},
+        description: '-2 VP. (Nature finds a way.)'},
     });
   }
 }

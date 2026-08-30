@@ -10,7 +10,7 @@ export class TrapBoobyTrap extends Card implements IActionCard, IProjectCard {
     super({
       type: CardType.ACTIVE, name: CardName.TRAP_BOOBY_TRAP, tags: [], cost: 0,
       metadata: {cardNumber: 'TRAP028', renderData: CardRenderer.builder((b) => {b.action('TRAP: If opponent has 10+ steel, steal 2.', (ab) => {ab.empty().startAction.text('TRAP');});}),
-        description: 'TRAP: If opponent has 10+ steel, steal 2. (Triggers once automatically.)'},
+        description: 'Action: TRAP: If opponent has 10+ steel, steal 2. (Triggers once automatically.)'},
     });
   }
   private triggered = false;

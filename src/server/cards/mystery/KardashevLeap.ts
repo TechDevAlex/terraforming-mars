@@ -11,7 +11,7 @@ export class KardashevLeap extends Card implements IProjectCard {
       victoryPoints: 2,
       behavior: {production: {steel: 2, megacredits: 2}},
       metadata: {cardNumber: 'MY310', renderData: CardRenderer.builder((b) => {b.text('Adjust production.');}),
-        description: 'Adjust production. (Nature finds a way.)'},
+        description: '2 VP. (Nature finds a way.)'},
     });
   }
 }

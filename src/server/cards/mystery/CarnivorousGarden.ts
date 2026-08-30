@@ -12,7 +12,7 @@ export class CarnivorousGarden extends Card implements IActionCard, IProjectCard
       type: CardType.ACTIVE, name: CardName.CARNIVOROUS_GARDEN, tags: [Tag.POWER, Tag.SCIENCE], cost: 7,
       victoryPoints: -1,
       metadata: {cardNumber: 'MY125', renderData: CardRenderer.builder((b) => {b.action('Spend 3 MC to gain 6 MC.', (ab) => {ab.empty().startAction.text('?');});}),
-        description: 'Action: Spend 3 MC to gain 6 MC. (Nature finds a way.)'},
+        description: 'Action: Spend 3 MC to gain 6 MC.. -1 VP. (Nature finds a way.)'},
     });
   }
   public canAct(player: Player): boolean {return player.canAfford(3);}

@@ -10,7 +10,7 @@ export class TrapCardTheft extends Card implements IActionCard, IProjectCard {
     super({
       type: CardType.ACTIVE, name: CardName.TRAP_CARD_THEFT, tags: [], cost: 0,
       metadata: {cardNumber: 'TRAP004', renderData: CardRenderer.builder((b) => {b.action('TRAP: If you have 5+ tags, gain 3 steel.', (ab) => {ab.empty().startAction.text('TRAP');});}),
-        description: 'TRAP: If you have 5+ tags, gain 3 steel. (Triggers once automatically.)'},
+        description: 'Action: TRAP: If you have 5+ tags, gain 3 steel. (Triggers once automatically.)'},
     });
   }
   private triggered = false;

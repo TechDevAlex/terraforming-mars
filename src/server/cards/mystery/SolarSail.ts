@@ -11,7 +11,7 @@ export class SolarSail extends Card implements IProjectCard {
       victoryPoints: -2,
       behavior: {stock: {titanium: 2}},
       metadata: {cardNumber: 'MY300', renderData: CardRenderer.builder((b) => {b.text('Gain resources.');}),
-        description: 'Gain resources. (Knowledge is the ultimate currency.)'},
+        description: '-2 VP. (Knowledge is the ultimate currency.)'},
     });
   }
 }

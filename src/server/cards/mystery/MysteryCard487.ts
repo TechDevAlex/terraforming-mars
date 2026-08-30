@@ -9,7 +9,7 @@ export class MysteryCard487 extends Card implements IProjectCard {
       type: CardType.EVENT, name: CardName.MYSTERY_CARD_487, tags: [], cost: 12,
       behavior: {drawCard: 3},
       metadata: {cardNumber: 'MY487', renderData: CardRenderer.builder((b) => {b.text('Draw cards.');}),
-        description: 'Draw cards. (Reality shifts.)'},
+        description: 'Draw 3 cards. (Reality shifts.)'},
     });
   }
 }

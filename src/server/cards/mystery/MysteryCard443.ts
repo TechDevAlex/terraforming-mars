@@ -10,7 +10,7 @@ export class MysteryCard443 extends Card implements IProjectCard {
       type: CardType.AUTOMATED, name: CardName.MYSTERY_CARD_443, tags: [Tag.BUILDING], cost: 7,
       behavior: {tr: 1, production: {titanium: 1}},
       metadata: {cardNumber: 'MY443', renderData: CardRenderer.builder((b) => {b.text('TR and production.');}),
-        description: 'TR and production. (Every clue matters.)'},
+        description: 'Raise your TR 1 step. (Every clue matters.)'},
     });
   }
 }

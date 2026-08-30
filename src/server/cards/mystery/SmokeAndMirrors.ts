@@ -11,7 +11,7 @@ export class SmokeAndMirrors extends Card implements IActionCard, IProjectCard {
     super({
       type: CardType.ACTIVE, name: CardName.SMOKE_AND_MIRRORS, tags: [Tag.EARTH], cost: 12,
       metadata: {cardNumber: 'MY007', renderData: CardRenderer.builder((b) => {b.action('Gain 1 energy.', (ab) => {ab.empty().startAction.text('?');});}),
-        description: 'Action: Gain 1 energy. (Innovation breeds opportunity.)'},
+        description: 'Action: Gain 1 energy.. (Innovation breeds opportunity.)'},
     });
   }
   public canAct(_player: Player): boolean {return true;}

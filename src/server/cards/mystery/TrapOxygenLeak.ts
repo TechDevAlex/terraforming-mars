@@ -10,7 +10,7 @@ export class TrapOxygenLeak extends Card implements IActionCard, IProjectCard {
     super({
       type: CardType.ACTIVE, name: CardName.TRAP_OXYGEN_LEAK, tags: [], cost: 0,
       metadata: {cardNumber: 'TRAP017', renderData: CardRenderer.builder((b) => {b.action('TRAP: If you have 3+ cities, gain 5 MC.', (ab) => {ab.empty().startAction.text('TRAP');});}),
-        description: 'TRAP: If you have 3+ cities, gain 5 MC. (Triggers once automatically.)'},
+        description: 'Action: TRAP: If you have 3+ cities, gain 5 MC. (Triggers once automatically.)'},
     });
   }
   private triggered = false;

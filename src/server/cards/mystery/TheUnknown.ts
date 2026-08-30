@@ -10,7 +10,7 @@ export class TheUnknown extends Card implements IProjectCard {
       victoryPoints: -1,
       behavior: {production: {megacredits: 2}, drawCard: 2},
       metadata: {cardNumber: 'MY241', renderData: CardRenderer.builder((b) => {b.text('Production and draw.');}),
-        description: 'Production and draw. (Innovation breeds opportunity.)'},
+        description: '-1 VP. (Innovation breeds opportunity.)'},
     });
   }
 }

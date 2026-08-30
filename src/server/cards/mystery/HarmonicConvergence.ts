@@ -11,7 +11,7 @@ export class HarmonicConvergence extends Card implements IProjectCard {
       victoryPoints: -2,
       behavior: {production: {energy: 1}},
       metadata: {cardNumber: 'MY274', renderData: CardRenderer.builder((b) => {b.text('Adjust production.');}),
-        description: 'Adjust production. (Time bends.)'},
+        description: '-2 VP. (Time bends.)'},
     });
   }
 }

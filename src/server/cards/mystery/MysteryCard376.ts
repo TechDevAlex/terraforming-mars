@@ -11,7 +11,7 @@ export class MysteryCard376 extends Card implements IProjectCard {
       victoryPoints: -2,
       behavior: {tr: 1, production: {megacredits: 2}},
       metadata: {cardNumber: 'MY376', renderData: CardRenderer.builder((b) => {b.text('TR and production.');}),
-        description: 'TR and production. (Nature finds a way.)'},
+        description: 'Raise your TR 1 step. -2 VP. (Nature finds a way.)'},
     });
   }
 }

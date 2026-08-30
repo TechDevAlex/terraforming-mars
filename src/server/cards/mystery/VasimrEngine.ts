@@ -11,7 +11,7 @@ export class VasimrEngine extends Card implements IActionCard, IProjectCard {
     super({
       type: CardType.ACTIVE, name: CardName.VASIMR_ENGINE, tags: [Tag.MARS, Tag.POWER], cost: 16,
       metadata: {cardNumber: 'MY304', renderData: CardRenderer.builder((b) => {b.action('Gain 2 plants.', (ab) => {ab.empty().startAction.text('?');});}),
-        description: 'Action: Gain 2 plants. (Trust no one.)'},
+        description: 'Action: Gain 2 plants.. (Trust no one.)'},
     });
   }
   public canAct(_player: Player): boolean {return true;}

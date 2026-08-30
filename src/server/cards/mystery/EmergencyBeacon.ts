@@ -10,7 +10,7 @@ export class EmergencyBeacon extends Card implements IProjectCard {
       victoryPoints: -2,
       behavior: {city: {}, production: {megacredits: 1}},
       metadata: {cardNumber: 'MY118', renderData: CardRenderer.builder((b) => {b.text('Place city, gain production.');}),
-        description: 'Place city, gain production. (The frontier expands.)'},
+        description: '-2 VP. (The frontier expands.)'},
     });
   }
 }

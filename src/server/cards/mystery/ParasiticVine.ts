@@ -11,7 +11,7 @@ export class ParasiticVine extends Card implements IProjectCard {
       victoryPoints: 3,
       behavior: {production: {energy: 1, megacredits: 2}},
       metadata: {cardNumber: 'MY127', renderData: CardRenderer.builder((b) => {b.text('Adjust production.');}),
-        description: 'Adjust production. (The stars align.)'},
+        description: '3 VP. (The stars align.)'},
     });
   }
 }

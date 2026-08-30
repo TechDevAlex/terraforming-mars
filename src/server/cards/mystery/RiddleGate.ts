@@ -9,7 +9,7 @@ export class RiddleGate extends Card implements IProjectCard {
       type: CardType.EVENT, name: CardName.RIDDLE_GATE, tags: [], cost: 3,
       behavior: {global: {temperature: 1}},
       metadata: {cardNumber: 'MY244', renderData: CardRenderer.builder((b) => {b.text('Raise global parameter.');}),
-        description: 'Raise global parameter. (Steel and will forge the path.)'},
+        description: 'Raise temperature 1 step. (Steel and will forge the path.)'},
     });
   }
 }

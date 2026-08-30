@@ -10,7 +10,7 @@ export class GroundhogDay extends Card implements IProjectCard {
       victoryPoints: 3,
       behavior: {production: {plants: 2, heat: 1}},
       metadata: {cardNumber: 'MY357', renderData: CardRenderer.builder((b) => {b.text('Adjust production.');}),
-        description: 'Adjust production. (Progress demands sacrifice.)'},
+        description: '3 VP. (Progress demands sacrifice.)'},
     });
   }
 }

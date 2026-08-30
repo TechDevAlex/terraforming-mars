@@ -11,7 +11,7 @@ export class BigCrunchEngine extends Card implements IProjectCard {
       victoryPoints: -2,
       behavior: {production: {megacredits: 2}},
       metadata: {cardNumber: 'MY313', renderData: CardRenderer.builder((b) => {b.text('Adjust production.');}),
-        description: 'Adjust production. (The plot thickens.)'},
+        description: '-2 VP. (The plot thickens.)'},
     });
   }
 }

@@ -11,7 +11,7 @@ export class NebulaForge extends Card implements IProjectCard {
       victoryPoints: 1,
       behavior: {production: {heat: 1, energy: 1}},
       metadata: {cardNumber: 'MY033', renderData: CardRenderer.builder((b) => {b.text('Adjust production.');}),
-        description: 'Adjust production. (Secrets have power.)'},
+        description: '1 VP. (Secrets have power.)'},
     });
   }
 }

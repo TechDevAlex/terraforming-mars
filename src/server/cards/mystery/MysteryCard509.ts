@@ -11,7 +11,7 @@ export class MysteryCard509 extends Card implements IActionCard, IProjectCard {
     super({
       type: CardType.ACTIVE, name: CardName.MYSTERY_CARD_509, tags: [Tag.CITY], cost: 20,
       metadata: {cardNumber: 'MY509', renderData: CardRenderer.builder((b) => {b.action('Gain 1 titanium.', (ab) => {ab.empty().startAction.text('?');});}),
-        description: 'Action: Gain 1 titanium. (Knowledge is the ultimate currency.)'},
+        description: 'Action: Gain 1 titanium.. (Knowledge is the ultimate currency.)'},
     });
   }
   public canAct(_player: Player): boolean {return true;}

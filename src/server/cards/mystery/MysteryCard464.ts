@@ -11,7 +11,7 @@ export class MysteryCard464 extends Card implements IActionCard, IProjectCard {
     super({
       type: CardType.ACTIVE, name: CardName.MYSTERY_CARD_464, tags: [Tag.MARS, Tag.JOVIAN], cost: 19,
       metadata: {cardNumber: 'MY464', renderData: CardRenderer.builder((b) => {b.action('Gain 1 energy.', (ab) => {ab.empty().startAction.text('?');});}),
-        description: 'Action: Gain 1 energy. (The stars align.)'},
+        description: 'Action: Gain 1 energy.. (The stars align.)'},
     });
   }
   public canAct(_player: Player): boolean {return true;}

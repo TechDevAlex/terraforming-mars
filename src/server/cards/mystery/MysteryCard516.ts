@@ -11,7 +11,7 @@ export class MysteryCard516 extends Card implements IProjectCard {
       victoryPoints: -2,
       behavior: {production: {heat: 2}, drawCard: 1},
       metadata: {cardNumber: 'MY516', renderData: CardRenderer.builder((b) => {b.text('Production and draw.');}),
-        description: 'Production and draw. (Reality shifts.)'},
+        description: '-2 VP. (Reality shifts.)'},
     });
   }
 }

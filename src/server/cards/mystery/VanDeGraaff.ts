@@ -11,7 +11,7 @@ export class VanDeGraaff extends Card implements IActionCard, IProjectCard {
     super({
       type: CardType.ACTIVE, name: CardName.VAN_DE_GRAAFF, tags: [Tag.BUILDING], cost: 16,
       metadata: {cardNumber: 'MY277', renderData: CardRenderer.builder((b) => {b.action('Gain 1 energy.', (ab) => {ab.empty().startAction.text('?');});}),
-        description: 'Action: Gain 1 energy. (The mystery deepens.)'},
+        description: 'Action: Gain 1 energy.. (The mystery deepens.)'},
     });
   }
   public canAct(_player: Player): boolean {return true;}

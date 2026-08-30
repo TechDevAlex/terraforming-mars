@@ -10,7 +10,7 @@ export class TrapAmbush extends Card implements IActionCard, IProjectCard {
     super({
       type: CardType.ACTIVE, name: CardName.TRAP_AMBUSH, tags: [], cost: 0,
       metadata: {cardNumber: 'TRAP031', renderData: CardRenderer.builder((b) => {b.action('TRAP: If opponent has 20+ MC, gain 3 MC.', (ab) => {ab.empty().startAction.text('TRAP');});}),
-        description: 'TRAP: If opponent has 20+ MC, gain 3 MC. (Triggers once automatically.)'},
+        description: 'Action: TRAP: If opponent has 20+ MC, gain 3 MC. (Triggers once automatically.)'},
     });
   }
   private triggered = false;

@@ -11,7 +11,7 @@ export class MysteryCard391 extends Card implements IProjectCard {
       victoryPoints: -2,
       behavior: {production: {titanium: 2}},
       metadata: {cardNumber: 'MY391', renderData: CardRenderer.builder((b) => {b.text('Adjust production.');}),
-        description: 'Adjust production. (Progress demands sacrifice.)'},
+        description: '-2 VP. (Progress demands sacrifice.)'},
     });
   }
 }

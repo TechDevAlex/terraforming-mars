@@ -11,7 +11,7 @@ export class CloakingField extends Card implements IProjectCard {
       victoryPoints: -1,
       behavior: {production: {plants: 1, steel: 2, energy: 1}},
       metadata: {cardNumber: 'MY094', renderData: CardRenderer.builder((b) => {b.text('Adjust production.');}),
-        description: 'Adjust production. (Space warps.)'},
+        description: '-1 VP. (Space warps.)'},
     });
   }
 }

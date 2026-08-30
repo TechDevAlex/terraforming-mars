@@ -8,7 +8,7 @@ export class MidnightLabs extends CorporationCard implements ICorporationCard {
     super({
       name: CardName.MIDNIGHT_LABS, tags: [Tag.SCIENCE], startingMegaCredits: 36,
       firstAction: {text: 'Initial action', drawCard: 2, production: {megacredits: 1}},
-      metadata: {cardNumber: 'MYCORP13', description: 'You start with 36 M€.',
+      metadata: {cardNumber: 'MYCORP13', description: 'You start with 36 M€. As your first action, draw 2 cards.',
         renderData: CardRenderer.builder((b) => {b.br.megacredits(36);})
       },
     });

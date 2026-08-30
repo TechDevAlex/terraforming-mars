@@ -11,7 +11,7 @@ export class ScoutsReport extends Card implements IActionCard, IProjectCard {
     super({
       type: CardType.ACTIVE, name: CardName.SCOUTS_REPORT, tags: [Tag.BUILDING], cost: 5,
       metadata: {cardNumber: 'MY221', renderData: CardRenderer.builder((b) => {b.action('Gain 2 plants.', (ab) => {ab.empty().startAction.text('?');});}),
-        description: 'Action: Gain 2 plants. (Knowledge is the ultimate currency.)'},
+        description: 'Action: Gain 2 plants.. (Knowledge is the ultimate currency.)'},
     });
   }
   public canAct(_player: Player): boolean {return true;}

@@ -11,7 +11,7 @@ export class SwarmIntelligence extends Card implements IProjectCard {
       victoryPoints: 3,
       behavior: {stock: {steel: 4}},
       metadata: {cardNumber: 'MY329', renderData: CardRenderer.builder((b) => {b.text('Gain resources.');}),
-        description: 'Gain resources. (Reality shifts.)'},
+        description: '3 VP. (Reality shifts.)'},
     });
   }
 }

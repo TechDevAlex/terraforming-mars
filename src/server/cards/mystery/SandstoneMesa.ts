@@ -11,7 +11,7 @@ export class SandstoneMesa extends Card implements IProjectCard {
       victoryPoints: -1,
       behavior: {ocean: {}},
       metadata: {cardNumber: 'MY148', renderData: CardRenderer.builder((b) => {b.text('Place an ocean.');}),
-        description: 'Place an ocean. (The plot thickens.)'},
+        description: '-1 VP. (The plot thickens.)'},
     });
   }
 }

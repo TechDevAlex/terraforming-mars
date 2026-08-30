@@ -11,7 +11,7 @@ export class AssemblyLine extends Card implements IActionCard, IProjectCard {
       type: CardType.ACTIVE, name: CardName.ASSEMBLY_LINE, tags: [], cost: 15,
       victoryPoints: -2,
       metadata: {cardNumber: 'MY161', renderData: CardRenderer.builder((b) => {b.action('Spend 1 MC to draw a card.', (ab) => {ab.empty().startAction.text('?');});}),
-        description: 'Action: Spend 1 MC to draw a card. (Knowledge is the ultimate currency.)'},
+        description: 'Action: Spend 1 MC to draw a card.. -2 VP. (Knowledge is the ultimate currency.)'},
     });
   }
   public canAct(player: Player): boolean {return player.canAfford(1);}

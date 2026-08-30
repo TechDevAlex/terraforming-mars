@@ -11,7 +11,7 @@ export class MysteryCard462 extends Card implements IActionCard, IProjectCard {
     super({
       type: CardType.ACTIVE, name: CardName.MYSTERY_CARD_462, tags: [Tag.JOVIAN, Tag.CITY], cost: 13,
       metadata: {cardNumber: 'MY462', renderData: CardRenderer.builder((b) => {b.action('Gain 1 steel and 1 titanium.', (ab) => {ab.empty().startAction.text('?');});}),
-        description: 'Action: Gain 1 steel and 1 titanium. (Reality shifts.)'},
+        description: 'Action: Gain 1 steel and 1 titanium.. (Reality shifts.)'},
     });
   }
   public canAct(_player: Player): boolean {return true;}

@@ -10,7 +10,7 @@ export class ArmsRace extends Card implements IProjectCard {
       victoryPoints: -1,
       behavior: {tr: 1, production: {megacredits: 1}},
       metadata: {cardNumber: 'MY239', renderData: CardRenderer.builder((b) => {b.text('TR and production.');}),
-        description: 'TR and production. (The stars align.)'},
+        description: 'Raise your TR 1 step. -1 VP. (The stars align.)'},
     });
   }
 }

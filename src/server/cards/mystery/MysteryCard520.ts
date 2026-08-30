@@ -12,7 +12,7 @@ export class MysteryCard520 extends Card implements IActionCard, IProjectCard {
       type: CardType.ACTIVE, name: CardName.MYSTERY_CARD_520, tags: [Tag.ANIMAL, Tag.POWER], cost: 16,
       victoryPoints: 1,
       metadata: {cardNumber: 'MY520', renderData: CardRenderer.builder((b) => {b.action('Gain 1 energy.', (ab) => {ab.empty().startAction.text('?');});}),
-        description: 'Action: Gain 1 energy. (A whisper in the void.)'},
+        description: 'Action: Gain 1 energy.. 1 VP. (A whisper in the void.)'},
     });
   }
   public canAct(_player: Player): boolean {return true;}

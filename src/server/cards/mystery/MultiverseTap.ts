@@ -12,7 +12,7 @@ export class MultiverseTap extends Card implements IActionCard, IProjectCard {
       type: CardType.ACTIVE, name: CardName.MULTIVERSE_TAP, tags: [Tag.POWER], cost: 5,
       victoryPoints: 1,
       metadata: {cardNumber: 'MY314', renderData: CardRenderer.builder((b) => {b.action('Gain 1 energy.', (ab) => {ab.empty().startAction.text('?');});}),
-        description: 'Action: Gain 1 energy. (Trust no one.)'},
+        description: 'Action: Gain 1 energy.. 1 VP. (Trust no one.)'},
     });
   }
   public canAct(_player: Player): boolean {return true;}

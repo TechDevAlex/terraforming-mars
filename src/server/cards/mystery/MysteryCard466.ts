@@ -11,7 +11,7 @@ export class MysteryCard466 extends Card implements IProjectCard {
       victoryPoints: 1,
       behavior: {tr: 1, production: {steel: 2}},
       metadata: {cardNumber: 'MY466', renderData: CardRenderer.builder((b) => {b.text('TR and production.');}),
-        description: 'TR and production. (Steel and will forge the path.)'},
+        description: 'Raise your TR 1 step. 1 VP. (Steel and will forge the path.)'},
     });
   }
 }

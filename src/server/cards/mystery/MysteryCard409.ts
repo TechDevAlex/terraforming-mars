@@ -10,7 +10,7 @@ export class MysteryCard409 extends Card implements IActionCard, IProjectCard {
     super({
       type: CardType.ACTIVE, name: CardName.MYSTERY_CARD_409, tags: [], cost: 11,
       metadata: {cardNumber: 'MY409', renderData: CardRenderer.builder((b) => {b.action('Spend 1 MC to draw a card.', (ab) => {ab.empty().startAction.text('?');});}),
-        description: 'Action: Spend 1 MC to draw a card. (A whisper in the void.)'},
+        description: 'Action: Spend 1 MC to draw a card.. (A whisper in the void.)'},
     });
   }
   public canAct(player: Player): boolean {return player.canAfford(1);}

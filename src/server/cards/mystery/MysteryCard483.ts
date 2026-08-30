@@ -10,7 +10,7 @@ export class MysteryCard483 extends Card implements IActionCard, IProjectCard {
     super({
       type: CardType.ACTIVE, name: CardName.MYSTERY_CARD_483, tags: [], cost: 13,
       metadata: {cardNumber: 'MY483', renderData: CardRenderer.builder((b) => {b.action('Gain 3 MC.', (ab) => {ab.empty().startAction.text('?');});}),
-        description: 'Action: Gain 3 MC. (The unknown beckons.)'},
+        description: 'Action: Gain 3 MC.. (The unknown beckons.)'},
     });
   }
   public canAct(_player: Player): boolean {return true;}

@@ -11,7 +11,7 @@ export class TheFixer extends Card implements IActionCard, IProjectCard {
     super({
       type: CardType.ACTIVE, name: CardName.THE_FIXER, tags: [Tag.MARS], cost: 18,
       metadata: {cardNumber: 'MY018', renderData: CardRenderer.builder((b) => {b.action('Gain 1 steel and 1 titanium.', (ab) => {ab.empty().startAction.text('?');});}),
-        description: 'Action: Gain 1 steel and 1 titanium. (Secrets have power.)'},
+        description: 'Action: Gain 1 steel and 1 titanium.. (Secrets have power.)'},
     });
   }
   public canAct(_player: Player): boolean {return true;}

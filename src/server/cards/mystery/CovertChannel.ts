@@ -11,7 +11,7 @@ export class CovertChannel extends Card implements IActionCard, IProjectCard {
     super({
       type: CardType.ACTIVE, name: CardName.COVERT_CHANNEL, tags: [Tag.EARTH], cost: 10,
       metadata: {cardNumber: 'MY113', renderData: CardRenderer.builder((b) => {b.action('Spend 2 MC to draw a card.', (ab) => {ab.empty().startAction.text('?');});}),
-        description: 'Action: Spend 2 MC to draw a card. (Nature finds a way.)'},
+        description: 'Action: Spend 2 MC to draw a card.. (Nature finds a way.)'},
     });
   }
   public canAct(player: Player): boolean {return player.canAfford(2);}

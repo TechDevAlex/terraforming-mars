@@ -11,7 +11,7 @@ export class WarehouseDistrict extends Card implements IActionCard, IProjectCard
     super({
       type: CardType.ACTIVE, name: CardName.WAREHOUSE_DISTRICT, tags: [Tag.SPACE, Tag.BUILDING], cost: 9,
       metadata: {cardNumber: 'MY166', renderData: CardRenderer.builder((b) => {b.action('Gain 1 energy.', (ab) => {ab.empty().startAction.text('?');});}),
-        description: 'Action: Gain 1 energy. (Time bends.)'},
+        description: 'Action: Gain 1 energy.. (Time bends.)'},
     });
   }
   public canAct(_player: Player): boolean {return true;}

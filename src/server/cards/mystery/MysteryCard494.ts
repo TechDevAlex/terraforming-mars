@@ -10,7 +10,7 @@ export class MysteryCard494 extends Card implements IProjectCard {
       type: CardType.EVENT, name: CardName.MYSTERY_CARD_494, tags: [Tag.SPACE], cost: 18,
       behavior: {tr: 2},
       metadata: {cardNumber: 'MY494', renderData: CardRenderer.builder((b) => {b.text('Raise TR.');}),
-        description: 'Raise TR. (The frontier expands.)'},
+        description: 'Raise your TR 2 steps. (The frontier expands.)'},
     });
   }
 }

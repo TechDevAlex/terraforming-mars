@@ -11,7 +11,7 @@ export class OvertimeShift extends Card implements IActionCard, IProjectCard {
     super({
       type: CardType.ACTIVE, name: CardName.OVERTIME_SHIFT, tags: [Tag.CITY], cost: 14,
       metadata: {cardNumber: 'MY163', renderData: CardRenderer.builder((b) => {b.action('Gain 1 steel and 1 titanium.', (ab) => {ab.empty().startAction.text('?');});}),
-        description: 'Action: Gain 1 steel and 1 titanium. (Progress demands sacrifice.)'},
+        description: 'Action: Gain 1 steel and 1 titanium.. (Progress demands sacrifice.)'},
     });
   }
   public canAct(_player: Player): boolean {return true;}

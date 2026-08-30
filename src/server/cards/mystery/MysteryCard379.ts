@@ -10,7 +10,7 @@ export class MysteryCard379 extends Card implements IProjectCard {
       type: CardType.EVENT, name: CardName.MYSTERY_CARD_379, tags: [Tag.BUILDING], cost: 9,
       behavior: {global: {oxygen: 1}},
       metadata: {cardNumber: 'MY379', renderData: CardRenderer.builder((b) => {b.text('Raise global parameter.');}),
-        description: 'Raise global parameter. (Nothing is as it seems.)'},
+        description: 'Raise oxygen 1 step. (Nothing is as it seems.)'},
     });
   }
 }

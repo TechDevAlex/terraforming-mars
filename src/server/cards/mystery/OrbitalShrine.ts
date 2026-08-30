@@ -12,7 +12,7 @@ export class OrbitalShrine extends Card implements IActionCard, IProjectCard {
       type: CardType.ACTIVE, name: CardName.ORBITAL_SHRINE, tags: [Tag.POWER, Tag.JOVIAN], cost: 17,
       victoryPoints: 1,
       metadata: {cardNumber: 'MY051', renderData: CardRenderer.builder((b) => {b.action('Gain 2 plants.', (ab) => {ab.empty().startAction.text('?');});}),
-        description: 'Action: Gain 2 plants. (Shadows hide secrets.)'},
+        description: 'Action: Gain 2 plants.. 1 VP. (Shadows hide secrets.)'},
     });
   }
   public canAct(_player: Player): boolean {return true;}

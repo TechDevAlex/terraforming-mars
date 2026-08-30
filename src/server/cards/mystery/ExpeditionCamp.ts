@@ -10,7 +10,7 @@ export class ExpeditionCamp extends Card implements IProjectCard {
       type: CardType.EVENT, name: CardName.EXPEDITION_CAMP, tags: [Tag.CITY], cost: 21,
       behavior: {drawCard: 3},
       metadata: {cardNumber: 'MY216', renderData: CardRenderer.builder((b) => {b.text('Draw cards.');}),
-        description: 'Draw cards. (The mystery deepens.)'},
+        description: 'Draw 3 cards. (The mystery deepens.)'},
     });
   }
 }

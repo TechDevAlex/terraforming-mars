@@ -10,7 +10,7 @@ export class MysteryCard472 extends Card implements IProjectCard {
       type: CardType.AUTOMATED, name: CardName.MYSTERY_CARD_472, tags: [Tag.JOVIAN], cost: 6,
       behavior: {tr: 1, production: {steel: 1}},
       metadata: {cardNumber: 'MY472', renderData: CardRenderer.builder((b) => {b.text('TR and production.');}),
-        description: 'TR and production. (The unknown beckons.)'},
+        description: 'Raise your TR 1 step. (The unknown beckons.)'},
     });
   }
 }

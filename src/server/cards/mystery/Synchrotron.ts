@@ -11,7 +11,7 @@ export class Synchrotron extends Card implements IActionCard, IProjectCard {
     super({
       type: CardType.ACTIVE, name: CardName.SYNCHROTRON, tags: [Tag.SPACE], cost: 7,
       metadata: {cardNumber: 'MY288', renderData: CardRenderer.builder((b) => {b.action('Spend 2 MC to draw a card.', (ab) => {ab.empty().startAction.text('?');});}),
-        description: 'Action: Spend 2 MC to draw a card. (The truth is out there.)'},
+        description: 'Action: Spend 2 MC to draw a card.. (The truth is out there.)'},
     });
   }
   public canAct(player: Player): boolean {return player.canAfford(2);}

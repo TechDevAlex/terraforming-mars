@@ -11,7 +11,7 @@ export class StealthSatellite extends Card implements IProjectCard {
       victoryPoints: 1,
       behavior: {production: {steel: 2, megacredits: 1, titanium: 1}},
       metadata: {cardNumber: 'MY093', renderData: CardRenderer.builder((b) => {b.text('Adjust production.');}),
-        description: 'Adjust production. (The mystery deepens.)'},
+        description: '1 VP. (The mystery deepens.)'},
     });
   }
 }

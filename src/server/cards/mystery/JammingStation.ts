@@ -11,7 +11,7 @@ export class JammingStation extends Card implements IProjectCard {
       victoryPoints: 1,
       behavior: {city: {}, production: {megacredits: 2}},
       metadata: {cardNumber: 'MY096', renderData: CardRenderer.builder((b) => {b.text('Place city, gain production.');}),
-        description: 'Place city, gain production. (Knowledge is the ultimate currency.)'},
+        description: '1 VP. (Knowledge is the ultimate currency.)'},
     });
   }
 }

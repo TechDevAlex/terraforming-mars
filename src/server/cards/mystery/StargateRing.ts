@@ -11,7 +11,7 @@ export class StargateRing extends Card implements IProjectCard {
       victoryPoints: 1,
       behavior: {ocean: {}},
       metadata: {cardNumber: 'MY368', renderData: CardRenderer.builder((b) => {b.text('Place an ocean.');}),
-        description: 'Place an ocean. (Progress demands sacrifice.)'},
+        description: '1 VP. (Progress demands sacrifice.)'},
     });
   }
 }

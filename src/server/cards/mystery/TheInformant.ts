@@ -12,7 +12,7 @@ export class TheInformant extends Card implements IActionCard, IProjectCard {
       type: CardType.ACTIVE, name: CardName.THE_INFORMANT, tags: [Tag.POWER, Tag.PLANT], cost: 15,
       victoryPoints: -1,
       metadata: {cardNumber: 'MY003', renderData: CardRenderer.builder((b) => {b.action('Gain 1 energy.', (ab) => {ab.empty().startAction.text('?');});}),
-        description: 'Action: Gain 1 energy. (Space warps.)'},
+        description: 'Action: Gain 1 energy.. -1 VP. (Space warps.)'},
     });
   }
   public canAct(_player: Player): boolean {return true;}

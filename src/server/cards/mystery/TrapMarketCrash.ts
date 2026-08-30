@@ -10,7 +10,7 @@ export class TrapMarketCrash extends Card implements IActionCard, IProjectCard {
     super({
       type: CardType.ACTIVE, name: CardName.TRAP_MARKET_CRASH, tags: [], cost: 0,
       metadata: {cardNumber: 'TRAP049', renderData: CardRenderer.builder((b) => {b.action('TRAP: If you have 30+ MC, gain 1 TR.', (ab) => {ab.empty().startAction.text('TRAP');});}),
-        description: 'TRAP: If you have 30+ MC, gain 1 TR. (Triggers once automatically.)'},
+        description: 'Action: TRAP: If you have 30+ MC, gain 1 TR. (Triggers once automatically.)'},
     });
   }
   private triggered = false;

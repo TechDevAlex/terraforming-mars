@@ -11,7 +11,7 @@ export class CombatDrill extends Card implements IProjectCard {
       victoryPoints: 1,
       behavior: {production: {energy: 2, heat: 1, titanium: 1}},
       metadata: {cardNumber: 'MY349', renderData: CardRenderer.builder((b) => {b.text('Adjust production.');}),
-        description: 'Adjust production. (Every clue matters.)'},
+        description: '1 VP. (Every clue matters.)'},
     });
   }
 }

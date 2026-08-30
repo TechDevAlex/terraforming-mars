@@ -11,7 +11,7 @@ export class GetawayDriver extends Card implements IProjectCard {
       victoryPoints: -2,
       behavior: {stock: {steel: 4}},
       metadata: {cardNumber: 'MY023', renderData: CardRenderer.builder((b) => {b.text('Gain resources.');}),
-        description: 'Gain resources. (Secrets have power.)'},
+        description: '-2 VP. (Secrets have power.)'},
     });
   }
 }

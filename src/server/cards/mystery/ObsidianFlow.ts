@@ -11,7 +11,7 @@ export class ObsidianFlow extends Card implements IActionCard, IProjectCard {
     super({
       type: CardType.ACTIVE, name: CardName.OBSIDIAN_FLOW, tags: [Tag.SPACE, Tag.SCIENCE], cost: 10,
       metadata: {cardNumber: 'MY145', renderData: CardRenderer.builder((b) => {b.action('Gain 2 plants.', (ab) => {ab.empty().startAction.text('?');});}),
-        description: 'Action: Gain 2 plants. (Every clue matters.)'},
+        description: 'Action: Gain 2 plants.. (Every clue matters.)'},
     });
   }
   public canAct(_player: Player): boolean {return true;}

@@ -10,7 +10,7 @@ export class ResistanceCell extends Card implements IProjectCard {
       victoryPoints: 2,
       behavior: {production: {heat: 2}},
       metadata: {cardNumber: 'MY197', renderData: CardRenderer.builder((b) => {b.text('Adjust production.');}),
-        description: 'Adjust production. (Nature finds a way.)'},
+        description: '2 VP. (Nature finds a way.)'},
     });
   }
 }

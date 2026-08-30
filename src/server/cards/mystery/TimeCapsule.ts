@@ -11,7 +11,7 @@ export class TimeCapsule extends Card implements IActionCard, IProjectCard {
     super({
       type: CardType.ACTIVE, name: CardName.TIME_CAPSULE, tags: [Tag.JOVIAN, Tag.ANIMAL], cost: 19,
       metadata: {cardNumber: 'MY265', renderData: CardRenderer.builder((b) => {b.action('Spend 1 MC to draw a card.', (ab) => {ab.empty().startAction.text('?');});}),
-        description: 'Action: Spend 1 MC to draw a card. (Trust no one.)'},
+        description: 'Action: Spend 1 MC to draw a card.. (Trust no one.)'},
     });
   }
   public canAct(player: Player): boolean {return player.canAfford(1);}

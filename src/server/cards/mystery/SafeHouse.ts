@@ -11,7 +11,7 @@ export class SafeHouse extends Card implements IActionCard, IProjectCard {
     super({
       type: CardType.ACTIVE, name: CardName.SAFE_HOUSE, tags: [Tag.CITY, Tag.PLANT], cost: 16,
       metadata: {cardNumber: 'MY014', renderData: CardRenderer.builder((b) => {b.action('Gain 2 heat.', (ab) => {ab.empty().startAction.text('?');});}),
-        description: 'Action: Gain 2 heat. (The unknown beckons.)'},
+        description: 'Action: Gain 2 heat.. (The unknown beckons.)'},
     });
   }
   public canAct(_player: Player): boolean {return true;}

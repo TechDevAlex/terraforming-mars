@@ -11,7 +11,7 @@ export class BatteringRam extends Card implements IProjectCard {
       victoryPoints: -1,
       behavior: {production: {energy: 2, plants: 1}},
       metadata: {cardNumber: 'MY226', renderData: CardRenderer.builder((b) => {b.text('Adjust production.');}),
-        description: 'Adjust production. (The unknown beckons.)'},
+        description: '-1 VP. (The unknown beckons.)'},
     });
   }
 }

@@ -12,7 +12,7 @@ export class LightSail extends Card implements IActionCard, IProjectCard {
       type: CardType.ACTIVE, name: CardName.LIGHT_SAIL, tags: [Tag.BUILDING], cost: 20,
       victoryPoints: -1,
       metadata: {cardNumber: 'MY301', renderData: CardRenderer.builder((b) => {b.action('Gain 1 steel and 1 titanium.', (ab) => {ab.empty().startAction.text('?');});}),
-        description: 'Action: Gain 1 steel and 1 titanium. (The mystery deepens.)'},
+        description: 'Action: Gain 1 steel and 1 titanium.. -1 VP. (The mystery deepens.)'},
     });
   }
   public canAct(_player: Player): boolean {return true;}
