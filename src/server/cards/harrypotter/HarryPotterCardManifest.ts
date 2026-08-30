@@ -20,6 +20,7 @@ import {ChamberOfSecrets} from './ChamberOfSecrets';
 import {MandrakeNursery} from './MandrakeNursery';
 import {ElderWand} from './ElderWand';
 import {Thestrals} from './Thestrals';
+import {BrewPotionStandardProject} from './BrewPotionStandardProject';
 
 export const HARRY_POTTER_CARD_MANIFEST = new ModuleManifest({
   module: 'harrypotter',
@@ -44,5 +45,8 @@ export const HARRY_POTTER_CARD_MANIFEST = new ModuleManifest({
     [CardName.MANDRAKE_NURSERY]: {Factory: MandrakeNursery},
     [CardName.ELDER_WAND]: {Factory: ElderWand},
     [CardName.THESTRALS]: {Factory: Thestrals},
+  },
+  standardProjects: {
+    [CardName.BREW_POTION_STANDARD_PROJECT]: {Factory: BrewPotionStandardProject},
   },
 });
