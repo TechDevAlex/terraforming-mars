@@ -949,6 +949,23 @@ export enum CardName {
   ELDER_WAND = 'Elder Wand',
   THESTRALS = 'Thestrals',
 
+
+  // BOOM!
+  COINFLIP = 'Coinflip',
+  OVERSLEPT = 'Overslept',
+  WHALE_HUNTING = 'Whale Hunting',
+  FINANCIAL_GOODY = 'Financial Goody',
+  FITNESS_STUDIO_SUBSCRIPTION = 'Fitness Studio Subscription',
+  REDIRECT = 'Redirect',
+  DOUBLE_PRODUCTION = 'Double Production',
+  GOLDEN_GATE_BRIDGE = 'Golden Gate Bridge',
+  WASTELAND = 'Wasteland',
+  VERBOTENER_WALD = 'Verbotener Wald',
+  BUILD_A_CATHEDRAL = 'Build a Cathedral',
+  NATURAL_DISASTER = 'Natural Disaster',
+  LIGHTS_OUT = 'Lights Out',
+  OCEAN_THE_EARTH = 'Ocean the Earth',
+  CARD_COLLECTOR = 'Card Collector',
   // Underworld
   GEOLOGIST_TEAM = 'Geologist Team',
   GEOSCAN_SATELLITE = 'Geoscan Satellite',
