@@ -1,0 +1,4 @@
+import {IProjectCard} from '../IProjectCard';import {Tag} from '../../../common/cards/Tag';import {Card} from '../Card';import {CardType} from '../../../common/cards/CardType';import {CardName} from '../../../common/cards/CardName';import {CardRenderer} from '../render/CardRenderer';
+export class GrawpLaborForce extends Card implements IProjectCard {
+  constructor() {super({type: CardType.AUTOMATED, name: CardName.GRAWP_LABOR_FORCE, tags: [Tag.BUILDING, Tag.MARS], cost: 11, behavior: {production: {steel: 2, heat: 1}}, metadata: {cardNumber: 'HP186', renderData: CardRenderer.builder((b) => {b.production((pb) => pb.steel(2).heat(1));}), description: 'Increase steel production 2 and heat production 1 step. (Hagrid\'s giant half-brother—sixteen feet tall and surprisingly gentle, mostly.)'}});}
+}

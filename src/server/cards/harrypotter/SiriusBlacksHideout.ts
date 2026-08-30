@@ -1,0 +1,4 @@
+import {IProjectCard} from '../IProjectCard';import {Tag} from '../../../common/cards/Tag';import {Card} from '../Card';import {CardType} from '../../../common/cards/CardType';import {CardName} from '../../../common/cards/CardName';import {CardRenderer} from '../render/CardRenderer';
+export class SiriusBlacksHideout extends Card implements IProjectCard {
+  constructor() {super({type: CardType.AUTOMATED, name: CardName.SIRIUS_BLACKS_HIDEOUT, tags: [Tag.BUILDING], cost: 8, behavior: {production: {megacredits: 1, steel: 1}, drawCard: 1}, metadata: {cardNumber: 'HP71', renderData: CardRenderer.builder((b) => {b.production((pb) => pb.megacredits(1).steel(1)).cards(1);}), description: 'Increase M€ and steel production 1 step each. Draw a card. (Twelve Grimmauld Place—unplottable, undetectable, and profoundly gloomy.)'}});}
+}

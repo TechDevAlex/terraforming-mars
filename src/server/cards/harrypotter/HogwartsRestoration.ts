@@ -1,0 +1,4 @@
+import {IProjectCard} from '../IProjectCard';import {Tag} from '../../../common/cards/Tag';import {Card} from '../Card';import {CardType} from '../../../common/cards/CardType';import {CardName} from '../../../common/cards/CardName';import {CardRenderer} from '../render/CardRenderer';
+export class HogwartsRestoration extends Card implements IProjectCard {
+  constructor() {super({type: CardType.AUTOMATED, name: CardName.HOGWARTS_RESTORATION, tags: [Tag.BUILDING, Tag.MARS, Tag.EARTH], cost: 22, victoryPoints: 3, behavior: {tr: 2, production: {steel: 1, megacredits: 2}, greenery: {}}, metadata: {cardNumber: 'HP200', renderData: CardRenderer.builder((b) => {b.tr(2).greenery().production((pb) => pb.steel(1).megacredits(2));}), description: 'Raise TR 2 steps. Place a greenery. Increase steel and M€ production. (Stone by stone, spell by spell, the castle was rebuilt—a symbol that hope endures.)'}});}
+}

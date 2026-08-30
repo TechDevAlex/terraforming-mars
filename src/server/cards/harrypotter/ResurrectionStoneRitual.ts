@@ -1,0 +1,4 @@
+import {IProjectCard} from '../IProjectCard';import {Tag} from '../../../common/cards/Tag';import {Card} from '../Card';import {CardType} from '../../../common/cards/CardType';import {CardName} from '../../../common/cards/CardName';import {CardRenderer} from '../render/CardRenderer';
+export class ResurrectionStoneRitual extends Card implements IProjectCard {
+  constructor() {super({type: CardType.EVENT, name: CardName.RESURRECTION_STONE_RITUAL, tags: [Tag.POWER, Tag.SCIENCE], cost: 15, requirements: [{tag: Tag.SCIENCE, count: 2}], behavior: {tr: 2, drawCard: 1}, metadata: {cardNumber: 'HP155', renderData: CardRenderer.builder((b) => {b.tr(2).cards(1);}), description: 'Requires 2 science tags. Raise TR 2 steps. Draw a card. (The stone turns thrice and the shades of the dead return—not truly alive, but present.)'}});}
+}

@@ -1,0 +1,4 @@
+import {IProjectCard} from '../IProjectCard';import {Tag} from '../../../common/cards/Tag';import {Card} from '../Card';import {CardType} from '../../../common/cards/CardType';import {CardName} from '../../../common/cards/CardName';import {CardRenderer} from '../render/CardRenderer';
+export class MinervaMcGonagallsDiscipline extends Card implements IProjectCard {
+  constructor() {super({type: CardType.AUTOMATED, name: CardName.MINERVA_MCGONAGALLS_DISCIPLINE, tags: [Tag.SCIENCE, Tag.EARTH], cost: 12, victoryPoints: 1, behavior: {tr: 1, production: {megacredits: 1}}, metadata: {cardNumber: 'HP81', renderData: CardRenderer.builder((b) => {b.tr(1).production((pb) => pb.megacredits(1));}), description: 'Raise TR 1 step. Increase M€ production 1 step. (Have a biscuit, Potter—and then explain exactly why you were out of bed.)'}});}
+}

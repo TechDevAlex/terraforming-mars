@@ -1,0 +1,4 @@
+import {IProjectCard} from '../IProjectCard';import {Tag} from '../../../common/cards/Tag';import {Card} from '../Card';import {CardType} from '../../../common/cards/CardType';import {CardName} from '../../../common/cards/CardName';import {CardRenderer} from '../render/CardRenderer';
+export class DeathEaterInfiltration extends Card implements IProjectCard {
+  constructor() {super({type: CardType.AUTOMATED, name: CardName.DEATH_EATER_INFILTRATION, tags: [Tag.POWER, Tag.EARTH], cost: 16, victoryPoints: -2, behavior: {production: {megacredits: 5}}, metadata: {cardNumber: 'HP190', renderData: CardRenderer.builder((b) => {b.production((pb) => pb.megacredits(5));}), description: 'Increase M€ production 5 steps. -2 VP. (They wore the masks and answered the call—even inside the Ministry, the Dark Lord had eyes.)'}});}
+}

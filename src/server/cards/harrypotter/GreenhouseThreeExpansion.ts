@@ -1,0 +1,4 @@
+import {IProjectCard} from '../IProjectCard';import {Tag} from '../../../common/cards/Tag';import {Card} from '../Card';import {CardType} from '../../../common/cards/CardType';import {CardName} from '../../../common/cards/CardName';import {CardRenderer} from '../render/CardRenderer';
+export class GreenhouseThreeExpansion extends Card implements IProjectCard {
+  constructor() {super({type: CardType.AUTOMATED, name: CardName.GREENHOUSE_THREE_EXPANSION, tags: [Tag.PLANT, Tag.BUILDING], cost: 11, victoryPoints: 1, behavior: {production: {plants: 2, heat: 1}}, metadata: {cardNumber: 'HP157', renderData: CardRenderer.builder((b) => {b.production((pb) => pb.plants(2).heat(1));}), description: 'Increase plant production 2 and heat production 1 step. (The magical greenhouses grow plants from every continent, some from no known continent.)'}});}
+}

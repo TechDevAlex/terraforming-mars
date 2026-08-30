@@ -1,0 +1,4 @@
+import {IProjectCard} from '../IProjectCard';import {Tag} from '../../../common/cards/Tag';import {Card} from '../Card';import {CardType} from '../../../common/cards/CardType';import {CardName} from '../../../common/cards/CardName';import {CardRenderer} from '../render/CardRenderer';
+export class MinistryMuggleOutreach extends Card implements IProjectCard {
+  constructor() {super({type: CardType.AUTOMATED, name: CardName.MINISTRY_MUGGLE_OUTREACH, tags: [Tag.EARTH], cost: 9, victoryPoints: 1, behavior: {tr: 1, production: {megacredits: 1}}, metadata: {cardNumber: 'HP67', renderData: CardRenderer.builder((b) => {b.tr(1).production((pb) => pb.megacredits(1));}), description: 'Raise TR 1 step. Increase M€ production 1 step. (The Muggle-Worthy Excuse Committee works overtime to explain away dragon sightings.)'}});}
+}

@@ -1,0 +1,4 @@
+import {IProjectCard} from '../IProjectCard';import {Tag} from '../../../common/cards/Tag';import {Card} from '../Card';import {CardType} from '../../../common/cards/CardType';import {CardName} from '../../../common/cards/CardName';import {CardRenderer} from '../render/CardRenderer';import {CardResource} from '../../../common/CardResource';
+export class VeelaHairCollection extends Card implements IProjectCard {
+  constructor() {super({type: CardType.AUTOMATED, name: CardName.VEELA_HAIR_COLLECTION, tags: [Tag.SCIENCE, Tag.MICROBE], cost: 7, behavior: {production: {energy: 1}, addResourcesToAnyCard: [{type: CardResource.MICROBE, count: 2}]}, metadata: {cardNumber: 'HP102', renderData: CardRenderer.builder((b) => {b.production((pb) => pb.energy(1)).resource(CardResource.MICROBE, {amount: 2});}), description: 'Increase energy production 1 step. Add 2 microbes to ANY card. (Veela hair makes a temperamental wand core—beautiful but unreliable.)'}});}
+}

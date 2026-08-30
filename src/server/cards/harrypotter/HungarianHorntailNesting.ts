@@ -1,0 +1,4 @@
+import {IProjectCard} from '../IProjectCard';import {Tag} from '../../../common/cards/Tag';import {Card} from '../Card';import {CardType} from '../../../common/cards/CardType';import {CardName} from '../../../common/cards/CardName';import {CardRenderer} from '../render/CardRenderer';
+export class HungarianHorntailNesting extends Card implements IProjectCard {
+  constructor() {super({type: CardType.AUTOMATED, name: CardName.HUNGARIAN_HORNTAIL_NESTING, tags: [Tag.ANIMAL, Tag.POWER], cost: 15, victoryPoints: 2, behavior: {production: {energy: 2}, global: {temperature: 1}}, metadata: {cardNumber: 'HP85', renderData: CardRenderer.builder((b) => {b.production((pb) => pb.energy(2)).temperature(1);}), description: 'Increase energy production 2 steps. Raise temperature 1 step. (Fifty feet of scales, spines, and fire—the most dangerous dragon breed alive.)'}});}
+}

@@ -1,0 +1,4 @@
+import {IProjectCard} from '../IProjectCard';import {Tag} from '../../../common/cards/Tag';import {Card} from '../Card';import {CardType} from '../../../common/cards/CardType';import {CardName} from '../../../common/cards/CardName';import {CardRenderer} from '../render/CardRenderer';
+export class ProphecyOrbVault extends Card implements IProjectCard {
+  constructor() {super({type: CardType.AUTOMATED, name: CardName.PROPHECY_ORB_VAULT, tags: [Tag.SPACE, Tag.SCIENCE], cost: 17, victoryPoints: 2, behavior: {production: {titanium: 1}, drawCard: 2}, metadata: {cardNumber: 'HP153', renderData: CardRenderer.builder((b) => {b.production((pb) => pb.titanium(1)).cards(2);}), description: 'Increase titanium production 1 step. Draw 2 cards. (Row upon row of dusty glass spheres, each containing a whispered fate.)'}});}
+}

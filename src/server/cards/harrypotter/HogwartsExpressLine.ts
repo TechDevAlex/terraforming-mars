@@ -1,0 +1,4 @@
+import {IProjectCard} from '../IProjectCard';import {Tag} from '../../../common/cards/Tag';import {Card} from '../Card';import {CardType} from '../../../common/cards/CardType';import {CardName} from '../../../common/cards/CardName';import {CardRenderer} from '../render/CardRenderer';
+export class HogwartsExpressLine extends Card implements IProjectCard {
+  constructor() {super({type: CardType.AUTOMATED, name: CardName.HOGWARTS_EXPRESS_LINE, tags: [Tag.EARTH, Tag.BUILDING], cost: 15, victoryPoints: 1, behavior: {production: {megacredits: 2, steel: 1}}, metadata: {cardNumber: 'HP55', renderData: CardRenderer.builder((b) => {b.production((pb) => pb.megacredits(2).steel(1));}), description: 'Increase M€ production 2 steps and steel production 1 step. (Platform Nine and Three-Quarters connects the mundane world to the magical one.)'}});}
+}

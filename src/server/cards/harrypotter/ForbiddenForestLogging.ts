@@ -1,0 +1,4 @@
+import {IProjectCard} from '../IProjectCard';import {Tag} from '../../../common/cards/Tag';import {Card} from '../Card';import {CardType} from '../../../common/cards/CardType';import {CardName} from '../../../common/cards/CardName';import {CardRenderer} from '../render/CardRenderer';
+export class ForbiddenForestLogging extends Card implements IProjectCard {
+  constructor() {super({type: CardType.AUTOMATED, name: CardName.FORBIDDEN_FOREST_LOGGING, tags: [Tag.PLANT, Tag.BUILDING], cost: 8, behavior: {production: {plants: 1, steel: 1}}, metadata: {cardNumber: 'HP120', renderData: CardRenderer.builder((b) => {b.production((pb) => pb.plants(1).steel(1));}), description: 'Increase plant and steel production 1 step each. (The forest grudgingly yields timber, though the trees remember every axe.)'}});}
+}

@@ -1,0 +1,4 @@
+import {IProjectCard} from '../IProjectCard';import {Tag} from '../../../common/cards/Tag';import {Card} from '../Card';import {CardType} from '../../../common/cards/CardType';import {CardName} from '../../../common/cards/CardName';import {CardRenderer} from '../render/CardRenderer';
+export class HogwartsLakeTerraforming extends Card implements IProjectCard {
+  constructor() {super({type: CardType.AUTOMATED, name: CardName.HOGWARTS_LAKE_TERRAFORMING, tags: [Tag.MARS, Tag.BUILDING], cost: 14, victoryPoints: 1, behavior: {ocean: {}, production: {heat: 1}}, metadata: {cardNumber: 'HP162', renderData: CardRenderer.builder((b) => {b.oceans(1).production((pb) => pb.heat(1));}), description: 'Place an ocean. Increase heat production 1 step. (The black lake teems with merpeople, grindylows, and the giant squid.)'}});}
+}

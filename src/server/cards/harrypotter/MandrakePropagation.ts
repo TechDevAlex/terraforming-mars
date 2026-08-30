@@ -1,0 +1,4 @@
+import {IProjectCard} from '../IProjectCard';import {Tag} from '../../../common/cards/Tag';import {Card} from '../Card';import {CardType} from '../../../common/cards/CardType';import {CardName} from '../../../common/cards/CardName';import {CardRenderer} from '../render/CardRenderer';import {CardResource} from '../../../common/CardResource';
+export class MandrakePropagation extends Card implements IProjectCard {
+  constructor() {super({type: CardType.AUTOMATED, name: CardName.MANDRAKE_PROPAGATION, tags: [Tag.PLANT, Tag.MICROBE], cost: 6, behavior: {production: {plants: 1}, addResourcesToAnyCard: [{type: CardResource.MICROBE, count: 2}]}, metadata: {cardNumber: 'HP72', renderData: CardRenderer.builder((b) => {b.production((pb) => pb.plants(1)).resource(CardResource.MICROBE, {amount: 2});}), description: 'Increase plant production 1 step. Add 2 microbes to ANY card. (Their cry is fatal to anyone who hears it—always wear your earmuffs.)'}});}
+}

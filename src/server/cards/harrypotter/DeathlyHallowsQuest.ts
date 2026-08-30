@@ -1,0 +1,4 @@
+import {IProjectCard} from '../IProjectCard';import {Tag} from '../../../common/cards/Tag';import {Card} from '../Card';import {CardType} from '../../../common/cards/CardType';import {CardName} from '../../../common/cards/CardName';import {CardRenderer} from '../render/CardRenderer';
+export class DeathlyHallowsQuest extends Card implements IProjectCard {
+  constructor() {super({type: CardType.AUTOMATED, name: CardName.DEATHLY_HALLOWS_QUEST, tags: [Tag.POWER, Tag.SCIENCE, Tag.SPACE], cost: 35, victoryPoints: 5, requirements: [{tag: Tag.SCIENCE, count: 4}], behavior: {production: {megacredits: 3, energy: 2, titanium: 1}}, metadata: {cardNumber: 'HP199', renderData: CardRenderer.builder((b) => {b.production((pb) => pb.megacredits(3).energy(2).titanium(1));}), description: 'Requires 4 science tags. Increase M€ production 3, energy production 2, titanium production 1 step. (The Elder Wand, the Resurrection Stone, the Cloak of Invisibility—master of death.)'}});}
+}

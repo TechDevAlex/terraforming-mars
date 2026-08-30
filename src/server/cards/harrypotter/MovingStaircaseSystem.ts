@@ -1,0 +1,4 @@
+import {IProjectCard} from '../IProjectCard';import {Tag} from '../../../common/cards/Tag';import {Card} from '../Card';import {CardType} from '../../../common/cards/CardType';import {CardName} from '../../../common/cards/CardName';import {CardRenderer} from '../render/CardRenderer';
+export class MovingStaircaseSystem extends Card implements IProjectCard {
+  constructor() {super({type: CardType.AUTOMATED, name: CardName.MOVING_STAIRCASE_SYSTEM, tags: [Tag.BUILDING], cost: 9, behavior: {production: {energy: 1, megacredits: 1}}, metadata: {cardNumber: 'HP182', renderData: CardRenderer.builder((b) => {b.production((pb) => pb.energy(1).megacredits(1));}), description: 'Increase energy and M€ production 1 step each. (A hundred and forty-two staircases—some go somewhere different on Fridays.)'}});}
+}

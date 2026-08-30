@@ -1,0 +1,4 @@
+import {IProjectCard} from '../IProjectCard';import {Tag} from '../../../common/cards/Tag';import {Card} from '../Card';import {CardType} from '../../../common/cards/CardType';import {CardName} from '../../../common/cards/CardName';import {CardRenderer} from '../render/CardRenderer';
+export class ElderWandMastery extends Card implements IProjectCard {
+  constructor() {super({type: CardType.AUTOMATED, name: CardName.ELDER_WAND_MASTERY, tags: [Tag.POWER], cost: 26, victoryPoints: 3, requirements: [{tag: Tag.POWER, count: 3}], behavior: {production: {energy: 3}, drawCard: 2}, metadata: {cardNumber: 'HP131', renderData: CardRenderer.builder((b) => {b.production((pb) => pb.energy(3)).cards(2);}), description: 'Requires 3 power tags. Increase energy production 3 steps. Draw 2 cards. (The Deathstick, the Wand of Destiny—it serves only the wizard who conquers its master.)'}});}
+}

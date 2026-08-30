@@ -1,0 +1,4 @@
+import {IProjectCard} from '../IProjectCard';import {Tag} from '../../../common/cards/Tag';import {Card} from '../Card';import {CardType} from '../../../common/cards/CardType';import {CardName} from '../../../common/cards/CardName';import {CardRenderer} from '../render/CardRenderer';
+export class CentaurHerdAlliance extends Card implements IProjectCard {
+  constructor() {super({type: CardType.AUTOMATED, name: CardName.CENTAUR_HERD_ALLIANCE, tags: [Tag.ANIMAL, Tag.SPACE], cost: 14, victoryPoints: 2, behavior: {production: {titanium: 1}, drawCard: 1}, metadata: {cardNumber: 'HP112', renderData: CardRenderer.builder((b) => {b.production((pb) => pb.titanium(1)).cards(1);}), description: 'Increase titanium production 1 step. Draw a card. (The centaurs read the heavens and rarely interfere—but when they do, worlds shift.)'}});}
+}

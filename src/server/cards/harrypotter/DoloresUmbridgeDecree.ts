@@ -1,0 +1,4 @@
+import {IProjectCard} from '../IProjectCard';import {Tag} from '../../../common/cards/Tag';import {Card} from '../Card';import {CardType} from '../../../common/cards/CardType';import {CardName} from '../../../common/cards/CardName';import {CardRenderer} from '../render/CardRenderer';
+export class DoloresUmbridgeDecree extends Card implements IProjectCard {
+  constructor() {super({type: CardType.AUTOMATED, name: CardName.DOLORES_UMBRIDGE_DECREE, tags: [Tag.EARTH], cost: 13, victoryPoints: -2, behavior: {production: {megacredits: 4}}, metadata: {cardNumber: 'HP168', renderData: CardRenderer.builder((b) => {b.production((pb) => pb.megacredits(4));}), description: 'Increase M€ production 4 steps. -2 VP. (Educational Decree Number Twenty-Six—the toad-faced tyrant controlled everything.)'}});}
+}

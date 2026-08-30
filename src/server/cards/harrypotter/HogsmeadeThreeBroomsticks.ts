@@ -1,0 +1,4 @@
+import {IProjectCard} from '../IProjectCard';import {Tag} from '../../../common/cards/Tag';import {Card} from '../Card';import {CardType} from '../../../common/cards/CardType';import {CardName} from '../../../common/cards/CardName';import {CardRenderer} from '../render/CardRenderer';
+export class HogsmeadeThreeBroomsticks extends Card implements IProjectCard {
+  constructor() {super({type: CardType.AUTOMATED, name: CardName.HOGSMEADE_THREE_BROOMSTICKS, tags: [Tag.CITY, Tag.EARTH], cost: 11, victoryPoints: 1, behavior: {production: {megacredits: 2, heat: 1}}, metadata: {cardNumber: 'HP76', renderData: CardRenderer.builder((b) => {b.production((pb) => pb.megacredits(2).heat(1));}), description: 'Increase M€ production 2 steps and heat production 1 step. (Butterbeer froths golden in the tankard as Madam Rosmerta serves with a smile.)'}});}
+}

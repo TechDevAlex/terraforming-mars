@@ -1,0 +1,4 @@
+import {IProjectCard} from '../IProjectCard';import {Tag} from '../../../common/cards/Tag';import {Card} from '../Card';import {CardType} from '../../../common/cards/CardType';import {CardName} from '../../../common/cards/CardName';import {CardRenderer} from '../render/CardRenderer';
+export class HorcruxVessel extends Card implements IProjectCard {
+  constructor() {super({type: CardType.AUTOMATED, name: CardName.HORCRUX_VESSEL, tags: [Tag.SCIENCE, Tag.POWER], cost: 25, victoryPoints: -3, behavior: {production: {megacredits: 6, energy: 2}}, metadata: {cardNumber: 'HP62', renderData: CardRenderer.builder((b) => {b.production((pb) => pb.megacredits(6).energy(2));}), description: 'Increase M€ production 6 steps and energy production 2 steps. -3 VP. (To split the soul is the ultimate abomination—and the ultimate power.)'}});}
+}

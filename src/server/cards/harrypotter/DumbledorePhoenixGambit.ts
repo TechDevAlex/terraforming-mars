@@ -1,0 +1,4 @@
+import {IProjectCard} from '../IProjectCard';import {Tag} from '../../../common/cards/Tag';import {Card} from '../Card';import {CardType} from '../../../common/cards/CardType';import {CardName} from '../../../common/cards/CardName';import {CardRenderer} from '../render/CardRenderer';
+export class DumbledorePhoenixGambit extends Card implements IProjectCard {
+  constructor() {super({type: CardType.EVENT, name: CardName.DUMBLEDORE_PHOENIX_GAMBIT, tags: [Tag.POWER, Tag.SPACE], cost: 28, requirements: [{tag: Tag.SCIENCE, count: 3}], behavior: {tr: 3, drawCard: 2}, metadata: {cardNumber: 'HP176', renderData: CardRenderer.builder((b) => {b.tr(3).cards(2);}), description: 'Requires 3 science tags. Raise TR 3 steps. Draw 2 cards. (Dumbledore vanished in a burst of phoenix fire, leaving the Ministry in chaos.)'}});}
+}

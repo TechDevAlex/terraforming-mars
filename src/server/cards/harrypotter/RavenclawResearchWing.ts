@@ -1,0 +1,4 @@
+import {IProjectCard} from '../IProjectCard';import {Tag} from '../../../common/cards/Tag';import {Card} from '../Card';import {CardType} from '../../../common/cards/CardType';import {CardName} from '../../../common/cards/CardName';import {CardRenderer} from '../render/CardRenderer';
+export class RavenclawResearchWing extends Card implements IProjectCard {
+  constructor() {super({type: CardType.AUTOMATED, name: CardName.RAVENCLAW_RESEARCH_WING, tags: [Tag.BUILDING, Tag.SCIENCE], cost: 19, victoryPoints: 2, behavior: {production: {megacredits: 1}, drawCard: 2}, metadata: {cardNumber: 'HP60', renderData: CardRenderer.builder((b) => {b.production((pb) => pb.megacredits(1)).cards(2);}), description: 'Increase M€ production 1 step. Draw 2 cards. (Wit beyond measure is man\'s greatest treasure, reads the inscription above the door.)'}});}
+}

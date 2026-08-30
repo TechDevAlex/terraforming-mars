@@ -1,0 +1,4 @@
+import {IProjectCard} from '../IProjectCard';import {Tag} from '../../../common/cards/Tag';import {Card} from '../Card';import {CardType} from '../../../common/cards/CardType';import {CardName} from '../../../common/cards/CardName';import {CardRenderer} from '../render/CardRenderer';
+export class WolfsbaneFieldHarvest extends Card implements IProjectCard {
+  constructor() {super({type: CardType.AUTOMATED, name: CardName.WOLFSBANE_FIELD_HARVEST, tags: [Tag.PLANT, Tag.SCIENCE], cost: 7, behavior: {production: {plants: 1, megacredits: 1}}, metadata: {cardNumber: 'HP188', renderData: CardRenderer.builder((b) => {b.production((pb) => pb.plants(1).megacredits(1));}), description: 'Increase plant and M€ production 1 step each. (The aconite blooms purple under moonlight—essential for the potion that tames the beast.)'}});}
+}

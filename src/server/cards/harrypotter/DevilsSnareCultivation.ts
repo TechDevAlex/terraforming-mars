@@ -1,0 +1,4 @@
+import {IProjectCard} from '../IProjectCard';import {Tag} from '../../../common/cards/Tag';import {Card} from '../Card';import {CardType} from '../../../common/cards/CardType';import {CardName} from '../../../common/cards/CardName';import {CardRenderer} from '../render/CardRenderer';import {CardResource} from '../../../common/CardResource';
+export class DevilsSnareCultivation extends Card implements IProjectCard {
+  constructor() {super({type: CardType.AUTOMATED, name: CardName.DEVILS_SNARE_CULTIVATION, tags: [Tag.PLANT, Tag.MICROBE], cost: 5, behavior: {production: {plants: 1}, addResourcesToAnyCard: [{type: CardResource.MICROBE, count: 1}]}, metadata: {cardNumber: 'HP139', renderData: CardRenderer.builder((b) => {b.production((pb) => pb.plants(1)).resource(CardResource.MICROBE);}), description: 'Increase plant production 1 step. Add 1 microbe to ANY card. (It likes the dark and damp—relax and it will release you, struggle and it kills faster.)'}});}
+}

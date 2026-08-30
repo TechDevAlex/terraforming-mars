@@ -1,0 +1,4 @@
+import {IProjectCard} from '../IProjectCard';import {Tag} from '../../../common/cards/Tag';import {Card} from '../Card';import {CardType} from '../../../common/cards/CardType';import {CardName} from '../../../common/cards/CardName';import {CardRenderer} from '../render/CardRenderer';
+export class DiagonAlleyMarketplace extends Card implements IProjectCard {
+  constructor() {super({type: CardType.AUTOMATED, name: CardName.DIAGON_ALLEY_MARKETPLACE, tags: [Tag.CITY, Tag.BUILDING, Tag.EARTH], cost: 20, victoryPoints: 3, behavior: {city: {}, production: {megacredits: 3}}, metadata: {cardNumber: 'HP130', renderData: CardRenderer.builder((b) => {b.city().production((pb) => pb.megacredits(3));}), description: 'Place a city. Increase M€ production 3 steps. (Behind the Leaky Cauldron, tap the right brick and a world of wonder unfolds.)'}});}
+}

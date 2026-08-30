@@ -1,0 +1,4 @@
+import {IProjectCard} from '../IProjectCard';import {Tag} from '../../../common/cards/Tag';import {Card} from '../Card';import {CardType} from '../../../common/cards/CardType';import {CardName} from '../../../common/cards/CardName';import {CardRenderer} from '../render/CardRenderer';
+export class HolyheadHarpiesCamp extends Card implements IProjectCard {
+  constructor() {super({type: CardType.AUTOMATED, name: CardName.HOLYHEAD_HARPIES_CAMP, tags: [Tag.BUILDING, Tag.MARS], cost: 9, behavior: {production: {megacredits: 2, heat: 1}}, metadata: {cardNumber: 'HP177', renderData: CardRenderer.builder((b) => {b.production((pb) => pb.megacredits(2).heat(1));}), description: 'Increase M€ production 2 and heat production 1 step. (The all-witch Quidditch team trains relentlessly on the Welsh coast.)'}});}
+}

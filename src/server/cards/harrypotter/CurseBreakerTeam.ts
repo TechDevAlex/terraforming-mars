@@ -1,0 +1,4 @@
+import {IProjectCard} from '../IProjectCard';import {Tag} from '../../../common/cards/Tag';import {Card} from '../Card';import {CardType} from '../../../common/cards/CardType';import {CardName} from '../../../common/cards/CardName';import {CardRenderer} from '../render/CardRenderer';
+export class CurseBreakerTeam extends Card implements IProjectCard {
+  constructor() {super({type: CardType.AUTOMATED, name: CardName.CURSE_BREAKER_TEAM, tags: [Tag.SCIENCE, Tag.MARS], cost: 13, victoryPoints: 1, behavior: {production: {megacredits: 2}, tr: 1}, metadata: {cardNumber: 'HP158', renderData: CardRenderer.builder((b) => {b.production((pb) => pb.megacredits(2)).tr(1);}), description: 'Increase M€ production 2 steps. Raise TR 1 step. (Bill Weasley led the team through cursed tombs where one wrong step meant death.)'}});}
+}

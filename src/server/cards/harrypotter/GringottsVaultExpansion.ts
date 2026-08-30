@@ -1,0 +1,4 @@
+import {IProjectCard} from '../IProjectCard';import {Tag} from '../../../common/cards/Tag';import {Card} from '../Card';import {CardType} from '../../../common/cards/CardType';import {CardName} from '../../../common/cards/CardName';import {CardRenderer} from '../render/CardRenderer';
+export class GringottsVaultExpansion extends Card implements IProjectCard {
+  constructor() {super({type: CardType.AUTOMATED, name: CardName.GRINGOTTS_VAULT_EXPANSION, tags: [Tag.BUILDING, Tag.EARTH], cost: 16, victoryPoints: 1, behavior: {production: {megacredits: 3}}, metadata: {cardNumber: 'HP66', renderData: CardRenderer.builder((b) => {b.production((pb) => pb.megacredits(3));}), description: 'Increase M€ production 3 steps. (Deep beneath London, goblin-guarded vaults hold the fortunes of the wizarding world.)'}});}
+}

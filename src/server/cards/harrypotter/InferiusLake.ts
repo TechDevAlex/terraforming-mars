@@ -1,0 +1,4 @@
+import {IProjectCard} from '../IProjectCard';import {Tag} from '../../../common/cards/Tag';import {Card} from '../Card';import {CardType} from '../../../common/cards/CardType';import {CardName} from '../../../common/cards/CardName';import {CardRenderer} from '../render/CardRenderer';
+export class InferiusLake extends Card implements IProjectCard {
+  constructor() {super({type: CardType.AUTOMATED, name: CardName.INFERIUS_LAKE, tags: [Tag.MICROBE, Tag.MARS], cost: 12, victoryPoints: -1, behavior: {production: {heat: 2}, ocean: {}}, metadata: {cardNumber: 'HP146', renderData: CardRenderer.builder((b) => {b.production((pb) => pb.heat(2)).oceans(1);}), description: 'Increase heat production 2 steps. Place an ocean. -1 VP. (The dead moved beneath the black water, pale hands reaching for the living.)'}});}
+}

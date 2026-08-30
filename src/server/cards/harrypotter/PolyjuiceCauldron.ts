@@ -1,0 +1,6 @@
+import {IProjectCard} from '../IProjectCard';import {Tag} from '../../../common/cards/Tag';import {Card} from '../Card';import {CardType} from '../../../common/cards/CardType';import {IActionCard} from '../ICard';import {Player} from '../../Player';import {CardName} from '../../../common/cards/CardName';import {Resource} from '../../../common/Resource';import {CardRenderer} from '../render/CardRenderer';
+export class PolyjuiceCauldron extends Card implements IActionCard, IProjectCard {
+  constructor() {super({type: CardType.ACTIVE, name: CardName.POLYJUICE_CAULDRON, tags: [Tag.SCIENCE, Tag.MICROBE], cost: 13, metadata: {cardNumber: 'HP113', renderData: CardRenderer.builder((b) => {b.action('Spend 3 M€ to gain 2 of each: steel, titanium.', (ab) => {ab.megacredits(3).startAction.steel(2).titanium(2);});}), description: 'Action: Spend 3 M€ to gain 2 steel and 2 titanium. (A month of brewing for an hour of deception—the taste is abominable.)'}});}
+  public canAct(player: Player): boolean {return player.canAfford(3);}
+  public action(player: Player) {player.megaCredits -= 3; player.stock.add(Resource.STEEL, 2, {log: true}); player.stock.add(Resource.TITANIUM, 2, {log: true}); return undefined;}
+}

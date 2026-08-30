@@ -1,0 +1,4 @@
+import {IProjectCard} from '../IProjectCard';import {Tag} from '../../../common/cards/Tag';import {Card} from '../Card';import {CardType} from '../../../common/cards/CardType';import {CardName} from '../../../common/cards/CardName';import {CardRenderer} from '../render/CardRenderer';
+export class SlytherinAmbitionPact extends Card implements IProjectCard {
+  constructor() {super({type: CardType.AUTOMATED, name: CardName.SLYTHERIN_AMBITION_PACT, tags: [Tag.POWER, Tag.SCIENCE], cost: 19, victoryPoints: -2, behavior: {production: {megacredits: 5, titanium: 1}}, metadata: {cardNumber: 'HP109', renderData: CardRenderer.builder((b) => {b.production((pb) => pb.megacredits(5).titanium(1));}), description: 'Increase M€ production 5 steps and titanium production 1 step. -2 VP. (Those cunning folk use any means to achieve their ends—the Sorting Hat warned.)'}});}
+}

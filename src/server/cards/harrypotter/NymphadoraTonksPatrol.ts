@@ -1,0 +1,4 @@
+import {IProjectCard} from '../IProjectCard';import {Tag} from '../../../common/cards/Tag';import {Card} from '../Card';import {CardType} from '../../../common/cards/CardType';import {CardName} from '../../../common/cards/CardName';import {CardRenderer} from '../render/CardRenderer';
+export class NymphadoraTonksPatrol extends Card implements IProjectCard {
+  constructor() {super({type: CardType.AUTOMATED, name: CardName.NYMPHADORA_TONKS_PATROL, tags: [Tag.EARTH, Tag.MARS], cost: 8, behavior: {production: {megacredits: 1}, tr: 1}, metadata: {cardNumber: 'HP104', renderData: CardRenderer.builder((b) => {b.production((pb) => pb.megacredits(1)).tr(1);}), description: 'Increase M€ production 1 step. Raise TR 1 step. (Wotcher, Harry—Tonks tripped over the umbrella stand again on the way out.)'}});}
+}

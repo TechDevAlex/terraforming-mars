@@ -1,0 +1,4 @@
+import {IProjectCard} from '../IProjectCard';import {Tag} from '../../../common/cards/Tag';import {Card} from '../Card';import {CardType} from '../../../common/cards/CardType';import {CardName} from '../../../common/cards/CardName';import {CardRenderer} from '../render/CardRenderer';
+export class WhompingWillowRootNetwork extends Card implements IProjectCard {
+  constructor() {super({type: CardType.AUTOMATED, name: CardName.WHOMPING_WILLOW_ROOT_NETWORK, tags: [Tag.PLANT, Tag.MARS], cost: 11, victoryPoints: 1, behavior: {production: {plants: 2}, global: {oxygen: 1}}, metadata: {cardNumber: 'HP133', renderData: CardRenderer.builder((b) => {b.production((pb) => pb.plants(2)).oxygen(1);}), description: 'Increase plant production 2 steps. Raise oxygen 1 step. (Beneath the thrashing branches, roots extend a mile in every direction.)'}});}
+}

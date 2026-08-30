@@ -1,0 +1,4 @@
+import {IProjectCard} from '../IProjectCard';import {Tag} from '../../../common/cards/Tag';import {Card} from '../Card';import {CardType} from '../../../common/cards/CardType';import {CardName} from '../../../common/cards/CardName';import {CardRenderer} from '../render/CardRenderer';
+export class DementorBreedingGround extends Card implements IProjectCard {
+  constructor() {super({type: CardType.AUTOMATED, name: CardName.DEMENTOR_BREEDING_GROUND, tags: [Tag.MICROBE, Tag.MARS], cost: 14, victoryPoints: -1, behavior: {production: {megacredits: 3, heat: 2}}, metadata: {cardNumber: 'HP136', renderData: CardRenderer.builder((b) => {b.production((pb) => pb.megacredits(3).heat(2));}), description: 'Increase M€ production 3 and heat production 2 steps. -1 VP. (They breed in darkness, feeding on despair—where misery gathers, dementors multiply.)'}});}
+}

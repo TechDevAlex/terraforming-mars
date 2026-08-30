@@ -1,0 +1,4 @@
+import {IProjectCard} from '../IProjectCard';import {Tag} from '../../../common/cards/Tag';import {Card} from '../Card';import {CardType} from '../../../common/cards/CardType';import {CardName} from '../../../common/cards/CardName';import {CardRenderer} from '../render/CardRenderer';
+export class PhoenixOrderHeadquarters extends Card implements IProjectCard {
+  constructor() {super({type: CardType.AUTOMATED, name: CardName.PHOENIX_ORDER_HEADQUARTERS, tags: [Tag.BUILDING, Tag.EARTH], cost: 16, victoryPoints: 2, behavior: {production: {megacredits: 2}, tr: 1}, metadata: {cardNumber: 'HP101', renderData: CardRenderer.builder((b) => {b.production((pb) => pb.megacredits(2)).tr(1);}), description: 'Increase M€ production 2 steps. Raise TR 1 step. (The Order gathered in secret, bound by loyalty to fight the coming darkness.)'}});}
+}

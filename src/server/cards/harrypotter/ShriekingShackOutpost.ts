@@ -1,0 +1,4 @@
+import {IProjectCard} from '../IProjectCard';import {Tag} from '../../../common/cards/Tag';import {Card} from '../Card';import {CardType} from '../../../common/cards/CardType';import {CardName} from '../../../common/cards/CardName';import {CardRenderer} from '../render/CardRenderer';
+export class ShriekingShackOutpost extends Card implements IProjectCard {
+  constructor() {super({type: CardType.AUTOMATED, name: CardName.SHRIEKING_SHACK_OUTPOST, tags: [Tag.BUILDING, Tag.MARS], cost: 6, behavior: {production: {megacredits: 1, heat: 1}}, metadata: {cardNumber: 'HP97', renderData: CardRenderer.builder((b) => {b.production((pb) => pb.megacredits(1).heat(1));}), description: 'Increase M€ and heat production 1 step each. (The most haunted building in Britain—though the ghosts were never really ghosts.)'}});}
+}
