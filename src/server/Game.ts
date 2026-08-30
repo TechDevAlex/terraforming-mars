@@ -417,7 +417,8 @@ export class Game implements IGame, Logger {
         }
         // Deal trap cards if Mystery expansion is active
         if (gameOptions.mysteryExpansion && trapPool.length >= 4) {
-          player.dealtTrapCards.push(...trapPool.splice(0, 4));
+          // Add trap cards to the player's dealt project cards (they cost 0, player chooses to keep or not)
+          player.dealtProjectCards.push(...trapPool.splice(0, 4));
         }
       } else {
         game.playerHasPickedCorporationCard(player, new BeginnerCorporation());

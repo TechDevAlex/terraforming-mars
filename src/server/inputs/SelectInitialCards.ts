@@ -14,8 +14,7 @@ type Inputs = {
   corp: PlayerInput | undefined,
   project: PlayerInput | undefined,
   prelude: PlayerInput | undefined,
-  ceo: PlayerInput | undefined,
-  trap: PlayerInput | undefined
+  ceo: PlayerInput | undefined
 }
 export class SelectInitialCards extends OptionsInput<undefined> {
   public readonly inputs: Inputs = {
@@ -23,7 +22,6 @@ export class SelectInitialCards extends OptionsInput<undefined> {
     project: undefined,
     prelude: undefined,
     ceo: undefined,
-    trap: undefined,
   };
 
   private push(name: keyof Inputs, input: PlayerInput) {
@@ -79,15 +77,6 @@ export class SelectInitialCards extends OptionsInput<undefined> {
         }));
     }
 
-    if (game.gameOptions.mysteryExpansion && player.dealtTrapCards.length > 0) {
-      const trapMin = Math.min(2, player.dealtTrapCards.length);
-      this.push('trap',
-        new SelectCard('Select 2 Trap Cards', undefined, player.dealtTrapCards, {min: trapMin, max: 2, played: false}).andThen((trapCards) => {
-          player.cardsInHand.push(...trapCards);
-          return undefined;
-        }));
-    }
-
     this.push('project',
       new SelectCard(titles.SELECT_PROJECTS_TITLE, undefined, player.dealtProjectCards, {min: 0, max: 10})
         .andThen((cards) => {
@@ -135,12 +124,6 @@ export class SelectInitialCards extends OptionsInput<undefined> {
     for (const card of player.dealtCeoCards) {
       if (player.ceoCardsInHand.includes(card) === false) {
         game.ceoDeck.discard(card);
-      }
-    }
-
-    for (const card of player.dealtTrapCards) {
-      if (player.cardsInHand.includes(card) === false) {
-        game.projectDeck.discard(card);
       }
     }
   }
