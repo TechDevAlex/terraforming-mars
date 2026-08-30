@@ -970,7 +970,9 @@ export class Player implements IPlayer {
     }
 
     if (additionalCorp === false && corporationCard.name !== CardName.BEGINNER_CORPORATION) {
-      const diff = this.cardsInHand.length * this.cardCost;
+      // Exclude trap cards from cost — they're free
+      const paidCards = this.cardsInHand.filter((c) => !c.name.toString().startsWith('Trap:'));
+      const diff = paidCards.length * this.cardCost;
       this.stock.deduct(Resource.MEGACREDITS, diff);
     }
     this.game.log('${0} played ${1}', (b) => b.player(this).card(corporationCard));

@@ -14,7 +14,8 @@ type Inputs = {
   corp: PlayerInput | undefined,
   project: PlayerInput | undefined,
   prelude: PlayerInput | undefined,
-  ceo: PlayerInput | undefined
+  ceo: PlayerInput | undefined,
+  trap: PlayerInput | undefined
 }
 export class SelectInitialCards extends OptionsInput<undefined> {
   public readonly inputs: Inputs = {
@@ -22,6 +23,7 @@ export class SelectInitialCards extends OptionsInput<undefined> {
     project: undefined,
     prelude: undefined,
     ceo: undefined,
+    trap: undefined,
   };
 
   private push(name: keyof Inputs, input: PlayerInput) {
@@ -77,6 +79,18 @@ export class SelectInitialCards extends OptionsInput<undefined> {
         }));
     }
 
+    if (game.gameOptions.mysteryExpansion && player.dealtTrapCards.length > 0) {
+      const maxTraps = Math.min(2, player.dealtTrapCards.length);
+      this.push('trap',
+        new SelectCard(titles.SELECT_TRAP_TITLE, undefined, player.dealtTrapCards, {min: maxTraps, max: 2, played: false}).andThen((trapCards) => {
+          if (trapCards.length !== 2 && player.dealtTrapCards.length >= 2) {
+            throw new InputError('Select exactly 2 trap cards');
+          }
+          player.cardsInHand.push(...trapCards);
+          return undefined;
+        }));
+    }
+
     this.push('project',
       new SelectCard(titles.SELECT_PROJECTS_TITLE, undefined, player.dealtProjectCards, {min: 0, max: 10})
         .andThen((cards) => {
@@ -95,9 +109,10 @@ export class SelectInitialCards extends OptionsInput<undefined> {
   private completed(corporation: ICorporationCard) {
     const player = this.player;
     const game = player.game;
-    // Check for negative M€
+    // Check for negative M€ — exclude trap cards (they're free)
     const cardCost = corporation.cardCost !== undefined ? corporation.cardCost : player.cardCost;
-    if (corporation.name !== CardName.BEGINNER_CORPORATION && player.cardsInHand.length * cardCost > corporation.startingMegaCredits) {
+    const paidCards = player.cardsInHand.filter((c) => !c.name.toString().startsWith('Trap:'));
+    if (corporation.name !== CardName.BEGINNER_CORPORATION && paidCards.length * cardCost > corporation.startingMegaCredits) {
       player.cardsInHand = [];
       player.preludeCardsInHand = [];
       throw new InputError('Too many cards selected');
@@ -105,10 +120,7 @@ export class SelectInitialCards extends OptionsInput<undefined> {
 
     for (const card of player.dealtProjectCards) {
       if (player.cardsInHand.includes(card) === false) {
-        // Don't discard trap cards back to deck — they stay out of the game
-        if (!card.name.toString().startsWith('Trap:')) {
-          game.projectDeck.discard(card);
-        }
+        game.projectDeck.discard(card);
       }
     }
 
@@ -129,6 +141,9 @@ export class SelectInitialCards extends OptionsInput<undefined> {
         game.ceoDeck.discard(card);
       }
     }
+
+    // Unselected trap cards are removed from the game entirely (not discarded to any deck)
+    // Selected traps are already in cardsInHand from the andThen callback
   }
 
   public toModel(player: IPlayer): SelectInitialCardsModel {

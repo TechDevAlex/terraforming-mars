@@ -15,6 +15,7 @@
     </div>
     <SelectCard v-if="hasPrelude" :playerView="playerView" :playerinput="preludeCardOption" :onsave="noop" :showtitle="true" v-on:cardschanged="preludesChanged" />
     <SelectCard v-if="hasCeo" :playerView="playerView" :playerinput="ceoCardOption" :onsave="noop" :showtitle="true" v-on:cardschanged="ceosChanged" />
+    <SelectCard v-if="hasTrap" :playerView="playerView" :playerinput="trapCardOption" :onsave="noop" :showtitle="true" v-on:cardschanged="trapsChanged" />
     <SelectCard :playerView="playerView" :playerinput="projectCardOption" :onsave="noop" :showtitle="true" v-on:cardschanged="cardsChanged" />
     <template v-if="this.selectedCorporations.length === 1">
       <div><span v-i18n>Starting Megacredits:</span> <div class="megacredits">{{getStartingMegacredits()}}</div></div>
@@ -62,6 +63,7 @@ type DataModel = {
   // End result will be a single corporation, but the player may select multiple while deciding what to keep.
   selectedCorporations: Array<CardName>,
   selectedPreludes: Array<CardName>,
+  selectedTraps: Array<CardName>,
   valid: boolean,
   warning: string | undefined,
 }
@@ -101,6 +103,7 @@ export default (Vue as WithRefs<Refs>).extend({
       selectedCeos: [],
       selectedCorporations: [],
       selectedPreludes: [],
+      selectedTraps: [],
       valid: false,
       warning: undefined,
     };
@@ -243,6 +246,12 @@ export default (Vue as WithRefs<Refs>).extend({
           cards: this.selectedCeos,
         });
       }
+      if (this.hasTrap) {
+        result.responses.push({
+          type: 'card',
+          cards: this.selectedTraps,
+        });
+      }
       result.responses.push({
         type: 'card',
         cards: this.selectedCards,
@@ -264,6 +273,10 @@ export default (Vue as WithRefs<Refs>).extend({
     },
     preludesChanged(cards: Array<CardName>) {
       this.selectedPreludes = cards;
+      this.validate();
+    },
+    trapsChanged(cards: Array<CardName>) {
+      this.selectedTraps = cards;
       this.validate();
     },
 
@@ -295,6 +308,16 @@ export default (Vue as WithRefs<Refs>).extend({
         }
         if (this.selectedCeos.length > 1) {
           this.warning = 'You selected too many CEOs';
+          return false;
+        }
+      }
+      if (this.hasTrap) {
+        if (this.selectedTraps.length < 2) {
+          this.warning = 'Select 2 trap cards';
+          return false;
+        }
+        if (this.selectedTraps.length > 2) {
+          this.warning = 'You selected too many trap cards';
           return false;
         }
       }
@@ -331,6 +354,9 @@ export default (Vue as WithRefs<Refs>).extend({
     hasCeo() {
       return hasOption(this.playerinput.options, titles.SELECT_CEO_TITLE);
     },
+    hasTrap() {
+      return hasOption(this.playerinput.options, titles.SELECT_TRAP_TITLE);
+    },
     corpCardOption() {
       const option = getOption(this.playerinput.options, titles.SELECT_CORPORATION_TITLE);
       if (getPreferences().experimental_ui) {
@@ -352,6 +378,9 @@ export default (Vue as WithRefs<Refs>).extend({
         option.max = option.cards.length;
       }
       return option;
+    },
+    trapCardOption() {
+      return getOption(this.playerinput.options, titles.SELECT_TRAP_TITLE);
     },
     projectCardOption() {
       return getOption(this.playerinput.options, titles.SELECT_PROJECTS_TITLE);
