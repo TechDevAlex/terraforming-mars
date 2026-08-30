@@ -261,6 +261,7 @@ export class Game implements IGame, Logger {
         starwars: options.starWarsExpansion ?? false,
         harrypotter: options.harryPotterExpansion ?? false,
         underworld: options.underworldExpansion ?? false,
+        boom: options.boomExpansion ?? false,
       };
     }
     const gameOptions = {...DEFAULT_GAME_OPTIONS, ...options};

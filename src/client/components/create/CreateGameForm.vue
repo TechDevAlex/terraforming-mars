@@ -175,6 +175,12 @@
                                 <div class="create-game-expansion-icon expansion-icon-underworld"></div>
                                 <span v-i18n>Underworld 2 (beta)</span><span></span>&nbsp;<a href="https://github.com/terraforming-mars/terraforming-mars/wiki/Underworld" class="tooltip" target="_blank">&#9432;</a>
                             </label>
+
+                            <input type="checkbox" name="boom" id="boom-checkbox" v-model="expansions.boom">
+                            <label for="boom-checkbox" class="expansion-button">
+                                <div class="create-game-expansion-icon expansion-icon-boom"></div>
+                                <span v-i18n>BOOM!</span>
+                            </label>
                         </div>
 
                         <div class="create-game-page-column">
@@ -805,6 +811,7 @@ export default (Vue as WithRefs<Refs>).extend({
               ceo: json_constants.CEOEXTENSION,
               starwars: json_constants.STARWARSEXPANSION,
               harrypotter: json_constants.HARRYPOTTEREXPANSION,
+              boom: json_constants.BOOMEXPANSION,
               underworld: json_constants.UNDERWORLDEXPANSION,
             } as const;
             for (const expansion of Object.keys(oldFields)) {

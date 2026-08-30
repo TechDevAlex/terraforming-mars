@@ -24,6 +24,7 @@ import {PRELUDE2_CARD_MANIFEST} from './cards/prelude2/Prelude2CardManifest';
 import {STAR_WARS_CARD_MANIFEST} from './cards/starwars/StarwarsCardManifest';
 import {HARRY_POTTER_CARD_MANIFEST} from './cards/harrypotter/HarryPotterCardManifest';
 import {UNDERWORLD_CARD_MANIFEST} from './cards/underworld/UnderworldCardManifest';
+import {BOOM_CARD_MANIFEST} from './cards/boom/BoomCardManifest';
 
 /**
  * Returns the cards available to a game based on its `GameOptions`.
@@ -62,6 +63,7 @@ export class GameCards {
       [gameOptions.starWarsExpansion, STAR_WARS_CARD_MANIFEST],
       [gameOptions.harryPotterExpansion, HARRY_POTTER_CARD_MANIFEST],
       [gameOptions.underworldExpansion, UNDERWORLD_CARD_MANIFEST],
+      [gameOptions.boomExpansion, BOOM_CARD_MANIFEST],
     ];
 
     this.moduleManifests = manifests

@@ -38,6 +38,7 @@ export type GameOptions = {
   starWarsExpansion: boolean;
   harryPotterExpansion: boolean;
   underworldExpansion: boolean;
+  boomExpansion: boolean;
 
   expansions: Record<Expansion, boolean>,
 
@@ -117,6 +118,7 @@ export const DEFAULT_GAME_OPTIONS: GameOptions = {
     starwars: false,
     harrypotter: false,
     underworld: false,
+    boom: false,
   },
   fastModeOption: false,
   includeFanMA: false,
@@ -148,6 +150,7 @@ export const DEFAULT_GAME_OPTIONS: GameOptions = {
   starWarsExpansion: false,
   turmoilExtension: false,
   underworldExpansion: false,
+  boomExpansion: false,
   undoOption: false,
   venusNextExtension: false,
   twoCorpsVariant: false,

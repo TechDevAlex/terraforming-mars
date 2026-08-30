@@ -71,6 +71,7 @@ export class GlobalEventDealer {
       starwars: gameOptions.starWarsExpansion,
       harrypotter: gameOptions.harryPotterExpansion,
       underworld: gameOptions.underworldExpansion,
+      boom: gameOptions.boomExpansion,
     };
 
     for (const manifest of ALL_MODULE_MANIFESTS) {
