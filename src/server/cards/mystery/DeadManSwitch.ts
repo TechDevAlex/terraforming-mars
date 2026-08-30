@@ -9,7 +9,7 @@ import {CardRenderer} from '../render/CardRenderer';
 export class DeadManSwitch extends Card implements IActionCard, IProjectCard {
   constructor() {
     super({
-      type: CardType.ACTIVE, name: CardName.DEAD_MAN_SWITCH, tags: [Tag.EARTH, Tag.BUILDING], cost: 20,
+      type: CardType.ACTIVE, name: CardName.DEAD_MAN_SWITCH, tags: [Tag.EARTH, Tag.BUILDING], cost: 10,
       metadata: {cardNumber: 'MY114', renderData: CardRenderer.builder((b) => {b.action('Gain 2 heat.', (ab) => {ab.empty().startAction.text('?');});}),
         description: 'Action: Gain 2 heat.. (The unknown beckons.)'},
     });

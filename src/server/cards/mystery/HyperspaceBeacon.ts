@@ -7,7 +7,7 @@ import {CardRenderer} from '../render/CardRenderer';
 export class HyperspaceBeacon extends Card implements IProjectCard {
   constructor() {
     super({
-      type: CardType.AUTOMATED, name: CardName.HYPERSPACE_BEACON, tags: [Tag.ANIMAL], cost: 14,
+      type: CardType.AUTOMATED, name: CardName.HYPERSPACE_BEACON, tags: [Tag.ANIMAL], cost: 26,
       victoryPoints: 1,
       behavior: {tr: 1, production: {titanium: 2}},
       metadata: {cardNumber: 'MY366', renderData: CardRenderer.builder((b) => {b.tr(1);}),

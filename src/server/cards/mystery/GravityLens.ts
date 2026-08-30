@@ -7,7 +7,7 @@ import {CardRenderer} from '../render/CardRenderer';
 export class GravityLens extends Card implements IProjectCard {
   constructor() {
     super({
-      type: CardType.AUTOMATED, name: CardName.GRAVITY_LENS, tags: [Tag.POWER], cost: 10,
+      type: CardType.AUTOMATED, name: CardName.GRAVITY_LENS, tags: [Tag.POWER], cost: 1,
       victoryPoints: -1,
       behavior: {production: {energy: 1}},
       metadata: {cardNumber: 'MY059', renderData: CardRenderer.builder((b) => {b.production((pb) => {pb.energy(1);});}),

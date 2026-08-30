@@ -7,7 +7,7 @@ import {CardRenderer} from '../render/CardRenderer';
 export class ShadowCabinet extends Card implements IProjectCard {
   constructor() {
     super({
-      type: CardType.EVENT, name: CardName.SHADOW_CABINET, tags: [Tag.SPACE], cost: 17,
+      type: CardType.EVENT, name: CardName.SHADOW_CABINET, tags: [Tag.SPACE], cost: 6,
       behavior: {drawCard: 2},
       metadata: {cardNumber: 'MY194', renderData: CardRenderer.builder((b) => {b.cards(2);}),
         description: 'Draw 2 cards. (Trust no one.)'},

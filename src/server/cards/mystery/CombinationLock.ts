@@ -7,7 +7,7 @@ import {CardRenderer} from '../render/CardRenderer';
 export class CombinationLock extends Card implements IProjectCard {
   constructor() {
     super({
-      type: CardType.AUTOMATED, name: CardName.COMBINATION_LOCK, tags: [Tag.BUILDING, Tag.CITY], cost: 26,
+      type: CardType.AUTOMATED, name: CardName.COMBINATION_LOCK, tags: [Tag.BUILDING, Tag.CITY], cost: 22,
       victoryPoints: -1,
       behavior: {tr: 1, production: {titanium: 2}},
       metadata: {cardNumber: 'MY263', renderData: CardRenderer.builder((b) => {b.tr(1);}),

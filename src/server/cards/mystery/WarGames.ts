@@ -9,7 +9,7 @@ import {CardRenderer} from '../render/CardRenderer';
 export class WarGames extends Card implements IActionCard, IProjectCard {
   constructor() {
     super({
-      type: CardType.ACTIVE, name: CardName.WAR_GAMES, tags: [Tag.MARS], cost: 6,
+      type: CardType.ACTIVE, name: CardName.WAR_GAMES, tags: [Tag.MARS], cost: 12,
       metadata: {cardNumber: 'MY350', renderData: CardRenderer.builder((b) => {b.action('Gain 1 steel and 1 titanium.', (ab) => {ab.empty().startAction.text('?');});}),
         description: 'Action: Gain 1 steel and 1 titanium.. (The mystery deepens.)'},
     });

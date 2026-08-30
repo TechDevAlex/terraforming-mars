@@ -7,7 +7,7 @@ import {CardRenderer} from '../render/CardRenderer';
 export class KardashevLeap extends Card implements IProjectCard {
   constructor() {
     super({
-      type: CardType.AUTOMATED, name: CardName.KARDASHEV_LEAP, tags: [Tag.SCIENCE, Tag.MARS], cost: 10,
+      type: CardType.AUTOMATED, name: CardName.KARDASHEV_LEAP, tags: [Tag.SCIENCE, Tag.MARS], cost: 29,
       victoryPoints: 2,
       behavior: {production: {steel: 2, megacredits: 2}},
       metadata: {cardNumber: 'MY310', renderData: CardRenderer.builder((b) => {b.production((pb) => {pb.steel(2); pb.megacredits(2);});}),

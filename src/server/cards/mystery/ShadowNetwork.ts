@@ -9,7 +9,7 @@ import {CardRenderer} from '../render/CardRenderer';
 export class ShadowNetwork extends Card implements IActionCard, IProjectCard {
   constructor() {
     super({
-      type: CardType.ACTIVE, name: CardName.SHADOW_NETWORK, tags: [Tag.SCIENCE], cost: 6,
+      type: CardType.ACTIVE, name: CardName.SHADOW_NETWORK, tags: [Tag.SCIENCE], cost: 15,
       metadata: {cardNumber: 'MY099', renderData: CardRenderer.builder((b) => {b.action('Gain 3 MC.', (ab) => {ab.empty().startAction.text('?');});}),
         description: 'Action: Gain 3 MC.. (Space warps.)'},
     });

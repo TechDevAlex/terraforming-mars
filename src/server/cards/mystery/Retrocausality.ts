@@ -9,7 +9,7 @@ import {CardRenderer} from '../render/CardRenderer';
 export class Retrocausality extends Card implements IActionCard, IProjectCard {
   constructor() {
     super({
-      type: CardType.ACTIVE, name: CardName.RETROCAUSALITY, tags: [Tag.SPACE, Tag.PLANT], cost: 10,
+      type: CardType.ACTIVE, name: CardName.RETROCAUSALITY, tags: [Tag.SPACE, Tag.PLANT], cost: 12,
       metadata: {cardNumber: 'MY360', renderData: CardRenderer.builder((b) => {b.action('Gain 1 titanium.', (ab) => {ab.empty().startAction.text('?');});}),
         description: 'Action: Gain 1 titanium.. (Reality shifts.)'},
     });

@@ -7,7 +7,7 @@ import {CardRenderer} from '../render/CardRenderer';
 export class VolcanicHotspring extends Card implements IProjectCard {
   constructor() {
     super({
-      type: CardType.AUTOMATED, name: CardName.VOLCANIC_HOTSPRING, tags: [Tag.PLANT], cost: 16,
+      type: CardType.AUTOMATED, name: CardName.VOLCANIC_HOTSPRING, tags: [Tag.PLANT], cost: 20,
       victoryPoints: -1,
       behavior: {production: {megacredits: 3, plants: 1}},
       metadata: {cardNumber: 'MY132', renderData: CardRenderer.builder((b) => {b.production((pb) => {pb.megacredits(3); pb.plants(1);});}),

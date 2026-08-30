@@ -9,7 +9,7 @@ import {CardRenderer} from '../render/CardRenderer';
 export class RitualCircle extends Card implements IActionCard, IProjectCard {
   constructor() {
     super({
-      type: CardType.ACTIVE, name: CardName.RITUAL_CIRCLE, tags: [Tag.EARTH], cost: 10,
+      type: CardType.ACTIVE, name: CardName.RITUAL_CIRCLE, tags: [Tag.EARTH], cost: 12,
       metadata: {cardNumber: 'MY061', renderData: CardRenderer.builder((b) => {b.action('Gain 1 steel and 1 titanium.', (ab) => {ab.empty().startAction.text('?');});}),
         description: 'Action: Gain 1 steel and 1 titanium.. (The frontier expands.)'},
     });

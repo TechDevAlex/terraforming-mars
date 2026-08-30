@@ -9,7 +9,7 @@ import {CardRenderer} from '../render/CardRenderer';
 export class HeatDeathReversal extends Card implements IActionCard, IProjectCard {
   constructor() {
     super({
-      type: CardType.ACTIVE, name: CardName.HEAT_DEATH_REVERSAL, tags: [Tag.BUILDING], cost: 7,
+      type: CardType.ACTIVE, name: CardName.HEAT_DEATH_REVERSAL, tags: [Tag.BUILDING], cost: 15,
       metadata: {cardNumber: 'MY312', renderData: CardRenderer.builder((b) => {b.action('Gain 3 MC.', (ab) => {ab.empty().startAction.text('?');});}),
         description: 'Action: Gain 3 MC.. (Every clue matters.)'},
     });

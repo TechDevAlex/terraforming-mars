@@ -9,7 +9,7 @@ import {CardRenderer} from '../render/CardRenderer';
 export class LeydenJar extends Card implements IActionCard, IProjectCard {
   constructor() {
     super({
-      type: CardType.ACTIVE, name: CardName.LEYDEN_JAR, tags: [Tag.MICROBE], cost: 6,
+      type: CardType.ACTIVE, name: CardName.LEYDEN_JAR, tags: [Tag.MICROBE], cost: 14,
       metadata: {cardNumber: 'MY279', renderData: CardRenderer.builder((b) => {b.action('Gain 2 plants.', (ab) => {ab.empty().startAction.text('?');});}),
         description: 'Action: Gain 2 plants.. (The plot thickens.)'},
     });

@@ -7,7 +7,7 @@ import {CardRenderer} from '../render/CardRenderer';
 export class GhostShip extends Card implements IProjectCard {
   constructor() {
     super({
-      type: CardType.AUTOMATED, name: CardName.GHOST_SHIP, tags: [Tag.MARS, Tag.POWER], cost: 13,
+      type: CardType.AUTOMATED, name: CardName.GHOST_SHIP, tags: [Tag.MARS, Tag.POWER], cost: 20,
       behavior: {production: {titanium: 2}},
       metadata: {cardNumber: 'MY080', renderData: CardRenderer.builder((b) => {b.production((pb) => {pb.titanium(2);});}),
         description: 'Adjust production. (The truth is out there.)'},

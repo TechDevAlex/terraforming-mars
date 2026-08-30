@@ -7,7 +7,7 @@ import {CardRenderer} from '../render/CardRenderer';
 export class MysteryCard501 extends Card implements IProjectCard {
   constructor() {
     super({
-      type: CardType.AUTOMATED, name: CardName.MYSTERY_CARD_501, tags: [Tag.BUILDING, Tag.JOVIAN], cost: 25,
+      type: CardType.AUTOMATED, name: CardName.MYSTERY_CARD_501, tags: [Tag.BUILDING, Tag.JOVIAN], cost: 10,
       behavior: {production: {energy: 2}},
       metadata: {cardNumber: 'MY501', renderData: CardRenderer.builder((b) => {b.production((pb) => {pb.energy(2);});}),
         description: 'Adjust production. (Steel and will forge the path.)'},

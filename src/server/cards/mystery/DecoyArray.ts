@@ -8,7 +8,7 @@ import {CardRenderer} from '../render/CardRenderer';
 export class DecoyArray extends Card implements IActionCard, IProjectCard {
   constructor() {
     super({
-      type: CardType.ACTIVE, name: CardName.DECOY_ARRAY, tags: [], cost: 7,
+      type: CardType.ACTIVE, name: CardName.DECOY_ARRAY, tags: [], cost: 12,
       victoryPoints: 1,
       metadata: {cardNumber: 'MY095', renderData: CardRenderer.builder((b) => {b.action('Gain 1 steel and 1 titanium.', (ab) => {ab.empty().startAction.text('?');});}),
         description: 'Action: Gain 1 steel and 1 titanium.. 1 VP. (Nature finds a way.)'},

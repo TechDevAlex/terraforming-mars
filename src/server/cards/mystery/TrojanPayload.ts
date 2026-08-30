@@ -9,7 +9,7 @@ import {CardRenderer} from '../render/CardRenderer';
 export class TrojanPayload extends Card implements IActionCard, IProjectCard {
   constructor() {
     super({
-      type: CardType.ACTIVE, name: CardName.TROJAN_PAYLOAD, tags: [Tag.EARTH], cost: 7,
+      type: CardType.ACTIVE, name: CardName.TROJAN_PAYLOAD, tags: [Tag.EARTH], cost: 13,
       metadata: {cardNumber: 'MY103', renderData: CardRenderer.builder((b) => {b.action('Spend 1 MC to draw a card.', (ab) => {ab.empty().startAction.text('?');});}),
         description: 'Action: Spend 1 MC to draw a card.. (The mystery deepens.)'},
     });

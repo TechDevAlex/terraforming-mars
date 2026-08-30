@@ -7,7 +7,7 @@ import {CardRenderer} from '../render/CardRenderer';
 export class DiplomaticImmunity extends Card implements IProjectCard {
   constructor() {
     super({
-      type: CardType.AUTOMATED, name: CardName.DIPLOMATIC_IMMUNITY, tags: [Tag.MICROBE], cost: 5,
+      type: CardType.AUTOMATED, name: CardName.DIPLOMATIC_IMMUNITY, tags: [Tag.MICROBE], cost: 25,
       behavior: {city: {}, production: {megacredits: 3}},
       metadata: {cardNumber: 'MY206', renderData: CardRenderer.builder((b) => {b.production((pb) => {pb.megacredits(3);}); b.br; b.city();}),
         description: 'Place city, gain production. (The truth is out there.)'},

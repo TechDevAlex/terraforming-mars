@@ -7,7 +7,7 @@ import {CardRenderer} from '../render/CardRenderer';
 export class PrimalFear extends Card implements IProjectCard {
   constructor() {
     super({
-      type: CardType.AUTOMATED, name: CardName.PRIMAL_FEAR, tags: [Tag.MICROBE, Tag.SPACE], cost: 6,
+      type: CardType.AUTOMATED, name: CardName.PRIMAL_FEAR, tags: [Tag.MICROBE, Tag.SPACE], cost: 24,
       behavior: {tr: 1, production: {titanium: 2}},
       metadata: {cardNumber: 'MY342', renderData: CardRenderer.builder((b) => {b.tr(1);}),
         description: 'Raise your TR 1 step. (Knowledge is the ultimate currency.)'},

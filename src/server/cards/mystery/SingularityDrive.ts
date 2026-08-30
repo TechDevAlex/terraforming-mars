@@ -9,7 +9,7 @@ import {CardRenderer} from '../render/CardRenderer';
 export class SingularityDrive extends Card implements IActionCard, IProjectCard {
   constructor() {
     super({
-      type: CardType.ACTIVE, name: CardName.SINGULARITY_DRIVE, tags: [Tag.POWER, Tag.CITY], cost: 9,
+      type: CardType.ACTIVE, name: CardName.SINGULARITY_DRIVE, tags: [Tag.POWER, Tag.CITY], cost: 12,
       metadata: {cardNumber: 'MY045', renderData: CardRenderer.builder((b) => {b.action('Gain 1 steel and 1 titanium.', (ab) => {ab.empty().startAction.text('?');});}),
         description: 'Action: Gain 1 steel and 1 titanium.. (Shadows hide secrets.)'},
     });

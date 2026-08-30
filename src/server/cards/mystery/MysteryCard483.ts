@@ -8,7 +8,7 @@ import {CardRenderer} from '../render/CardRenderer';
 export class MysteryCard483 extends Card implements IActionCard, IProjectCard {
   constructor() {
     super({
-      type: CardType.ACTIVE, name: CardName.MYSTERY_CARD_483, tags: [], cost: 13,
+      type: CardType.ACTIVE, name: CardName.MYSTERY_CARD_483, tags: [], cost: 15,
       metadata: {cardNumber: 'MY483', renderData: CardRenderer.builder((b) => {b.action('Gain 3 MC.', (ab) => {ab.empty().startAction.text('?');});}),
         description: 'Action: Gain 3 MC.. (The unknown beckons.)'},
     });

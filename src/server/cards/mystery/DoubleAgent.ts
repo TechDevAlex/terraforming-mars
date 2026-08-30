@@ -7,7 +7,7 @@ import {CardRenderer} from '../render/CardRenderer';
 export class DoubleAgent extends Card implements IProjectCard {
   constructor() {
     super({
-      type: CardType.AUTOMATED, name: CardName.DOUBLE_AGENT, tags: [Tag.BUILDING], cost: 10,
+      type: CardType.AUTOMATED, name: CardName.DOUBLE_AGENT, tags: [Tag.BUILDING], cost: 18,
       victoryPoints: 3,
       behavior: {tr: 1, production: {steel: 1}},
       metadata: {cardNumber: 'MY006', renderData: CardRenderer.builder((b) => {b.tr(1);}),

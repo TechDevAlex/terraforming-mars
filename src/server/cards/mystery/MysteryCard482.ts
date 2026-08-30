@@ -7,7 +7,7 @@ import {CardRenderer} from '../render/CardRenderer';
 export class MysteryCard482 extends Card implements IProjectCard {
   constructor() {
     super({
-      type: CardType.AUTOMATED, name: CardName.MYSTERY_CARD_482, tags: [Tag.POWER], cost: 26,
+      type: CardType.AUTOMATED, name: CardName.MYSTERY_CARD_482, tags: [Tag.POWER], cost: 16,
       behavior: {production: {megacredits: 2}, drawCard: 2},
       metadata: {cardNumber: 'MY482', renderData: CardRenderer.builder((b) => {b.production((pb) => {pb.megacredits(2);}); b.br; b.cards(2);}),
         description: 'Production and draw. (The mystery deepens.)'},

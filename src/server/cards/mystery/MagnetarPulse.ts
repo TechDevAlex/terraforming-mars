@@ -7,7 +7,7 @@ import {CardRenderer} from '../render/CardRenderer';
 export class MagnetarPulse extends Card implements IProjectCard {
   constructor() {
     super({
-      type: CardType.AUTOMATED, name: CardName.MAGNETAR_PULSE, tags: [Tag.EARTH], cost: 6,
+      type: CardType.AUTOMATED, name: CardName.MAGNETAR_PULSE, tags: [Tag.EARTH], cost: 25,
       behavior: {city: {}, production: {megacredits: 3}},
       metadata: {cardNumber: 'MY048', renderData: CardRenderer.builder((b) => {b.production((pb) => {pb.megacredits(3);}); b.br; b.city();}),
         description: 'Place city, gain production. (Darkness falls.)'},

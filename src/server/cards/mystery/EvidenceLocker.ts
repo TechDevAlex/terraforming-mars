@@ -9,7 +9,7 @@ import {CardRenderer} from '../render/CardRenderer';
 export class EvidenceLocker extends Card implements IActionCard, IProjectCard {
   constructor() {
     super({
-      type: CardType.ACTIVE, name: CardName.EVIDENCE_LOCKER, tags: [Tag.MARS], cost: 9,
+      type: CardType.ACTIVE, name: CardName.EVIDENCE_LOCKER, tags: [Tag.MARS], cost: 10,
       metadata: {cardNumber: 'MY015', renderData: CardRenderer.builder((b) => {b.action('Gain 2 heat.', (ab) => {ab.empty().startAction.text('?');});}),
         description: 'Action: Gain 2 heat.. (The unknown beckons.)'},
     });

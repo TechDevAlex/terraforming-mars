@@ -7,7 +7,7 @@ import {CardRenderer} from '../render/CardRenderer';
 export class PhantomLibrary extends Card implements IProjectCard {
   constructor() {
     super({
-      type: CardType.AUTOMATED, name: CardName.PHANTOM_LIBRARY, tags: [Tag.ANIMAL, Tag.MICROBE], cost: 25,
+      type: CardType.AUTOMATED, name: CardName.PHANTOM_LIBRARY, tags: [Tag.ANIMAL, Tag.MICROBE], cost: 10,
       behavior: {production: {megacredits: 2}},
       metadata: {cardNumber: 'MY079', renderData: CardRenderer.builder((b) => {b.production((pb) => {pb.megacredits(2);});}),
         description: 'Adjust production. (Space warps.)'},

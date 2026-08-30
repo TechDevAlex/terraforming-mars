@@ -7,7 +7,7 @@ import {CardRenderer} from '../render/CardRenderer';
 export class DreamwalkerLab extends Card implements IProjectCard {
   constructor() {
     super({
-      type: CardType.AUTOMATED, name: CardName.DREAMWALKER_LAB, tags: [Tag.CITY], cost: 6,
+      type: CardType.AUTOMATED, name: CardName.DREAMWALKER_LAB, tags: [Tag.CITY], cost: 30,
       behavior: {production: {steel: 4}},
       metadata: {cardNumber: 'MY087', renderData: CardRenderer.builder((b) => {b.production((pb) => {pb.steel(4);});}),
         description: 'Adjust production. (The mystery deepens.)'},

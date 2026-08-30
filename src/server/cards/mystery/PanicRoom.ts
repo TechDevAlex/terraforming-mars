@@ -9,7 +9,7 @@ import {CardRenderer} from '../render/CardRenderer';
 export class PanicRoom extends Card implements IActionCard, IProjectCard {
   constructor() {
     super({
-      type: CardType.ACTIVE, name: CardName.PANIC_ROOM, tags: [Tag.EARTH, Tag.POWER], cost: 20,
+      type: CardType.ACTIVE, name: CardName.PANIC_ROOM, tags: [Tag.EARTH, Tag.POWER], cost: 12,
       metadata: {cardNumber: 'MY115', renderData: CardRenderer.builder((b) => {b.action('Gain 1 steel and 1 titanium.', (ab) => {ab.empty().startAction.text('?');});}),
         description: 'Action: Gain 1 steel and 1 titanium.. (Shadows hide secrets.)'},
     });

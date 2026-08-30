@@ -7,7 +7,7 @@ import {CardRenderer} from '../render/CardRenderer';
 export class ProductionSurge extends Card implements IProjectCard {
   constructor() {
     super({
-      type: CardType.AUTOMATED, name: CardName.PRODUCTION_SURGE, tags: [Tag.EARTH, Tag.SPACE], cost: 22,
+      type: CardType.AUTOMATED, name: CardName.PRODUCTION_SURGE, tags: [Tag.EARTH, Tag.SPACE], cost: 8,
       behavior: {greenery: {}},
       metadata: {cardNumber: 'MY162', renderData: CardRenderer.builder((b) => {b.greenery();}),
         description: 'Place greenery. (Space warps.)'},

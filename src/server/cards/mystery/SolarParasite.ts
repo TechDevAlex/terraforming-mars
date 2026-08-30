@@ -9,7 +9,7 @@ import {CardRenderer} from '../render/CardRenderer';
 export class SolarParasite extends Card implements IActionCard, IProjectCard {
   constructor() {
     super({
-      type: CardType.ACTIVE, name: CardName.SOLAR_PARASITE, tags: [Tag.EARTH], cost: 20,
+      type: CardType.ACTIVE, name: CardName.SOLAR_PARASITE, tags: [Tag.EARTH], cost: 14,
       metadata: {cardNumber: 'MY042', renderData: CardRenderer.builder((b) => {b.action('Gain 2 plants.', (ab) => {ab.empty().startAction.text('?');});}),
         description: 'Action: Gain 2 plants.. (The mystery deepens.)'},
     });

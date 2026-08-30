@@ -9,7 +9,7 @@ import {CardRenderer} from '../render/CardRenderer';
 export class TheInformant extends Card implements IActionCard, IProjectCard {
   constructor() {
     super({
-      type: CardType.ACTIVE, name: CardName.THE_INFORMANT, tags: [Tag.POWER, Tag.PLANT], cost: 15,
+      type: CardType.ACTIVE, name: CardName.THE_INFORMANT, tags: [Tag.POWER, Tag.PLANT], cost: 8,
       victoryPoints: -1,
       metadata: {cardNumber: 'MY003', renderData: CardRenderer.builder((b) => {b.action('Gain 1 energy.', (ab) => {ab.empty().startAction.text('?');});}),
         description: 'Action: Gain 1 energy.. -1 VP. (Space warps.)'},

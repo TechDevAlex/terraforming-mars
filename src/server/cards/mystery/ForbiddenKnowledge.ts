@@ -7,7 +7,7 @@ import {CardRenderer} from '../render/CardRenderer';
 export class ForbiddenKnowledge extends Card implements IProjectCard {
   constructor() {
     super({
-      type: CardType.EVENT, name: CardName.FORBIDDEN_KNOWLEDGE, tags: [Tag.SPACE], cost: 13,
+      type: CardType.EVENT, name: CardName.FORBIDDEN_KNOWLEDGE, tags: [Tag.SPACE], cost: 5,
       behavior: {global: {oxygen: 1}},
       metadata: {cardNumber: 'MY073', renderData: CardRenderer.builder((b) => {b.oxygen(1);}),
         description: 'Raise oxygen 1 step. (Progress demands sacrifice.)'},

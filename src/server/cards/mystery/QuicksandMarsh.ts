@@ -9,7 +9,7 @@ import {CardRenderer} from '../render/CardRenderer';
 export class QuicksandMarsh extends Card implements IActionCard, IProjectCard {
   constructor() {
     super({
-      type: CardType.ACTIVE, name: CardName.QUICKSAND_MARSH, tags: [Tag.BUILDING, Tag.MARS], cost: 9,
+      type: CardType.ACTIVE, name: CardName.QUICKSAND_MARSH, tags: [Tag.BUILDING, Tag.MARS], cost: 18,
       metadata: {cardNumber: 'MY140', renderData: CardRenderer.builder((b) => {b.action('Draw 1 card.', (ab) => {ab.empty().startAction.text('?');});}),
         description: 'Action: Draw 1 card.. (The mystery deepens.)'},
     });

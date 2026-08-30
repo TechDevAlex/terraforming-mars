@@ -7,7 +7,7 @@ import {CardRenderer} from '../render/CardRenderer';
 export class EnigmaMachine extends Card implements IProjectCard {
   constructor() {
     super({
-      type: CardType.EVENT, name: CardName.ENIGMA_MACHINE, tags: [Tag.SCIENCE], cost: 16,
+      type: CardType.EVENT, name: CardName.ENIGMA_MACHINE, tags: [Tag.SCIENCE], cost: 3,
       behavior: {drawCard: 1},
       metadata: {cardNumber: 'MY091', renderData: CardRenderer.builder((b) => {b.cards(1);}),
         description: 'Draw 1 card. (The truth is out there.)'},

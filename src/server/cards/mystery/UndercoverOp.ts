@@ -7,7 +7,7 @@ import {CardRenderer} from '../render/CardRenderer';
 export class UndercoverOp extends Card implements IProjectCard {
   constructor() {
     super({
-      type: CardType.EVENT, name: CardName.UNDERCOVER_OP, tags: [Tag.BUILDING], cost: 20,
+      type: CardType.EVENT, name: CardName.UNDERCOVER_OP, tags: [Tag.BUILDING], cost: 6,
       behavior: {stock: {plants: 4}},
       metadata: {cardNumber: 'MY012', renderData: CardRenderer.builder((b) => {b.plants(4);}),
         description: 'Gain resources. (Reality shifts.)'},

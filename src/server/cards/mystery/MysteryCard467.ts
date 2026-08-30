@@ -7,7 +7,7 @@ import {CardRenderer} from '../render/CardRenderer';
 export class MysteryCard467 extends Card implements IProjectCard {
   constructor() {
     super({
-      type: CardType.AUTOMATED, name: CardName.MYSTERY_CARD_467, tags: [Tag.JOVIAN, Tag.MARS], cost: 9,
+      type: CardType.AUTOMATED, name: CardName.MYSTERY_CARD_467, tags: [Tag.JOVIAN, Tag.MARS], cost: 22,
       victoryPoints: -1,
       behavior: {tr: 1, production: {titanium: 2}},
       metadata: {cardNumber: 'MY467', renderData: CardRenderer.builder((b) => {b.tr(1);}),

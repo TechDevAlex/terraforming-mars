@@ -9,7 +9,7 @@ import {CardRenderer} from '../render/CardRenderer';
 export class SporeCloud extends Card implements IActionCard, IProjectCard {
   constructor() {
     super({
-      type: CardType.ACTIVE, name: CardName.SPORE_CLOUD, tags: [Tag.MICROBE], cost: 5,
+      type: CardType.ACTIVE, name: CardName.SPORE_CLOUD, tags: [Tag.MICROBE], cost: 13,
       metadata: {cardNumber: 'MY123', renderData: CardRenderer.builder((b) => {b.action('Spend 2 MC to draw a card.', (ab) => {ab.empty().startAction.text('?');});}),
         description: 'Action: Spend 2 MC to draw a card.. (Darkness falls.)'},
     });

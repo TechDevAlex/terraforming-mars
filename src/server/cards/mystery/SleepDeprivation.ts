@@ -9,7 +9,7 @@ import {CardRenderer} from '../render/CardRenderer';
 export class SleepDeprivation extends Card implements IActionCard, IProjectCard {
   constructor() {
     super({
-      type: CardType.ACTIVE, name: CardName.SLEEP_DEPRIVATION, tags: [Tag.PLANT], cost: 19,
+      type: CardType.ACTIVE, name: CardName.SLEEP_DEPRIVATION, tags: [Tag.PLANT], cost: 14,
       metadata: {cardNumber: 'MY338', renderData: CardRenderer.builder((b) => {b.action('Gain 2 plants.', (ab) => {ab.empty().startAction.text('?');});}),
         description: 'Action: Gain 2 plants.. (Space warps.)'},
     });

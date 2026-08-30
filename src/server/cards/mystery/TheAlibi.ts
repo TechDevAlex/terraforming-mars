@@ -7,7 +7,7 @@ import {CardRenderer} from '../render/CardRenderer';
 export class TheAlibi extends Card implements IProjectCard {
   constructor() {
     super({
-      type: CardType.AUTOMATED, name: CardName.THE_ALIBI, tags: [Tag.BUILDING], cost: 8,
+      type: CardType.AUTOMATED, name: CardName.THE_ALIBI, tags: [Tag.BUILDING], cost: 19,
       behavior: {tr: 1, production: {steel: 2}},
       metadata: {cardNumber: 'MY008', renderData: CardRenderer.builder((b) => {b.tr(1);}),
         description: 'Raise your TR 1 step. (Space warps.)'},

@@ -9,7 +9,7 @@ import {CardRenderer} from '../render/CardRenderer';
 export class AstralProjection extends Card implements IActionCard, IProjectCard {
   constructor() {
     super({
-      type: CardType.ACTIVE, name: CardName.ASTRAL_PROJECTION, tags: [Tag.BUILDING, Tag.CITY], cost: 11,
+      type: CardType.ACTIVE, name: CardName.ASTRAL_PROJECTION, tags: [Tag.BUILDING, Tag.CITY], cost: 8,
       victoryPoints: -2,
       metadata: {cardNumber: 'MY071', renderData: CardRenderer.builder((b) => {b.action('Gain 1 energy.', (ab) => {ab.empty().startAction.text('?');});}),
         description: 'Action: Gain 1 energy.. -2 VP. (Nothing is as it seems.)'},

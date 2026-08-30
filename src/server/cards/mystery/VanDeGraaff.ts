@@ -9,7 +9,7 @@ import {CardRenderer} from '../render/CardRenderer';
 export class VanDeGraaff extends Card implements IActionCard, IProjectCard {
   constructor() {
     super({
-      type: CardType.ACTIVE, name: CardName.VAN_DE_GRAAFF, tags: [Tag.BUILDING], cost: 16,
+      type: CardType.ACTIVE, name: CardName.VAN_DE_GRAAFF, tags: [Tag.BUILDING], cost: 8,
       metadata: {cardNumber: 'MY277', renderData: CardRenderer.builder((b) => {b.action('Gain 1 energy.', (ab) => {ab.empty().startAction.text('?');});}),
         description: 'Action: Gain 1 energy.. (The mystery deepens.)'},
     });

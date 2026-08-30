@@ -9,7 +9,7 @@ import {CardRenderer} from '../render/CardRenderer';
 export class RefineryUpgrade extends Card implements IActionCard, IProjectCard {
   constructor() {
     super({
-      type: CardType.ACTIVE, name: CardName.REFINERY_UPGRADE, tags: [Tag.SCIENCE], cost: 8,
+      type: CardType.ACTIVE, name: CardName.REFINERY_UPGRADE, tags: [Tag.SCIENCE], cost: 15,
       victoryPoints: 1,
       metadata: {cardNumber: 'MY170', renderData: CardRenderer.builder((b) => {b.action('Spend 2 MC to draw a card.', (ab) => {ab.empty().startAction.text('?');});}),
         description: 'Action: Spend 2 MC to draw a card.. 1 VP. (The veil lifts.)'},

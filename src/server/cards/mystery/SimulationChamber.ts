@@ -7,7 +7,7 @@ import {CardRenderer} from '../render/CardRenderer';
 export class SimulationChamber extends Card implements IProjectCard {
   constructor() {
     super({
-      type: CardType.AUTOMATED, name: CardName.SIMULATION_CHAMBER, tags: [Tag.SCIENCE, Tag.EARTH], cost: 11,
+      type: CardType.AUTOMATED, name: CardName.SIMULATION_CHAMBER, tags: [Tag.SCIENCE, Tag.EARTH], cost: 18,
       behavior: {production: {energy: 2, heat: 2}},
       metadata: {cardNumber: 'MY351', renderData: CardRenderer.builder((b) => {b.production((pb) => {pb.energy(2); pb.heat(2);});}),
         description: 'Adjust production. (Reality shifts.)'},

@@ -9,7 +9,7 @@ import {CardRenderer} from '../render/CardRenderer';
 export class MidnightCourier extends Card implements IActionCard, IProjectCard {
   constructor() {
     super({
-      type: CardType.ACTIVE, name: CardName.MIDNIGHT_COURIER, tags: [Tag.JOVIAN], cost: 5,
+      type: CardType.ACTIVE, name: CardName.MIDNIGHT_COURIER, tags: [Tag.JOVIAN], cost: 14,
       metadata: {cardNumber: 'MY002', renderData: CardRenderer.builder((b) => {b.action('Gain 2 plants.', (ab) => {ab.empty().startAction.text('?');});}),
         description: 'Action: Gain 2 plants.. (Every clue matters.)'},
     });

@@ -9,7 +9,7 @@ import {CardRenderer} from '../render/CardRenderer';
 export class PhantomWitness extends Card implements IActionCard, IProjectCard {
   constructor() {
     super({
-      type: CardType.ACTIVE, name: CardName.PHANTOM_WITNESS, tags: [Tag.ANIMAL], cost: 5,
+      type: CardType.ACTIVE, name: CardName.PHANTOM_WITNESS, tags: [Tag.ANIMAL], cost: 19,
       victoryPoints: 3,
       metadata: {cardNumber: 'MY010', renderData: CardRenderer.builder((b) => {b.action('Spend 2 MC to draw a card.', (ab) => {ab.empty().startAction.text('?');});}),
         description: 'Action: Spend 2 MC to draw a card.. 3 VP. (The mystery deepens.)'},

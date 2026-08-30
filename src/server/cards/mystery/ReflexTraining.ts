@@ -7,7 +7,7 @@ import {CardRenderer} from '../render/CardRenderer';
 export class ReflexTraining extends Card implements IProjectCard {
   constructor() {
     super({
-      type: CardType.AUTOMATED, name: CardName.REFLEX_TRAINING, tags: [Tag.JOVIAN], cost: 4,
+      type: CardType.AUTOMATED, name: CardName.REFLEX_TRAINING, tags: [Tag.JOVIAN], cost: 15,
       behavior: {production: {megacredits: 3}},
       metadata: {cardNumber: 'MY348', renderData: CardRenderer.builder((b) => {b.production((pb) => {pb.megacredits(3);});}),
         description: 'Adjust production. (Time bends.)'},

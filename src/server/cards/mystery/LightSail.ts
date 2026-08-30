@@ -9,7 +9,7 @@ import {CardRenderer} from '../render/CardRenderer';
 export class LightSail extends Card implements IActionCard, IProjectCard {
   constructor() {
     super({
-      type: CardType.ACTIVE, name: CardName.LIGHT_SAIL, tags: [Tag.BUILDING], cost: 20,
+      type: CardType.ACTIVE, name: CardName.LIGHT_SAIL, tags: [Tag.BUILDING], cost: 12,
       victoryPoints: -1,
       metadata: {cardNumber: 'MY301', renderData: CardRenderer.builder((b) => {b.action('Gain 1 steel and 1 titanium.', (ab) => {ab.empty().startAction.text('?');});}),
         description: 'Action: Gain 1 steel and 1 titanium.. -1 VP. (The mystery deepens.)'},

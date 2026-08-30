@@ -7,7 +7,7 @@ import {CardRenderer} from '../render/CardRenderer';
 export class NexusPoint extends Card implements IProjectCard {
   constructor() {
     super({
-      type: CardType.AUTOMATED, name: CardName.NEXUS_POINT, tags: [Tag.PLANT], cost: 9,
+      type: CardType.AUTOMATED, name: CardName.NEXUS_POINT, tags: [Tag.PLANT], cost: 19,
       behavior: {tr: 1, production: {steel: 2}},
       metadata: {cardNumber: 'MY370', renderData: CardRenderer.builder((b) => {b.tr(1);}),
         description: 'Raise your TR 1 step. (Nature finds a way.)'},

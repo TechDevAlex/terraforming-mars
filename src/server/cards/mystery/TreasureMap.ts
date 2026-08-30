@@ -7,7 +7,7 @@ import {CardRenderer} from '../render/CardRenderer';
 export class TreasureMap extends Card implements IProjectCard {
   constructor() {
     super({
-      type: CardType.AUTOMATED, name: CardName.TREASURE_MAP, tags: [Tag.POWER], cost: 14,
+      type: CardType.AUTOMATED, name: CardName.TREASURE_MAP, tags: [Tag.POWER], cost: 24,
       victoryPoints: 1,
       behavior: {production: {steel: 3}},
       metadata: {cardNumber: 'MY211', renderData: CardRenderer.builder((b) => {b.production((pb) => {pb.steel(3);});}),

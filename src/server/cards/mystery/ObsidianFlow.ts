@@ -9,7 +9,7 @@ import {CardRenderer} from '../render/CardRenderer';
 export class ObsidianFlow extends Card implements IActionCard, IProjectCard {
   constructor() {
     super({
-      type: CardType.ACTIVE, name: CardName.OBSIDIAN_FLOW, tags: [Tag.SPACE, Tag.SCIENCE], cost: 10,
+      type: CardType.ACTIVE, name: CardName.OBSIDIAN_FLOW, tags: [Tag.SPACE, Tag.SCIENCE], cost: 14,
       metadata: {cardNumber: 'MY145', renderData: CardRenderer.builder((b) => {b.action('Gain 2 plants.', (ab) => {ab.empty().startAction.text('?');});}),
         description: 'Action: Gain 2 plants.. (Every clue matters.)'},
     });

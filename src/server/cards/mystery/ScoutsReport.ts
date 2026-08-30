@@ -9,7 +9,7 @@ import {CardRenderer} from '../render/CardRenderer';
 export class ScoutsReport extends Card implements IActionCard, IProjectCard {
   constructor() {
     super({
-      type: CardType.ACTIVE, name: CardName.SCOUTS_REPORT, tags: [Tag.BUILDING], cost: 5,
+      type: CardType.ACTIVE, name: CardName.SCOUTS_REPORT, tags: [Tag.BUILDING], cost: 14,
       metadata: {cardNumber: 'MY221', renderData: CardRenderer.builder((b) => {b.action('Gain 2 plants.', (ab) => {ab.empty().startAction.text('?');});}),
         description: 'Action: Gain 2 plants.. (Knowledge is the ultimate currency.)'},
     });

@@ -7,7 +7,7 @@ import {CardRenderer} from '../render/CardRenderer';
 export class BlackMarketDeal extends Card implements IProjectCard {
   constructor() {
     super({
-      type: CardType.AUTOMATED, name: CardName.BLACK_MARKET_DEAL, tags: [Tag.JOVIAN], cost: 25,
+      type: CardType.AUTOMATED, name: CardName.BLACK_MARKET_DEAL, tags: [Tag.JOVIAN], cost: 20,
       behavior: {production: {titanium: 2}},
       metadata: {cardNumber: 'MY011', renderData: CardRenderer.builder((b) => {b.production((pb) => {pb.titanium(2);});}),
         description: 'Adjust production. (The veil lifts.)'},

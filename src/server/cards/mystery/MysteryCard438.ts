@@ -7,7 +7,7 @@ import {CardRenderer} from '../render/CardRenderer';
 export class MysteryCard438 extends Card implements IProjectCard {
   constructor() {
     super({
-      type: CardType.AUTOMATED, name: CardName.MYSTERY_CARD_438, tags: [Tag.MICROBE, Tag.SPACE], cost: 11,
+      type: CardType.AUTOMATED, name: CardName.MYSTERY_CARD_438, tags: [Tag.MICROBE, Tag.SPACE], cost: 18,
       behavior: {production: {plants: 1, energy: 2}},
       metadata: {cardNumber: 'MY438', renderData: CardRenderer.builder((b) => {b.production((pb) => {pb.plants(1); pb.energy(2);});}),
         description: 'Adjust production. (Nature finds a way.)'},

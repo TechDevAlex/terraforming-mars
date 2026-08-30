@@ -7,7 +7,7 @@ import {CardRenderer} from '../render/CardRenderer';
 export class EclipseEvent extends Card implements IProjectCard {
   constructor() {
     super({
-      type: CardType.AUTOMATED, name: CardName.ECLIPSE_EVENT, tags: [Tag.EARTH], cost: 16,
+      type: CardType.AUTOMATED, name: CardName.ECLIPSE_EVENT, tags: [Tag.EARTH], cost: 4,
       victoryPoints: -2,
       behavior: {greenery: {}},
       metadata: {cardNumber: 'MY270', renderData: CardRenderer.builder((b) => {b.greenery();}),

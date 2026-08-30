@@ -7,7 +7,7 @@ import {CardRenderer} from '../render/CardRenderer';
 export class HallThruster extends Card implements IProjectCard {
   constructor() {
     super({
-      type: CardType.EVENT, name: CardName.HALL_THRUSTER, tags: [Tag.ANIMAL], cost: 9,
+      type: CardType.EVENT, name: CardName.HALL_THRUSTER, tags: [Tag.ANIMAL], cost: 5,
       behavior: {global: {oxygen: 1}},
       metadata: {cardNumber: 'MY303', renderData: CardRenderer.builder((b) => {b.oxygen(1);}),
         description: 'Raise oxygen 1 step. (Time bends.)'},

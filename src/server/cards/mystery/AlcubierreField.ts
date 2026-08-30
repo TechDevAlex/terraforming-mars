@@ -7,7 +7,7 @@ import {CardRenderer} from '../render/CardRenderer';
 export class AlcubierreField extends Card implements IProjectCard {
   constructor() {
     super({
-      type: CardType.AUTOMATED, name: CardName.ALCUBIERRE_FIELD, tags: [Tag.POWER], cost: 18,
+      type: CardType.AUTOMATED, name: CardName.ALCUBIERRE_FIELD, tags: [Tag.POWER], cost: 26,
       victoryPoints: 1,
       behavior: {tr: 1, production: {titanium: 2}},
       metadata: {cardNumber: 'MY307', renderData: CardRenderer.builder((b) => {b.tr(1);}),

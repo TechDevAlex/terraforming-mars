@@ -7,7 +7,7 @@ import {CardRenderer} from '../render/CardRenderer';
 export class DirtyMoney extends Card implements IProjectCard {
   constructor() {
     super({
-      type: CardType.EVENT, name: CardName.DIRTY_MONEY, tags: [Tag.EARTH, Tag.MARS], cost: 21,
+      type: CardType.EVENT, name: CardName.DIRTY_MONEY, tags: [Tag.EARTH, Tag.MARS], cost: 8,
       victoryPoints: 2,
       behavior: {drawCard: 1},
       metadata: {cardNumber: 'MY019', renderData: CardRenderer.builder((b) => {b.cards(1);}),

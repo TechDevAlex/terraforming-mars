@@ -7,7 +7,7 @@ import {CardRenderer} from '../render/CardRenderer';
 export class Helium3Mining extends Card implements IProjectCard {
   constructor() {
     super({
-      type: CardType.AUTOMATED, name: CardName.HELIUM_3_MINING, tags: [Tag.CITY], cost: 15,
+      type: CardType.AUTOMATED, name: CardName.HELIUM_3_MINING, tags: [Tag.CITY], cost: 36,
       victoryPoints: 3,
       behavior: {production: {titanium: 2, megacredits: 2}},
       metadata: {cardNumber: 'MY296', renderData: CardRenderer.builder((b) => {b.production((pb) => {pb.titanium(2); pb.megacredits(2);});}),

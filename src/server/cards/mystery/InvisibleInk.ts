@@ -6,7 +6,7 @@ import {CardRenderer} from '../render/CardRenderer';
 export class InvisibleInk extends Card implements IProjectCard {
   constructor() {
     super({
-      type: CardType.AUTOMATED, name: CardName.INVISIBLE_INK, tags: [], cost: 24,
+      type: CardType.AUTOMATED, name: CardName.INVISIBLE_INK, tags: [], cost: 14,
       behavior: {tr: 1, production: {titanium: 1}},
       metadata: {cardNumber: 'MY256', renderData: CardRenderer.builder((b) => {b.tr(1);}),
         description: 'Raise your TR 1 step. (The stars align.)'},

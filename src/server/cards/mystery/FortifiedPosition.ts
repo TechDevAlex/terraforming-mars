@@ -7,7 +7,7 @@ import {CardRenderer} from '../render/CardRenderer';
 export class FortifiedPosition extends Card implements IProjectCard {
   constructor() {
     super({
-      type: CardType.AUTOMATED, name: CardName.FORTIFIED_POSITION, tags: [Tag.JOVIAN], cost: 5,
+      type: CardType.AUTOMATED, name: CardName.FORTIFIED_POSITION, tags: [Tag.JOVIAN], cost: 15,
       behavior: {production: {megacredits: 2, energy: 1}},
       metadata: {cardNumber: 'MY229', renderData: CardRenderer.builder((b) => {b.production((pb) => {pb.megacredits(2); pb.energy(1);});}),
         description: 'Adjust production. (Time bends.)'},

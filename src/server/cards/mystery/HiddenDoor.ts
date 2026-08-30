@@ -9,7 +9,7 @@ import {CardRenderer} from '../render/CardRenderer';
 export class HiddenDoor extends Card implements IActionCard, IProjectCard {
   constructor() {
     super({
-      type: CardType.ACTIVE, name: CardName.HIDDEN_DOOR, tags: [Tag.JOVIAN], cost: 8,
+      type: CardType.ACTIVE, name: CardName.HIDDEN_DOOR, tags: [Tag.JOVIAN], cost: 15,
       metadata: {cardNumber: 'MY252', renderData: CardRenderer.builder((b) => {b.action('Spend 3 MC to gain 6 MC.', (ab) => {ab.empty().startAction.text('?');});}),
         description: 'Action: Spend 3 MC to gain 6 MC.. (Knowledge is the ultimate currency.)'},
     });

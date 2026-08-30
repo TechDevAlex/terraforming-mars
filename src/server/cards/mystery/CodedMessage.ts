@@ -7,7 +7,7 @@ import {CardRenderer} from '../render/CardRenderer';
 export class CodedMessage extends Card implements IProjectCard {
   constructor() {
     super({
-      type: CardType.AUTOMATED, name: CardName.CODED_MESSAGE, tags: [Tag.JOVIAN, Tag.ANIMAL], cost: 5,
+      type: CardType.AUTOMATED, name: CardName.CODED_MESSAGE, tags: [Tag.JOVIAN, Tag.ANIMAL], cost: 21,
       victoryPoints: -1,
       behavior: {production: {energy: 3, heat: 2}},
       metadata: {cardNumber: 'MY257', renderData: CardRenderer.builder((b) => {b.production((pb) => {pb.energy(3); pb.heat(2);});}),

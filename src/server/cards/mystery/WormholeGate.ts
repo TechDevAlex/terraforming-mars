@@ -7,7 +7,7 @@ import {CardRenderer} from '../render/CardRenderer';
 export class WormholeGate extends Card implements IProjectCard {
   constructor() {
     super({
-      type: CardType.EVENT, name: CardName.WORMHOLE_GATE, tags: [Tag.SCIENCE], cost: 19,
+      type: CardType.EVENT, name: CardName.WORMHOLE_GATE, tags: [Tag.SCIENCE], cost: 6,
       behavior: {drawCard: 2},
       metadata: {cardNumber: 'MY044', renderData: CardRenderer.builder((b) => {b.cards(2);}),
         description: 'Draw 2 cards. (The mystery deepens.)'},

@@ -9,7 +9,7 @@ import {CardRenderer} from '../render/CardRenderer';
 export class CarnivorousGarden extends Card implements IActionCard, IProjectCard {
   constructor() {
     super({
-      type: CardType.ACTIVE, name: CardName.CARNIVOROUS_GARDEN, tags: [Tag.POWER, Tag.SCIENCE], cost: 7,
+      type: CardType.ACTIVE, name: CardName.CARNIVOROUS_GARDEN, tags: [Tag.POWER, Tag.SCIENCE], cost: 15,
       victoryPoints: -1,
       metadata: {cardNumber: 'MY125', renderData: CardRenderer.builder((b) => {b.action('Spend 3 MC to gain 6 MC.', (ab) => {ab.empty().startAction.text('?');});}),
         description: 'Action: Spend 3 MC to gain 6 MC.. -1 VP. (Nature finds a way.)'},

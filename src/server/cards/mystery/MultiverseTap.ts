@@ -9,7 +9,7 @@ import {CardRenderer} from '../render/CardRenderer';
 export class MultiverseTap extends Card implements IActionCard, IProjectCard {
   constructor() {
     super({
-      type: CardType.ACTIVE, name: CardName.MULTIVERSE_TAP, tags: [Tag.POWER], cost: 5,
+      type: CardType.ACTIVE, name: CardName.MULTIVERSE_TAP, tags: [Tag.POWER], cost: 9,
       victoryPoints: 1,
       metadata: {cardNumber: 'MY314', renderData: CardRenderer.builder((b) => {b.action('Gain 1 energy.', (ab) => {ab.empty().startAction.text('?');});}),
         description: 'Action: Gain 1 energy.. 1 VP. (Trust no one.)'},

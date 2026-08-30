@@ -7,7 +7,7 @@ import {CardRenderer} from '../render/CardRenderer';
 export class SkeletonKey extends Card implements IProjectCard {
   constructor() {
     super({
-      type: CardType.AUTOMATED, name: CardName.SKELETON_KEY, tags: [Tag.MARS], cost: 5,
+      type: CardType.AUTOMATED, name: CardName.SKELETON_KEY, tags: [Tag.MARS], cost: 20,
       victoryPoints: 3,
       behavior: {tr: 1, production: {megacredits: 2}},
       metadata: {cardNumber: 'MY261', renderData: CardRenderer.builder((b) => {b.tr(1);}),

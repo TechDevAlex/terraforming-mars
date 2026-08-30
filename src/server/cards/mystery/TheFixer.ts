@@ -9,7 +9,7 @@ import {CardRenderer} from '../render/CardRenderer';
 export class TheFixer extends Card implements IActionCard, IProjectCard {
   constructor() {
     super({
-      type: CardType.ACTIVE, name: CardName.THE_FIXER, tags: [Tag.MARS], cost: 18,
+      type: CardType.ACTIVE, name: CardName.THE_FIXER, tags: [Tag.MARS], cost: 12,
       metadata: {cardNumber: 'MY018', renderData: CardRenderer.builder((b) => {b.action('Gain 1 steel and 1 titanium.', (ab) => {ab.empty().startAction.text('?');});}),
         description: 'Action: Gain 1 steel and 1 titanium.. (Secrets have power.)'},
     });

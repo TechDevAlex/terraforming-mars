@@ -7,7 +7,7 @@ import {CardRenderer} from '../render/CardRenderer';
 export class StrategicReserve extends Card implements IProjectCard {
   constructor() {
     super({
-      type: CardType.AUTOMATED, name: CardName.STRATEGIC_RESERVE, tags: [Tag.JOVIAN], cost: 22,
+      type: CardType.AUTOMATED, name: CardName.STRATEGIC_RESERVE, tags: [Tag.JOVIAN], cost: 26,
       victoryPoints: -1,
       behavior: {production: {plants: 1, titanium: 2}},
       metadata: {cardNumber: 'MY233', renderData: CardRenderer.builder((b) => {b.production((pb) => {pb.plants(1); pb.titanium(2);});}),

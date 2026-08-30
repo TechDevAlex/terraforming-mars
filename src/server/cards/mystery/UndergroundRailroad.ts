@@ -9,7 +9,7 @@ import {CardRenderer} from '../render/CardRenderer';
 export class UndergroundRailroad extends Card implements IActionCard, IProjectCard {
   constructor() {
     super({
-      type: CardType.ACTIVE, name: CardName.UNDERGROUND_RAILROAD, tags: [Tag.JOVIAN, Tag.EARTH], cost: 11,
+      type: CardType.ACTIVE, name: CardName.UNDERGROUND_RAILROAD, tags: [Tag.JOVIAN, Tag.EARTH], cost: 19,
       victoryPoints: 3,
       metadata: {cardNumber: 'MY196', renderData: CardRenderer.builder((b) => {b.action('Draw 1 card.', (ab) => {ab.empty().startAction.text('?');});}),
         description: 'Action: Draw 1 card.. 3 VP. (Space warps.)'},

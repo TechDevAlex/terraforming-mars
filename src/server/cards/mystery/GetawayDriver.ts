@@ -7,7 +7,7 @@ import {CardRenderer} from '../render/CardRenderer';
 export class GetawayDriver extends Card implements IProjectCard {
   constructor() {
     super({
-      type: CardType.EVENT, name: CardName.GETAWAY_DRIVER, tags: [Tag.CITY, Tag.MARS], cost: 17,
+      type: CardType.EVENT, name: CardName.GETAWAY_DRIVER, tags: [Tag.CITY, Tag.MARS], cost: 2,
       victoryPoints: -2,
       behavior: {stock: {steel: 4}},
       metadata: {cardNumber: 'MY023', renderData: CardRenderer.builder((b) => {b.steel(4);}),

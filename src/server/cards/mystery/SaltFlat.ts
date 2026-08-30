@@ -9,7 +9,7 @@ import {CardRenderer} from '../render/CardRenderer';
 export class SaltFlat extends Card implements IActionCard, IProjectCard {
   constructor() {
     super({
-      type: CardType.ACTIVE, name: CardName.SALT_FLAT, tags: [Tag.CITY, Tag.EARTH], cost: 8,
+      type: CardType.ACTIVE, name: CardName.SALT_FLAT, tags: [Tag.CITY, Tag.EARTH], cost: 15,
       metadata: {cardNumber: 'MY150', renderData: CardRenderer.builder((b) => {b.action('Spend 3 MC to gain 6 MC.', (ab) => {ab.empty().startAction.text('?');});}),
         description: 'Action: Spend 3 MC to gain 6 MC.. (Nature finds a way.)'},
     });

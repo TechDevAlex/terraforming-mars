@@ -7,7 +7,7 @@ import {CardRenderer} from '../render/CardRenderer';
 export class MysteryCard379 extends Card implements IProjectCard {
   constructor() {
     super({
-      type: CardType.EVENT, name: CardName.MYSTERY_CARD_379, tags: [Tag.BUILDING], cost: 9,
+      type: CardType.EVENT, name: CardName.MYSTERY_CARD_379, tags: [Tag.BUILDING], cost: 5,
       behavior: {global: {oxygen: 1}},
       metadata: {cardNumber: 'MY379', renderData: CardRenderer.builder((b) => {b.oxygen(1);}),
         description: 'Raise oxygen 1 step. (Nothing is as it seems.)'},

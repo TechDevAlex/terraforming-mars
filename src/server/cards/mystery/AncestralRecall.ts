@@ -9,7 +9,7 @@ import {CardRenderer} from '../render/CardRenderer';
 export class AncestralRecall extends Card implements IActionCard, IProjectCard {
   constructor() {
     super({
-      type: CardType.ACTIVE, name: CardName.ANCESTRAL_RECALL, tags: [Tag.SCIENCE], cost: 11,
+      type: CardType.ACTIVE, name: CardName.ANCESTRAL_RECALL, tags: [Tag.SCIENCE], cost: 16,
       metadata: {cardNumber: 'MY345', renderData: CardRenderer.builder((b) => {b.action('Draw 1 card.', (ab) => {ab.empty().startAction.text('?');});}),
         description: 'Action: Draw 1 card.. (The plot thickens.)'},
     });

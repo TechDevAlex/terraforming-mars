@@ -9,7 +9,7 @@ import {CardRenderer} from '../render/CardRenderer';
 export class DeepSeaVent extends Card implements IActionCard, IProjectCard {
   constructor() {
     super({
-      type: CardType.ACTIVE, name: CardName.DEEP_SEA_VENT, tags: [Tag.EARTH], cost: 6,
+      type: CardType.ACTIVE, name: CardName.DEEP_SEA_VENT, tags: [Tag.EARTH], cost: 15,
       metadata: {cardNumber: 'MY131', renderData: CardRenderer.builder((b) => {b.action('Spend 3 MC to gain 6 MC.', (ab) => {ab.empty().startAction.text('?');});}),
         description: 'Action: Spend 3 MC to gain 6 MC.. (Progress demands sacrifice.)'},
     });

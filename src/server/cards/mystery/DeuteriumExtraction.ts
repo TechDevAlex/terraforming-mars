@@ -6,7 +6,7 @@ import {CardRenderer} from '../render/CardRenderer';
 export class DeuteriumExtraction extends Card implements IProjectCard {
   constructor() {
     super({
-      type: CardType.AUTOMATED, name: CardName.DEUTERIUM_EXTRACTION, tags: [], cost: 6,
+      type: CardType.AUTOMATED, name: CardName.DEUTERIUM_EXTRACTION, tags: [], cost: 24,
       behavior: {tr: 1, production: {titanium: 2}},
       metadata: {cardNumber: 'MY295', renderData: CardRenderer.builder((b) => {b.tr(1);}),
         description: 'Raise your TR 1 step. (The frontier expands.)'},

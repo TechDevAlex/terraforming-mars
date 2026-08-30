@@ -9,7 +9,7 @@ import {CardRenderer} from '../render/CardRenderer';
 export class NeutronHarvest extends Card implements IActionCard, IProjectCard {
   constructor() {
     super({
-      type: CardType.ACTIVE, name: CardName.NEUTRON_HARVEST, tags: [Tag.ANIMAL, Tag.POWER], cost: 18,
+      type: CardType.ACTIVE, name: CardName.NEUTRON_HARVEST, tags: [Tag.ANIMAL, Tag.POWER], cost: 12,
       metadata: {cardNumber: 'MY041', renderData: CardRenderer.builder((b) => {b.action('Spend 1 MC to draw a card.', (ab) => {ab.empty().startAction.text('?');});}),
         description: 'Action: Spend 1 MC to draw a card.. (Every clue matters.)'},
     });

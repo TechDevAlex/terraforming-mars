@@ -7,7 +7,7 @@ import {CardRenderer} from '../render/CardRenderer';
 export class ExpeditionCamp extends Card implements IProjectCard {
   constructor() {
     super({
-      type: CardType.EVENT, name: CardName.EXPEDITION_CAMP, tags: [Tag.CITY], cost: 21,
+      type: CardType.EVENT, name: CardName.EXPEDITION_CAMP, tags: [Tag.CITY], cost: 9,
       behavior: {drawCard: 3},
       metadata: {cardNumber: 'MY216', renderData: CardRenderer.builder((b) => {b.cards(3);}),
         description: 'Draw 3 cards. (The mystery deepens.)'},

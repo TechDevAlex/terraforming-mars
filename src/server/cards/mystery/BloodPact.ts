@@ -9,7 +9,7 @@ import {CardRenderer} from '../render/CardRenderer';
 export class BloodPact extends Card implements IActionCard, IProjectCard {
   constructor() {
     super({
-      type: CardType.ACTIVE, name: CardName.BLOOD_PACT, tags: [Tag.MARS], cost: 7,
+      type: CardType.ACTIVE, name: CardName.BLOOD_PACT, tags: [Tag.MARS], cost: 12,
       metadata: {cardNumber: 'MY062', renderData: CardRenderer.builder((b) => {b.action('Gain 1 steel and 1 titanium.', (ab) => {ab.empty().startAction.text('?');});}),
         description: 'Action: Gain 1 steel and 1 titanium.. (The frontier expands.)'},
     });

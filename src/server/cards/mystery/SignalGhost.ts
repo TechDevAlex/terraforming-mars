@@ -7,7 +7,7 @@ import {CardRenderer} from '../render/CardRenderer';
 export class SignalGhost extends Card implements IProjectCard {
   constructor() {
     super({
-      type: CardType.EVENT, name: CardName.SIGNAL_GHOST, tags: [Tag.PLANT, Tag.JOVIAN], cost: 7,
+      type: CardType.EVENT, name: CardName.SIGNAL_GHOST, tags: [Tag.PLANT, Tag.JOVIAN], cost: 3,
       behavior: {stock: {steel: 2}},
       metadata: {cardNumber: 'MY110', renderData: CardRenderer.builder((b) => {b.steel(2);}),
         description: 'Gain resources. (Darkness falls.)'},

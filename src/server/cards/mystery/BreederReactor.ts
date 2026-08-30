@@ -7,7 +7,7 @@ import {CardRenderer} from '../render/CardRenderer';
 export class BreederReactor extends Card implements IProjectCard {
   constructor() {
     super({
-      type: CardType.EVENT, name: CardName.BREEDER_REACTOR, tags: [Tag.JOVIAN], cost: 19,
+      type: CardType.EVENT, name: CardName.BREEDER_REACTOR, tags: [Tag.JOVIAN], cost: 6,
       behavior: {stock: {steel: 4}},
       metadata: {cardNumber: 'MY293', renderData: CardRenderer.builder((b) => {b.steel(4);}),
         description: 'Gain resources. (Nothing is as it seems.)'},

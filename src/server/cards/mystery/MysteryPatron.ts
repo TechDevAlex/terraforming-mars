@@ -7,7 +7,7 @@ import {CardRenderer} from '../render/CardRenderer';
 export class MysteryPatron extends Card implements IProjectCard {
   constructor() {
     super({
-      type: CardType.AUTOMATED, name: CardName.MYSTERY_PATRON, tags: [Tag.CITY], cost: 10,
+      type: CardType.AUTOMATED, name: CardName.MYSTERY_PATRON, tags: [Tag.CITY], cost: 15,
       behavior: {production: {plants: 2}},
       metadata: {cardNumber: 'MY246', renderData: CardRenderer.builder((b) => {b.production((pb) => {pb.plants(2);});}),
         description: 'Adjust production. (Every clue matters.)'},

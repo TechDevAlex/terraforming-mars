@@ -7,7 +7,7 @@ import {CardRenderer} from '../render/CardRenderer';
 export class GravityWell extends Card implements IProjectCard {
   constructor() {
     super({
-      type: CardType.AUTOMATED, name: CardName.GRAVITY_WELL, tags: [Tag.SPACE, Tag.JOVIAN], cost: 23,
+      type: CardType.AUTOMATED, name: CardName.GRAVITY_WELL, tags: [Tag.SPACE, Tag.JOVIAN], cost: 1,
       victoryPoints: -2,
       behavior: {production: {energy: 1}},
       metadata: {cardNumber: 'MY039', renderData: CardRenderer.builder((b) => {b.production((pb) => {pb.energy(1);});}),

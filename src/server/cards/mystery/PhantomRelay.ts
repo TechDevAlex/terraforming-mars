@@ -9,7 +9,7 @@ import {CardRenderer} from '../render/CardRenderer';
 export class PhantomRelay extends Card implements IActionCard, IProjectCard {
   constructor() {
     super({
-      type: CardType.ACTIVE, name: CardName.PHANTOM_RELAY, tags: [Tag.SPACE], cost: 6,
+      type: CardType.ACTIVE, name: CardName.PHANTOM_RELAY, tags: [Tag.SPACE], cost: 13,
       metadata: {cardNumber: 'MY098', renderData: CardRenderer.builder((b) => {b.action('Spend 2 MC to draw a card.', (ab) => {ab.empty().startAction.text('?');});}),
         description: 'Action: Spend 2 MC to draw a card.. (Every clue matters.)'},
     });

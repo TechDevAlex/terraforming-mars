@@ -7,7 +7,7 @@ import {CardRenderer} from '../render/CardRenderer';
 export class MysteryCard510 extends Card implements IProjectCard {
   constructor() {
     super({
-      type: CardType.EVENT, name: CardName.MYSTERY_CARD_510, tags: [Tag.PLANT], cost: 15,
+      type: CardType.EVENT, name: CardName.MYSTERY_CARD_510, tags: [Tag.PLANT], cost: 8,
       behavior: {ocean: {}},
       metadata: {cardNumber: 'MY510', renderData: CardRenderer.builder((b) => {b.oceans(1);}),
         description: 'Place an ocean. (Steel and will forge the path.)'},

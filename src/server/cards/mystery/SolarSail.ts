@@ -7,7 +7,7 @@ import {CardRenderer} from '../render/CardRenderer';
 export class SolarSail extends Card implements IProjectCard {
   constructor() {
     super({
-      type: CardType.EVENT, name: CardName.SOLAR_SAIL, tags: [Tag.SCIENCE, Tag.POWER], cost: 8,
+      type: CardType.EVENT, name: CardName.SOLAR_SAIL, tags: [Tag.SCIENCE, Tag.POWER], cost: 1,
       victoryPoints: -2,
       behavior: {stock: {titanium: 2}},
       metadata: {cardNumber: 'MY300', renderData: CardRenderer.builder((b) => {b.titanium(2);}),

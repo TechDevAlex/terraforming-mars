@@ -7,7 +7,7 @@ import {CardRenderer} from '../render/CardRenderer';
 export class IonDrive extends Card implements IProjectCard {
   constructor() {
     super({
-      type: CardType.AUTOMATED, name: CardName.ION_DRIVE, tags: [Tag.CITY], cost: 17,
+      type: CardType.AUTOMATED, name: CardName.ION_DRIVE, tags: [Tag.CITY], cost: 26,
       behavior: {production: {titanium: 2}, drawCard: 2},
       metadata: {cardNumber: 'MY302', renderData: CardRenderer.builder((b) => {b.production((pb) => {pb.titanium(2);}); b.br; b.cards(2);}),
         description: 'Production and draw. (A whisper in the void.)'},

@@ -9,7 +9,7 @@ import {CardRenderer} from '../render/CardRenderer';
 export class MysteryCard373 extends Card implements IActionCard, IProjectCard {
   constructor() {
     super({
-      type: CardType.ACTIVE, name: CardName.MYSTERY_CARD_373, tags: [Tag.SPACE, Tag.MARS], cost: 12,
+      type: CardType.ACTIVE, name: CardName.MYSTERY_CARD_373, tags: [Tag.SPACE, Tag.MARS], cost: 17,
       metadata: {cardNumber: 'MY373', renderData: CardRenderer.builder((b) => {b.action('Draw 1 card.', (ab) => {ab.empty().startAction.text('?');});}),
         description: 'Action: Draw 1 card.. (Steel and will forge the path.)'},
     });

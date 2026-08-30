@@ -7,7 +7,7 @@ import {CardRenderer} from '../render/CardRenderer';
 export class ChronotonBeam extends Card implements IProjectCard {
   constructor() {
     super({
-      type: CardType.AUTOMATED, name: CardName.CHRONOTON_BEAM, tags: [Tag.POWER, Tag.MICROBE], cost: 21,
+      type: CardType.AUTOMATED, name: CardName.CHRONOTON_BEAM, tags: [Tag.POWER, Tag.MICROBE], cost: 26,
       victoryPoints: 3,
       behavior: {production: {titanium: 1, megacredits: 2}},
       metadata: {cardNumber: 'MY361', renderData: CardRenderer.builder((b) => {b.production((pb) => {pb.titanium(1); pb.megacredits(2);});}),

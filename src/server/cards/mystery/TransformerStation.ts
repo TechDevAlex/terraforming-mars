@@ -9,7 +9,7 @@ import {CardRenderer} from '../render/CardRenderer';
 export class TransformerStation extends Card implements IActionCard, IProjectCard {
   constructor() {
     super({
-      type: CardType.ACTIVE, name: CardName.TRANSFORMER_STATION, tags: [Tag.JOVIAN, Tag.MICROBE], cost: 5,
+      type: CardType.ACTIVE, name: CardName.TRANSFORMER_STATION, tags: [Tag.JOVIAN, Tag.MICROBE], cost: 18,
       metadata: {cardNumber: 'MY176', renderData: CardRenderer.builder((b) => {b.action('Draw 1 card.', (ab) => {ab.empty().startAction.text('?');});}),
         description: 'Action: Draw 1 card.. (Knowledge is the ultimate currency.)'},
     });

@@ -9,7 +9,7 @@ import {CardRenderer} from '../render/CardRenderer';
 export class MysteryCard536 extends Card implements IActionCard, IProjectCard {
   constructor() {
     super({
-      type: CardType.ACTIVE, name: CardName.MYSTERY_CARD_536, tags: [Tag.PLANT, Tag.CITY], cost: 17,
+      type: CardType.ACTIVE, name: CardName.MYSTERY_CARD_536, tags: [Tag.PLANT, Tag.CITY], cost: 14,
       metadata: {cardNumber: 'MY536', renderData: CardRenderer.builder((b) => {b.action('Gain 2 plants.', (ab) => {ab.empty().startAction.text('?');});}),
         description: 'Action: Gain 2 plants.. (The mystery deepens.)'},
     });

@@ -9,7 +9,7 @@ import {CardRenderer} from '../render/CardRenderer';
 export class SafeHouse extends Card implements IActionCard, IProjectCard {
   constructor() {
     super({
-      type: CardType.ACTIVE, name: CardName.SAFE_HOUSE, tags: [Tag.CITY, Tag.PLANT], cost: 16,
+      type: CardType.ACTIVE, name: CardName.SAFE_HOUSE, tags: [Tag.CITY, Tag.PLANT], cost: 10,
       metadata: {cardNumber: 'MY014', renderData: CardRenderer.builder((b) => {b.action('Gain 2 heat.', (ab) => {ab.empty().startAction.text('?');});}),
         description: 'Action: Gain 2 heat.. (The unknown beckons.)'},
     });

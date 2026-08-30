@@ -7,7 +7,7 @@ import {CardRenderer} from '../render/CardRenderer';
 export class MysteryCard461 extends Card implements IProjectCard {
   constructor() {
     super({
-      type: CardType.EVENT, name: CardName.MYSTERY_CARD_461, tags: [Tag.POWER], cost: 13,
+      type: CardType.EVENT, name: CardName.MYSTERY_CARD_461, tags: [Tag.POWER], cost: 6,
       behavior: {drawCard: 2},
       metadata: {cardNumber: 'MY461', renderData: CardRenderer.builder((b) => {b.cards(2);}),
         description: 'Draw 2 cards. (Progress demands sacrifice.)'},

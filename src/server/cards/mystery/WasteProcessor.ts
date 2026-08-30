@@ -9,7 +9,7 @@ import {CardRenderer} from '../render/CardRenderer';
 export class WasteProcessor extends Card implements IActionCard, IProjectCard {
   constructor() {
     super({
-      type: CardType.ACTIVE, name: CardName.WASTE_PROCESSOR, tags: [Tag.SCIENCE], cost: 16,
+      type: CardType.ACTIVE, name: CardName.WASTE_PROCESSOR, tags: [Tag.SCIENCE], cost: 12,
       metadata: {cardNumber: 'MY157', renderData: CardRenderer.builder((b) => {b.action('Spend 1 MC to draw a card.', (ab) => {ab.empty().startAction.text('?');});}),
         description: 'Action: Spend 1 MC to draw a card.. (The plot thickens.)'},
     });

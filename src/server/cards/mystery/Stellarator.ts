@@ -7,7 +7,7 @@ import {CardRenderer} from '../render/CardRenderer';
 export class Stellarator extends Card implements IProjectCard {
   constructor() {
     super({
-      type: CardType.AUTOMATED, name: CardName.STELLARATOR, tags: [Tag.SCIENCE, Tag.PLANT], cost: 13,
+      type: CardType.AUTOMATED, name: CardName.STELLARATOR, tags: [Tag.SCIENCE, Tag.PLANT], cost: 21,
       behavior: {production: {plants: 2}, drawCard: 2},
       metadata: {cardNumber: 'MY290', renderData: CardRenderer.builder((b) => {b.production((pb) => {pb.plants(2);}); b.br; b.cards(2);}),
         description: 'Production and draw. (Secrets have power.)'},

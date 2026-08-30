@@ -9,7 +9,7 @@ import {CardRenderer} from '../render/CardRenderer';
 export class SiegeWeapons extends Card implements IActionCard, IProjectCard {
   constructor() {
     super({
-      type: CardType.ACTIVE, name: CardName.SIEGE_WEAPONS, tags: [Tag.SCIENCE, Tag.BUILDING], cost: 10,
+      type: CardType.ACTIVE, name: CardName.SIEGE_WEAPONS, tags: [Tag.SCIENCE, Tag.BUILDING], cost: 12,
       metadata: {cardNumber: 'MY225', renderData: CardRenderer.builder((b) => {b.action('Gain 1 steel and 1 titanium.', (ab) => {ab.empty().startAction.text('?');});}),
         description: 'Action: Gain 1 steel and 1 titanium.. (Nothing is as it seems.)'},
     });

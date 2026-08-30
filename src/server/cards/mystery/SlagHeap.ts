@@ -9,7 +9,7 @@ import {CardRenderer} from '../render/CardRenderer';
 export class SlagHeap extends Card implements IActionCard, IProjectCard {
   constructor() {
     super({
-      type: CardType.ACTIVE, name: CardName.SLAG_HEAP, tags: [Tag.ANIMAL], cost: 19,
+      type: CardType.ACTIVE, name: CardName.SLAG_HEAP, tags: [Tag.ANIMAL], cost: 12,
       metadata: {cardNumber: 'MY158', renderData: CardRenderer.builder((b) => {b.action('Gain 1 steel and 1 titanium.', (ab) => {ab.empty().startAction.text('?');});}),
         description: 'Action: Gain 1 steel and 1 titanium.. (Space warps.)'},
     });

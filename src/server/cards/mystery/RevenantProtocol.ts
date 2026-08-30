@@ -7,7 +7,7 @@ import {CardRenderer} from '../render/CardRenderer';
 export class RevenantProtocol extends Card implements IProjectCard {
   constructor() {
     super({
-      type: CardType.AUTOMATED, name: CardName.REVENANT_PROTOCOL, tags: [Tag.POWER, Tag.PLANT], cost: 27,
+      type: CardType.AUTOMATED, name: CardName.REVENANT_PROTOCOL, tags: [Tag.POWER, Tag.PLANT], cost: 4,
       victoryPoints: -2,
       behavior: {greenery: {}},
       metadata: {cardNumber: 'MY085', renderData: CardRenderer.builder((b) => {b.greenery();}),

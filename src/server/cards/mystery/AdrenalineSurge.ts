@@ -7,7 +7,7 @@ import {CardRenderer} from '../render/CardRenderer';
 export class AdrenalineSurge extends Card implements IProjectCard {
   constructor() {
     super({
-      type: CardType.AUTOMATED, name: CardName.ADRENALINE_SURGE, tags: [Tag.ANIMAL], cost: 12,
+      type: CardType.AUTOMATED, name: CardName.ADRENALINE_SURGE, tags: [Tag.ANIMAL], cost: 16,
       behavior: {production: {heat: 4}},
       metadata: {cardNumber: 'MY339', renderData: CardRenderer.builder((b) => {b.production((pb) => {pb.heat(4);});}),
         description: 'Adjust production. (Innovation breeds opportunity.)'},

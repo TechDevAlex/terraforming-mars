@@ -7,7 +7,7 @@ import {CardRenderer} from '../render/CardRenderer';
 export class AncientRuins extends Card implements IProjectCard {
   constructor() {
     super({
-      type: CardType.EVENT, name: CardName.ANCIENT_RUINS, tags: [Tag.SCIENCE], cost: 22,
+      type: CardType.EVENT, name: CardName.ANCIENT_RUINS, tags: [Tag.SCIENCE], cost: 8,
       behavior: {tr: 2},
       metadata: {cardNumber: 'MY213', renderData: CardRenderer.builder((b) => {b.tr(2);}),
         description: 'Raise your TR 2 steps. (The unknown beckons.)'},

@@ -7,7 +7,7 @@ import {CardRenderer} from '../render/CardRenderer';
 export class TurbineFarm extends Card implements IProjectCard {
   constructor() {
     super({
-      type: CardType.EVENT, name: CardName.TURBINE_FARM, tags: [Tag.MICROBE, Tag.POWER], cost: 21,
+      type: CardType.EVENT, name: CardName.TURBINE_FARM, tags: [Tag.MICROBE, Tag.POWER], cost: 6,
       behavior: {drawCard: 2},
       metadata: {cardNumber: 'MY173', renderData: CardRenderer.builder((b) => {b.cards(2);}),
         description: 'Draw 2 cards. (Nothing is as it seems.)'},

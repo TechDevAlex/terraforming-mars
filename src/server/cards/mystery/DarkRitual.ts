@@ -9,7 +9,7 @@ import {CardRenderer} from '../render/CardRenderer';
 export class DarkRitual extends Card implements IActionCard, IProjectCard {
   constructor() {
     super({
-      type: CardType.ACTIVE, name: CardName.DARK_RITUAL, tags: [Tag.SPACE, Tag.MICROBE], cost: 11,
+      type: CardType.ACTIVE, name: CardName.DARK_RITUAL, tags: [Tag.SPACE, Tag.MICROBE], cost: 14,
       metadata: {cardNumber: 'MY069', renderData: CardRenderer.builder((b) => {b.action('Gain 2 plants.', (ab) => {ab.empty().startAction.text('?');});}),
         description: 'Action: Gain 2 plants.. (Progress demands sacrifice.)'},
     });

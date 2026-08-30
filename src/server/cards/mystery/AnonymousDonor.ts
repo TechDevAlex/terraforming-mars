@@ -7,7 +7,7 @@ import {CardRenderer} from '../render/CardRenderer';
 export class AnonymousDonor extends Card implements IProjectCard {
   constructor() {
     super({
-      type: CardType.EVENT, name: CardName.ANONYMOUS_DONOR, tags: [Tag.EARTH, Tag.MARS], cost: 18,
+      type: CardType.EVENT, name: CardName.ANONYMOUS_DONOR, tags: [Tag.EARTH, Tag.MARS], cost: 9,
       behavior: {drawCard: 3},
       metadata: {cardNumber: 'MY247', renderData: CardRenderer.builder((b) => {b.cards(3);}),
         description: 'Draw 3 cards. (Innovation breeds opportunity.)'},

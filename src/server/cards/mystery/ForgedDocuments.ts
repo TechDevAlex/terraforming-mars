@@ -9,7 +9,7 @@ import {CardRenderer} from '../render/CardRenderer';
 export class ForgedDocuments extends Card implements IActionCard, IProjectCard {
   constructor() {
     super({
-      type: CardType.ACTIVE, name: CardName.FORGED_DOCUMENTS, tags: [Tag.CITY], cost: 7,
+      type: CardType.ACTIVE, name: CardName.FORGED_DOCUMENTS, tags: [Tag.CITY], cost: 13,
       victoryPoints: 3,
       metadata: {cardNumber: 'MY026', renderData: CardRenderer.builder((b) => {b.action('Gain 2 heat.', (ab) => {ab.empty().startAction.text('?');});}),
         description: 'Action: Gain 2 heat.. 3 VP. (Trust no one.)'},

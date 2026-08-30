@@ -9,7 +9,7 @@ import {CardRenderer} from '../render/CardRenderer';
 export class TokamakReactor extends Card implements IActionCard, IProjectCard {
   constructor() {
     super({
-      type: CardType.ACTIVE, name: CardName.TOKAMAK_REACTOR, tags: [Tag.ANIMAL], cost: 12,
+      type: CardType.ACTIVE, name: CardName.TOKAMAK_REACTOR, tags: [Tag.ANIMAL], cost: 14,
       victoryPoints: 1,
       metadata: {cardNumber: 'MY289', renderData: CardRenderer.builder((b) => {b.action('Gain 2 plants.', (ab) => {ab.empty().startAction.text('?');});}),
         description: 'Action: Gain 2 plants.. 1 VP. (Every clue matters.)'},

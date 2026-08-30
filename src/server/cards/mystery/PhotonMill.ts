@@ -9,7 +9,7 @@ import {CardRenderer} from '../render/CardRenderer';
 export class PhotonMill extends Card implements IActionCard, IProjectCard {
   constructor() {
     super({
-      type: CardType.ACTIVE, name: CardName.PHOTON_MILL, tags: [Tag.CITY], cost: 16,
+      type: CardType.ACTIVE, name: CardName.PHOTON_MILL, tags: [Tag.CITY], cost: 12,
       metadata: {cardNumber: 'MY058', renderData: CardRenderer.builder((b) => {b.action('Gain 1 titanium.', (ab) => {ab.empty().startAction.text('?');});}),
         description: 'Action: Gain 1 titanium.. (The mystery deepens.)'},
     });

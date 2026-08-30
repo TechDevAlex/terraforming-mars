@@ -7,7 +7,7 @@ import {CardRenderer} from '../render/CardRenderer';
 export class LobbyGroup extends Card implements IProjectCard {
   constructor() {
     super({
-      type: CardType.AUTOMATED, name: CardName.LOBBY_GROUP, tags: [Tag.MARS], cost: 20,
+      type: CardType.AUTOMATED, name: CardName.LOBBY_GROUP, tags: [Tag.MARS], cost: 7,
       behavior: {tr: 1, production: {megacredits: 1}},
       metadata: {cardNumber: 'MY193', renderData: CardRenderer.builder((b) => {b.tr(1);}),
         description: 'Raise your TR 1 step. (Steel and will forge the path.)'},

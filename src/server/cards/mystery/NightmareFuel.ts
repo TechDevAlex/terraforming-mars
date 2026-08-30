@@ -9,7 +9,7 @@ import {CardRenderer} from '../render/CardRenderer';
 export class NightmareFuel extends Card implements IActionCard, IProjectCard {
   constructor() {
     super({
-      type: CardType.ACTIVE, name: CardName.NIGHTMARE_FUEL, tags: [Tag.BUILDING], cost: 7,
+      type: CardType.ACTIVE, name: CardName.NIGHTMARE_FUEL, tags: [Tag.BUILDING], cost: 10,
       victoryPoints: -1,
       metadata: {cardNumber: 'MY088', renderData: CardRenderer.builder((b) => {b.action('Gain 2 heat.', (ab) => {ab.empty().startAction.text('?');});}),
         description: 'Action: Gain 2 heat.. -1 VP. (The mystery deepens.)'},

@@ -7,7 +7,7 @@ import {CardRenderer} from '../render/CardRenderer';
 export class SummitMeeting extends Card implements IProjectCard {
   constructor() {
     super({
-      type: CardType.AUTOMATED, name: CardName.SUMMIT_MEETING, tags: [Tag.MICROBE], cost: 26,
+      type: CardType.AUTOMATED, name: CardName.SUMMIT_MEETING, tags: [Tag.MICROBE], cost: 17,
       victoryPoints: 1,
       behavior: {production: {plants: 2}},
       metadata: {cardNumber: 'MY209', renderData: CardRenderer.builder((b) => {b.production((pb) => {pb.plants(2);});}),

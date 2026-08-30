@@ -6,7 +6,7 @@ import {CardRenderer} from '../render/CardRenderer';
 export class DarkWebHub extends Card implements IProjectCard {
   constructor() {
     super({
-      type: CardType.EVENT, name: CardName.DARK_WEB_HUB, tags: [], cost: 11,
+      type: CardType.EVENT, name: CardName.DARK_WEB_HUB, tags: [], cost: 5,
       behavior: {global: {temperature: 1}},
       metadata: {cardNumber: 'MY100', renderData: CardRenderer.builder((b) => {b.temperature(1);}),
         description: 'Raise temperature 1 step. (The stars align.)'},

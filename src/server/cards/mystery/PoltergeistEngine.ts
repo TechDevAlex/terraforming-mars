@@ -7,7 +7,7 @@ import {CardRenderer} from '../render/CardRenderer';
 export class PoltergeistEngine extends Card implements IProjectCard {
   constructor() {
     super({
-      type: CardType.AUTOMATED, name: CardName.POLTERGEIST_ENGINE, tags: [Tag.SCIENCE], cost: 22,
+      type: CardType.AUTOMATED, name: CardName.POLTERGEIST_ENGINE, tags: [Tag.SCIENCE], cost: 8,
       behavior: {greenery: {}},
       metadata: {cardNumber: 'MY082', renderData: CardRenderer.builder((b) => {b.greenery();}),
         description: 'Place greenery. (Nature finds a way.)'},
