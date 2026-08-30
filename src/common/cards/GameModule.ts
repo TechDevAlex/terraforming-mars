@@ -15,6 +15,7 @@ export const EXPANSIONS = [
   'harrypotter',
   'underworld',
   'boom',
+  'mystery',
 ] as const;
 
 export const GAME_MODULES = [
@@ -43,6 +44,7 @@ export const MODULE_NAMES: Readonly<Record<GameModule, string>> = {
   harrypotter: 'Harry Potter',
   underworld: 'Underworld',
   boom: 'BOOM!',
+  mystery: 'Mystery',
 };
 
 export const DEFAULT_EXPANSIONS: Record<Expansion, boolean> = {
@@ -62,4 +64,5 @@ export const DEFAULT_EXPANSIONS: Record<Expansion, boolean> = {
   harrypotter: false,
   underworld: false,
   boom: false,
+  mystery: false,
 };

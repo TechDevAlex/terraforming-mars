@@ -1,0 +1,16 @@
+import {IProjectCard} from '../IProjectCard';
+import {Tag} from '../../../common/cards/Tag';
+import {Card} from '../Card';
+import {CardType} from '../../../common/cards/CardType';
+import {CardName} from '../../../common/cards/CardName';
+import {CardRenderer} from '../render/CardRenderer';
+export class WormholeGate extends Card implements IProjectCard {
+  constructor() {
+    super({
+      type: CardType.EVENT, name: CardName.WORMHOLE_GATE, tags: [Tag.SCIENCE], cost: 19,
+      behavior: {drawCard: 2},
+      metadata: {cardNumber: 'MY044', renderData: CardRenderer.builder((b) => {b.text('Draw cards.');}),
+        description: 'Draw cards. (The mystery deepens.)'},
+    });
+  }
+}

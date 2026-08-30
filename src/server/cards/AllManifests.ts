@@ -18,6 +18,7 @@ import {STAR_WARS_CARD_MANIFEST} from './starwars/StarwarsCardManifest';
 import {HARRY_POTTER_CARD_MANIFEST} from './harrypotter/HarryPotterCardManifest';
 import {UNDERWORLD_CARD_MANIFEST} from './underworld/UnderworldCardManifest';
 import {BOOM_CARD_MANIFEST} from './boom/BoomCardManifest';
+import {MYSTERY_CARD_MANIFEST} from './mystery/MysteryCardManifest';
 
 export const ALL_MODULE_MANIFESTS: Array<ModuleManifest> = [
   BASE_CARD_MANIFEST,
@@ -37,4 +38,5 @@ export const ALL_MODULE_MANIFESTS: Array<ModuleManifest> = [
   HARRY_POTTER_CARD_MANIFEST,
   UNDERWORLD_CARD_MANIFEST,
   BOOM_CARD_MANIFEST,
+  MYSTERY_CARD_MANIFEST,
 ];

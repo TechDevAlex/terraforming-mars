@@ -59,7 +59,8 @@ import {AddResourcesToCard} from './deferredActions/AddResourcesToCard';
 import {ColonyDeserializer} from './colonies/ColonyDeserializer';
 import {GameLoader} from './database/GameLoader';
 import {DEFAULT_GAME_OPTIONS, GameOptions} from './game/GameOptions';
-import {CorporationDeck, PreludeDeck, ProjectDeck, CeoDeck} from './cards/Deck';
+import {Deck, CorporationDeck, PreludeDeck, ProjectDeck, CeoDeck} from './cards/Deck';
+import {IProjectCard} from './cards/IProjectCard';
 import {Logger} from './logs/Logger';
 import {addDays, stringToNumber} from './database/utils';
 import {Tag} from '../common/cards/Tag';
@@ -262,6 +263,7 @@ export class Game implements IGame, Logger {
         harrypotter: options.harryPotterExpansion ?? false,
         underworld: options.underworldExpansion ?? false,
         boom: options.boomExpansion ?? false,
+        mystery: options.mysteryExpansion ?? false,
       };
     }
     const gameOptions = {...DEFAULT_GAME_OPTIONS, ...options};
@@ -364,6 +366,17 @@ export class Game implements IGame, Logger {
 
     // Initialize each player:
     // Give them their corporation cards, other cards, starting production,
+    // Extract trap cards from project deck if Mystery expansion is active
+    let trapPool: Array<IProjectCard> = [];
+    if (gameOptions.mysteryExpansion) {
+      trapPool = projectDeck.drawPile.filter((c) => c.name.toString().startsWith('Trap:'));
+      for (const trap of trapPool) {
+        const idx = projectDeck.drawPile.indexOf(trap);
+        if (idx >= 0) projectDeck.drawPile.splice(idx, 1);
+      }
+      Deck.shuffle(trapPool, game.rng);
+    }
+
     // handicaps.
     for (const player of game.playersInGenerationOrder) {
       player.setTerraformRating(player.terraformRating + player.handicap);
@@ -401,6 +414,10 @@ export class Game implements IGame, Logger {
         if (gameOptions.ceoExtension) {
           gameOptions.startingCeos = Math.max(gameOptions.startingCeos ?? 0, constants.CEO_CARDS_DEALT_PER_PLAYER);
           player.dealtCeoCards.push(...ceoDeck.drawN(game, gameOptions.startingCeos));
+        }
+        // Deal trap cards if Mystery expansion is active
+        if (gameOptions.mysteryExpansion && trapPool.length >= 4) {
+          player.dealtTrapCards.push(...trapPool.splice(0, 4));
         }
       } else {
         game.playerHasPickedCorporationCard(player, new BeginnerCorporation());

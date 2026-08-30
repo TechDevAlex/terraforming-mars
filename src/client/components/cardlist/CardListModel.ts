@@ -40,6 +40,7 @@ const MODULE_ABBREVIATIONS: Record<GameModule, string> = {
   harrypotter: 'HP',
   underworld: 'u',
   boom: 'B!',
+  mystery: 'M?',
 };
 
 const TYPE_ABBREVIATIONS: Record<TypeOption, string> = {
@@ -101,6 +102,7 @@ export function hashToModel(windowLocationHash: string): CardListModel {
       harrypotter: true,
       underworld: true,
       boom: true,
+      mystery: true,
     },
     types: {
       event: true,

@@ -181,6 +181,12 @@
                                 <div class="create-game-expansion-icon expansion-icon-boom"></div>
                                 <span v-i18n>BOOM!</span>
                             </label>
+
+                            <input type="checkbox" name="mystery" id="mystery-checkbox" v-model="expansions.mystery">
+                            <label for="mystery-checkbox" class="expansion-button">
+                                <div class="create-game-expansion-icon expansion-icon-mystery"></div>
+                                <span v-i18n>Mystery</span>
+                            </label>
                         </div>
 
                         <div class="create-game-page-column">
@@ -812,6 +818,7 @@ export default (Vue as WithRefs<Refs>).extend({
               starwars: json_constants.STARWARSEXPANSION,
               harrypotter: json_constants.HARRYPOTTEREXPANSION,
               boom: json_constants.BOOMEXPANSION,
+              mystery: json_constants.MYSTERYEXPANSION,
               underworld: json_constants.UNDERWORLDEXPANSION,
             } as const;
             for (const expansion of Object.keys(oldFields)) {

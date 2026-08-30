@@ -39,6 +39,7 @@ export type GameOptions = {
   harryPotterExpansion: boolean;
   underworldExpansion: boolean;
   boomExpansion: boolean;
+  mysteryExpansion: boolean;
 
   expansions: Record<Expansion, boolean>,
 
@@ -119,6 +120,7 @@ export const DEFAULT_GAME_OPTIONS: GameOptions = {
     harrypotter: false,
     underworld: false,
     boom: false,
+    mystery: false,
   },
   fastModeOption: false,
   includeFanMA: false,
@@ -151,6 +153,7 @@ export const DEFAULT_GAME_OPTIONS: GameOptions = {
   turmoilExtension: false,
   underworldExpansion: false,
   boomExpansion: false,
+  mysteryExpansion: false,
   undoOption: false,
   venusNextExtension: false,
   twoCorpsVariant: false,

@@ -430,6 +430,7 @@ export class Server {
         harrypotter: options.harryPotterExpansion,
         underworld: options.underworldExpansion,
         boom: options.boomExpansion,
+        mystery: options.mysteryExpansion,
       },
       fastModeOption: options.fastModeOption,
       includedCards: options.includedCards,

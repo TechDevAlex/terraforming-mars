@@ -104,6 +104,7 @@ export interface IPlayer {
   // Cards
   dealtCorporationCards: Array<ICorporationCard>;
   dealtPreludeCards: Array<IPreludeCard>;
+  dealtTrapCards: Array<IProjectCard>;
   dealtCeoCards: Array<ICeoCard>;
   dealtProjectCards: Array<IProjectCard>;
   cardsInHand: Array<IProjectCard>;

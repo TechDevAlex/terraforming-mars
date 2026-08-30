@@ -1,0 +1,17 @@
+import {IProjectCard} from '../IProjectCard';
+import {Tag} from '../../../common/cards/Tag';
+import {Card} from '../Card';
+import {CardType} from '../../../common/cards/CardType';
+import {CardName} from '../../../common/cards/CardName';
+import {CardRenderer} from '../render/CardRenderer';
+export class ExtremophileColony extends Card implements IProjectCard {
+  constructor() {
+    super({
+      type: CardType.AUTOMATED, name: CardName.EXTREMOPHILE_COLONY, tags: [Tag.POWER, Tag.SCIENCE], cost: 18,
+      victoryPoints: 3,
+      behavior: {tr: 1, production: {megacredits: 2}},
+      metadata: {cardNumber: 'MY130', renderData: CardRenderer.builder((b) => {b.text('TR and production.');}),
+        description: 'TR and production. (Every clue matters.)'},
+    });
+  }
+}

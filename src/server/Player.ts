@@ -128,6 +128,7 @@ export class Player implements IPlayer {
   // Cards
   public dealtCorporationCards: Array<ICorporationCard> = [];
   public dealtPreludeCards: Array<IPreludeCard> = [];
+  public dealtTrapCards: Array<IProjectCard> = [];
   public dealtCeoCards: Array<ICeoCard> = [];
   public dealtProjectCards: Array<IProjectCard> = [];
   public cardsInHand: Array<IProjectCard> = [];
@@ -1735,6 +1736,7 @@ export class Player implements IPlayer {
       // Cards
       dealtCorporationCards: this.dealtCorporationCards.map(toName),
       dealtPreludeCards: this.dealtPreludeCards.map(toName),
+      dealtTrapCards: this.dealtTrapCards.map(toName),
       dealtCeoCards: this.dealtCeoCards.map(toName),
       dealtProjectCards: this.dealtProjectCards.map(toName),
       cardsInHand: this.cardsInHand.map(toName),
@@ -1859,6 +1861,7 @@ export class Player implements IPlayer {
     player.pendingInitialActions = corporationCardsFromJSON(d.pendingInitialActions ?? []);
     player.dealtCorporationCards = corporationCardsFromJSON(d.dealtCorporationCards);
     player.dealtPreludeCards = preludesFromJSON(d.dealtPreludeCards);
+    player.dealtTrapCards = cardsFromJSON(d.dealtTrapCards ?? []);
     player.dealtCeoCards = ceosFromJSON(d.dealtCeoCards);
     player.dealtProjectCards = cardsFromJSON(d.dealtProjectCards);
     player.cardsInHand = cardsFromJSON(d.cardsInHand);

@@ -25,6 +25,7 @@ import {STAR_WARS_CARD_MANIFEST} from './cards/starwars/StarwarsCardManifest';
 import {HARRY_POTTER_CARD_MANIFEST} from './cards/harrypotter/HarryPotterCardManifest';
 import {UNDERWORLD_CARD_MANIFEST} from './cards/underworld/UnderworldCardManifest';
 import {BOOM_CARD_MANIFEST} from './cards/boom/BoomCardManifest';
+import {MYSTERY_CARD_MANIFEST} from './cards/mystery/MysteryCardManifest';
 
 /**
  * Returns the cards available to a game based on its `GameOptions`.
@@ -64,6 +65,7 @@ export class GameCards {
       [gameOptions.harryPotterExpansion, HARRY_POTTER_CARD_MANIFEST],
       [gameOptions.underworldExpansion, UNDERWORLD_CARD_MANIFEST],
       [gameOptions.boomExpansion, BOOM_CARD_MANIFEST],
+      [gameOptions.mysteryExpansion, MYSTERY_CARD_MANIFEST],
     ];
 
     this.moduleManifests = manifests

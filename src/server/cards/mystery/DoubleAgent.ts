@@ -1,0 +1,17 @@
+import {IProjectCard} from '../IProjectCard';
+import {Tag} from '../../../common/cards/Tag';
+import {Card} from '../Card';
+import {CardType} from '../../../common/cards/CardType';
+import {CardName} from '../../../common/cards/CardName';
+import {CardRenderer} from '../render/CardRenderer';
+export class DoubleAgent extends Card implements IProjectCard {
+  constructor() {
+    super({
+      type: CardType.AUTOMATED, name: CardName.DOUBLE_AGENT, tags: [Tag.BUILDING], cost: 10,
+      victoryPoints: 3,
+      behavior: {tr: 1, production: {steel: 1}},
+      metadata: {cardNumber: 'MY006', renderData: CardRenderer.builder((b) => {b.text('TR and production.');}),
+        description: 'TR and production. (Innovation breeds opportunity.)'},
+    });
+  }
+}
