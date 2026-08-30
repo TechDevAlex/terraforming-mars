@@ -32,7 +32,7 @@
           <tr><td>2 pts</td><td>Draw 1</td></tr>
           <tr><td>3-4 pts</td><td>Draw 2</td></tr>
           <tr><td>5-6 pts</td><td>Draw 2 + 3 M€</td></tr>
-          <tr><td>7+ pts</td><td>Draw 3 + 1 TR</td></tr>
+          <tr><td>8+ pts</td><td>Draw 3 + 1 TR</td></tr>
         </table>
         <p v-i18n>No events, corporations, preludes, or CEOs. Once per generation.</p>
       </div>

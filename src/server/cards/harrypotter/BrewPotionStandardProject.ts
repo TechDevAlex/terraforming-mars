@@ -52,7 +52,7 @@ export class BrewPotionStandardProject extends StandardProjectCard {
    * 7+ pts: Felix Felicis — Draw 3 free + 1 TR
    */
   private static applyRewards(player: IPlayer, points: number): void {
-    if (points >= 7) {
+    if (points >= 8) {
       // Felix Felicis
       player.drawCard(3);
       player.increaseTerraformRating();
