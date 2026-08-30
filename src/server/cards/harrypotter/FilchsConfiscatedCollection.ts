@@ -7,11 +7,11 @@ import {Player} from '../../Player';
 import {CardName} from '../../../common/cards/CardName';
 import {CardRenderer} from '../render/CardRenderer';
 
-export class RoomOfRequirement extends Card implements IActionCard, IProjectCard {
+export class FilchsConfiscatedCollection extends Card implements IActionCard, IProjectCard {
   constructor() {
     super({
       type: CardType.ACTIVE,
-      name: CardName.ROOM_OF_REQUIREMENT,
+      name: CardName.FILCHS_CONFISCATED_COLLECTION,
       tags: [Tag.SCIENCE],
       cost: 8,
 
@@ -22,7 +22,7 @@ export class RoomOfRequirement extends Card implements IActionCard, IProjectCard
             ab.megacredits(2).startAction.cards(1);
           });
         }),
-        description: 'Action: Spend 2 M€ to draw a card.',
+        description: 'Action: Spend 2 M€ to draw a card. (Argus Filch — the grumpy Hogwarts caretaker whose office is stuffed with confiscated items from generations of students.)',
       },
     });
   }

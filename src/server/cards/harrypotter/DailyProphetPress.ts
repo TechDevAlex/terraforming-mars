@@ -22,7 +22,7 @@ export class DailyProphetPress extends Card implements IProjectCard {
         renderData: CardRenderer.builder((b) => {
           b.production((pb) => pb.megacredits(2));
         }),
-        description: 'Increase your M€ production 2 steps.',
+        description: 'Increase your M€ production 2 steps. (The Daily Prophet — the wizarding world\'s newspaper of record, delivered fresh each morning by owl post.)',
       },
     });
   }

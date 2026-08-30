@@ -6,11 +6,11 @@ import {CardName} from '../../../common/cards/CardName';
 import {CardRenderer} from '../render/CardRenderer';
 import {digit} from '../Options';
 
-export class ForbiddenForest extends Card implements IProjectCard {
+export class NevillesHerbologyLesson extends Card implements IProjectCard {
   constructor() {
     super({
       type: CardType.EVENT,
-      name: CardName.FORBIDDEN_FOREST,
+      name: CardName.NEVILLES_HERBOLOGY_LESSON,
       tags: [Tag.MARS],
       cost: 5,
 
@@ -23,7 +23,7 @@ export class ForbiddenForest extends Card implements IProjectCard {
         renderData: CardRenderer.builder((b) => {
           b.plants(4, {digit});
         }),
-        description: 'Gain 4 plants.',
+        description: 'Gain 4 plants. (Neville Longbottom — clumsy but kind-hearted, with a surprising gift for Herbology.)',
       },
     });
   }

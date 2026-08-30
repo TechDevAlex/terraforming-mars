@@ -22,7 +22,7 @@ export class DiagonAlleyShops extends Card implements IProjectCard {
             eb.tag(Tag.EARTH).startEffect.megacredits(-2);
           });
         }),
-        description: 'Effect: When you play an Earth tag, you pay 2 M€ less for it.',
+        description: 'Effect: When you play an Earth tag, you pay 2 M€ less for it. (Diagon Alley — the cobblestoned wizarding high street, home to Ollivanders, Flourish & Blotts, and every shop a young witch or wizard could dream of.)',
       },
     });
   }

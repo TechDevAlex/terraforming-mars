@@ -8,22 +8,23 @@ import {CardRenderer} from '../render/CardRenderer';
 export class ElderWand extends Card implements IProjectCard {
   constructor() {
     super({
-      type: CardType.AUTOMATED,
+      type: CardType.ACTIVE,
       name: CardName.ELDER_WAND,
-      tags: [Tag.SCIENCE],
-      cost: 5,
+      tags: [Tag.JOVIAN, Tag.JOVIAN],
+      cost: 26,
+      victoryPoints: {tag: Tag.JOVIAN},
 
       behavior: {
-        drawCard: 1,
-        stock: {megacredits: 2},
+        production: {titanium: 1},
       },
 
       metadata: {
-        cardNumber: 'HP19',
+        cardNumber: 'HP20',
         renderData: CardRenderer.builder((b) => {
-          b.cards(1).megacredits(2);
+          b.production((pb) => pb.titanium(1)).br;
+          b.vpText('1 VP per Jovian tag you have.');
         }),
-        description: 'Draw 1 card. Gain 2 M€.',
+        description: 'Increase your titanium production 1 step. 1 VP per Jovian tag you have. (The Elder Wand — the most powerful wand in existence, one of the three Deathly Hallows. Its allegiance must be won, never given.)',
       },
     });
   }

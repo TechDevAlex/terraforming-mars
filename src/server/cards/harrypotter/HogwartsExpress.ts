@@ -25,7 +25,7 @@ export class HogwartsExpress extends Card implements IProjectCard {
           b.city().br;
           b.production((pb) => pb.megacredits(1).slash().tag(Tag.CITY));
         }),
-        description: 'Place a city tile. Increase your M€ production 1 step for each city tag you have, including this.',
+        description: 'Place a city tile. Increase your M€ production 1 step for each city tag you have, including this. (The Hogwarts Express — the scarlet steam engine departing Platform 9¾, carrying students to the greatest school of witchcraft and wizardry in the world.)',
       },
     });
   }

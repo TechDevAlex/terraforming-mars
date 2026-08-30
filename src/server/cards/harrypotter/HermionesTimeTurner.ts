@@ -23,7 +23,7 @@ export class HermionesTimeTurner extends Card implements IProjectCard {
         renderData: CardRenderer.builder((b) => {
           b.production((pb) => pb.megacredits(1).slash().tag(Tag.SCIENCE, 2));
         }),
-        description: 'Increase your M€ production 1 step for every 2 science tags you have, including this.',
+        description: 'Increase your M€ production 1 step for every 2 science tags you have, including this. (Hermione\'s Time-Turner — a tiny golden hourglass that lets its wearer slip back through time. She used it to attend extra classes, naturally.)',
       },
     });
   }

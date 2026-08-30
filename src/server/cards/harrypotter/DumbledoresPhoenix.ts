@@ -24,7 +24,7 @@ export class DumbledoresPhoenix extends Card implements IProjectCard {
           b.production((pb) => pb.energy(1)).br;
           b.vpText('1 VP per 2 science tags you have.');
         }),
-        description: 'Increase your energy production 1 step. 1 VP per 2 science tags you have.',
+        description: 'Increase your energy production 1 step. 1 VP per 2 science tags you have. (Fawkes — Dumbledore\'s phoenix, whose tears heal and whose song strengthens the pure of heart.)',
       },
     });
   }

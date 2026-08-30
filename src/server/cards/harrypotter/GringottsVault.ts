@@ -24,7 +24,7 @@ export class GringottsVault extends Card implements IProjectCard {
           b.production((pb) => pb.megacredits(5)).br;
           b.minus().tr(2);
         }),
-        description: 'Increase your M€ production 5 steps. Lose 2 TR.',
+        description: 'Increase your M€ production 5 steps. Lose 2 TR. (Gringotts — the goblin-run wizarding bank. Its vaults run miles beneath London, guarded by dragons and dark enchantments. Safe, but at what cost?)',
       },
     });
   }

@@ -27,7 +27,7 @@ export class OrderOfThePhoenix extends Card implements IActionCard, IProjectCard
           b.br;
           b.text('When you have 5+ agendas here, all cards you play cost 3 M€ less.', Size.SMALL, true);
         }),
-        description: 'Action: Add 1 agenda resource to this card. When you have 5 or more agendas here, all cards you play cost 3 M€ less.',
+        description: 'Action: Add 1 agenda resource to this card. When you have 5 or more agendas here, all cards you play cost 3 M€ less. (The Order of the Phoenix — Dumbledore\'s secret society, quietly gathering strength against the Dark Lord.)',
       },
     });
   }

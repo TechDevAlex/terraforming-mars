@@ -26,7 +26,7 @@ export class FiendfyreUnleashed extends Card implements IProjectCard {
           b.tr(1).temperature(1).br;
           b.heat(5, {digit});
         }),
-        description: 'Raise your TR 1 step. Raise temperature 1 step. Gain 5 heat.',
+        description: 'Raise your TR 1 step. Raise temperature 1 step. Gain 5 heat. (Fiendfyre — cursed flames of immense destructive power that take the form of fiery serpents and chimeras. Nearly impossible to control once unleashed.)',
       },
     });
   }

@@ -28,7 +28,7 @@ export class ChamberOfSecrets extends Card implements IProjectCard {
           b.oxygen(1).br;
           b.resource(CardResource.MICROBE, {amount: 3, digit}).asterix();
         }),
-        description: 'Raise oxygen 1 step. Add 3 microbes to ANY card.',
+        description: 'Raise oxygen 1 step. Add 3 microbes to ANY card. (The Chamber of Secrets — Salazar Slytherin\'s hidden lair deep beneath Hogwarts, home to the monstrous Basilisk.)',
       },
     });
   }

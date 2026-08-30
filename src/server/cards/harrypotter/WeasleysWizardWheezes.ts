@@ -23,7 +23,7 @@ export class WeasleysWizardWheezes extends Card implements IProjectCard {
             eb.tag(Tag.BUILDING).startEffect.steel(1);
           });
         }),
-        description: 'Effect: When you play a building tag, gain 1 steel.',
+        description: 'Effect: When you play a building tag, gain 1 steel. (Weasleys\' Wizard Wheezes — Fred and George\'s joke shop at 93 Diagon Alley. Skiving Snackboxes, Extendable Ears, and chaos sold daily.)',
       },
     });
   }

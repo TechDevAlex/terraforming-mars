@@ -5,25 +5,25 @@ import {CardType} from '../../../common/cards/CardType';
 import {CardName} from '../../../common/cards/CardName';
 import {CardRenderer} from '../render/CardRenderer';
 
-export class MandrakeNursery extends Card implements IProjectCard {
+export class TrevorNevillesToad extends Card implements IProjectCard {
   constructor() {
     super({
       type: CardType.AUTOMATED,
-      name: CardName.MANDRAKE_NURSERY,
-      tags: [Tag.PLANT],
-      cost: 8,
+      name: CardName.TREVOR_NEVILLES_TOAD,
+      tags: [Tag.SCIENCE],
+      cost: 5,
 
       behavior: {
-        production: {plants: 1},
-        stock: {plants: 2},
+        drawCard: 1,
+        stock: {megacredits: 2},
       },
 
       metadata: {
-        cardNumber: 'HP18',
+        cardNumber: 'HP19',
         renderData: CardRenderer.builder((b) => {
-          b.production((pb) => pb.plants(1)).plants(2);
+          b.cards(1).megacredits(2);
         }),
-        description: 'Increase your plant production 1 step. Gain 2 plants. (Mandrakes — magical plants whose cry can knock you unconscious, or worse. Handle with earmuffs.)',
+        description: 'Draw 1 card. Gain 2 M€. (Trevor — Neville\'s perpetually escaping toad. Mostly useless, but you can\'t help feeling fond of him.)',
       },
     });
   }

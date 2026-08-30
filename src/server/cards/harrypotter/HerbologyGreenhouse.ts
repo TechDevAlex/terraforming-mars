@@ -22,7 +22,7 @@ export class HerbologyGreenhouse extends Card implements IProjectCard {
         renderData: CardRenderer.builder((b) => {
           b.production((pb) => pb.plants(2).megacredits(1));
         }),
-        description: 'Increase your plant production 2 steps and your M€ production 1 step.',
+        description: 'Increase your plant production 2 steps and your M€ production 1 step. (Professor Sprout\'s Greenhouse — where Mandrakes scream, Venomous Tentaculas snap, and students learn that magic grows from the earth.)',
       },
     });
   }

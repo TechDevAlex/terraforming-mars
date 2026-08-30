@@ -27,7 +27,7 @@ export class SlytherinAmbition extends Card implements IProjectCard {
             eb.city({size: Size.SMALL, all}).startEffect.production((pb) => pb.megacredits(1));
           });
         }),
-        description: 'Effect: When any opponent places a city tile, increase your M€ production 1 step.',
+        description: 'Effect: When any opponent places a city tile, increase your M€ production 1 step. (Slytherin House — where the cunning and ambitious thrive. Why build when you can profit from what others build?)',
       },
     });
   }

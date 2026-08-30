@@ -930,12 +930,12 @@ export enum CardName {
   // Harry Potter
   MINISTRY_OF_MAGIC_POWER_GRID = 'Ministry of Magic Power Grid',
   DIAGON_ALLEY_SHOPS = 'Diagon Alley Shops',
-  ROOM_OF_REQUIREMENT = 'Room of Requirement',
+  FILCHS_CONFISCATED_COLLECTION = 'Filch\'s Confiscated Collection',
   DAILY_PROPHET_PRESS = 'Daily Prophet Press',
   LEAKY_CAULDRON = 'Leaky Cauldron',
   HOGWARTS_EXPRESS = 'Hogwarts Express',
   GRINGOTTS_VAULT = 'Gringotts Vault',
-  FORBIDDEN_FOREST = 'Forbidden Forest',
+  NEVILLES_HERBOLOGY_LESSON = 'Neville\'s Herbology Lesson',
   DUMBLEDORES_PHOENIX = 'Dumbledore\'s Phoenix',
   HERBOLOGY_GREENHOUSE = 'Herbology Greenhouse',
   PETRIFICUS_TOTALUS = 'Petrificus Totalus',
@@ -946,8 +946,8 @@ export enum CardName {
   WEASLEYS_WIZARD_WHEEZES = 'Weasley\'s Wizard Wheezes',
   CHAMBER_OF_SECRETS = 'Chamber of Secrets',
   MANDRAKE_NURSERY = 'Mandrake Nursery',
+  TREVOR_NEVILLES_TOAD = 'Trevor, Neville\'s Toad',
   ELDER_WAND = 'Elder Wand',
-  THESTRALS = 'Thestrals',
 
 
   // BOOM!

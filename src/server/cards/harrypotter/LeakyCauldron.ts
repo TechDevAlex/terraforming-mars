@@ -23,7 +23,7 @@ export class LeakyCauldron extends Card implements IActionCard, IProjectCard {
             ab.plants(2).startAction.megacredits(3);
           });
         }),
-        description: 'Action: Spend 2 plants to gain 3 M€.',
+        description: 'Action: Spend 2 plants to gain 3 M€. (The Leaky Cauldron — the dingy but beloved pub that serves as the gateway between Muggle London and Diagon Alley.)',
       },
     });
   }

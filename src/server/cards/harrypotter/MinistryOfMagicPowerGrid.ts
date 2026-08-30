@@ -22,7 +22,7 @@ export class MinistryOfMagicPowerGrid extends Card implements IProjectCard {
         renderData: CardRenderer.builder((b) => {
           b.production((pb) => pb.energy(3).plants(-1));
         }),
-        description: 'Increase your energy production 3 steps. Decrease your plant production 1 step.',
+        description: 'Increase your energy production 3 steps. Decrease your plant production 1 step. (The Ministry of Magic — the sprawling bureaucratic heart of wizarding Britain, hidden beneath London.)',
       },
     });
   }

@@ -21,7 +21,7 @@ export class PetrificusTotalus extends Card implements IProjectCard {
         renderData: CardRenderer.builder((b) => {
           b.minus().megacredits(3, {all, digit}).asterix();
         }),
-        description: 'Every other player loses 3 M€.',
+        description: 'Every other player loses 3 M€. (Petrificus Totalus — the Full Body-Bind Curse. Your arms snap to your sides, your legs lock together, and you topple like a board.)',
       },
     });
   }
