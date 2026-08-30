@@ -16,6 +16,27 @@
         <Card :card="{'name': card}" />
       </div>
 
+      <h2 v-i18n>Harry Potter Expansion</h2>
+      <div class="cardbox">
+        <Card :card="{'name': getBrewPotion()}" />
+      </div>
+      <div class="help-potion-legend">
+        <h3 v-i18n>Brew Potion — Ingredient Points</h3>
+        <table>
+          <tr><td>Hand card</td><td>1 pt</td></tr>
+          <tr><td>Green card (played)</td><td>1 pt per tag</td></tr>
+          <tr><td>Blue card (played)</td><td>2 + 1 pt per tag</td></tr>
+        </table>
+        <h3 v-i18n>Brew Potion — Potions (drawn cards are free)</h3>
+        <table>
+          <tr><td>2 pts</td><td>Draw 1</td></tr>
+          <tr><td>3-4 pts</td><td>Draw 2</td></tr>
+          <tr><td>5-6 pts</td><td>Draw 2 + 3 M€</td></tr>
+          <tr><td>7+ pts</td><td>Draw 3 + 1 TR</td></tr>
+        </table>
+        <p v-i18n>No events, corporations, preludes, or CEOs. Once per generation.</p>
+      </div>
+
     </div>
 </template>
 <script lang="ts">
@@ -57,6 +78,7 @@ export default Vue.extend({
       CardName.EXCAVATE_STANDARD_PROJECT,
       CardName.COLLUSION_STANDARD_PROJECT,
     ],
+    getBrewPotion: () => CardName.BREW_POTION_STANDARD_PROJECT,
   },
 });
 </script>
