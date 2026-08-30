@@ -9,7 +9,7 @@ export class EnigmaMachine extends Card implements IProjectCard {
     super({
       type: CardType.EVENT, name: CardName.ENIGMA_MACHINE, tags: [Tag.SCIENCE], cost: 16,
       behavior: {drawCard: 1},
-      metadata: {cardNumber: 'MY091', renderData: CardRenderer.builder((b) => {b.text('Draw cards.');}),
+      metadata: {cardNumber: 'MY091', renderData: CardRenderer.builder((b) => {b.cards(1);}),
         description: 'Draw 1 card. (The truth is out there.)'},
     });
   }

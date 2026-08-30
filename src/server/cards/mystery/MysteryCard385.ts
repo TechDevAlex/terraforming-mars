@@ -9,7 +9,7 @@ export class MysteryCard385 extends Card implements IProjectCard {
     super({
       type: CardType.AUTOMATED, name: CardName.MYSTERY_CARD_385, tags: [Tag.PLANT], cost: 22,
       behavior: {city: {}, production: {megacredits: 1}},
-      metadata: {cardNumber: 'MY385', renderData: CardRenderer.builder((b) => {b.text('Place city, gain production.');}),
+      metadata: {cardNumber: 'MY385', renderData: CardRenderer.builder((b) => {b.production((pb) => {pb.megacredits(1);}); b.br; b.city();}),
         description: 'Place city, gain production. (The veil lifts.)'},
     });
   }

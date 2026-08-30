@@ -10,7 +10,7 @@ export class MysteryCard525 extends Card implements IProjectCard {
       type: CardType.AUTOMATED, name: CardName.MYSTERY_CARD_525, tags: [Tag.JOVIAN], cost: 20,
       victoryPoints: 2,
       behavior: {city: {}, production: {megacredits: 2}},
-      metadata: {cardNumber: 'MY525', renderData: CardRenderer.builder((b) => {b.text('Place city, gain production.');}),
+      metadata: {cardNumber: 'MY525', renderData: CardRenderer.builder((b) => {b.production((pb) => {pb.megacredits(2);}); b.br; b.city();}),
         description: '2 VP. (Every clue matters.)'},
     });
   }

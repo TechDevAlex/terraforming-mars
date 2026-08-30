@@ -9,7 +9,7 @@ export class IdentityTheft extends Card implements IProjectCard {
     super({
       type: CardType.AUTOMATED, name: CardName.IDENTITY_THEFT, tags: [Tag.SCIENCE], cost: 12,
       behavior: {production: {heat: 1, plants: 1}},
-      metadata: {cardNumber: 'MY108', renderData: CardRenderer.builder((b) => {b.text('Adjust production.');}),
+      metadata: {cardNumber: 'MY108', renderData: CardRenderer.builder((b) => {b.production((pb) => {pb.heat(1); pb.plants(1);});}),
         description: 'Adjust production. (Reality shifts.)'},
     });
   }

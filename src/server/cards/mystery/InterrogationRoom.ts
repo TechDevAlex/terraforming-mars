@@ -9,7 +9,7 @@ export class InterrogationRoom extends Card implements IProjectCard {
       type: CardType.AUTOMATED, name: CardName.INTERROGATION_ROOM, tags: [], cost: 23,
       victoryPoints: 3,
       behavior: {production: {steel: 1, megacredits: 2}},
-      metadata: {cardNumber: 'MY016', renderData: CardRenderer.builder((b) => {b.text('Adjust production.');}),
+      metadata: {cardNumber: 'MY016', renderData: CardRenderer.builder((b) => {b.production((pb) => {pb.steel(1); pb.megacredits(2);});}),
         description: '3 VP. (Space warps.)'},
     });
   }

@@ -10,7 +10,7 @@ export class MysteryCard516 extends Card implements IProjectCard {
       type: CardType.AUTOMATED, name: CardName.MYSTERY_CARD_516, tags: [Tag.MICROBE, Tag.ANIMAL], cost: 4,
       victoryPoints: -2,
       behavior: {production: {heat: 2}, drawCard: 1},
-      metadata: {cardNumber: 'MY516', renderData: CardRenderer.builder((b) => {b.text('Production and draw.');}),
+      metadata: {cardNumber: 'MY516', renderData: CardRenderer.builder((b) => {b.production((pb) => {pb.heat(2);}); b.br; b.cards(1);}),
         description: '-2 VP. (Reality shifts.)'},
     });
   }

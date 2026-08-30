@@ -10,7 +10,7 @@ export class StargateRing extends Card implements IProjectCard {
       type: CardType.EVENT, name: CardName.STARGATE_RING, tags: [Tag.JOVIAN, Tag.MICROBE], cost: 7,
       victoryPoints: 1,
       behavior: {ocean: {}},
-      metadata: {cardNumber: 'MY368', renderData: CardRenderer.builder((b) => {b.text('Place an ocean.');}),
+      metadata: {cardNumber: 'MY368', renderData: CardRenderer.builder((b) => {b.oceans(1);}),
         description: '1 VP. (Progress demands sacrifice.)'},
     });
   }

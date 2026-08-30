@@ -9,7 +9,7 @@ export class MoonstoneMine extends Card implements IProjectCard {
     super({
       type: CardType.AUTOMATED, name: CardName.MOONSTONE_MINE, tags: [Tag.SPACE], cost: 10,
       behavior: {production: {steel: 1}},
-      metadata: {cardNumber: 'MY090', renderData: CardRenderer.builder((b) => {b.text('Adjust production.');}),
+      metadata: {cardNumber: 'MY090', renderData: CardRenderer.builder((b) => {b.production((pb) => {pb.steel(1);});}),
         description: 'Adjust production. (Darkness falls.)'},
     });
   }

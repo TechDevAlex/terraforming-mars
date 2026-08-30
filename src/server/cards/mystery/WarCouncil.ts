@@ -9,7 +9,7 @@ export class WarCouncil extends Card implements IProjectCard {
     super({
       type: CardType.EVENT, name: CardName.WAR_COUNCIL, tags: [Tag.BUILDING], cost: 10,
       behavior: {ocean: {}},
-      metadata: {cardNumber: 'MY231', renderData: CardRenderer.builder((b) => {b.text('Place an ocean.');}),
+      metadata: {cardNumber: 'MY231', renderData: CardRenderer.builder((b) => {b.oceans(1);}),
         description: 'Place an ocean. (The mystery deepens.)'},
     });
   }

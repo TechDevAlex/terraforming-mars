@@ -10,7 +10,7 @@ export class BigCrunchEngine extends Card implements IProjectCard {
       type: CardType.AUTOMATED, name: CardName.BIG_CRUNCH_ENGINE, tags: [Tag.PLANT, Tag.POWER], cost: 15,
       victoryPoints: -2,
       behavior: {production: {megacredits: 2}},
-      metadata: {cardNumber: 'MY313', renderData: CardRenderer.builder((b) => {b.text('Adjust production.');}),
+      metadata: {cardNumber: 'MY313', renderData: CardRenderer.builder((b) => {b.production((pb) => {pb.megacredits(2);});}),
         description: '-2 VP. (The plot thickens.)'},
     });
   }

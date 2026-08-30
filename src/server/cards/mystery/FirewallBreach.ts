@@ -10,7 +10,7 @@ export class FirewallBreach extends Card implements IProjectCard {
       type: CardType.EVENT, name: CardName.FIREWALL_BREACH, tags: [Tag.MICROBE], cost: 7,
       victoryPoints: 2,
       behavior: {drawCard: 1},
-      metadata: {cardNumber: 'MY105', renderData: CardRenderer.builder((b) => {b.text('Draw cards.');}),
+      metadata: {cardNumber: 'MY105', renderData: CardRenderer.builder((b) => {b.cards(1);}),
         description: 'Draw 1 card. 2 VP. (Darkness falls.)'},
     });
   }

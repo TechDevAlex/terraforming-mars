@@ -10,7 +10,7 @@ export class MysteryCard432 extends Card implements IProjectCard {
       type: CardType.AUTOMATED, name: CardName.MYSTERY_CARD_432, tags: [Tag.EARTH], cost: 12,
       victoryPoints: -2,
       behavior: {production: {energy: 1}},
-      metadata: {cardNumber: 'MY432', renderData: CardRenderer.builder((b) => {b.text('Adjust production.');}),
+      metadata: {cardNumber: 'MY432', renderData: CardRenderer.builder((b) => {b.production((pb) => {pb.energy(1);});}),
         description: '-2 VP. (The frontier expands.)'},
     });
   }

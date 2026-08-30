@@ -9,7 +9,7 @@ export class WraithCollector extends Card implements IProjectCard {
     super({
       type: CardType.EVENT, name: CardName.WRAITH_COLLECTOR, tags: [Tag.PLANT, Tag.ANIMAL], cost: 21,
       behavior: {stock: {megacredits: 3}},
-      metadata: {cardNumber: 'MY083', renderData: CardRenderer.builder((b) => {b.text('Gain resources.');}),
+      metadata: {cardNumber: 'MY083', renderData: CardRenderer.builder((b) => {b.megacredits(3);}),
         description: 'Gain resources. (The veil lifts.)'},
     });
   }

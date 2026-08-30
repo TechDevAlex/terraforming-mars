@@ -9,7 +9,7 @@ export class TachyonPulse extends Card implements IProjectCard {
     super({
       type: CardType.AUTOMATED, name: CardName.TACHYON_PULSE, tags: [Tag.SCIENCE], cost: 12,
       behavior: {production: {heat: 2, titanium: 1}},
-      metadata: {cardNumber: 'MY362', renderData: CardRenderer.builder((b) => {b.text('Adjust production.');}),
+      metadata: {cardNumber: 'MY362', renderData: CardRenderer.builder((b) => {b.production((pb) => {pb.heat(2); pb.titanium(1);});}),
         description: 'Adjust production. (The truth is out there.)'},
     });
   }

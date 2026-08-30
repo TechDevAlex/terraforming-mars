@@ -9,7 +9,7 @@ export class MysteryCard389 extends Card implements IProjectCard {
     super({
       type: CardType.EVENT, name: CardName.MYSTERY_CARD_389, tags: [Tag.SPACE], cost: 6,
       behavior: {drawCard: 2},
-      metadata: {cardNumber: 'MY389', renderData: CardRenderer.builder((b) => {b.text('Draw cards.');}),
+      metadata: {cardNumber: 'MY389', renderData: CardRenderer.builder((b) => {b.cards(2);}),
         description: 'Draw 2 cards. (The truth is out there.)'},
     });
   }

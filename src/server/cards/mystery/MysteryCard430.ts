@@ -10,7 +10,7 @@ export class MysteryCard430 extends Card implements IProjectCard {
       type: CardType.AUTOMATED, name: CardName.MYSTERY_CARD_430, tags: [Tag.SPACE], cost: 18,
       victoryPoints: 1,
       behavior: {production: {megacredits: 2}},
-      metadata: {cardNumber: 'MY430', renderData: CardRenderer.builder((b) => {b.text('Adjust production.');}),
+      metadata: {cardNumber: 'MY430', renderData: CardRenderer.builder((b) => {b.production((pb) => {pb.megacredits(2);});}),
         description: '1 VP. (Every clue matters.)'},
     });
   }

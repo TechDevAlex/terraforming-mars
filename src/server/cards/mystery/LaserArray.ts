@@ -10,7 +10,7 @@ export class LaserArray extends Card implements IProjectCard {
       type: CardType.AUTOMATED, name: CardName.LASER_ARRAY, tags: [Tag.SCIENCE, Tag.POWER], cost: 20,
       victoryPoints: 1,
       behavior: {production: {megacredits: 2, titanium: 2}},
-      metadata: {cardNumber: 'MY284', renderData: CardRenderer.builder((b) => {b.text('Adjust production.');}),
+      metadata: {cardNumber: 'MY284', renderData: CardRenderer.builder((b) => {b.production((pb) => {pb.megacredits(2); pb.titanium(2);});}),
         description: '1 VP. (Time bends.)'},
     });
   }

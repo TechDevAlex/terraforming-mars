@@ -8,7 +8,7 @@ export class AncientMemory extends Card implements IProjectCard {
     super({
       type: CardType.AUTOMATED, name: CardName.ANCIENT_MEMORY, tags: [], cost: 28,
       behavior: {production: {plants: 2}},
-      metadata: {cardNumber: 'MY343', renderData: CardRenderer.builder((b) => {b.text('Adjust production.');}),
+      metadata: {cardNumber: 'MY343', renderData: CardRenderer.builder((b) => {b.production((pb) => {pb.plants(2);});}),
         description: 'Adjust production. (The truth is out there.)'},
     });
   }

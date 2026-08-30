@@ -9,7 +9,7 @@ export class Sanctions extends Card implements IProjectCard {
     super({
       type: CardType.EVENT, name: CardName.SANCTIONS, tags: [Tag.ANIMAL], cost: 3,
       behavior: {drawCard: 2},
-      metadata: {cardNumber: 'MY204', renderData: CardRenderer.builder((b) => {b.text('Draw cards.');}),
+      metadata: {cardNumber: 'MY204', renderData: CardRenderer.builder((b) => {b.cards(2);}),
         description: 'Draw 2 cards. (Nothing is as it seems.)'},
     });
   }

@@ -10,7 +10,7 @@ export class MysteryCard435 extends Card implements IProjectCard {
       type: CardType.EVENT, name: CardName.MYSTERY_CARD_435, tags: [Tag.SPACE], cost: 20,
       victoryPoints: -1,
       behavior: {tr: 2},
-      metadata: {cardNumber: 'MY435', renderData: CardRenderer.builder((b) => {b.text('Raise TR.');}),
+      metadata: {cardNumber: 'MY435', renderData: CardRenderer.builder((b) => {b.tr(2);}),
         description: 'Raise your TR 2 steps. -1 VP. (Trust no one.)'},
     });
   }

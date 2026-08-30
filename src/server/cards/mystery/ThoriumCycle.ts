@@ -8,7 +8,7 @@ export class ThoriumCycle extends Card implements IProjectCard {
     super({
       type: CardType.AUTOMATED, name: CardName.THORIUM_CYCLE, tags: [], cost: 26,
       behavior: {production: {megacredits: 1, plants: 2}},
-      metadata: {cardNumber: 'MY294', renderData: CardRenderer.builder((b) => {b.text('Adjust production.');}),
+      metadata: {cardNumber: 'MY294', renderData: CardRenderer.builder((b) => {b.production((pb) => {pb.megacredits(1); pb.plants(2);});}),
         description: 'Adjust production. (Time bends.)'},
     });
   }

@@ -10,7 +10,7 @@ export class TheHeist extends Card implements IProjectCard {
       type: CardType.AUTOMATED, name: CardName.THE_HEIST, tags: [Tag.POWER], cost: 5,
       victoryPoints: -2,
       behavior: {greenery: {}},
-      metadata: {cardNumber: 'MY022', renderData: CardRenderer.builder((b) => {b.text('Place greenery.');}),
+      metadata: {cardNumber: 'MY022', renderData: CardRenderer.builder((b) => {b.greenery();}),
         description: '-2 VP. (Every clue matters.)'},
     });
   }

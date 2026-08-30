@@ -9,7 +9,7 @@ export class MysteryCard402 extends Card implements IProjectCard {
     super({
       type: CardType.AUTOMATED, name: CardName.MYSTERY_CARD_402, tags: [Tag.MICROBE, Tag.SPACE], cost: 8,
       behavior: {tr: 1, production: {megacredits: 2}},
-      metadata: {cardNumber: 'MY402', renderData: CardRenderer.builder((b) => {b.text('TR and production.');}),
+      metadata: {cardNumber: 'MY402', renderData: CardRenderer.builder((b) => {b.tr(1);}),
         description: 'Raise your TR 1 step. (Shadows hide secrets.)'},
     });
   }

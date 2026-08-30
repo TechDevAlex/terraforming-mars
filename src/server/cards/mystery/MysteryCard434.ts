@@ -10,7 +10,7 @@ export class MysteryCard434 extends Card implements IProjectCard {
       type: CardType.AUTOMATED, name: CardName.MYSTERY_CARD_434, tags: [Tag.PLANT, Tag.POWER], cost: 13,
       victoryPoints: -1,
       behavior: {city: {}, production: {megacredits: 2}},
-      metadata: {cardNumber: 'MY434', renderData: CardRenderer.builder((b) => {b.text('Place city, gain production.');}),
+      metadata: {cardNumber: 'MY434', renderData: CardRenderer.builder((b) => {b.production((pb) => {pb.megacredits(2);}); b.br; b.city();}),
         description: '-1 VP. (Space warps.)'},
     });
   }

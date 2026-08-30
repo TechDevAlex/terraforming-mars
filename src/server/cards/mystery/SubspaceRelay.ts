@@ -8,7 +8,7 @@ export class SubspaceRelay extends Card implements IProjectCard {
     super({
       type: CardType.EVENT, name: CardName.SUBSPACE_RELAY, tags: [], cost: 17,
       behavior: {tr: 1},
-      metadata: {cardNumber: 'MY365', renderData: CardRenderer.builder((b) => {b.text('Raise TR.');}),
+      metadata: {cardNumber: 'MY365', renderData: CardRenderer.builder((b) => {b.tr(1);}),
         description: 'Raise your TR 1 step. (Secrets have power.)'},
     });
   }

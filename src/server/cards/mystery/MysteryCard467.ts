@@ -10,7 +10,7 @@ export class MysteryCard467 extends Card implements IProjectCard {
       type: CardType.AUTOMATED, name: CardName.MYSTERY_CARD_467, tags: [Tag.JOVIAN, Tag.MARS], cost: 9,
       victoryPoints: -1,
       behavior: {tr: 1, production: {titanium: 2}},
-      metadata: {cardNumber: 'MY467', renderData: CardRenderer.builder((b) => {b.text('TR and production.');}),
+      metadata: {cardNumber: 'MY467', renderData: CardRenderer.builder((b) => {b.tr(1);}),
         description: 'Raise your TR 1 step. -1 VP. (Progress demands sacrifice.)'},
     });
   }

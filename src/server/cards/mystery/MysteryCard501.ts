@@ -9,7 +9,7 @@ export class MysteryCard501 extends Card implements IProjectCard {
     super({
       type: CardType.AUTOMATED, name: CardName.MYSTERY_CARD_501, tags: [Tag.BUILDING, Tag.JOVIAN], cost: 25,
       behavior: {production: {energy: 2}},
-      metadata: {cardNumber: 'MY501', renderData: CardRenderer.builder((b) => {b.text('Adjust production.');}),
+      metadata: {cardNumber: 'MY501', renderData: CardRenderer.builder((b) => {b.production((pb) => {pb.energy(2);});}),
         description: 'Adjust production. (Steel and will forge the path.)'},
     });
   }

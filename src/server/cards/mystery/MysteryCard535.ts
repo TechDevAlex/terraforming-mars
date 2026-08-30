@@ -10,7 +10,7 @@ export class MysteryCard535 extends Card implements IProjectCard {
       type: CardType.EVENT, name: CardName.MYSTERY_CARD_535, tags: [Tag.PLANT, Tag.BUILDING], cost: 21,
       victoryPoints: 1,
       behavior: {tr: 1},
-      metadata: {cardNumber: 'MY535', renderData: CardRenderer.builder((b) => {b.text('Raise TR.');}),
+      metadata: {cardNumber: 'MY535', renderData: CardRenderer.builder((b) => {b.tr(1);}),
         description: 'Raise your TR 1 step. 1 VP. (Innovation breeds opportunity.)'},
     });
   }

@@ -9,7 +9,7 @@ export class NeuralNetwork extends Card implements IProjectCard {
     super({
       type: CardType.EVENT, name: CardName.NEURAL_NETWORK, tags: [Tag.BUILDING], cost: 8,
       behavior: {global: {oxygen: 1}},
-      metadata: {cardNumber: 'MY326', renderData: CardRenderer.builder((b) => {b.text('Raise global parameter.');}),
+      metadata: {cardNumber: 'MY326', renderData: CardRenderer.builder((b) => {b.oxygen(1);}),
         description: 'Raise oxygen 1 step. (The truth is out there.)'},
     });
   }

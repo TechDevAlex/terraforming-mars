@@ -10,7 +10,7 @@ export class KardashevLeap extends Card implements IProjectCard {
       type: CardType.AUTOMATED, name: CardName.KARDASHEV_LEAP, tags: [Tag.SCIENCE, Tag.MARS], cost: 10,
       victoryPoints: 2,
       behavior: {production: {steel: 2, megacredits: 2}},
-      metadata: {cardNumber: 'MY310', renderData: CardRenderer.builder((b) => {b.text('Adjust production.');}),
+      metadata: {cardNumber: 'MY310', renderData: CardRenderer.builder((b) => {b.production((pb) => {pb.steel(2); pb.megacredits(2);});}),
         description: '2 VP. (Nature finds a way.)'},
     });
   }

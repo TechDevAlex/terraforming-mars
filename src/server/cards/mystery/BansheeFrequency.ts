@@ -9,7 +9,7 @@ export class BansheeFrequency extends Card implements IProjectCard {
     super({
       type: CardType.AUTOMATED, name: CardName.BANSHEE_FREQUENCY, tags: [Tag.EARTH], cost: 26,
       behavior: {production: {plants: 3}},
-      metadata: {cardNumber: 'MY084', renderData: CardRenderer.builder((b) => {b.text('Adjust production.');}),
+      metadata: {cardNumber: 'MY084', renderData: CardRenderer.builder((b) => {b.production((pb) => {pb.plants(3);});}),
         description: 'Adjust production. (A whisper in the void.)'},
     });
   }

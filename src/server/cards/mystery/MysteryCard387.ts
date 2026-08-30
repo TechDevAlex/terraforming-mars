@@ -10,7 +10,7 @@ export class MysteryCard387 extends Card implements IProjectCard {
       type: CardType.AUTOMATED, name: CardName.MYSTERY_CARD_387, tags: [Tag.MARS, Tag.PLANT], cost: 9,
       victoryPoints: 2,
       behavior: {tr: 1, production: {titanium: 1}},
-      metadata: {cardNumber: 'MY387', renderData: CardRenderer.builder((b) => {b.text('TR and production.');}),
+      metadata: {cardNumber: 'MY387', renderData: CardRenderer.builder((b) => {b.tr(1);}),
         description: 'Raise your TR 1 step. 2 VP. (Knowledge is the ultimate currency.)'},
     });
   }

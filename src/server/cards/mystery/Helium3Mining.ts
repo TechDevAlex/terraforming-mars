@@ -10,7 +10,7 @@ export class Helium3Mining extends Card implements IProjectCard {
       type: CardType.AUTOMATED, name: CardName.HELIUM_3_MINING, tags: [Tag.CITY], cost: 15,
       victoryPoints: 3,
       behavior: {production: {titanium: 2, megacredits: 2}},
-      metadata: {cardNumber: 'MY296', renderData: CardRenderer.builder((b) => {b.text('Adjust production.');}),
+      metadata: {cardNumber: 'MY296', renderData: CardRenderer.builder((b) => {b.production((pb) => {pb.titanium(2); pb.megacredits(2);});}),
         description: '3 VP. (The stars align.)'},
     });
   }

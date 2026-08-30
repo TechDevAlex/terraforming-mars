@@ -9,7 +9,7 @@ export class DerelictStation extends Card implements IProjectCard {
     super({
       type: CardType.AUTOMATED, name: CardName.DERELICT_STATION, tags: [Tag.SPACE], cost: 21,
       behavior: {tr: 1, production: {steel: 1}},
-      metadata: {cardNumber: 'MY154', renderData: CardRenderer.builder((b) => {b.text('TR and production.');}),
+      metadata: {cardNumber: 'MY154', renderData: CardRenderer.builder((b) => {b.tr(1);}),
         description: 'Raise your TR 1 step. (Nature finds a way.)'},
     });
   }

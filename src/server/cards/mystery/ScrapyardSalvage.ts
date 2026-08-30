@@ -9,7 +9,7 @@ export class ScrapyardSalvage extends Card implements IProjectCard {
       type: CardType.AUTOMATED, name: CardName.SCRAPYARD_SALVAGE, tags: [], cost: 9,
       victoryPoints: -2,
       behavior: {production: {megacredits: 2}},
-      metadata: {cardNumber: 'MY155', renderData: CardRenderer.builder((b) => {b.text('Adjust production.');}),
+      metadata: {cardNumber: 'MY155', renderData: CardRenderer.builder((b) => {b.production((pb) => {pb.megacredits(2);});}),
         description: '-2 VP. (Knowledge is the ultimate currency.)'},
     });
   }

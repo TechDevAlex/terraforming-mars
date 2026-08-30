@@ -9,7 +9,7 @@ export class MysteryButterflyEffect extends Card implements IProjectCard {
     super({
       type: CardType.AUTOMATED, name: CardName.MYSTERY_BUTTERFLY_EFFECT, tags: [Tag.BUILDING, Tag.SCIENCE], cost: 14,
       behavior: {tr: 1, production: {titanium: 2}},
-      metadata: {cardNumber: 'MY319', renderData: CardRenderer.builder((b) => {b.text('TR and production.');}),
+      metadata: {cardNumber: 'MY319', renderData: CardRenderer.builder((b) => {b.tr(1);}),
         description: 'Raise your TR 1 step. (The mystery deepens.)'},
     });
   }

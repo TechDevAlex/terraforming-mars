@@ -9,7 +9,7 @@ export class ColdWarStandoff extends Card implements IProjectCard {
     super({
       type: CardType.AUTOMATED, name: CardName.COLD_WAR_STANDOFF, tags: [Tag.EARTH], cost: 7,
       behavior: {production: {titanium: 1, steel: 1}},
-      metadata: {cardNumber: 'MY240', renderData: CardRenderer.builder((b) => {b.text('Adjust production.');}),
+      metadata: {cardNumber: 'MY240', renderData: CardRenderer.builder((b) => {b.production((pb) => {pb.titanium(1); pb.steel(1);});}),
         description: 'Adjust production. (A whisper in the void.)'},
     });
   }

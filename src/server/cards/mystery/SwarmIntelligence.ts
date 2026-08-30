@@ -10,7 +10,7 @@ export class SwarmIntelligence extends Card implements IProjectCard {
       type: CardType.EVENT, name: CardName.SWARM_INTELLIGENCE, tags: [Tag.POWER, Tag.JOVIAN], cost: 12,
       victoryPoints: 3,
       behavior: {stock: {steel: 4}},
-      metadata: {cardNumber: 'MY329', renderData: CardRenderer.builder((b) => {b.text('Gain resources.');}),
+      metadata: {cardNumber: 'MY329', renderData: CardRenderer.builder((b) => {b.steel(4);}),
         description: '3 VP. (Reality shifts.)'},
     });
   }

@@ -9,7 +9,7 @@ export class CursedGround extends Card implements IProjectCard {
     super({
       type: CardType.EVENT, name: CardName.CURSED_GROUND, tags: [Tag.SCIENCE], cost: 10,
       behavior: {drawCard: 2},
-      metadata: {cardNumber: 'MY066', renderData: CardRenderer.builder((b) => {b.text('Draw cards.');}),
+      metadata: {cardNumber: 'MY066', renderData: CardRenderer.builder((b) => {b.cards(2);}),
         description: 'Draw 2 cards. (Space warps.)'},
     });
   }

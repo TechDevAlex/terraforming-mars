@@ -9,7 +9,7 @@ export class GroundhogDay extends Card implements IProjectCard {
       type: CardType.AUTOMATED, name: CardName.GROUNDHOG_DAY, tags: [], cost: 17,
       victoryPoints: 3,
       behavior: {production: {plants: 2, heat: 1}},
-      metadata: {cardNumber: 'MY357', renderData: CardRenderer.builder((b) => {b.text('Adjust production.');}),
+      metadata: {cardNumber: 'MY357', renderData: CardRenderer.builder((b) => {b.production((pb) => {pb.plants(2); pb.heat(1);});}),
         description: '3 VP. (Progress demands sacrifice.)'},
     });
   }

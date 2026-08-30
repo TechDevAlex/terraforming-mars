@@ -10,7 +10,7 @@ export class ParasiticVine extends Card implements IProjectCard {
       type: CardType.AUTOMATED, name: CardName.PARASITIC_VINE, tags: [Tag.MICROBE, Tag.BUILDING], cost: 27,
       victoryPoints: 3,
       behavior: {production: {energy: 1, megacredits: 2}},
-      metadata: {cardNumber: 'MY127', renderData: CardRenderer.builder((b) => {b.text('Adjust production.');}),
+      metadata: {cardNumber: 'MY127', renderData: CardRenderer.builder((b) => {b.production((pb) => {pb.energy(1); pb.megacredits(2);});}),
         description: '3 VP. (The stars align.)'},
     });
   }

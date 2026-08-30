@@ -9,7 +9,7 @@ export class PipelineNetwork extends Card implements IProjectCard {
     super({
       type: CardType.EVENT, name: CardName.PIPELINE_NETWORK, tags: [Tag.SPACE, Tag.CITY], cost: 5,
       behavior: {tr: 1},
-      metadata: {cardNumber: 'MY169', renderData: CardRenderer.builder((b) => {b.text('Raise TR.');}),
+      metadata: {cardNumber: 'MY169', renderData: CardRenderer.builder((b) => {b.tr(1);}),
         description: 'Raise your TR 1 step. (The stars align.)'},
     });
   }

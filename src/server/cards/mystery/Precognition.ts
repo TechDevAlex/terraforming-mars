@@ -10,7 +10,7 @@ export class Precognition extends Card implements IProjectCard {
       type: CardType.EVENT, name: CardName.PRECOGNITION, tags: [Tag.JOVIAN], cost: 17,
       victoryPoints: 1,
       behavior: {tr: 2},
-      metadata: {cardNumber: 'MY359', renderData: CardRenderer.builder((b) => {b.text('Raise TR.');}),
+      metadata: {cardNumber: 'MY359', renderData: CardRenderer.builder((b) => {b.tr(2);}),
         description: 'Raise your TR 2 steps. 1 VP. (Trust no one.)'},
     });
   }

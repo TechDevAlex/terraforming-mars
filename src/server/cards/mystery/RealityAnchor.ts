@@ -10,7 +10,7 @@ export class RealityAnchor extends Card implements IProjectCard {
       type: CardType.EVENT, name: CardName.REALITY_ANCHOR, tags: [Tag.SCIENCE], cost: 20,
       victoryPoints: 3,
       behavior: {drawCard: 1},
-      metadata: {cardNumber: 'MY315', renderData: CardRenderer.builder((b) => {b.text('Draw cards.');}),
+      metadata: {cardNumber: 'MY315', renderData: CardRenderer.builder((b) => {b.cards(1);}),
         description: 'Draw 1 card. 3 VP. (The frontier expands.)'},
     });
   }

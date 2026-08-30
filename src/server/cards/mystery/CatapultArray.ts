@@ -9,7 +9,7 @@ export class CatapultArray extends Card implements IProjectCard {
     super({
       type: CardType.AUTOMATED, name: CardName.CATAPULT_ARRAY, tags: [Tag.EARTH], cost: 16,
       behavior: {greenery: {}},
-      metadata: {cardNumber: 'MY227', renderData: CardRenderer.builder((b) => {b.text('Place greenery.');}),
+      metadata: {cardNumber: 'MY227', renderData: CardRenderer.builder((b) => {b.greenery();}),
         description: 'Place greenery. (The frontier expands.)'},
     });
   }

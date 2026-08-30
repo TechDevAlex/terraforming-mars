@@ -10,7 +10,7 @@ export class BuriedTreasure extends Card implements IProjectCard {
       type: CardType.AUTOMATED, name: CardName.BURIED_TREASURE, tags: [Tag.CITY, Tag.SCIENCE], cost: 23,
       victoryPoints: 3,
       behavior: {production: {steel: 1, plants: 1}},
-      metadata: {cardNumber: 'MY266', renderData: CardRenderer.builder((b) => {b.text('Adjust production.');}),
+      metadata: {cardNumber: 'MY266', renderData: CardRenderer.builder((b) => {b.production((pb) => {pb.steel(1); pb.plants(1);});}),
         description: '3 VP. (Reality shifts.)'},
     });
   }

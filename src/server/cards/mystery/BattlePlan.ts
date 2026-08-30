@@ -9,7 +9,7 @@ export class BattlePlan extends Card implements IProjectCard {
     super({
       type: CardType.AUTOMATED, name: CardName.BATTLE_PLAN, tags: [Tag.PLANT, Tag.SPACE], cost: 19,
       behavior: {production: {steel: 2, plants: 1}},
-      metadata: {cardNumber: 'MY232', renderData: CardRenderer.builder((b) => {b.text('Adjust production.');}),
+      metadata: {cardNumber: 'MY232', renderData: CardRenderer.builder((b) => {b.production((pb) => {pb.steel(2); pb.plants(1);});}),
         description: 'Adjust production. (The truth is out there.)'},
     });
   }

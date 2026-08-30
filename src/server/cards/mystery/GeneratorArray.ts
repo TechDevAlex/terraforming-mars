@@ -9,7 +9,7 @@ export class GeneratorArray extends Card implements IProjectCard {
     super({
       type: CardType.EVENT, name: CardName.GENERATOR_ARRAY, tags: [Tag.EARTH], cost: 3,
       behavior: {stock: {plants: 3}},
-      metadata: {cardNumber: 'MY174', renderData: CardRenderer.builder((b) => {b.text('Gain resources.');}),
+      metadata: {cardNumber: 'MY174', renderData: CardRenderer.builder((b) => {b.plants(3);}),
         description: 'Gain resources. (Darkness falls.)'},
     });
   }

@@ -10,7 +10,7 @@ export class LastStand extends Card implements IProjectCard {
       type: CardType.AUTOMATED, name: CardName.LAST_STAND, tags: [Tag.JOVIAN], cost: 15,
       victoryPoints: 1,
       behavior: {production: {titanium: 1, heat: 1, plants: 1}},
-      metadata: {cardNumber: 'MY235', renderData: CardRenderer.builder((b) => {b.text('Adjust production.');}),
+      metadata: {cardNumber: 'MY235', renderData: CardRenderer.builder((b) => {b.production((pb) => {pb.titanium(1); pb.heat(1); pb.plants(1);});}),
         description: '1 VP. (The truth is out there.)'},
     });
   }

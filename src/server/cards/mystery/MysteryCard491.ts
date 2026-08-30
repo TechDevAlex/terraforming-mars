@@ -9,7 +9,7 @@ export class MysteryCard491 extends Card implements IProjectCard {
       type: CardType.AUTOMATED, name: CardName.MYSTERY_CARD_491, tags: [], cost: 11,
       victoryPoints: -1,
       behavior: {tr: 1, production: {steel: 1}},
-      metadata: {cardNumber: 'MY491', renderData: CardRenderer.builder((b) => {b.text('TR and production.');}),
+      metadata: {cardNumber: 'MY491', renderData: CardRenderer.builder((b) => {b.tr(1);}),
         description: 'Raise your TR 1 step. -1 VP. (Shadows hide secrets.)'},
     });
   }

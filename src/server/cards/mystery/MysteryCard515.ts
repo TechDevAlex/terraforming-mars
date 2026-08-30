@@ -9,7 +9,7 @@ export class MysteryCard515 extends Card implements IProjectCard {
     super({
       type: CardType.EVENT, name: CardName.MYSTERY_CARD_515, tags: [Tag.MARS], cost: 7,
       behavior: {ocean: {}},
-      metadata: {cardNumber: 'MY515', renderData: CardRenderer.builder((b) => {b.text('Place an ocean.');}),
+      metadata: {cardNumber: 'MY515', renderData: CardRenderer.builder((b) => {b.oceans(1);}),
         description: 'Place an ocean. (Reality shifts.)'},
     });
   }

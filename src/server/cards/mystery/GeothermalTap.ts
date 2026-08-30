@@ -9,7 +9,7 @@ export class GeothermalTap extends Card implements IProjectCard {
     super({
       type: CardType.EVENT, name: CardName.GEOTHERMAL_TAP, tags: [Tag.JOVIAN], cost: 6,
       behavior: {stock: {titanium: 3}},
-      metadata: {cardNumber: 'MY133', renderData: CardRenderer.builder((b) => {b.text('Gain resources.');}),
+      metadata: {cardNumber: 'MY133', renderData: CardRenderer.builder((b) => {b.titanium(3);}),
         description: 'Gain resources. (Space warps.)'},
     });
   }

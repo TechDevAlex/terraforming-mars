@@ -10,7 +10,7 @@ export class MysteryCard459 extends Card implements IProjectCard {
       type: CardType.EVENT, name: CardName.MYSTERY_CARD_459, tags: [Tag.JOVIAN, Tag.MARS], cost: 14,
       victoryPoints: 2,
       behavior: {ocean: {}},
-      metadata: {cardNumber: 'MY459', renderData: CardRenderer.builder((b) => {b.text('Place an ocean.');}),
+      metadata: {cardNumber: 'MY459', renderData: CardRenderer.builder((b) => {b.oceans(1);}),
         description: '2 VP. (The frontier expands.)'},
     });
   }

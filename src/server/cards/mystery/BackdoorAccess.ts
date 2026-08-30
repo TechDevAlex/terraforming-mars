@@ -9,7 +9,7 @@ export class BackdoorAccess extends Card implements IProjectCard {
     super({
       type: CardType.EVENT, name: CardName.BACKDOOR_ACCESS, tags: [Tag.CITY], cost: 3,
       behavior: {stock: {megacredits: 3}},
-      metadata: {cardNumber: 'MY104', renderData: CardRenderer.builder((b) => {b.text('Gain resources.');}),
+      metadata: {cardNumber: 'MY104', renderData: CardRenderer.builder((b) => {b.megacredits(3);}),
         description: 'Gain resources. (Innovation breeds opportunity.)'},
     });
   }

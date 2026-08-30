@@ -9,7 +9,7 @@ export class ProductionSurge extends Card implements IProjectCard {
     super({
       type: CardType.AUTOMATED, name: CardName.PRODUCTION_SURGE, tags: [Tag.EARTH, Tag.SPACE], cost: 22,
       behavior: {greenery: {}},
-      metadata: {cardNumber: 'MY162', renderData: CardRenderer.builder((b) => {b.text('Place greenery.');}),
+      metadata: {cardNumber: 'MY162', renderData: CardRenderer.builder((b) => {b.greenery();}),
         description: 'Place greenery. (Space warps.)'},
     });
   }

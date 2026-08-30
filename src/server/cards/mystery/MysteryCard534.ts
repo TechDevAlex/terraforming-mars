@@ -8,7 +8,7 @@ export class MysteryCard534 extends Card implements IProjectCard {
     super({
       type: CardType.EVENT, name: CardName.MYSTERY_CARD_534, tags: [], cost: 22,
       behavior: {stock: {plants: 4}},
-      metadata: {cardNumber: 'MY534', renderData: CardRenderer.builder((b) => {b.text('Gain resources.');}),
+      metadata: {cardNumber: 'MY534', renderData: CardRenderer.builder((b) => {b.plants(4);}),
         description: 'Gain resources. (Space warps.)'},
     });
   }

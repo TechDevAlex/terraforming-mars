@@ -9,7 +9,7 @@ export class DejaVu extends Card implements IProjectCard {
     super({
       type: CardType.EVENT, name: CardName.DEJA_VU, tags: [Tag.SPACE, Tag.MICROBE], cost: 6,
       behavior: {drawCard: 1},
-      metadata: {cardNumber: 'MY358', renderData: CardRenderer.builder((b) => {b.text('Draw cards.');}),
+      metadata: {cardNumber: 'MY358', renderData: CardRenderer.builder((b) => {b.cards(1);}),
         description: 'Draw 1 card. (Knowledge is the ultimate currency.)'},
     });
   }

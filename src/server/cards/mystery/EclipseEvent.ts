@@ -10,7 +10,7 @@ export class EclipseEvent extends Card implements IProjectCard {
       type: CardType.AUTOMATED, name: CardName.ECLIPSE_EVENT, tags: [Tag.EARTH], cost: 16,
       victoryPoints: -2,
       behavior: {greenery: {}},
-      metadata: {cardNumber: 'MY270', renderData: CardRenderer.builder((b) => {b.text('Place greenery.');}),
+      metadata: {cardNumber: 'MY270', renderData: CardRenderer.builder((b) => {b.greenery();}),
         description: '-2 VP. (A whisper in the void.)'},
     });
   }

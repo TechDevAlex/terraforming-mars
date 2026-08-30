@@ -9,7 +9,7 @@ export class MyceliumWeb extends Card implements IProjectCard {
     super({
       type: CardType.AUTOMATED, name: CardName.MYCELIUM_WEB, tags: [Tag.ANIMAL], cost: 18,
       behavior: {production: {steel: 2, megacredits: 2}},
-      metadata: {cardNumber: 'MY122', renderData: CardRenderer.builder((b) => {b.text('Adjust production.');}),
+      metadata: {cardNumber: 'MY122', renderData: CardRenderer.builder((b) => {b.production((pb) => {pb.steel(2); pb.megacredits(2);});}),
         description: 'Adjust production. (Darkness falls.)'},
     });
   }

@@ -9,7 +9,7 @@ export class FocusGroup extends Card implements IProjectCard {
     super({
       type: CardType.EVENT, name: CardName.FOCUS_GROUP, tags: [Tag.MARS], cost: 9,
       behavior: {stock: {megacredits: 4}},
-      metadata: {cardNumber: 'MY190', renderData: CardRenderer.builder((b) => {b.text('Gain resources.');}),
+      metadata: {cardNumber: 'MY190', renderData: CardRenderer.builder((b) => {b.megacredits(4);}),
         description: 'Gain resources. (The veil lifts.)'},
     });
   }

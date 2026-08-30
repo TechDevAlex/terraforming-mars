@@ -9,7 +9,7 @@ export class RallyPoint extends Card implements IProjectCard {
     super({
       type: CardType.AUTOMATED, name: CardName.RALLY_POINT, tags: [Tag.EARTH, Tag.SCIENCE], cost: 11,
       behavior: {greenery: {}},
-      metadata: {cardNumber: 'MY230', renderData: CardRenderer.builder((b) => {b.text('Place greenery.');}),
+      metadata: {cardNumber: 'MY230', renderData: CardRenderer.builder((b) => {b.greenery();}),
         description: 'Place greenery. (Darkness falls.)'},
     });
   }

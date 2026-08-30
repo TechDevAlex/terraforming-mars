@@ -10,7 +10,7 @@ export class CipherWheel extends Card implements IProjectCard {
       type: CardType.AUTOMATED, name: CardName.CIPHER_WHEEL, tags: [Tag.ANIMAL, Tag.PLANT], cost: 19,
       victoryPoints: 1,
       behavior: {production: {megacredits: 2, steel: 1}},
-      metadata: {cardNumber: 'MY245', renderData: CardRenderer.builder((b) => {b.text('Adjust production.');}),
+      metadata: {cardNumber: 'MY245', renderData: CardRenderer.builder((b) => {b.production((pb) => {pb.megacredits(2); pb.steel(1);});}),
         description: '1 VP. (Steel and will forge the path.)'},
     });
   }

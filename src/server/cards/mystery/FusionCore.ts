@@ -9,7 +9,7 @@ export class FusionCore extends Card implements IProjectCard {
     super({
       type: CardType.AUTOMATED, name: CardName.FUSION_CORE, tags: [Tag.SPACE], cost: 7,
       behavior: {tr: 1, production: {steel: 1}},
-      metadata: {cardNumber: 'MY291', renderData: CardRenderer.builder((b) => {b.text('TR and production.');}),
+      metadata: {cardNumber: 'MY291', renderData: CardRenderer.builder((b) => {b.tr(1);}),
         description: 'Raise your TR 1 step. (The frontier expands.)'},
     });
   }

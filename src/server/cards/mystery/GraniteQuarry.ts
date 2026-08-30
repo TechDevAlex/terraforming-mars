@@ -8,7 +8,7 @@ export class GraniteQuarry extends Card implements IProjectCard {
     super({
       type: CardType.EVENT, name: CardName.GRANITE_QUARRY, tags: [], cost: 21,
       behavior: {stock: {megacredits: 4}},
-      metadata: {cardNumber: 'MY147', renderData: CardRenderer.builder((b) => {b.text('Gain resources.');}),
+      metadata: {cardNumber: 'MY147', renderData: CardRenderer.builder((b) => {b.megacredits(4);}),
         description: 'Gain resources. (Nothing is as it seems.)'},
     });
   }

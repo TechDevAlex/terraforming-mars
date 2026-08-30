@@ -10,7 +10,7 @@ export class TeslaCoil extends Card implements IProjectCard {
       type: CardType.EVENT, name: CardName.TESLA_COIL, tags: [Tag.BUILDING], cost: 19,
       victoryPoints: -1,
       behavior: {stock: {steel: 4}},
-      metadata: {cardNumber: 'MY276', renderData: CardRenderer.builder((b) => {b.text('Gain resources.');}),
+      metadata: {cardNumber: 'MY276', renderData: CardRenderer.builder((b) => {b.steel(4);}),
         description: '-1 VP. (The stars align.)'},
     });
   }

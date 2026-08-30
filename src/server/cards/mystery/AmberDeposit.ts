@@ -9,7 +9,7 @@ export class AmberDeposit extends Card implements IProjectCard {
     super({
       type: CardType.AUTOMATED, name: CardName.AMBER_DEPOSIT, tags: [Tag.CITY, Tag.JOVIAN], cost: 19,
       behavior: {production: {heat: 2, energy: 1}},
-      metadata: {cardNumber: 'MY136', renderData: CardRenderer.builder((b) => {b.text('Adjust production.');}),
+      metadata: {cardNumber: 'MY136', renderData: CardRenderer.builder((b) => {b.production((pb) => {pb.heat(2); pb.energy(1);});}),
         description: 'Adjust production. (Darkness falls.)'},
     });
   }

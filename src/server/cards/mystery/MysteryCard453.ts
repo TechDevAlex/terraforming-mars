@@ -10,7 +10,7 @@ export class MysteryCard453 extends Card implements IProjectCard {
       type: CardType.AUTOMATED, name: CardName.MYSTERY_CARD_453, tags: [Tag.PLANT], cost: 25,
       victoryPoints: 1,
       behavior: {production: {heat: 2, titanium: 2}},
-      metadata: {cardNumber: 'MY453', renderData: CardRenderer.builder((b) => {b.text('Adjust production.');}),
+      metadata: {cardNumber: 'MY453', renderData: CardRenderer.builder((b) => {b.production((pb) => {pb.heat(2); pb.titanium(2);});}),
         description: '1 VP. (The plot thickens.)'},
     });
   }

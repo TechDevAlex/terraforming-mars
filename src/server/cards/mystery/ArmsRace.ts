@@ -9,7 +9,7 @@ export class ArmsRace extends Card implements IProjectCard {
       type: CardType.AUTOMATED, name: CardName.ARMS_RACE, tags: [], cost: 6,
       victoryPoints: -1,
       behavior: {tr: 1, production: {megacredits: 1}},
-      metadata: {cardNumber: 'MY239', renderData: CardRenderer.builder((b) => {b.text('TR and production.');}),
+      metadata: {cardNumber: 'MY239', renderData: CardRenderer.builder((b) => {b.tr(1);}),
         description: 'Raise your TR 1 step. -1 VP. (The stars align.)'},
     });
   }

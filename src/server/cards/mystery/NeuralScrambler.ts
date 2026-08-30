@@ -9,7 +9,7 @@ export class NeuralScrambler extends Card implements IProjectCard {
     super({
       type: CardType.AUTOMATED, name: CardName.NEURAL_SCRAMBLER, tags: [Tag.EARTH], cost: 24,
       behavior: {city: {}, production: {megacredits: 3}},
-      metadata: {cardNumber: 'MY106', renderData: CardRenderer.builder((b) => {b.text('Place city, gain production.');}),
+      metadata: {cardNumber: 'MY106', renderData: CardRenderer.builder((b) => {b.production((pb) => {pb.megacredits(3);}); b.br; b.city();}),
         description: 'Place city, gain production. (Trust no one.)'},
     });
   }

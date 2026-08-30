@@ -9,7 +9,7 @@ export class BlackSiteFactory extends Card implements IProjectCard {
     super({
       type: CardType.AUTOMATED, name: CardName.BLACK_SITE_FACTORY, tags: [Tag.BUILDING], cost: 7,
       behavior: {production: {steel: 1}},
-      metadata: {cardNumber: 'MY151', renderData: CardRenderer.builder((b) => {b.text('Adjust production.');}),
+      metadata: {cardNumber: 'MY151', renderData: CardRenderer.builder((b) => {b.production((pb) => {pb.steel(1);});}),
         description: 'Adjust production. (The veil lifts.)'},
     });
   }

@@ -10,7 +10,7 @@ export class FlankingManeuver extends Card implements IProjectCard {
       type: CardType.EVENT, name: CardName.FLANKING_MANEUVER, tags: [Tag.JOVIAN, Tag.PLANT], cost: 11,
       victoryPoints: 2,
       behavior: {stock: {plants: 2}},
-      metadata: {cardNumber: 'MY224', renderData: CardRenderer.builder((b) => {b.text('Gain resources.');}),
+      metadata: {cardNumber: 'MY224', renderData: CardRenderer.builder((b) => {b.plants(2);}),
         description: '2 VP. (Progress demands sacrifice.)'},
     });
   }

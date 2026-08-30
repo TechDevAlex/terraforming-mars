@@ -10,7 +10,7 @@ export class ToxicBloom extends Card implements IProjectCard {
       type: CardType.AUTOMATED, name: CardName.TOXIC_BLOOM, tags: [Tag.CITY, Tag.MARS], cost: 23,
       victoryPoints: 2,
       behavior: {production: {megacredits: 1}, drawCard: 1},
-      metadata: {cardNumber: 'MY126', renderData: CardRenderer.builder((b) => {b.text('Production and draw.');}),
+      metadata: {cardNumber: 'MY126', renderData: CardRenderer.builder((b) => {b.production((pb) => {pb.megacredits(1);}); b.br; b.cards(1);}),
         description: '2 VP. (Knowledge is the ultimate currency.)'},
     });
   }

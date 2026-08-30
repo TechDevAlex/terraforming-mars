@@ -9,7 +9,7 @@ export class MysteryCard393 extends Card implements IProjectCard {
     super({
       type: CardType.AUTOMATED, name: CardName.MYSTERY_CARD_393, tags: [Tag.MARS], cost: 18,
       behavior: {production: {titanium: 1}, drawCard: 1},
-      metadata: {cardNumber: 'MY393', renderData: CardRenderer.builder((b) => {b.text('Production and draw.');}),
+      metadata: {cardNumber: 'MY393', renderData: CardRenderer.builder((b) => {b.production((pb) => {pb.titanium(1);}); b.br; b.cards(1);}),
         description: 'Production and draw. (Nothing is as it seems.)'},
     });
   }

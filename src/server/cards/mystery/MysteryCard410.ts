@@ -10,7 +10,7 @@ export class MysteryCard410 extends Card implements IProjectCard {
       type: CardType.AUTOMATED, name: CardName.MYSTERY_CARD_410, tags: [Tag.POWER], cost: 10,
       victoryPoints: 3,
       behavior: {production: {energy: 2}},
-      metadata: {cardNumber: 'MY410', renderData: CardRenderer.builder((b) => {b.text('Adjust production.');}),
+      metadata: {cardNumber: 'MY410', renderData: CardRenderer.builder((b) => {b.production((pb) => {pb.energy(2);});}),
         description: '3 VP. (Knowledge is the ultimate currency.)'},
     });
   }

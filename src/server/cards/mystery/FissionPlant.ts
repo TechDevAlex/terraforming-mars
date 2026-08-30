@@ -9,7 +9,7 @@ export class FissionPlant extends Card implements IProjectCard {
     super({
       type: CardType.AUTOMATED, name: CardName.FISSION_PLANT, tags: [Tag.PLANT, Tag.CITY], cost: 25,
       behavior: {production: {plants: 1}, drawCard: 2},
-      metadata: {cardNumber: 'MY292', renderData: CardRenderer.builder((b) => {b.text('Production and draw.');}),
+      metadata: {cardNumber: 'MY292', renderData: CardRenderer.builder((b) => {b.production((pb) => {pb.plants(1);}); b.br; b.cards(2);}),
         description: 'Production and draw. (The stars align.)'},
     });
   }

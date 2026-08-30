@@ -10,7 +10,7 @@ export class GravityWell extends Card implements IProjectCard {
       type: CardType.AUTOMATED, name: CardName.GRAVITY_WELL, tags: [Tag.SPACE, Tag.JOVIAN], cost: 23,
       victoryPoints: -2,
       behavior: {production: {energy: 1}},
-      metadata: {cardNumber: 'MY039', renderData: CardRenderer.builder((b) => {b.text('Adjust production.');}),
+      metadata: {cardNumber: 'MY039', renderData: CardRenderer.builder((b) => {b.production((pb) => {pb.energy(1);});}),
         description: '-2 VP. (The veil lifts.)'},
     });
   }

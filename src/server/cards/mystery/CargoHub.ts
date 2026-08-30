@@ -9,7 +9,7 @@ export class CargoHub extends Card implements IProjectCard {
     super({
       type: CardType.AUTOMATED, name: CardName.CARGO_HUB, tags: [Tag.MICROBE], cost: 17,
       behavior: {production: {steel: 1, heat: 4}},
-      metadata: {cardNumber: 'MY167', renderData: CardRenderer.builder((b) => {b.text('Adjust production.');}),
+      metadata: {cardNumber: 'MY167', renderData: CardRenderer.builder((b) => {b.production((pb) => {pb.steel(1); pb.heat(4);});}),
         description: 'Adjust production. (Every clue matters.)'},
     });
   }

@@ -10,7 +10,7 @@ export class StealthSatellite extends Card implements IProjectCard {
       type: CardType.AUTOMATED, name: CardName.STEALTH_SATELLITE, tags: [Tag.JOVIAN], cost: 20,
       victoryPoints: 1,
       behavior: {production: {steel: 2, megacredits: 1, titanium: 1}},
-      metadata: {cardNumber: 'MY093', renderData: CardRenderer.builder((b) => {b.text('Adjust production.');}),
+      metadata: {cardNumber: 'MY093', renderData: CardRenderer.builder((b) => {b.production((pb) => {pb.steel(2); pb.megacredits(1); pb.titanium(1);});}),
         description: '1 VP. (The mystery deepens.)'},
     });
   }

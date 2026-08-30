@@ -9,7 +9,7 @@ export class DysonSwarm extends Card implements IProjectCard {
     super({
       type: CardType.AUTOMATED, name: CardName.DYSON_SWARM, tags: [Tag.SCIENCE, Tag.CITY], cost: 28,
       behavior: {production: {energy: 1, titanium: 1}},
-      metadata: {cardNumber: 'MY308', renderData: CardRenderer.builder((b) => {b.text('Adjust production.');}),
+      metadata: {cardNumber: 'MY308', renderData: CardRenderer.builder((b) => {b.production((pb) => {pb.energy(1); pb.titanium(1);});}),
         description: 'Adjust production. (The frontier expands.)'},
     });
   }

@@ -10,7 +10,7 @@ export class MysteryCard471 extends Card implements IProjectCard {
       type: CardType.EVENT, name: CardName.MYSTERY_CARD_471, tags: [Tag.MICROBE, Tag.SPACE], cost: 10,
       victoryPoints: -2,
       behavior: {tr: 2},
-      metadata: {cardNumber: 'MY471', renderData: CardRenderer.builder((b) => {b.text('Raise TR.');}),
+      metadata: {cardNumber: 'MY471', renderData: CardRenderer.builder((b) => {b.tr(2);}),
         description: 'Raise your TR 2 steps. -2 VP. (Innovation breeds opportunity.)'},
     });
   }

@@ -9,7 +9,7 @@ export class SealedEnvelope extends Card implements IProjectCard {
     super({
       type: CardType.EVENT, name: CardName.SEALED_ENVELOPE, tags: [Tag.POWER], cost: 11,
       behavior: {stock: {plants: 5}},
-      metadata: {cardNumber: 'MY259', renderData: CardRenderer.builder((b) => {b.text('Gain resources.');}),
+      metadata: {cardNumber: 'MY259', renderData: CardRenderer.builder((b) => {b.plants(5);}),
         description: 'Gain resources. (Progress demands sacrifice.)'},
     });
   }

@@ -9,7 +9,7 @@ export class DreamCatcher extends Card implements IProjectCard {
     super({
       type: CardType.AUTOMATED, name: CardName.DREAM_CATCHER, tags: [Tag.CITY, Tag.SCIENCE], cost: 21,
       behavior: {tr: 1, production: {titanium: 2}},
-      metadata: {cardNumber: 'MY336', renderData: CardRenderer.builder((b) => {b.text('TR and production.');}),
+      metadata: {cardNumber: 'MY336', renderData: CardRenderer.builder((b) => {b.tr(1);}),
         description: 'Raise your TR 1 step. (Reality shifts.)'},
     });
   }

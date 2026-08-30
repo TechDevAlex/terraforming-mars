@@ -8,7 +8,7 @@ export class HauntedManor extends Card implements IProjectCard {
     super({
       type: CardType.AUTOMATED, name: CardName.HAUNTED_MANOR, tags: [], cost: 4,
       behavior: {production: {energy: 1}, drawCard: 2},
-      metadata: {cardNumber: 'MY078', renderData: CardRenderer.builder((b) => {b.text('Production and draw.');}),
+      metadata: {cardNumber: 'MY078', renderData: CardRenderer.builder((b) => {b.production((pb) => {pb.energy(1);}); b.br; b.cards(2);}),
         description: 'Production and draw. (The frontier expands.)'},
     });
   }

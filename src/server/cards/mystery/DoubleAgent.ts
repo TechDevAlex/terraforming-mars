@@ -10,7 +10,7 @@ export class DoubleAgent extends Card implements IProjectCard {
       type: CardType.AUTOMATED, name: CardName.DOUBLE_AGENT, tags: [Tag.BUILDING], cost: 10,
       victoryPoints: 3,
       behavior: {tr: 1, production: {steel: 1}},
-      metadata: {cardNumber: 'MY006', renderData: CardRenderer.builder((b) => {b.text('TR and production.');}),
+      metadata: {cardNumber: 'MY006', renderData: CardRenderer.builder((b) => {b.tr(1);}),
         description: 'Raise your TR 1 step. 3 VP. (Innovation breeds opportunity.)'},
     });
   }

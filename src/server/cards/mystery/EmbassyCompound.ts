@@ -9,7 +9,7 @@ export class EmbassyCompound extends Card implements IProjectCard {
     super({
       type: CardType.AUTOMATED, name: CardName.EMBASSY_COMPOUND, tags: [Tag.EARTH, Tag.MICROBE], cost: 10,
       behavior: {production: {steel: 1}, drawCard: 2},
-      metadata: {cardNumber: 'MY207', renderData: CardRenderer.builder((b) => {b.text('Production and draw.');}),
+      metadata: {cardNumber: 'MY207', renderData: CardRenderer.builder((b) => {b.production((pb) => {pb.steel(1);}); b.br; b.cards(2);}),
         description: 'Production and draw. (Shadows hide secrets.)'},
     });
   }

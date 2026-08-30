@@ -9,7 +9,7 @@ export class ShadowFamiliar extends Card implements IProjectCard {
     super({
       type: CardType.EVENT, name: CardName.SHADOW_FAMILIAR, tags: [Tag.BUILDING, Tag.SCIENCE], cost: 15,
       behavior: {ocean: {}},
-      metadata: {cardNumber: 'MY068', renderData: CardRenderer.builder((b) => {b.text('Place an ocean.');}),
+      metadata: {cardNumber: 'MY068', renderData: CardRenderer.builder((b) => {b.oceans(1);}),
         description: 'Place an ocean. (The mystery deepens.)'},
     });
   }

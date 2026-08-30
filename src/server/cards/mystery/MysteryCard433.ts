@@ -9,7 +9,7 @@ export class MysteryCard433 extends Card implements IProjectCard {
     super({
       type: CardType.EVENT, name: CardName.MYSTERY_CARD_433, tags: [Tag.CITY, Tag.SPACE], cost: 20,
       behavior: {ocean: {}},
-      metadata: {cardNumber: 'MY433', renderData: CardRenderer.builder((b) => {b.text('Place an ocean.');}),
+      metadata: {cardNumber: 'MY433', renderData: CardRenderer.builder((b) => {b.oceans(1);}),
         description: 'Place an ocean. (The plot thickens.)'},
     });
   }

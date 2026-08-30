@@ -10,7 +10,7 @@ export class MysteryCard458 extends Card implements IProjectCard {
       type: CardType.AUTOMATED, name: CardName.MYSTERY_CARD_458, tags: [Tag.PLANT, Tag.JOVIAN], cost: 15,
       victoryPoints: 3,
       behavior: {production: {megacredits: 1, heat: 2}},
-      metadata: {cardNumber: 'MY458', renderData: CardRenderer.builder((b) => {b.text('Adjust production.');}),
+      metadata: {cardNumber: 'MY458', renderData: CardRenderer.builder((b) => {b.production((pb) => {pb.megacredits(1); pb.heat(2);});}),
         description: '3 VP. (Steel and will forge the path.)'},
     });
   }

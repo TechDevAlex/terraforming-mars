@@ -9,7 +9,7 @@ export class BunkerComplex extends Card implements IProjectCard {
     super({
       type: CardType.AUTOMATED, name: CardName.BUNKER_COMPLEX, tags: [Tag.ANIMAL], cost: 10,
       behavior: {production: {titanium: 1, heat: 2}},
-      metadata: {cardNumber: 'MY116', renderData: CardRenderer.builder((b) => {b.text('Adjust production.');}),
+      metadata: {cardNumber: 'MY116', renderData: CardRenderer.builder((b) => {b.production((pb) => {pb.titanium(1); pb.heat(2);});}),
         description: 'Adjust production. (Knowledge is the ultimate currency.)'},
     });
   }

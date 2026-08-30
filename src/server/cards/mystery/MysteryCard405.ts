@@ -9,7 +9,7 @@ export class MysteryCard405 extends Card implements IProjectCard {
     super({
       type: CardType.AUTOMATED, name: CardName.MYSTERY_CARD_405, tags: [Tag.SPACE], cost: 14,
       behavior: {production: {heat: 2}},
-      metadata: {cardNumber: 'MY405', renderData: CardRenderer.builder((b) => {b.text('Adjust production.');}),
+      metadata: {cardNumber: 'MY405', renderData: CardRenderer.builder((b) => {b.production((pb) => {pb.heat(2);});}),
         description: 'Adjust production. (The mystery deepens.)'},
     });
   }

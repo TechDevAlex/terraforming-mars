@@ -9,7 +9,7 @@ export class MysteryPatron extends Card implements IProjectCard {
     super({
       type: CardType.AUTOMATED, name: CardName.MYSTERY_PATRON, tags: [Tag.CITY], cost: 10,
       behavior: {production: {plants: 2}},
-      metadata: {cardNumber: 'MY246', renderData: CardRenderer.builder((b) => {b.text('Adjust production.');}),
+      metadata: {cardNumber: 'MY246', renderData: CardRenderer.builder((b) => {b.production((pb) => {pb.plants(2);});}),
         description: 'Adjust production. (Every clue matters.)'},
     });
   }

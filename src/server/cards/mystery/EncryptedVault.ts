@@ -10,7 +10,7 @@ export class EncryptedVault extends Card implements IProjectCard {
       type: CardType.AUTOMATED, name: CardName.ENCRYPTED_VAULT, tags: [Tag.POWER], cost: 19,
       victoryPoints: 2,
       behavior: {city: {}, production: {megacredits: 1}},
-      metadata: {cardNumber: 'MY101', renderData: CardRenderer.builder((b) => {b.text('Place city, gain production.');}),
+      metadata: {cardNumber: 'MY101', renderData: CardRenderer.builder((b) => {b.production((pb) => {pb.megacredits(1);}); b.br; b.city();}),
         description: '2 VP. (Darkness falls.)'},
     });
   }

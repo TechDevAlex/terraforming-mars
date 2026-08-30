@@ -10,7 +10,7 @@ export class FoundryComplex extends Card implements IProjectCard {
       type: CardType.AUTOMATED, name: CardName.FOUNDRY_COMPLEX, tags: [Tag.MICROBE, Tag.SCIENCE], cost: 26,
       victoryPoints: 2,
       behavior: {production: {energy: 2, megacredits: 2}},
-      metadata: {cardNumber: 'MY160', renderData: CardRenderer.builder((b) => {b.text('Adjust production.');}),
+      metadata: {cardNumber: 'MY160', renderData: CardRenderer.builder((b) => {b.production((pb) => {pb.energy(2); pb.megacredits(2);});}),
         description: '2 VP. (The truth is out there.)'},
     });
   }

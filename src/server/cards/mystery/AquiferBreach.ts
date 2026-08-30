@@ -8,7 +8,7 @@ export class AquiferBreach extends Card implements IProjectCard {
     super({
       type: CardType.AUTOMATED, name: CardName.AQUIFER_BREACH, tags: [], cost: 6,
       behavior: {tr: 1, production: {steel: 2}},
-      metadata: {cardNumber: 'MY142', renderData: CardRenderer.builder((b) => {b.text('TR and production.');}),
+      metadata: {cardNumber: 'MY142', renderData: CardRenderer.builder((b) => {b.tr(1);}),
         description: 'Raise your TR 1 step. (Trust no one.)'},
     });
   }

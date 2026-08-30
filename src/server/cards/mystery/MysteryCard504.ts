@@ -9,7 +9,7 @@ export class MysteryCard504 extends Card implements IProjectCard {
     super({
       type: CardType.AUTOMATED, name: CardName.MYSTERY_CARD_504, tags: [Tag.BUILDING, Tag.EARTH], cost: 23,
       behavior: {production: {plants: 2}},
-      metadata: {cardNumber: 'MY504', renderData: CardRenderer.builder((b) => {b.text('Adjust production.');}),
+      metadata: {cardNumber: 'MY504', renderData: CardRenderer.builder((b) => {b.production((pb) => {pb.plants(2);});}),
         description: 'Adjust production. (Innovation breeds opportunity.)'},
     });
   }

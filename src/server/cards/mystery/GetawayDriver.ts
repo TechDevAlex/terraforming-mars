@@ -10,7 +10,7 @@ export class GetawayDriver extends Card implements IProjectCard {
       type: CardType.EVENT, name: CardName.GETAWAY_DRIVER, tags: [Tag.CITY, Tag.MARS], cost: 17,
       victoryPoints: -2,
       behavior: {stock: {steel: 4}},
-      metadata: {cardNumber: 'MY023', renderData: CardRenderer.builder((b) => {b.text('Gain resources.');}),
+      metadata: {cardNumber: 'MY023', renderData: CardRenderer.builder((b) => {b.steel(4);}),
         description: '-2 VP. (Secrets have power.)'},
     });
   }

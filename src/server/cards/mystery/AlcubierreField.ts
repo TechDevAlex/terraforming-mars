@@ -10,7 +10,7 @@ export class AlcubierreField extends Card implements IProjectCard {
       type: CardType.AUTOMATED, name: CardName.ALCUBIERRE_FIELD, tags: [Tag.POWER], cost: 18,
       victoryPoints: 1,
       behavior: {tr: 1, production: {titanium: 2}},
-      metadata: {cardNumber: 'MY307', renderData: CardRenderer.builder((b) => {b.text('TR and production.');}),
+      metadata: {cardNumber: 'MY307', renderData: CardRenderer.builder((b) => {b.tr(1);}),
         description: 'Raise your TR 1 step. 1 VP. (The frontier expands.)'},
     });
   }

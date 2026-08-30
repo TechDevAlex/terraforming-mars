@@ -10,7 +10,7 @@ export class UnknownBenefactor extends Card implements IProjectCard {
       type: CardType.AUTOMATED, name: CardName.UNKNOWN_BENEFACTOR, tags: [Tag.SCIENCE, Tag.CITY], cost: 14,
       victoryPoints: -1,
       behavior: {city: {}, production: {megacredits: 1}},
-      metadata: {cardNumber: 'MY250', renderData: CardRenderer.builder((b) => {b.text('Place city, gain production.');}),
+      metadata: {cardNumber: 'MY250', renderData: CardRenderer.builder((b) => {b.production((pb) => {pb.megacredits(1);}); b.br; b.city();}),
         description: '-1 VP. (Trust no one.)'},
     });
   }

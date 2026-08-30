@@ -9,7 +9,7 @@ export class ShadowBroker extends Card implements IProjectCard {
     super({
       type: CardType.AUTOMATED, name: CardName.SHADOW_BROKER, tags: [Tag.POWER], cost: 28,
       behavior: {city: {}, production: {megacredits: 2}},
-      metadata: {cardNumber: 'MY001', renderData: CardRenderer.builder((b) => {b.text('Place city, gain production.');}),
+      metadata: {cardNumber: 'MY001', renderData: CardRenderer.builder((b) => {b.production((pb) => {pb.megacredits(2);}); b.br; b.city();}),
         description: 'Place city, gain production. (The plot thickens.)'},
     });
   }

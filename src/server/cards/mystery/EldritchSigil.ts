@@ -9,7 +9,7 @@ export class EldritchSigil extends Card implements IProjectCard {
     super({
       type: CardType.AUTOMATED, name: CardName.ELDRITCH_SIGIL, tags: [Tag.ANIMAL, Tag.BUILDING], cost: 20,
       behavior: {greenery: {}},
-      metadata: {cardNumber: 'MY075', renderData: CardRenderer.builder((b) => {b.text('Place greenery.');}),
+      metadata: {cardNumber: 'MY075', renderData: CardRenderer.builder((b) => {b.greenery();}),
         description: 'Place greenery. (The frontier expands.)'},
     });
   }

@@ -9,7 +9,7 @@ export class MaydayProtocol extends Card implements IProjectCard {
     super({
       type: CardType.EVENT, name: CardName.MAYDAY_PROTOCOL, tags: [Tag.SCIENCE], cost: 7,
       behavior: {tr: 1},
-      metadata: {cardNumber: 'MY120', renderData: CardRenderer.builder((b) => {b.text('Raise TR.');}),
+      metadata: {cardNumber: 'MY120', renderData: CardRenderer.builder((b) => {b.tr(1);}),
         description: 'Raise your TR 1 step. (Trust no one.)'},
     });
   }

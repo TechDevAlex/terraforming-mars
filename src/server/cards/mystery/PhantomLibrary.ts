@@ -9,7 +9,7 @@ export class PhantomLibrary extends Card implements IProjectCard {
     super({
       type: CardType.AUTOMATED, name: CardName.PHANTOM_LIBRARY, tags: [Tag.ANIMAL, Tag.MICROBE], cost: 25,
       behavior: {production: {megacredits: 2}},
-      metadata: {cardNumber: 'MY079', renderData: CardRenderer.builder((b) => {b.text('Adjust production.');}),
+      metadata: {cardNumber: 'MY079', renderData: CardRenderer.builder((b) => {b.production((pb) => {pb.megacredits(2);});}),
         description: 'Adjust production. (Space warps.)'},
     });
   }

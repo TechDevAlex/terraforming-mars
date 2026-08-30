@@ -9,7 +9,7 @@ export class MysteryCard423 extends Card implements IProjectCard {
     super({
       type: CardType.AUTOMATED, name: CardName.MYSTERY_CARD_423, tags: [Tag.SPACE, Tag.MICROBE], cost: 15,
       behavior: {production: {plants: 2, energy: 1, megacredits: 1}},
-      metadata: {cardNumber: 'MY423', renderData: CardRenderer.builder((b) => {b.text('Adjust production.');}),
+      metadata: {cardNumber: 'MY423', renderData: CardRenderer.builder((b) => {b.production((pb) => {pb.plants(2); pb.energy(1); pb.megacredits(1);});}),
         description: 'Adjust production. (Nothing is as it seems.)'},
     });
   }

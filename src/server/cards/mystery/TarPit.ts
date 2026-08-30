@@ -10,7 +10,7 @@ export class TarPit extends Card implements IProjectCard {
       type: CardType.AUTOMATED, name: CardName.TAR_PIT, tags: [Tag.MARS], cost: 14,
       victoryPoints: 2,
       behavior: {production: {plants: 2, steel: 2}},
-      metadata: {cardNumber: 'MY139', renderData: CardRenderer.builder((b) => {b.text('Adjust production.');}),
+      metadata: {cardNumber: 'MY139', renderData: CardRenderer.builder((b) => {b.production((pb) => {pb.plants(2); pb.steel(2);});}),
         description: '2 VP. (The stars align.)'},
     });
   }

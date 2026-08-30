@@ -9,7 +9,7 @@ export class RecyclingPlant extends Card implements IProjectCard {
     super({
       type: CardType.AUTOMATED, name: CardName.RECYCLING_PLANT, tags: [Tag.BUILDING, Tag.JOVIAN], cost: 16,
       behavior: {tr: 1, production: {steel: 1}},
-      metadata: {cardNumber: 'MY156', renderData: CardRenderer.builder((b) => {b.text('TR and production.');}),
+      metadata: {cardNumber: 'MY156', renderData: CardRenderer.builder((b) => {b.tr(1);}),
         description: 'Raise your TR 1 step. (Space warps.)'},
     });
   }

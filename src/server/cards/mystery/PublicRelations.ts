@@ -10,7 +10,7 @@ export class PublicRelations extends Card implements IProjectCard {
       type: CardType.EVENT, name: CardName.PUBLIC_RELATIONS, tags: [Tag.ANIMAL], cost: 13,
       victoryPoints: 3,
       behavior: {tr: 1},
-      metadata: {cardNumber: 'MY182', renderData: CardRenderer.builder((b) => {b.text('Raise TR.');}),
+      metadata: {cardNumber: 'MY182', renderData: CardRenderer.builder((b) => {b.tr(1);}),
         description: 'Raise your TR 1 step. 3 VP. (The stars align.)'},
     });
   }

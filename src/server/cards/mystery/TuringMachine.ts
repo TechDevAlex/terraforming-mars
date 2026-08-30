@@ -9,7 +9,7 @@ export class TuringMachine extends Card implements IProjectCard {
     super({
       type: CardType.AUTOMATED, name: CardName.TURING_MACHINE, tags: [Tag.POWER], cost: 25,
       behavior: {production: {energy: 1, heat: 2}},
-      metadata: {cardNumber: 'MY325', renderData: CardRenderer.builder((b) => {b.text('Adjust production.');}),
+      metadata: {cardNumber: 'MY325', renderData: CardRenderer.builder((b) => {b.production((pb) => {pb.energy(1); pb.heat(2);});}),
         description: 'Adjust production. (Every clue matters.)'},
     });
   }

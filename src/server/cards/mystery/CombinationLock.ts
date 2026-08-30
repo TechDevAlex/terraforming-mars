@@ -10,7 +10,7 @@ export class CombinationLock extends Card implements IProjectCard {
       type: CardType.AUTOMATED, name: CardName.COMBINATION_LOCK, tags: [Tag.BUILDING, Tag.CITY], cost: 26,
       victoryPoints: -1,
       behavior: {tr: 1, production: {titanium: 2}},
-      metadata: {cardNumber: 'MY263', renderData: CardRenderer.builder((b) => {b.text('TR and production.');}),
+      metadata: {cardNumber: 'MY263', renderData: CardRenderer.builder((b) => {b.tr(1);}),
         description: 'Raise your TR 1 step. -1 VP. (Every clue matters.)'},
     });
   }

@@ -9,7 +9,7 @@ export class ReflexTraining extends Card implements IProjectCard {
     super({
       type: CardType.AUTOMATED, name: CardName.REFLEX_TRAINING, tags: [Tag.JOVIAN], cost: 4,
       behavior: {production: {megacredits: 3}},
-      metadata: {cardNumber: 'MY348', renderData: CardRenderer.builder((b) => {b.text('Adjust production.');}),
+      metadata: {cardNumber: 'MY348', renderData: CardRenderer.builder((b) => {b.production((pb) => {pb.megacredits(3);});}),
         description: 'Adjust production. (Time bends.)'},
     });
   }

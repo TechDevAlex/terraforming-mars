@@ -10,7 +10,7 @@ export class MysteryCard523 extends Card implements IProjectCard {
       type: CardType.AUTOMATED, name: CardName.MYSTERY_CARD_523, tags: [Tag.EARTH], cost: 11,
       victoryPoints: 3,
       behavior: {production: {megacredits: 1}},
-      metadata: {cardNumber: 'MY523', renderData: CardRenderer.builder((b) => {b.text('Adjust production.');}),
+      metadata: {cardNumber: 'MY523', renderData: CardRenderer.builder((b) => {b.production((pb) => {pb.megacredits(1);});}),
         description: '3 VP. (Secrets have power.)'},
     });
   }

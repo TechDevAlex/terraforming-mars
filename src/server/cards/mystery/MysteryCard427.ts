@@ -9,7 +9,7 @@ export class MysteryCard427 extends Card implements IProjectCard {
     super({
       type: CardType.AUTOMATED, name: CardName.MYSTERY_CARD_427, tags: [Tag.ANIMAL, Tag.SCIENCE], cost: 13,
       behavior: {production: {steel: 1, heat: 2}},
-      metadata: {cardNumber: 'MY427', renderData: CardRenderer.builder((b) => {b.text('Adjust production.');}),
+      metadata: {cardNumber: 'MY427', renderData: CardRenderer.builder((b) => {b.production((pb) => {pb.steel(1); pb.heat(2);});}),
         description: 'Adjust production. (Time bends.)'},
     });
   }

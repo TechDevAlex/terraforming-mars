@@ -9,7 +9,7 @@ export class Watchtower extends Card implements IProjectCard {
     super({
       type: CardType.AUTOMATED, name: CardName.WATCHTOWER, tags: [Tag.CITY, Tag.BUILDING], cost: 24,
       behavior: {greenery: {}},
-      metadata: {cardNumber: 'MY220', renderData: CardRenderer.builder((b) => {b.text('Place greenery.');}),
+      metadata: {cardNumber: 'MY220', renderData: CardRenderer.builder((b) => {b.greenery();}),
         description: 'Place greenery. (The frontier expands.)'},
     });
   }

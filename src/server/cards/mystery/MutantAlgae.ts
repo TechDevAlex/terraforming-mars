@@ -9,7 +9,7 @@ export class MutantAlgae extends Card implements IProjectCard {
     super({
       type: CardType.AUTOMATED, name: CardName.MUTANT_ALGAE, tags: [Tag.POWER], cost: 27,
       behavior: {production: {titanium: 2}},
-      metadata: {cardNumber: 'MY128', renderData: CardRenderer.builder((b) => {b.text('Adjust production.');}),
+      metadata: {cardNumber: 'MY128', renderData: CardRenderer.builder((b) => {b.production((pb) => {pb.titanium(2);});}),
         description: 'Adjust production. (The veil lifts.)'},
     });
   }

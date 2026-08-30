@@ -9,7 +9,7 @@ export class ResonanceCascade extends Card implements IProjectCard {
     super({
       type: CardType.EVENT, name: CardName.RESONANCE_CASCADE, tags: [Tag.MICROBE], cost: 21,
       behavior: {tr: 1},
-      metadata: {cardNumber: 'MY273', renderData: CardRenderer.builder((b) => {b.text('Raise TR.');}),
+      metadata: {cardNumber: 'MY273', renderData: CardRenderer.builder((b) => {b.tr(1);}),
         description: 'Raise your TR 1 step. (The mystery deepens.)'},
     });
   }

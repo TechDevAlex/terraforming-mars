@@ -9,7 +9,7 @@ export class MysteryCard411 extends Card implements IProjectCard {
     super({
       type: CardType.AUTOMATED, name: CardName.MYSTERY_CARD_411, tags: [Tag.EARTH, Tag.POWER], cost: 17,
       behavior: {production: {megacredits: 2}, drawCard: 2},
-      metadata: {cardNumber: 'MY411', renderData: CardRenderer.builder((b) => {b.text('Production and draw.');}),
+      metadata: {cardNumber: 'MY411', renderData: CardRenderer.builder((b) => {b.production((pb) => {pb.megacredits(2);}); b.br; b.cards(2);}),
         description: 'Production and draw. (Nothing is as it seems.)'},
     });
   }

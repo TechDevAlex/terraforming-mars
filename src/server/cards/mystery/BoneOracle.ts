@@ -9,7 +9,7 @@ export class BoneOracle extends Card implements IProjectCard {
     super({
       type: CardType.AUTOMATED, name: CardName.BONE_ORACLE, tags: [Tag.CITY, Tag.ANIMAL], cost: 23,
       behavior: {production: {heat: 2}, drawCard: 1},
-      metadata: {cardNumber: 'MY067', renderData: CardRenderer.builder((b) => {b.text('Production and draw.');}),
+      metadata: {cardNumber: 'MY067', renderData: CardRenderer.builder((b) => {b.production((pb) => {pb.heat(2);}); b.br; b.cards(1);}),
         description: 'Production and draw. (Shadows hide secrets.)'},
     });
   }

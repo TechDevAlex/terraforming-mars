@@ -9,7 +9,7 @@ export class MysteryCard424 extends Card implements IProjectCard {
     super({
       type: CardType.EVENT, name: CardName.MYSTERY_CARD_424, tags: [Tag.ANIMAL, Tag.MICROBE], cost: 3,
       behavior: {stock: {titanium: 5}},
-      metadata: {cardNumber: 'MY424', renderData: CardRenderer.builder((b) => {b.text('Gain resources.');}),
+      metadata: {cardNumber: 'MY424', renderData: CardRenderer.builder((b) => {b.titanium(5);}),
         description: 'Gain resources. (The mystery deepens.)'},
     });
   }

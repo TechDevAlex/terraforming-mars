@@ -9,7 +9,7 @@ export class MysteryCard397 extends Card implements IProjectCard {
     super({
       type: CardType.AUTOMATED, name: CardName.MYSTERY_CARD_397, tags: [Tag.SPACE], cost: 4,
       behavior: {greenery: {}},
-      metadata: {cardNumber: 'MY397', renderData: CardRenderer.builder((b) => {b.text('Place greenery.');}),
+      metadata: {cardNumber: 'MY397', renderData: CardRenderer.builder((b) => {b.greenery();}),
         description: 'Place greenery. (A whisper in the void.)'},
     });
   }

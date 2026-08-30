@@ -10,7 +10,7 @@ export class MysteryCard399 extends Card implements IProjectCard {
       type: CardType.EVENT, name: CardName.MYSTERY_CARD_399, tags: [Tag.EARTH, Tag.BUILDING], cost: 5,
       victoryPoints: 1,
       behavior: {drawCard: 1},
-      metadata: {cardNumber: 'MY399', renderData: CardRenderer.builder((b) => {b.text('Draw cards.');}),
+      metadata: {cardNumber: 'MY399', renderData: CardRenderer.builder((b) => {b.cards(1);}),
         description: 'Draw 1 card. 1 VP. (Progress demands sacrifice.)'},
     });
   }

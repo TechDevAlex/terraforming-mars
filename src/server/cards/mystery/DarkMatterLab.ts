@@ -9,7 +9,7 @@ export class DarkMatterLab extends Card implements IProjectCard {
     super({
       type: CardType.EVENT, name: CardName.DARK_MATTER_LAB, tags: [Tag.ANIMAL], cost: 14,
       behavior: {stock: {plants: 5}},
-      metadata: {cardNumber: 'MY035', renderData: CardRenderer.builder((b) => {b.text('Gain resources.');}),
+      metadata: {cardNumber: 'MY035', renderData: CardRenderer.builder((b) => {b.plants(5);}),
         description: 'Gain resources. (Innovation breeds opportunity.)'},
     });
   }

@@ -9,7 +9,7 @@ export class LostCity extends Card implements IProjectCard {
     super({
       type: CardType.EVENT, name: CardName.LOST_CITY, tags: [Tag.JOVIAN, Tag.SCIENCE], cost: 16,
       behavior: {global: {oxygen: 1}},
-      metadata: {cardNumber: 'MY212', renderData: CardRenderer.builder((b) => {b.text('Raise global parameter.');}),
+      metadata: {cardNumber: 'MY212', renderData: CardRenderer.builder((b) => {b.oxygen(1);}),
         description: 'Raise oxygen 1 step. (Shadows hide secrets.)'},
     });
   }

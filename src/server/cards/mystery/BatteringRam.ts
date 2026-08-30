@@ -10,7 +10,7 @@ export class BatteringRam extends Card implements IProjectCard {
       type: CardType.AUTOMATED, name: CardName.BATTERING_RAM, tags: [Tag.POWER, Tag.MICROBE], cost: 12,
       victoryPoints: -1,
       behavior: {production: {energy: 2, plants: 1}},
-      metadata: {cardNumber: 'MY226', renderData: CardRenderer.builder((b) => {b.text('Adjust production.');}),
+      metadata: {cardNumber: 'MY226', renderData: CardRenderer.builder((b) => {b.production((pb) => {pb.energy(2); pb.plants(1);});}),
         description: '-1 VP. (The unknown beckons.)'},
     });
   }

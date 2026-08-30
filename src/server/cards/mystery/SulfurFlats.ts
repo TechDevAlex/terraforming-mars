@@ -10,7 +10,7 @@ export class SulfurFlats extends Card implements IProjectCard {
       type: CardType.EVENT, name: CardName.SULFUR_FLATS, tags: [Tag.JOVIAN], cost: 14,
       victoryPoints: 1,
       behavior: {ocean: {}},
-      metadata: {cardNumber: 'MY144', renderData: CardRenderer.builder((b) => {b.text('Place an ocean.');}),
+      metadata: {cardNumber: 'MY144', renderData: CardRenderer.builder((b) => {b.oceans(1);}),
         description: '1 VP. (Steel and will forge the path.)'},
     });
   }

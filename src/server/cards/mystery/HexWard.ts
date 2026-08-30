@@ -10,7 +10,7 @@ export class HexWard extends Card implements IProjectCard {
       type: CardType.AUTOMATED, name: CardName.HEX_WARD, tags: [Tag.PLANT, Tag.SCIENCE], cost: 16,
       victoryPoints: 1,
       behavior: {production: {megacredits: 2}},
-      metadata: {cardNumber: 'MY065', renderData: CardRenderer.builder((b) => {b.text('Adjust production.');}),
+      metadata: {cardNumber: 'MY065', renderData: CardRenderer.builder((b) => {b.production((pb) => {pb.megacredits(2);});}),
         description: '1 VP. (Time bends.)'},
     });
   }

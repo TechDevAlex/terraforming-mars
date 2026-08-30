@@ -10,7 +10,7 @@ export class MysteryCard431 extends Card implements IProjectCard {
       type: CardType.AUTOMATED, name: CardName.MYSTERY_CARD_431, tags: [Tag.SCIENCE], cost: 23,
       victoryPoints: 1,
       behavior: {production: {titanium: 2}},
-      metadata: {cardNumber: 'MY431', renderData: CardRenderer.builder((b) => {b.text('Adjust production.');}),
+      metadata: {cardNumber: 'MY431', renderData: CardRenderer.builder((b) => {b.production((pb) => {pb.titanium(2);});}),
         description: '1 VP. (The veil lifts.)'},
     });
   }

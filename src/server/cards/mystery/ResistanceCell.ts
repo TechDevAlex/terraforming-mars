@@ -9,7 +9,7 @@ export class ResistanceCell extends Card implements IProjectCard {
       type: CardType.AUTOMATED, name: CardName.RESISTANCE_CELL, tags: [], cost: 25,
       victoryPoints: 2,
       behavior: {production: {heat: 2}},
-      metadata: {cardNumber: 'MY197', renderData: CardRenderer.builder((b) => {b.text('Adjust production.');}),
+      metadata: {cardNumber: 'MY197', renderData: CardRenderer.builder((b) => {b.production((pb) => {pb.heat(2);});}),
         description: '2 VP. (Nature finds a way.)'},
     });
   }

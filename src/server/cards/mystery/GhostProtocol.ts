@@ -9,7 +9,7 @@ export class GhostProtocol extends Card implements IProjectCard {
     super({
       type: CardType.AUTOMATED, name: CardName.GHOST_PROTOCOL, tags: [Tag.EARTH, Tag.MARS], cost: 4,
       behavior: {production: {megacredits: 1, energy: 1}},
-      metadata: {cardNumber: 'MY097', renderData: CardRenderer.builder((b) => {b.text('Adjust production.');}),
+      metadata: {cardNumber: 'MY097', renderData: CardRenderer.builder((b) => {b.production((pb) => {pb.megacredits(1); pb.energy(1);});}),
         description: 'Adjust production. (Innovation breeds opportunity.)'},
     });
   }

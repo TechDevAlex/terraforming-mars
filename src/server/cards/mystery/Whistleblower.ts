@@ -9,7 +9,7 @@ export class Whistleblower extends Card implements IProjectCard {
     super({
       type: CardType.EVENT, name: CardName.WHISTLEBLOWER, tags: [Tag.MICROBE, Tag.JOVIAN], cost: 6,
       behavior: {global: {temperature: 1}},
-      metadata: {cardNumber: 'MY186', renderData: CardRenderer.builder((b) => {b.text('Raise global parameter.');}),
+      metadata: {cardNumber: 'MY186', renderData: CardRenderer.builder((b) => {b.temperature(1);}),
         description: 'Raise temperature 1 step. (Progress demands sacrifice.)'},
     });
   }

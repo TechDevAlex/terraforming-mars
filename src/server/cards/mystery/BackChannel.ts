@@ -9,7 +9,7 @@ export class BackChannel extends Card implements IProjectCard {
     super({
       type: CardType.AUTOMATED, name: CardName.BACK_CHANNEL, tags: [Tag.CITY, Tag.PLANT], cost: 12,
       behavior: {city: {}, production: {megacredits: 3}},
-      metadata: {cardNumber: 'MY210', renderData: CardRenderer.builder((b) => {b.text('Place city, gain production.');}),
+      metadata: {cardNumber: 'MY210', renderData: CardRenderer.builder((b) => {b.production((pb) => {pb.megacredits(3);}); b.br; b.city();}),
         description: 'Place city, gain production. (Time bends.)'},
     });
   }

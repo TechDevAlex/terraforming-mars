@@ -9,7 +9,7 @@ export class CipherCore extends Card implements IProjectCard {
     super({
       type: CardType.EVENT, name: CardName.CIPHER_CORE, tags: [Tag.MARS], cost: 13,
       behavior: {global: {oxygen: 1}},
-      metadata: {cardNumber: 'MY092', renderData: CardRenderer.builder((b) => {b.text('Raise global parameter.');}),
+      metadata: {cardNumber: 'MY092', renderData: CardRenderer.builder((b) => {b.oxygen(1);}),
         description: 'Raise oxygen 1 step. (The frontier expands.)'},
     });
   }

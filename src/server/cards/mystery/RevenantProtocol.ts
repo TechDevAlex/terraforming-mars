@@ -10,7 +10,7 @@ export class RevenantProtocol extends Card implements IProjectCard {
       type: CardType.AUTOMATED, name: CardName.REVENANT_PROTOCOL, tags: [Tag.POWER, Tag.PLANT], cost: 27,
       victoryPoints: -2,
       behavior: {greenery: {}},
-      metadata: {cardNumber: 'MY085', renderData: CardRenderer.builder((b) => {b.text('Place greenery.');}),
+      metadata: {cardNumber: 'MY085', renderData: CardRenderer.builder((b) => {b.greenery();}),
         description: '-2 VP. (Nature finds a way.)'},
     });
   }

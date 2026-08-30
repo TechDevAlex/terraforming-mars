@@ -10,7 +10,7 @@ export class FalseWall extends Card implements IProjectCard {
       type: CardType.AUTOMATED, name: CardName.FALSE_WALL, tags: [Tag.POWER], cost: 4,
       victoryPoints: 3,
       behavior: {production: {plants: 2, heat: 1}},
-      metadata: {cardNumber: 'MY254', renderData: CardRenderer.builder((b) => {b.text('Adjust production.');}),
+      metadata: {cardNumber: 'MY254', renderData: CardRenderer.builder((b) => {b.production((pb) => {pb.plants(2); pb.heat(1);});}),
         description: '3 VP. (Space warps.)'},
     });
   }

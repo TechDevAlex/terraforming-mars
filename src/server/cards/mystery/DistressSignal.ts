@@ -9,7 +9,7 @@ export class DistressSignal extends Card implements IProjectCard {
     super({
       type: CardType.AUTOMATED, name: CardName.DISTRESS_SIGNAL, tags: [Tag.MARS], cost: 14,
       behavior: {production: {heat: 1}},
-      metadata: {cardNumber: 'MY119', renderData: CardRenderer.builder((b) => {b.text('Adjust production.');}),
+      metadata: {cardNumber: 'MY119', renderData: CardRenderer.builder((b) => {b.production((pb) => {pb.heat(1);});}),
         description: 'Adjust production. (Reality shifts.)'},
     });
   }

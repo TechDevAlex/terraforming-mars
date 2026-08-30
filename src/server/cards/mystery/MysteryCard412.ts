@@ -9,7 +9,7 @@ export class MysteryCard412 extends Card implements IProjectCard {
     super({
       type: CardType.AUTOMATED, name: CardName.MYSTERY_CARD_412, tags: [Tag.PLANT], cost: 18,
       behavior: {production: {energy: 1, titanium: 1, steel: 2}},
-      metadata: {cardNumber: 'MY412', renderData: CardRenderer.builder((b) => {b.text('Adjust production.');}),
+      metadata: {cardNumber: 'MY412', renderData: CardRenderer.builder((b) => {b.production((pb) => {pb.energy(1); pb.titanium(1); pb.steel(2);});}),
         description: 'Adjust production. (The veil lifts.)'},
     });
   }

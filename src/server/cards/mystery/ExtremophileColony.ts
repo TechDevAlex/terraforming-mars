@@ -10,7 +10,7 @@ export class ExtremophileColony extends Card implements IProjectCard {
       type: CardType.AUTOMATED, name: CardName.EXTREMOPHILE_COLONY, tags: [Tag.POWER, Tag.SCIENCE], cost: 18,
       victoryPoints: 3,
       behavior: {tr: 1, production: {megacredits: 2}},
-      metadata: {cardNumber: 'MY130', renderData: CardRenderer.builder((b) => {b.text('TR and production.');}),
+      metadata: {cardNumber: 'MY130', renderData: CardRenderer.builder((b) => {b.tr(1);}),
         description: 'Raise your TR 1 step. 3 VP. (Every clue matters.)'},
     });
   }

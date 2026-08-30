@@ -9,7 +9,7 @@ export class SupplyChain extends Card implements IProjectCard {
     super({
       type: CardType.EVENT, name: CardName.SUPPLY_CHAIN, tags: [Tag.MARS, Tag.EARTH], cost: 9,
       behavior: {global: {temperature: 1}},
-      metadata: {cardNumber: 'MY165', renderData: CardRenderer.builder((b) => {b.text('Raise global parameter.');}),
+      metadata: {cardNumber: 'MY165', renderData: CardRenderer.builder((b) => {b.temperature(1);}),
         description: 'Raise temperature 1 step. (The stars align.)'},
     });
   }

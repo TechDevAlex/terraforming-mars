@@ -10,7 +10,7 @@ export class MysteryCard505 extends Card implements IProjectCard {
       type: CardType.AUTOMATED, name: CardName.MYSTERY_CARD_505, tags: [Tag.MICROBE, Tag.JOVIAN], cost: 15,
       victoryPoints: -2,
       behavior: {city: {}, production: {megacredits: 3}},
-      metadata: {cardNumber: 'MY505', renderData: CardRenderer.builder((b) => {b.text('Place city, gain production.');}),
+      metadata: {cardNumber: 'MY505', renderData: CardRenderer.builder((b) => {b.production((pb) => {pb.megacredits(3);}); b.br; b.city();}),
         description: '-2 VP. (Trust no one.)'},
     });
   }

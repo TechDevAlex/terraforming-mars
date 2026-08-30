@@ -9,7 +9,7 @@ export class HumanitarianMission extends Card implements IProjectCard {
     super({
       type: CardType.AUTOMATED, name: CardName.HUMANITARIAN_MISSION, tags: [Tag.CITY], cost: 23,
       behavior: {production: {megacredits: 1}, drawCard: 2},
-      metadata: {cardNumber: 'MY201', renderData: CardRenderer.builder((b) => {b.text('Production and draw.');}),
+      metadata: {cardNumber: 'MY201', renderData: CardRenderer.builder((b) => {b.production((pb) => {pb.megacredits(1);}); b.br; b.cards(2);}),
         description: 'Production and draw. (The frontier expands.)'},
     });
   }

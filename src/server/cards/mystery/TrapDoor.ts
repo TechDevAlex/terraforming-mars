@@ -9,7 +9,7 @@ export class TrapDoor extends Card implements IProjectCard {
     super({
       type: CardType.AUTOMATED, name: CardName.TRAP_DOOR, tags: [Tag.MARS, Tag.BUILDING], cost: 18,
       behavior: {city: {}, production: {megacredits: 1}},
-      metadata: {cardNumber: 'MY253', renderData: CardRenderer.builder((b) => {b.text('Place city, gain production.');}),
+      metadata: {cardNumber: 'MY253', renderData: CardRenderer.builder((b) => {b.production((pb) => {pb.megacredits(1);}); b.br; b.city();}),
         description: 'Place city, gain production. (The truth is out there.)'},
     });
   }

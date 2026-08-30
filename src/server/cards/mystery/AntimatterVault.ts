@@ -9,7 +9,7 @@ export class AntimatterVault extends Card implements IProjectCard {
     super({
       type: CardType.EVENT, name: CardName.ANTIMATTER_VAULT, tags: [Tag.POWER], cost: 3,
       behavior: {stock: {steel: 2}},
-      metadata: {cardNumber: 'MY060', renderData: CardRenderer.builder((b) => {b.text('Gain resources.');}),
+      metadata: {cardNumber: 'MY060', renderData: CardRenderer.builder((b) => {b.steel(2);}),
         description: 'Gain resources. (Shadows hide secrets.)'},
     });
   }

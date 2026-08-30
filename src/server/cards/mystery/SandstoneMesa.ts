@@ -10,7 +10,7 @@ export class SandstoneMesa extends Card implements IProjectCard {
       type: CardType.EVENT, name: CardName.SANDSTONE_MESA, tags: [Tag.EARTH, Tag.SPACE], cost: 18,
       victoryPoints: -1,
       behavior: {ocean: {}},
-      metadata: {cardNumber: 'MY148', renderData: CardRenderer.builder((b) => {b.text('Place an ocean.');}),
+      metadata: {cardNumber: 'MY148', renderData: CardRenderer.builder((b) => {b.oceans(1);}),
         description: '-1 VP. (The plot thickens.)'},
     });
   }

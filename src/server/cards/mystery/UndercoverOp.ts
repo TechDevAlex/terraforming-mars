@@ -9,7 +9,7 @@ export class UndercoverOp extends Card implements IProjectCard {
     super({
       type: CardType.EVENT, name: CardName.UNDERCOVER_OP, tags: [Tag.BUILDING], cost: 20,
       behavior: {stock: {plants: 4}},
-      metadata: {cardNumber: 'MY012', renderData: CardRenderer.builder((b) => {b.text('Gain resources.');}),
+      metadata: {cardNumber: 'MY012', renderData: CardRenderer.builder((b) => {b.plants(4);}),
         description: 'Gain resources. (Reality shifts.)'},
     });
   }

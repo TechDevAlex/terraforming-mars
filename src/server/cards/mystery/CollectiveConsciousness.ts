@@ -10,7 +10,7 @@ export class CollectiveConsciousness extends Card implements IProjectCard {
       type: CardType.EVENT, name: CardName.COLLECTIVE_CONSCIOUSNESS, tags: [Tag.ANIMAL, Tag.MARS], cost: 15,
       victoryPoints: 3,
       behavior: {drawCard: 1},
-      metadata: {cardNumber: 'MY331', renderData: CardRenderer.builder((b) => {b.text('Draw cards.');}),
+      metadata: {cardNumber: 'MY331', renderData: CardRenderer.builder((b) => {b.cards(1);}),
         description: 'Draw 1 card. 3 VP. (Progress demands sacrifice.)'},
     });
   }

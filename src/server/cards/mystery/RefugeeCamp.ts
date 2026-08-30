@@ -9,7 +9,7 @@ export class RefugeeCamp extends Card implements IProjectCard {
     super({
       type: CardType.AUTOMATED, name: CardName.REFUGEE_CAMP, tags: [Tag.PLANT, Tag.SCIENCE], cost: 19,
       behavior: {production: {heat: 2}, drawCard: 2},
-      metadata: {cardNumber: 'MY199', renderData: CardRenderer.builder((b) => {b.text('Production and draw.');}),
+      metadata: {cardNumber: 'MY199', renderData: CardRenderer.builder((b) => {b.production((pb) => {pb.heat(2);}); b.br; b.cards(2);}),
         description: 'Production and draw. (Reality shifts.)'},
     });
   }

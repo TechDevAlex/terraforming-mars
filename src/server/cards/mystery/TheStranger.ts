@@ -9,7 +9,7 @@ export class TheStranger extends Card implements IProjectCard {
     super({
       type: CardType.EVENT, name: CardName.THE_STRANGER, tags: [Tag.MARS, Tag.SCIENCE], cost: 10,
       behavior: {drawCard: 3},
-      metadata: {cardNumber: 'MY249', renderData: CardRenderer.builder((b) => {b.text('Draw cards.');}),
+      metadata: {cardNumber: 'MY249', renderData: CardRenderer.builder((b) => {b.cards(3);}),
         description: 'Draw 3 cards. (Shadows hide secrets.)'},
     });
   }

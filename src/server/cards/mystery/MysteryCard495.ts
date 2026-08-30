@@ -10,7 +10,7 @@ export class MysteryCard495 extends Card implements IProjectCard {
       type: CardType.AUTOMATED, name: CardName.MYSTERY_CARD_495, tags: [Tag.BUILDING], cost: 9,
       victoryPoints: 1,
       behavior: {tr: 1, production: {titanium: 1}},
-      metadata: {cardNumber: 'MY495', renderData: CardRenderer.builder((b) => {b.text('TR and production.');}),
+      metadata: {cardNumber: 'MY495', renderData: CardRenderer.builder((b) => {b.tr(1);}),
         description: 'Raise your TR 1 step. 1 VP. (The plot thickens.)'},
     });
   }

@@ -10,7 +10,7 @@ export class SteganographyLab extends Card implements IProjectCard {
       type: CardType.AUTOMATED, name: CardName.STEGANOGRAPHY_LAB, tags: [Tag.PLANT, Tag.ANIMAL], cost: 5,
       victoryPoints: -2,
       behavior: {production: {energy: 1}},
-      metadata: {cardNumber: 'MY112', renderData: CardRenderer.builder((b) => {b.text('Adjust production.');}),
+      metadata: {cardNumber: 'MY112', renderData: CardRenderer.builder((b) => {b.production((pb) => {pb.energy(1);});}),
         description: '-2 VP. (The stars align.)'},
     });
   }

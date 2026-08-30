@@ -10,7 +10,7 @@ export class TreasureMap extends Card implements IProjectCard {
       type: CardType.AUTOMATED, name: CardName.TREASURE_MAP, tags: [Tag.POWER], cost: 14,
       victoryPoints: 1,
       behavior: {production: {steel: 3}},
-      metadata: {cardNumber: 'MY211', renderData: CardRenderer.builder((b) => {b.text('Adjust production.');}),
+      metadata: {cardNumber: 'MY211', renderData: CardRenderer.builder((b) => {b.production((pb) => {pb.steel(3);});}),
         description: '1 VP. (Space warps.)'},
     });
   }

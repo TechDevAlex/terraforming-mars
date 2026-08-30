@@ -9,7 +9,7 @@ export class MasterKey extends Card implements IProjectCard {
     super({
       type: CardType.AUTOMATED, name: CardName.MASTER_KEY, tags: [Tag.MICROBE], cost: 7,
       behavior: {production: {megacredits: 2}},
-      metadata: {cardNumber: 'MY262', renderData: CardRenderer.builder((b) => {b.text('Adjust production.');}),
+      metadata: {cardNumber: 'MY262', renderData: CardRenderer.builder((b) => {b.production((pb) => {pb.megacredits(2);});}),
         description: 'Adjust production. (Nature finds a way.)'},
     });
   }

@@ -9,7 +9,7 @@ export class CosmicDread extends Card implements IProjectCard {
     super({
       type: CardType.AUTOMATED, name: CardName.COSMIC_DREAD, tags: [Tag.ANIMAL, Tag.BUILDING], cost: 4,
       behavior: {production: {steel: 2, megacredits: 1}},
-      metadata: {cardNumber: 'MY034', renderData: CardRenderer.builder((b) => {b.text('Adjust production.');}),
+      metadata: {cardNumber: 'MY034', renderData: CardRenderer.builder((b) => {b.production((pb) => {pb.steel(2); pb.megacredits(1);});}),
         description: 'Adjust production. (Time bends.)'},
     });
   }

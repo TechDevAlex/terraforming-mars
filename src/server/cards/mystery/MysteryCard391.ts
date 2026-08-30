@@ -10,7 +10,7 @@ export class MysteryCard391 extends Card implements IProjectCard {
       type: CardType.AUTOMATED, name: CardName.MYSTERY_CARD_391, tags: [Tag.SPACE, Tag.ANIMAL], cost: 24,
       victoryPoints: -2,
       behavior: {production: {titanium: 2}},
-      metadata: {cardNumber: 'MY391', renderData: CardRenderer.builder((b) => {b.text('Adjust production.');}),
+      metadata: {cardNumber: 'MY391', renderData: CardRenderer.builder((b) => {b.production((pb) => {pb.titanium(2);});}),
         description: '-2 VP. (Progress demands sacrifice.)'},
     });
   }

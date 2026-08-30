@@ -10,7 +10,7 @@ export class AlienArtifact extends Card implements IProjectCard {
       type: CardType.AUTOMATED, name: CardName.ALIEN_ARTIFACT, tags: [Tag.MICROBE, Tag.SCIENCE], cost: 19,
       victoryPoints: 1,
       behavior: {city: {}, production: {megacredits: 3}},
-      metadata: {cardNumber: 'MY053', renderData: CardRenderer.builder((b) => {b.text('Place city, gain production.');}),
+      metadata: {cardNumber: 'MY053', renderData: CardRenderer.builder((b) => {b.production((pb) => {pb.megacredits(3);}); b.br; b.city();}),
         description: '1 VP. (Knowledge is the ultimate currency.)'},
     });
   }

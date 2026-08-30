@@ -10,7 +10,7 @@ export class SolarSail extends Card implements IProjectCard {
       type: CardType.EVENT, name: CardName.SOLAR_SAIL, tags: [Tag.SCIENCE, Tag.POWER], cost: 8,
       victoryPoints: -2,
       behavior: {stock: {titanium: 2}},
-      metadata: {cardNumber: 'MY300', renderData: CardRenderer.builder((b) => {b.text('Gain resources.');}),
+      metadata: {cardNumber: 'MY300', renderData: CardRenderer.builder((b) => {b.titanium(2);}),
         description: '-2 VP. (Knowledge is the ultimate currency.)'},
     });
   }

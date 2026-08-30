@@ -10,7 +10,7 @@ export class TheFence extends Card implements IProjectCard {
       type: CardType.EVENT, name: CardName.THE_FENCE, tags: [Tag.BUILDING], cost: 12,
       victoryPoints: -2,
       behavior: {stock: {titanium: 3}},
-      metadata: {cardNumber: 'MY025', renderData: CardRenderer.builder((b) => {b.text('Gain resources.');}),
+      metadata: {cardNumber: 'MY025', renderData: CardRenderer.builder((b) => {b.titanium(3);}),
         description: '-2 VP. (Progress demands sacrifice.)'},
     });
   }

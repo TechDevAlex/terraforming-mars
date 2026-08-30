@@ -9,7 +9,7 @@ export class GeneticAlgorithm extends Card implements IProjectCard {
     super({
       type: CardType.AUTOMATED, name: CardName.GENETIC_ALGORITHM, tags: [Tag.SCIENCE, Tag.JOVIAN], cost: 7,
       behavior: {greenery: {}},
-      metadata: {cardNumber: 'MY328', renderData: CardRenderer.builder((b) => {b.text('Place greenery.');}),
+      metadata: {cardNumber: 'MY328', renderData: CardRenderer.builder((b) => {b.greenery();}),
         description: 'Place greenery. (Every clue matters.)'},
     });
   }

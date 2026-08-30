@@ -9,7 +9,7 @@ export class Holodeck extends Card implements IProjectCard {
       type: CardType.EVENT, name: CardName.HOLODECK, tags: [], cost: 17,
       victoryPoints: 1,
       behavior: {ocean: {}},
-      metadata: {cardNumber: 'MY355', renderData: CardRenderer.builder((b) => {b.text('Place an ocean.');}),
+      metadata: {cardNumber: 'MY355', renderData: CardRenderer.builder((b) => {b.oceans(1);}),
         description: '1 VP. (Space warps.)'},
     });
   }

@@ -10,7 +10,7 @@ export class HarmonicConvergence extends Card implements IProjectCard {
       type: CardType.AUTOMATED, name: CardName.HARMONIC_CONVERGENCE, tags: [Tag.JOVIAN, Tag.BUILDING], cost: 20,
       victoryPoints: -2,
       behavior: {production: {energy: 1}},
-      metadata: {cardNumber: 'MY274', renderData: CardRenderer.builder((b) => {b.text('Adjust production.');}),
+      metadata: {cardNumber: 'MY274', renderData: CardRenderer.builder((b) => {b.production((pb) => {pb.energy(1);});}),
         description: '-2 VP. (Time bends.)'},
     });
   }

@@ -9,7 +9,7 @@ export class SeanceChamber extends Card implements IProjectCard {
     super({
       type: CardType.EVENT, name: CardName.SEANCE_CHAMBER, tags: [Tag.EARTH], cost: 6,
       behavior: {global: {oxygen: 1}},
-      metadata: {cardNumber: 'MY081', renderData: CardRenderer.builder((b) => {b.text('Raise global parameter.');}),
+      metadata: {cardNumber: 'MY081', renderData: CardRenderer.builder((b) => {b.oxygen(1);}),
         description: 'Raise oxygen 1 step. (Reality shifts.)'},
     });
   }

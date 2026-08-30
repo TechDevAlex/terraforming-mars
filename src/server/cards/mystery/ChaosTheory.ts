@@ -10,7 +10,7 @@ export class ChaosTheory extends Card implements IProjectCard {
       type: CardType.AUTOMATED, name: CardName.CHAOS_THEORY, tags: [Tag.BUILDING], cost: 14,
       victoryPoints: -1,
       behavior: {production: {plants: 2}},
-      metadata: {cardNumber: 'MY318', renderData: CardRenderer.builder((b) => {b.text('Adjust production.');}),
+      metadata: {cardNumber: 'MY318', renderData: CardRenderer.builder((b) => {b.production((pb) => {pb.plants(2);});}),
         description: '-1 VP. (Darkness falls.)'},
     });
   }

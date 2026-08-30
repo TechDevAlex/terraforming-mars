@@ -9,7 +9,7 @@ export class ForbiddenKnowledge extends Card implements IProjectCard {
     super({
       type: CardType.EVENT, name: CardName.FORBIDDEN_KNOWLEDGE, tags: [Tag.SPACE], cost: 13,
       behavior: {global: {oxygen: 1}},
-      metadata: {cardNumber: 'MY073', renderData: CardRenderer.builder((b) => {b.text('Raise global parameter.');}),
+      metadata: {cardNumber: 'MY073', renderData: CardRenderer.builder((b) => {b.oxygen(1);}),
         description: 'Raise oxygen 1 step. (Progress demands sacrifice.)'},
     });
   }

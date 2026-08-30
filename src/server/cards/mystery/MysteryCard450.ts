@@ -9,7 +9,7 @@ export class MysteryCard450 extends Card implements IProjectCard {
     super({
       type: CardType.AUTOMATED, name: CardName.MYSTERY_CARD_450, tags: [Tag.MICROBE], cost: 16,
       behavior: {production: {megacredits: 1}, drawCard: 1},
-      metadata: {cardNumber: 'MY450', renderData: CardRenderer.builder((b) => {b.text('Production and draw.');}),
+      metadata: {cardNumber: 'MY450', renderData: CardRenderer.builder((b) => {b.production((pb) => {pb.megacredits(1);}); b.br; b.cards(1);}),
         description: 'Production and draw. (Darkness falls.)'},
     });
   }

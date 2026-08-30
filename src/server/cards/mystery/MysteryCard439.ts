@@ -9,7 +9,7 @@ export class MysteryCard439 extends Card implements IProjectCard {
     super({
       type: CardType.AUTOMATED, name: CardName.MYSTERY_CARD_439, tags: [Tag.JOVIAN], cost: 24,
       behavior: {production: {megacredits: 2}},
-      metadata: {cardNumber: 'MY439', renderData: CardRenderer.builder((b) => {b.text('Adjust production.');}),
+      metadata: {cardNumber: 'MY439', renderData: CardRenderer.builder((b) => {b.production((pb) => {pb.megacredits(2);});}),
         description: 'Adjust production. (Knowledge is the ultimate currency.)'},
     });
   }

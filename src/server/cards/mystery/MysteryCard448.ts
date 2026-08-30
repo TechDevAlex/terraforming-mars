@@ -9,7 +9,7 @@ export class MysteryCard448 extends Card implements IProjectCard {
     super({
       type: CardType.EVENT, name: CardName.MYSTERY_CARD_448, tags: [Tag.EARTH, Tag.SCIENCE], cost: 18,
       behavior: {stock: {steel: 2}},
-      metadata: {cardNumber: 'MY448', renderData: CardRenderer.builder((b) => {b.text('Gain resources.');}),
+      metadata: {cardNumber: 'MY448', renderData: CardRenderer.builder((b) => {b.steel(2);}),
         description: 'Gain resources. (The veil lifts.)'},
     });
   }

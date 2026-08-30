@@ -10,7 +10,7 @@ export class PetrifiedForest extends Card implements IProjectCard {
       type: CardType.EVENT, name: CardName.PETRIFIED_FOREST, tags: [Tag.CITY, Tag.EARTH], cost: 8,
       victoryPoints: -1,
       behavior: {stock: {megacredits: 5}},
-      metadata: {cardNumber: 'MY138', renderData: CardRenderer.builder((b) => {b.text('Gain resources.');}),
+      metadata: {cardNumber: 'MY138', renderData: CardRenderer.builder((b) => {b.megacredits(5);}),
         description: '-1 VP. (Shadows hide secrets.)'},
     });
   }

@@ -9,7 +9,7 @@ export class GhostShip extends Card implements IProjectCard {
     super({
       type: CardType.AUTOMATED, name: CardName.GHOST_SHIP, tags: [Tag.MARS, Tag.POWER], cost: 13,
       behavior: {production: {titanium: 2}},
-      metadata: {cardNumber: 'MY080', renderData: CardRenderer.builder((b) => {b.text('Adjust production.');}),
+      metadata: {cardNumber: 'MY080', renderData: CardRenderer.builder((b) => {b.production((pb) => {pb.titanium(2);});}),
         description: 'Adjust production. (The truth is out there.)'},
     });
   }

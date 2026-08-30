@@ -9,7 +9,7 @@ export class AdrenalineSurge extends Card implements IProjectCard {
     super({
       type: CardType.AUTOMATED, name: CardName.ADRENALINE_SURGE, tags: [Tag.ANIMAL], cost: 12,
       behavior: {production: {heat: 4}},
-      metadata: {cardNumber: 'MY339', renderData: CardRenderer.builder((b) => {b.text('Adjust production.');}),
+      metadata: {cardNumber: 'MY339', renderData: CardRenderer.builder((b) => {b.production((pb) => {pb.heat(4);});}),
         description: 'Adjust production. (Innovation breeds opportunity.)'},
     });
   }

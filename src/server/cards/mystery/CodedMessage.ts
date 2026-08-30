@@ -10,7 +10,7 @@ export class CodedMessage extends Card implements IProjectCard {
       type: CardType.AUTOMATED, name: CardName.CODED_MESSAGE, tags: [Tag.JOVIAN, Tag.ANIMAL], cost: 5,
       victoryPoints: -1,
       behavior: {production: {energy: 3, heat: 2}},
-      metadata: {cardNumber: 'MY257', renderData: CardRenderer.builder((b) => {b.text('Adjust production.');}),
+      metadata: {cardNumber: 'MY257', renderData: CardRenderer.builder((b) => {b.production((pb) => {pb.energy(3); pb.heat(2);});}),
         description: '-1 VP. (The truth is out there.)'},
     });
   }

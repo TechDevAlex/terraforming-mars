@@ -9,7 +9,7 @@ export class SurvivalInstinct extends Card implements IProjectCard {
     super({
       type: CardType.AUTOMATED, name: CardName.SURVIVAL_INSTINCT, tags: [Tag.SPACE], cost: 16,
       behavior: {production: {steel: 2}},
-      metadata: {cardNumber: 'MY341', renderData: CardRenderer.builder((b) => {b.text('Adjust production.');}),
+      metadata: {cardNumber: 'MY341', renderData: CardRenderer.builder((b) => {b.production((pb) => {pb.steel(2);});}),
         description: 'Adjust production. (Space warps.)'},
     });
   }

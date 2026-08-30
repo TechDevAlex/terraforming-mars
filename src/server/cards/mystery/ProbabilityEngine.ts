@@ -9,7 +9,7 @@ export class ProbabilityEngine extends Card implements IProjectCard {
     super({
       type: CardType.EVENT, name: CardName.PROBABILITY_ENGINE, tags: [Tag.JOVIAN, Tag.ANIMAL], cost: 4,
       behavior: {stock: {megacredits: 4}},
-      metadata: {cardNumber: 'MY316', renderData: CardRenderer.builder((b) => {b.text('Gain resources.');}),
+      metadata: {cardNumber: 'MY316', renderData: CardRenderer.builder((b) => {b.megacredits(4);}),
         description: 'Gain resources. (Shadows hide secrets.)'},
     });
   }

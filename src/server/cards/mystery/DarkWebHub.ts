@@ -8,7 +8,7 @@ export class DarkWebHub extends Card implements IProjectCard {
     super({
       type: CardType.EVENT, name: CardName.DARK_WEB_HUB, tags: [], cost: 11,
       behavior: {global: {temperature: 1}},
-      metadata: {cardNumber: 'MY100', renderData: CardRenderer.builder((b) => {b.text('Raise global parameter.');}),
+      metadata: {cardNumber: 'MY100', renderData: CardRenderer.builder((b) => {b.temperature(1);}),
         description: 'Raise temperature 1 step. (The stars align.)'},
     });
   }

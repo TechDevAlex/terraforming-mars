@@ -9,7 +9,7 @@ export class BloodMemory extends Card implements IProjectCard {
     super({
       type: CardType.AUTOMATED, name: CardName.BLOOD_MEMORY, tags: [Tag.MARS], cost: 24,
       behavior: {production: {energy: 2}},
-      metadata: {cardNumber: 'MY346', renderData: CardRenderer.builder((b) => {b.text('Adjust production.');}),
+      metadata: {cardNumber: 'MY346', renderData: CardRenderer.builder((b) => {b.production((pb) => {pb.energy(2);});}),
         description: 'Adjust production. (Steel and will forge the path.)'},
     });
   }

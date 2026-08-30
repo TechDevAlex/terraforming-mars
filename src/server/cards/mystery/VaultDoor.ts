@@ -9,7 +9,7 @@ export class VaultDoor extends Card implements IProjectCard {
     super({
       type: CardType.AUTOMATED, name: CardName.VAULT_DOOR, tags: [Tag.BUILDING, Tag.JOVIAN], cost: 14,
       behavior: {production: {plants: 1, megacredits: 2}},
-      metadata: {cardNumber: 'MY264', renderData: CardRenderer.builder((b) => {b.text('Adjust production.');}),
+      metadata: {cardNumber: 'MY264', renderData: CardRenderer.builder((b) => {b.production((pb) => {pb.plants(1); pb.megacredits(2);});}),
         description: 'Adjust production. (Reality shifts.)'},
     });
   }

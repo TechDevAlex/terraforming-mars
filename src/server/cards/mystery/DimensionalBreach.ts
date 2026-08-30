@@ -9,7 +9,7 @@ export class DimensionalBreach extends Card implements IProjectCard {
     super({
       type: CardType.AUTOMATED, name: CardName.DIMENSIONAL_BREACH, tags: [Tag.SCIENCE, Tag.MARS], cost: 6,
       behavior: {production: {titanium: 2, steel: 2}},
-      metadata: {cardNumber: 'MY038', renderData: CardRenderer.builder((b) => {b.text('Adjust production.');}),
+      metadata: {cardNumber: 'MY038', renderData: CardRenderer.builder((b) => {b.production((pb) => {pb.titanium(2); pb.steel(2);});}),
         description: 'Adjust production. (Secrets have power.)'},
     });
   }

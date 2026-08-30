@@ -9,7 +9,7 @@ export class WarProfiteering extends Card implements IProjectCard {
     super({
       type: CardType.AUTOMATED, name: CardName.WAR_PROFITEERING, tags: [Tag.EARTH], cost: 19,
       behavior: {production: {steel: 2}},
-      metadata: {cardNumber: 'MY238', renderData: CardRenderer.builder((b) => {b.text('Adjust production.');}),
+      metadata: {cardNumber: 'MY238', renderData: CardRenderer.builder((b) => {b.production((pb) => {pb.steel(2);});}),
         description: 'Adjust production. (Nature finds a way.)'},
     });
   }

@@ -10,7 +10,7 @@ export class EctoplasmHarvest extends Card implements IProjectCard {
       type: CardType.AUTOMATED, name: CardName.ECTOPLASM_HARVEST, tags: [Tag.EARTH], cost: 24,
       victoryPoints: -1,
       behavior: {production: {heat: 2}, drawCard: 1},
-      metadata: {cardNumber: 'MY077', renderData: CardRenderer.builder((b) => {b.text('Production and draw.');}),
+      metadata: {cardNumber: 'MY077', renderData: CardRenderer.builder((b) => {b.production((pb) => {pb.heat(2);}); b.br; b.cards(1);}),
         description: '-1 VP. (The veil lifts.)'},
     });
   }

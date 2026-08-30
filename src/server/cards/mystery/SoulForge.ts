@@ -9,7 +9,7 @@ export class SoulForge extends Card implements IProjectCard {
     super({
       type: CardType.AUTOMATED, name: CardName.SOUL_FORGE, tags: [Tag.BUILDING], cost: 25,
       behavior: {production: {plants: 3, energy: 2}},
-      metadata: {cardNumber: 'MY063', renderData: CardRenderer.builder((b) => {b.text('Adjust production.');}),
+      metadata: {cardNumber: 'MY063', renderData: CardRenderer.builder((b) => {b.production((pb) => {pb.plants(3); pb.energy(2);});}),
         description: 'Adjust production. (Steel and will forge the path.)'},
     });
   }

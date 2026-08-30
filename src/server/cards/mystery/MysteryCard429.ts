@@ -9,7 +9,7 @@ export class MysteryCard429 extends Card implements IProjectCard {
     super({
       type: CardType.EVENT, name: CardName.MYSTERY_CARD_429, tags: [Tag.MICROBE], cost: 8,
       behavior: {tr: 1},
-      metadata: {cardNumber: 'MY429', renderData: CardRenderer.builder((b) => {b.text('Raise TR.');}),
+      metadata: {cardNumber: 'MY429', renderData: CardRenderer.builder((b) => {b.tr(1);}),
         description: 'Raise your TR 1 step. (The veil lifts.)'},
     });
   }

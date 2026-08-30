@@ -9,7 +9,7 @@ export class MuscleMemory extends Card implements IProjectCard {
     super({
       type: CardType.AUTOMATED, name: CardName.MUSCLE_MEMORY, tags: [Tag.MICROBE, Tag.POWER], cost: 26,
       behavior: {production: {heat: 1, steel: 3}},
-      metadata: {cardNumber: 'MY347', renderData: CardRenderer.builder((b) => {b.text('Adjust production.');}),
+      metadata: {cardNumber: 'MY347', renderData: CardRenderer.builder((b) => {b.production((pb) => {pb.heat(1); pb.steel(3);});}),
         description: 'Adjust production. (Nature finds a way.)'},
     });
   }
