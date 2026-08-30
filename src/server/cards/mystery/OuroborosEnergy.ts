@@ -6,10 +6,11 @@ import {CardRenderer} from '../render/CardRenderer';
 export class OuroborosEnergy extends CorporationCard implements ICorporationCard {
   constructor() {
     super({
-      name: CardName.OUROBOROS_ENERGY, tags: [Tag.EARTH], startingMegaCredits: 46,
-      firstAction: {text: 'Initial action', drawCard: 1, stock: {megacredits: 5}},
-      metadata: {cardNumber: 'MYCORP19', description: 'You start with 46 M€. As your first action, draw 1 card.',
-        renderData: CardRenderer.builder((b) => {b.br.megacredits(46);})
+      name: CardName.OUROBOROS_ENERGY, tags: [Tag.EARTH], startingMegaCredits: 48,
+      cardDiscount: {amount: 1},
+      metadata: {cardNumber: 'MYCORP07',
+        description: 'You start with 48 M€. All cards cost 1 M€ less.',
+        renderData: CardRenderer.builder((b) => {b.br.megacredits(48); b.corpBox('effect', (ce) => {ce.effect('All cards cost 1 M€ less.', (eb) => {eb.empty().startEffect.megacredits(-1);});});})
       },
     });
   }

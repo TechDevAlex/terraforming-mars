@@ -1,4 +1,3 @@
-import {Tag} from '../../../common/cards/Tag';
 import {CorporationCard} from '../corporation/CorporationCard';
 import {ICorporationCard} from '../corporation/ICorporationCard';
 import {CardName} from '../../../common/cards/CardName';
@@ -6,10 +5,10 @@ import {CardRenderer} from '../render/CardRenderer';
 export class LeviathanCorp extends CorporationCard implements ICorporationCard {
   constructor() {
     super({
-      name: CardName.LEVIATHAN_CORP, tags: [Tag.SPACE, Tag.JOVIAN], startingMegaCredits: 40,
-      firstAction: {text: 'Initial action', production: {titanium: 1, megacredits: 1}},
-      metadata: {cardNumber: 'MYCORP20', description: 'You start with 40 M€.',
-        renderData: CardRenderer.builder((b) => {b.br.megacredits(40);})
+      name: CardName.LEVIATHAN_CORP, tags: [], startingMegaCredits: 50,
+      metadata: {cardNumber: 'MYCORP12',
+        description: 'You start with 50 M€. You start with 50 M€. No special effect.',
+        renderData: CardRenderer.builder((b) => {b.br.megacredits(50); b.corpBox('effect', (ce) => {ce.effect('No special effect. Big starting capital.', (eb) => {eb.empty().startEffect.empty();});});})
       },
     });
   }
