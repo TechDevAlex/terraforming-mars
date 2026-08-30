@@ -105,7 +105,10 @@ export class SelectInitialCards extends OptionsInput<undefined> {
 
     for (const card of player.dealtProjectCards) {
       if (player.cardsInHand.includes(card) === false) {
-        game.projectDeck.discard(card);
+        // Don't discard trap cards back to deck — they stay out of the game
+        if (!card.name.toString().startsWith('Trap:')) {
+          game.projectDeck.discard(card);
+        }
       }
     }
 
