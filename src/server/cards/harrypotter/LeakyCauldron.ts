@@ -8,16 +8,16 @@ import {CardName} from '../../../common/cards/CardName';
 import {Resource} from '../../../common/Resource';
 import {CardRenderer} from '../render/CardRenderer';
 
-export class MoesTavern extends Card implements IActionCard, IProjectCard {
+export class LeakyCauldron extends Card implements IActionCard, IProjectCard {
   constructor() {
     super({
       type: CardType.ACTIVE,
-      name: CardName.MOES_TAVERN,
+      name: CardName.LEAKY_CAULDRON,
       tags: [Tag.BUILDING],
       cost: 6,
 
       metadata: {
-        cardNumber: 'SI05',
+        cardNumber: 'HP05',
         renderData: CardRenderer.builder((b) => {
           b.action('Spend 2 plants to gain 3 M€.', (ab) => {
             ab.plants(2).startAction.megacredits(3);

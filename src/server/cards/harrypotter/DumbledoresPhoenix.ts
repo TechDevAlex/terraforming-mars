@@ -5,11 +5,11 @@ import {CardType} from '../../../common/cards/CardType';
 import {CardName} from '../../../common/cards/CardName';
 import {CardRenderer} from '../render/CardRenderer';
 
-export class RadioactiveMan extends Card implements IProjectCard {
+export class DumbledoresPhoenix extends Card implements IProjectCard {
   constructor() {
     super({
       type: CardType.ACTIVE,
-      name: CardName.RADIOACTIVE_MAN,
+      name: CardName.DUMBLEDORES_PHOENIX,
       tags: [Tag.SCIENCE, Tag.SPACE],
       cost: 17,
       victoryPoints: {tag: Tag.SCIENCE, per: 2},
@@ -19,7 +19,7 @@ export class RadioactiveMan extends Card implements IProjectCard {
       },
 
       metadata: {
-        cardNumber: 'SI09',
+        cardNumber: 'HP09',
         renderData: CardRenderer.builder((b) => {
           b.production((pb) => pb.energy(1)).br;
           b.vpText('1 VP per 2 science tags you have.');

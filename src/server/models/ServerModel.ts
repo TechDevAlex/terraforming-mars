@@ -427,7 +427,7 @@ export class Server {
         pathfinders: options.pathfindersExpansion,
         ceo: options.ceoExtension,
         starwars: options.starWarsExpansion,
-        simpsons: options.simpsonsExpansion,
+        harrypotter: options.harryPotterExpansion,
         underworld: options.underworldExpansion,
       },
       fastModeOption: options.fastModeOption,

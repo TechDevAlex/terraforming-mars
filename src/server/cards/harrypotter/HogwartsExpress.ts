@@ -5,11 +5,11 @@ import {CardType} from '../../../common/cards/CardType';
 import {CardName} from '../../../common/cards/CardName';
 import {CardRenderer} from '../render/CardRenderer';
 
-export class MonorailSystem extends Card implements IProjectCard {
+export class HogwartsExpress extends Card implements IProjectCard {
   constructor() {
     super({
       type: CardType.AUTOMATED,
-      name: CardName.MONORAIL_SYSTEM,
+      name: CardName.HOGWARTS_EXPRESS,
       tags: [Tag.CITY, Tag.BUILDING],
       cost: 22,
       victoryPoints: 1,
@@ -20,7 +20,7 @@ export class MonorailSystem extends Card implements IProjectCard {
       },
 
       metadata: {
-        cardNumber: 'SI06',
+        cardNumber: 'HP06',
         renderData: CardRenderer.builder((b) => {
           b.city().br;
           b.production((pb) => pb.megacredits(1).slash().tag(Tag.CITY));

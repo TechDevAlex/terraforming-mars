@@ -5,24 +5,25 @@ import {CardType} from '../../../common/cards/CardType';
 import {CardName} from '../../../common/cards/CardName';
 import {CardRenderer} from '../render/CardRenderer';
 
-export class SpringfieldNuclearPlant extends Card implements IProjectCard {
+export class MandrakeNursery extends Card implements IProjectCard {
   constructor() {
     super({
       type: CardType.AUTOMATED,
-      name: CardName.SPRINGFIELD_NUCLEAR_PLANT,
-      tags: [Tag.POWER, Tag.BUILDING],
-      cost: 11,
+      name: CardName.MANDRAKE_NURSERY,
+      tags: [Tag.PLANT],
+      cost: 8,
 
       behavior: {
-        production: {energy: 3, plants: -1},
+        production: {plants: 1},
+        stock: {plants: 2},
       },
 
       metadata: {
-        cardNumber: 'SI01',
+        cardNumber: 'HP18',
         renderData: CardRenderer.builder((b) => {
-          b.production((pb) => pb.energy(3).plants(-1));
+          b.production((pb) => pb.plants(1)).plants(2);
         }),
-        description: 'Increase your energy production 3 steps. Decrease your plant production 1 step.',
+        description: 'Increase your plant production 1 step. Gain 2 plants.',
       },
     });
   }

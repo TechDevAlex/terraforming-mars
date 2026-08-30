@@ -6,11 +6,11 @@ import {CardName} from '../../../common/cards/CardName';
 import {CardRenderer} from '../render/CardRenderer';
 import {digit} from '../Options';
 
-export class SpringfieldGorge extends Card implements IProjectCard {
+export class ForbiddenForest extends Card implements IProjectCard {
   constructor() {
     super({
       type: CardType.EVENT,
-      name: CardName.SPRINGFIELD_GORGE,
+      name: CardName.FORBIDDEN_FOREST,
       tags: [Tag.MARS],
       cost: 5,
 
@@ -19,7 +19,7 @@ export class SpringfieldGorge extends Card implements IProjectCard {
       },
 
       metadata: {
-        cardNumber: 'SI08',
+        cardNumber: 'HP08',
         renderData: CardRenderer.builder((b) => {
           b.plants(4, {digit});
         }),

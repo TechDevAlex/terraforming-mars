@@ -8,16 +8,16 @@ import {Resource} from '../../../common/Resource';
 import {CardRenderer} from '../render/CardRenderer';
 import {all, digit} from '../Options';
 
-export class BartsSlingshot extends Card implements IProjectCard {
+export class PetrificusTotalus extends Card implements IProjectCard {
   constructor() {
     super({
       type: CardType.EVENT,
-      name: CardName.BARTS_SLINGSHOT,
+      name: CardName.PETRIFICUS_TOTALUS,
       tags: [Tag.SPACE],
       cost: 3,
 
       metadata: {
-        cardNumber: 'SI11',
+        cardNumber: 'HP11',
         renderData: CardRenderer.builder((b) => {
           b.minus().megacredits(3, {all, digit}).asterix();
         }),

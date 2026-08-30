@@ -5,25 +5,24 @@ import {CardType} from '../../../common/cards/CardType';
 import {CardName} from '../../../common/cards/CardName';
 import {CardRenderer} from '../render/CardRenderer';
 
-export class LisasSaxophone extends Card implements IProjectCard {
+export class HerbologyGreenhouse extends Card implements IProjectCard {
   constructor() {
     super({
       type: CardType.AUTOMATED,
-      name: CardName.LISAS_SAXOPHONE,
-      tags: [Tag.SCIENCE],
-      cost: 9,
-      victoryPoints: 1,
+      name: CardName.HERBOLOGY_GREENHOUSE,
+      tags: [Tag.BUILDING, Tag.PLANT],
+      cost: 16,
 
       behavior: {
-        production: {megacredits: {tag: Tag.SCIENCE, per: 2}},
+        production: {plants: 2, megacredits: 1},
       },
 
       metadata: {
-        cardNumber: 'SI12',
+        cardNumber: 'HP10',
         renderData: CardRenderer.builder((b) => {
-          b.production((pb) => pb.megacredits(1).slash().tag(Tag.SCIENCE, 2));
+          b.production((pb) => pb.plants(2).megacredits(1));
         }),
-        description: 'Increase your M€ production 1 step for every 2 science tags you have, including this.',
+        description: 'Increase your plant production 2 steps and your M€ production 1 step.',
       },
     });
   }

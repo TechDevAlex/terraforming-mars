@@ -5,25 +5,25 @@ import {CardType} from '../../../common/cards/CardType';
 import {CardName} from '../../../common/cards/CardName';
 import {CardRenderer} from '../render/CardRenderer';
 
-export class LardLadDonuts extends Card implements IProjectCard {
+export class ElderWand extends Card implements IProjectCard {
   constructor() {
     super({
       type: CardType.AUTOMATED,
-      name: CardName.LARD_LAD_DONUTS,
-      tags: [Tag.PLANT],
-      cost: 8,
+      name: CardName.ELDER_WAND,
+      tags: [Tag.SCIENCE],
+      cost: 5,
 
       behavior: {
-        production: {plants: 1},
-        stock: {plants: 2},
+        drawCard: 1,
+        stock: {megacredits: 2},
       },
 
       metadata: {
-        cardNumber: 'SI18',
+        cardNumber: 'HP19',
         renderData: CardRenderer.builder((b) => {
-          b.production((pb) => pb.plants(1)).plants(2);
+          b.cards(1).megacredits(2);
         }),
-        description: 'Increase your plant production 1 step. Gain 2 plants.',
+        description: 'Draw 1 card. Gain 2 M€.',
       },
     });
   }

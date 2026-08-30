@@ -5,25 +5,26 @@ import {CardType} from '../../../common/cards/CardType';
 import {CardName} from '../../../common/cards/CardName';
 import {CardRenderer} from '../render/CardRenderer';
 
-export class MaggiesPacifier extends Card implements IProjectCard {
+export class GringottsVault extends Card implements IProjectCard {
   constructor() {
     super({
       type: CardType.AUTOMATED,
-      name: CardName.MAGGIES_PACIFIER,
-      tags: [Tag.SCIENCE],
-      cost: 5,
+      name: CardName.GRINGOTTS_VAULT,
+      tags: [Tag.EARTH],
+      cost: 18,
 
       behavior: {
-        drawCard: 1,
-        stock: {megacredits: 2},
+        production: {megacredits: 5},
+        tr: -2,
       },
 
       metadata: {
-        cardNumber: 'SI19',
+        cardNumber: 'HP07',
         renderData: CardRenderer.builder((b) => {
-          b.cards(1).megacredits(2);
+          b.production((pb) => pb.megacredits(5)).br;
+          b.minus().tr(2);
         }),
-        description: 'Draw 1 card. Gain 2 M€.',
+        description: 'Increase your M€ production 5 steps. Lose 2 TR.',
       },
     });
   }

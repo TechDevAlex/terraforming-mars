@@ -259,7 +259,7 @@ export class Game implements IGame, Logger {
         pathfinders: options.pathfindersExpansion ?? false,
         ceo: options.ceoExtension ?? false,
         starwars: options.starWarsExpansion ?? false,
-        simpsons: options.simpsonsExpansion ?? false,
+        harrypotter: options.harryPotterExpansion ?? false,
         underworld: options.underworldExpansion ?? false,
       };
     }

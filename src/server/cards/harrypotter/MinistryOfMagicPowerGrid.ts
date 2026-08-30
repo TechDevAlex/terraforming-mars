@@ -5,24 +5,24 @@ import {CardType} from '../../../common/cards/CardType';
 import {CardName} from '../../../common/cards/CardName';
 import {CardRenderer} from '../render/CardRenderer';
 
-export class ItchyAndScratchyStudios extends Card implements IProjectCard {
+export class MinistryOfMagicPowerGrid extends Card implements IProjectCard {
   constructor() {
     super({
       type: CardType.AUTOMATED,
-      name: CardName.ITCHY_AND_SCRATCHY_STUDIOS,
-      tags: [Tag.EARTH],
-      cost: 7,
+      name: CardName.MINISTRY_OF_MAGIC_POWER_GRID,
+      tags: [Tag.POWER, Tag.BUILDING],
+      cost: 11,
 
       behavior: {
-        production: {megacredits: 2},
+        production: {energy: 3, plants: -1},
       },
 
       metadata: {
-        cardNumber: 'SI04',
+        cardNumber: 'HP01',
         renderData: CardRenderer.builder((b) => {
-          b.production((pb) => pb.megacredits(2));
+          b.production((pb) => pb.energy(3).plants(-1));
         }),
-        description: 'Increase your M€ production 2 steps.',
+        description: 'Increase your energy production 3 steps. Decrease your plant production 1 step.',
       },
     });
   }

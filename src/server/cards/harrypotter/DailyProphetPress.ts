@@ -5,24 +5,24 @@ import {CardType} from '../../../common/cards/CardType';
 import {CardName} from '../../../common/cards/CardName';
 import {CardRenderer} from '../render/CardRenderer';
 
-export class DuffBrewery extends Card implements IProjectCard {
+export class DailyProphetPress extends Card implements IProjectCard {
   constructor() {
     super({
       type: CardType.AUTOMATED,
-      name: CardName.DUFF_BREWERY,
-      tags: [Tag.BUILDING, Tag.PLANT],
-      cost: 16,
+      name: CardName.DAILY_PROPHET_PRESS,
+      tags: [Tag.EARTH],
+      cost: 7,
 
       behavior: {
-        production: {plants: 2, megacredits: 1},
+        production: {megacredits: 2},
       },
 
       metadata: {
-        cardNumber: 'SI10',
+        cardNumber: 'HP04',
         renderData: CardRenderer.builder((b) => {
-          b.production((pb) => pb.plants(2).megacredits(1));
+          b.production((pb) => pb.megacredits(2));
         }),
-        description: 'Increase your plant production 2 steps and your M€ production 1 step.',
+        description: 'Increase your M€ production 2 steps.',
       },
     });
   }

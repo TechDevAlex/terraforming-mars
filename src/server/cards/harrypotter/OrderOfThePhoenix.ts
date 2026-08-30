@@ -9,17 +9,17 @@ import {CardResource} from '../../../common/CardResource';
 import {CardRenderer} from '../render/CardRenderer';
 import {Size} from '../../../common/cards/render/Size';
 
-export class StonecuttersLodge extends Card implements IActionCard, IProjectCard {
+export class OrderOfThePhoenix extends Card implements IActionCard, IProjectCard {
   constructor() {
     super({
       type: CardType.ACTIVE,
-      name: CardName.STONECUTTERS_LODGE,
+      name: CardName.ORDER_OF_THE_PHOENIX,
       tags: [Tag.SCIENCE, Tag.BUILDING],
       cost: 12,
       resourceType: CardResource.AGENDA,
 
       metadata: {
-        cardNumber: 'SI15',
+        cardNumber: 'HP15',
         renderData: CardRenderer.builder((b) => {
           b.action('Add 1 agenda to this card.', (ab) => {
             ab.empty().startAction.resource(CardResource.AGENDA);

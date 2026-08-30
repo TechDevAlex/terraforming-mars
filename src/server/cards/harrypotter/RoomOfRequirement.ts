@@ -7,16 +7,16 @@ import {Player} from '../../Player';
 import {CardName} from '../../../common/cards/CardName';
 import {CardRenderer} from '../render/CardRenderer';
 
-export class ProfessorFrinksLab extends Card implements IActionCard, IProjectCard {
+export class RoomOfRequirement extends Card implements IActionCard, IProjectCard {
   constructor() {
     super({
       type: CardType.ACTIVE,
-      name: CardName.PROFESSOR_FRINKS_LAB,
+      name: CardName.ROOM_OF_REQUIREMENT,
       tags: [Tag.SCIENCE],
       cost: 8,
 
       metadata: {
-        cardNumber: 'SI03',
+        cardNumber: 'HP03',
         renderData: CardRenderer.builder((b) => {
           b.action('Spend 2 M€ to draw a card.', (ab) => {
             ab.megacredits(2).startAction.cards(1);

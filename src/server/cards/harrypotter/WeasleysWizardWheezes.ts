@@ -8,16 +8,16 @@ import {Resource} from '../../../common/Resource';
 import {CardName} from '../../../common/cards/CardName';
 import {CardRenderer} from '../render/CardRenderer';
 
-export class ApusKwikEMart extends Card implements IProjectCard {
+export class WeasleysWizardWheezes extends Card implements IProjectCard {
   constructor() {
     super({
       type: CardType.ACTIVE,
-      name: CardName.APUS_KWIK_E_MART,
+      name: CardName.WEASLEYS_WIZARD_WHEEZES,
       tags: [Tag.EARTH, Tag.BUILDING],
       cost: 10,
 
       metadata: {
-        cardNumber: 'SI16',
+        cardNumber: 'HP16',
         renderData: CardRenderer.builder((b) => {
           b.effect('When you play a building tag, gain 1 steel.', (eb) => {
             eb.tag(Tag.BUILDING).startEffect.steel(1);

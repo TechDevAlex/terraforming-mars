@@ -6,11 +6,11 @@ import {CardName} from '../../../common/cards/CardName';
 import {CardRenderer} from '../render/CardRenderer';
 import {digit} from '../Options';
 
-export class HomersOdyssey extends Card implements IProjectCard {
+export class FiendfyreUnleashed extends Card implements IProjectCard {
   constructor() {
     super({
       type: CardType.EVENT,
-      name: CardName.HOMERS_ODYSSEY,
+      name: CardName.FIENDFYRE_UNLEASHED,
       tags: [Tag.SPACE],
       cost: 20,
 
@@ -21,7 +21,7 @@ export class HomersOdyssey extends Card implements IProjectCard {
       },
 
       metadata: {
-        cardNumber: 'SI13',
+        cardNumber: 'HP13',
         renderData: CardRenderer.builder((b) => {
           b.tr(1).temperature(1).br;
           b.heat(5, {digit});

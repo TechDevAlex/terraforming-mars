@@ -7,11 +7,11 @@ import {CardResource} from '../../../common/CardResource';
 import {CardRenderer} from '../render/CardRenderer';
 import {digit} from '../Options';
 
-export class TreehouseOfHorror extends Card implements IProjectCard {
+export class ChamberOfSecrets extends Card implements IProjectCard {
   constructor() {
     super({
       type: CardType.EVENT,
-      name: CardName.TREEHOUSE_OF_HORROR,
+      name: CardName.CHAMBER_OF_SECRETS,
       tags: [Tag.MICROBE, Tag.SPACE],
       cost: 14,
 
@@ -23,7 +23,7 @@ export class TreehouseOfHorror extends Card implements IProjectCard {
       },
 
       metadata: {
-        cardNumber: 'SI17',
+        cardNumber: 'HP17',
         renderData: CardRenderer.builder((b) => {
           b.oxygen(1).br;
           b.resource(CardResource.MICROBE, {amount: 3, digit}).asterix();

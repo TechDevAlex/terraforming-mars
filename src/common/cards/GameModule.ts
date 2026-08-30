@@ -12,7 +12,7 @@ export const EXPANSIONS = [
   'pathfinders',
   'ceo',
   'starwars',
-  'simpsons',
+  'harrypotter',
   'underworld',
 ] as const;
 
@@ -39,7 +39,7 @@ export const MODULE_NAMES: Readonly<Record<GameModule, string>> = {
   pathfinders: 'Pathfinders',
   ceo: 'CEOs',
   starwars: 'Star Wars',
-  simpsons: 'The Simpsons',
+  harrypotter: 'Harry Potter',
   underworld: 'Underworld',
 };
 
@@ -57,6 +57,6 @@ export const DEFAULT_EXPANSIONS: Record<Expansion, boolean> = {
   pathfinders: false,
   ceo: false,
   starwars: false,
-  simpsons: false,
+  harrypotter: false,
   underworld: false,
 };

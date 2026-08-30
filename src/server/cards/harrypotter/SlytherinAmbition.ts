@@ -11,17 +11,17 @@ import {Size} from '../../../common/cards/render/Size';
 import {Board} from '../../boards/Board';
 import {all} from '../Options';
 
-export class ShelbyvilleRivalry extends Card implements IProjectCard {
+export class SlytherinAmbition extends Card implements IProjectCard {
   constructor() {
     super({
       type: CardType.ACTIVE,
-      name: CardName.SHELBYVILLE_RIVALRY,
+      name: CardName.SLYTHERIN_AMBITION,
       tags: [Tag.CITY],
       cost: 15,
       victoryPoints: 1,
 
       metadata: {
-        cardNumber: 'SI14',
+        cardNumber: 'HP14',
         renderData: CardRenderer.builder((b) => {
           b.effect('When any OPPONENT places a city tile, increase your M€ production 1 step.', (eb) => {
             eb.city({size: Size.SMALL, all}).startEffect.production((pb) => pb.megacredits(1));

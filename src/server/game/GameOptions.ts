@@ -36,7 +36,7 @@ export type GameOptions = {
   pathfindersExpansion: boolean;
   ceoExtension: boolean;
   starWarsExpansion: boolean;
-  simpsonsExpansion: boolean;
+  harryPotterExpansion: boolean;
   underworldExpansion: boolean;
 
   expansions: Record<Expansion, boolean>,
@@ -115,7 +115,7 @@ export const DEFAULT_GAME_OPTIONS: GameOptions = {
     pathfinders: false,
     ceo: false,
     starwars: false,
-    simpsons: false,
+    harrypotter: false,
     underworld: false,
   },
   fastModeOption: false,
@@ -144,7 +144,7 @@ export const DEFAULT_GAME_OPTIONS: GameOptions = {
   startingCeos: constants.CEO_CARDS_DEALT_PER_PLAYER,
   startingCorporations: constants.CORPORATION_CARDS_DEALT_PER_PLAYER,
   startingPreludes: constants.PRELUDE_CARDS_DEALT_PER_PLAYER,
-  simpsonsExpansion: false,
+  harryPotterExpansion: false,
   starWarsExpansion: false,
   turmoilExtension: false,
   underworldExpansion: false,

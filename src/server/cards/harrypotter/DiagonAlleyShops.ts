@@ -5,18 +5,18 @@ import {CardType} from '../../../common/cards/CardType';
 import {CardName} from '../../../common/cards/CardName';
 import {CardRenderer} from '../render/CardRenderer';
 
-export class KrustyBurgerFranchise extends Card implements IProjectCard {
+export class DiagonAlleyShops extends Card implements IProjectCard {
   constructor() {
     super({
       type: CardType.ACTIVE,
-      name: CardName.KRUSTY_BURGER_FRANCHISE,
+      name: CardName.DIAGON_ALLEY_SHOPS,
       tags: [Tag.BUILDING, Tag.EARTH],
       cost: 14,
 
       cardDiscount: {tag: Tag.EARTH, amount: 2},
 
       metadata: {
-        cardNumber: 'SI02',
+        cardNumber: 'HP02',
         renderData: CardRenderer.builder((b) => {
           b.effect('When you play an Earth tag, you pay 2 M€ less for it.', (eb) => {
             eb.tag(Tag.EARTH).startEffect.megacredits(-2);
