@@ -10,7 +10,7 @@ import {SelectPlayer} from '../../inputs/SelectPlayer';
 export class BellatrixLestrangesFury extends Card implements IProjectCard {
   constructor() {
     super({
-      type: CardType.EVENT, name: CardName.BELLATRIX_LESTRANGES_FURY, tags: [Tag.POWER], cost: 12,
+      type: CardType.EVENT, name: CardName.BELLATRIX_LESTRANGES_FURY, tags: [Tag.POWER, Tag.SPACE], cost: 12,
       metadata: {cardNumber: 'HP33', renderData: CardRenderer.builder((b) => {b.minus().plants(4).asterix().steel(2).asterix();}),
         description: 'Select a player. They lose 4 plants and 2 steel. (She cackled with delight as the world burned around her.)'},
     });
