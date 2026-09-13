@@ -25,9 +25,9 @@ export class Production extends BaseStock {
     if (isFromPlayer(from)) {
       LawSuit.resourceHook(this.player, resource, delta, from.player);
 
-      // Mons Insurance hook
+      // Mons Insurance / Gringotts Enforcers hook
       if (delta < 0 && from.player.id !== this.player.id) {
-        this.player.resolveInsurance();
+        this.player.resolveInsurance(from.player);
       }
     }
 

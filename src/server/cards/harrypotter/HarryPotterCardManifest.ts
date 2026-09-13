@@ -201,6 +201,27 @@ import {WolfsbaneFieldHarvest} from './WolfsbaneFieldHarvest';
 import {WolfsbanePotionLab} from './WolfsbanePotionLab';
 import {YuleBallGala} from './YuleBallGala';
 import {BrewPotionStandardProject} from './BrewPotionStandardProject';
+import {TheGreatFloo} from './TheGreatFloo';
+import {Dragons} from './Dragons';
+import {CentaurAstrologers} from './CentaurAstrologers';
+import {GringottsEnforcers} from './GringottsEnforcers';
+import {UnicornSanctuary} from './UnicornSanctuary';
+import {ImperiusCompetition} from './ImperiusCompetition';
+import {DarkRituals} from './DarkRituals';
+import {TrollWorkers} from './TrollWorkers';
+import {SelfStirringCauldrons} from './SelfStirringCauldrons';
+import {StockMarketDivination} from './StockMarketDivination';
+import {ComputerizedArithmancy} from './ComputerizedArithmancy';
+import {IncorporateMuggleResearch} from './IncorporateMuggleResearch';
+import {TransfigureAntimatter} from './TransfigureAntimatter';
+import {Obliviate} from './Obliviate';
+import {ConfoundMuggleOfficials} from './ConfoundMuggleOfficials';
+import {BubbleHeadCharms} from './BubbleHeadCharms';
+import {Transfiguration} from './Transfiguration';
+import {GoblinForgedMiningEquipment} from './GoblinForgedMiningEquipment';
+import {PhilosophersStone} from './PhilosophersStone';
+import {AccioComet} from './AccioComet';
+import {DoloresUmbridgeTakesOver} from './DoloresUmbridgeTakesOver';
 
 export const HARRY_POTTER_CARD_MANIFEST = new ModuleManifest({
   module: 'harrypotter',
@@ -405,6 +426,27 @@ export const HARRY_POTTER_CARD_MANIFEST = new ModuleManifest({
     [CardName.WOLFSBANE_FIELD_HARVEST]: {Factory: WolfsbaneFieldHarvest},
     [CardName.WOLFSBANE_POTION_LAB]: {Factory: WolfsbanePotionLab},
     [CardName.YULE_BALL_GALA]: {Factory: YuleBallGala},
+    [CardName.THE_GREAT_FLOO]: {Factory: TheGreatFloo},
+    [CardName.DRAGONS]: {Factory: Dragons},
+    [CardName.CENTAUR_ASTROLOGERS]: {Factory: CentaurAstrologers},
+    [CardName.GRINGOTTS_ENFORCERS]: {Factory: GringottsEnforcers},
+    [CardName.UNICORN_SANCTUARY]: {Factory: UnicornSanctuary},
+    [CardName.IMPERIUS_COMPETITION]: {Factory: ImperiusCompetition},
+    [CardName.DARK_RITUALS]: {Factory: DarkRituals},
+    [CardName.TROLL_WORKERS]: {Factory: TrollWorkers},
+    [CardName.SELF_STIRRING_CAULDRONS]: {Factory: SelfStirringCauldrons},
+    [CardName.STOCK_MARKET_DIVINATION]: {Factory: StockMarketDivination},
+    [CardName.COMPUTERIZED_ARITHMANCY]: {Factory: ComputerizedArithmancy},
+    [CardName.INCORPORATE_MUGGLE_RESEARCH]: {Factory: IncorporateMuggleResearch},
+    [CardName.TRANSFIGURE_ANTIMATTER]: {Factory: TransfigureAntimatter},
+    [CardName.OBLIVIATE]: {Factory: Obliviate},
+    [CardName.CONFOUND_MUGGLE_OFFICIALS]: {Factory: ConfoundMuggleOfficials},
+    [CardName.BUBBLE_HEAD_CHARMS]: {Factory: BubbleHeadCharms},
+    [CardName.TRANSFIGURATION]: {Factory: Transfiguration},
+    [CardName.GOBLIN_FORGED_MINING_EQUIPMENT]: {Factory: GoblinForgedMiningEquipment},
+    [CardName.PHILOSOPHERS_STONE]: {Factory: PhilosophersStone},
+    [CardName.ACCIO_COMET]: {Factory: AccioComet},
+    [CardName.DOLORES_UMBRIDGE_TAKES_OVER]: {Factory: DoloresUmbridgeTakesOver},
   },
   standardProjects: {
     [CardName.BREW_POTION_STANDARD_PROJECT]: {Factory: BrewPotionStandardProject},

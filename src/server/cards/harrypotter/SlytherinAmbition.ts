@@ -17,7 +17,7 @@ export class SlytherinAmbition extends Card implements IProjectCard {
       type: CardType.ACTIVE,
       name: CardName.SLYTHERIN_AMBITION,
       tags: [Tag.CITY],
-      cost: 15,
+      cost: 22,
       victoryPoints: 1,
 
       metadata: {

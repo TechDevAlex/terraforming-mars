@@ -6,20 +6,19 @@ import {CardName} from '../../../common/cards/CardName';
 import {CardRenderer} from '../render/CardRenderer';
 import {IPlayer} from '../../IPlayer';
 import {Resource} from '../../../common/Resource';
-import {SelectPlayer} from '../../inputs/SelectPlayer';
 export class BellatrixLestrangesFury extends Card implements IProjectCard {
   constructor() {
     super({
-      type: CardType.EVENT, name: CardName.BELLATRIX_LESTRANGES_FURY, tags: [Tag.POWER, Tag.SPACE], cost: 12,
-      metadata: {cardNumber: 'HP33', renderData: CardRenderer.builder((b) => {b.minus().plants(4).asterix().steel(2).asterix();}),
-        description: 'Select a player. They lose 4 plants and 2 steel. (She cackled with delight as the world burned around her.)'},
+      type: CardType.EVENT, name: CardName.BELLATRIX_LESTRANGES_FURY, tags: [Tag.POWER, Tag.SPACE], cost: 8,
+      metadata: {cardNumber: 'HP42', renderData: CardRenderer.builder((b) => {b.minus().plants(2).steel(1).asterix();}),
+        description: 'Each opponent loses 2 plants and 1 steel. (She cackled with delight as the world burned around her.)'},
     });
   }
   public override bespokePlay(player: IPlayer) {
-    return new SelectPlayer(player.opponents, 'Select target for Bellatrix').andThen((target) => {
-      target.stock.deduct(Resource.PLANTS, Math.min(target.plants, 4), {log: true, from: {player}});
-      target.stock.deduct(Resource.STEEL, Math.min(target.steel, 2), {log: true, from: {player}});
-      return undefined;
-    });
+    for (const opp of player.opponents) {
+      opp.stock.deduct(Resource.PLANTS, Math.min(opp.plants, 2), {log: true, from: {player}});
+      opp.stock.deduct(Resource.STEEL, Math.min(opp.steel, 1), {log: true, from: {player}});
+    }
+    return undefined;
   }
 }

@@ -11,7 +11,7 @@ export class ElderWand extends Card implements IProjectCard {
       type: CardType.ACTIVE,
       name: CardName.ELDER_WAND,
       tags: [Tag.JOVIAN, Tag.JOVIAN],
-      cost: 26,
+      cost: 38,
       victoryPoints: {tag: Tag.JOVIAN},
 
       behavior: {

@@ -11,7 +11,7 @@ export class DumbledoresPhoenix extends Card implements IProjectCard {
       type: CardType.ACTIVE,
       name: CardName.DUMBLEDORES_PHOENIX,
       tags: [Tag.SPACE, Tag.JOVIAN],
-      cost: 17,
+      cost: 24,
       victoryPoints: {tag: Tag.SCIENCE, per: 2},
 
       behavior: {

@@ -11,7 +11,7 @@ export class DailyProphetPress extends Card implements IProjectCard {
       type: CardType.AUTOMATED,
       name: CardName.DAILY_PROPHET_PRESS,
       tags: [Tag.BUILDING, Tag.EARTH],
-      cost: 7,
+      cost: 5,
 
       behavior: {
         production: {megacredits: 2},

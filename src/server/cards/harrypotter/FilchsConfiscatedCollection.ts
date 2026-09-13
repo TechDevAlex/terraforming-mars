@@ -13,7 +13,7 @@ export class FilchsConfiscatedCollection extends Card implements IActionCard, IP
       type: CardType.ACTIVE,
       name: CardName.FILCHS_CONFISCATED_COLLECTION,
       tags: [Tag.SCIENCE],
-      cost: 8,
+      cost: 2,
 
       metadata: {
         cardNumber: 'HP03',

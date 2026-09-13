@@ -11,7 +11,7 @@ export class MandrakeNursery extends Card implements IProjectCard {
       type: CardType.AUTOMATED,
       name: CardName.MANDRAKE_NURSERY,
       tags: [Tag.PLANT],
-      cost: 8,
+      cost: 6,
 
       behavior: {
         production: {plants: 1},

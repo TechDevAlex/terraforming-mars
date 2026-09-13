@@ -155,6 +155,7 @@ export class Game implements IGame, Logger {
   // Card-specific data
   // Mons Insurance promo corp
   public monsInsuranceOwner: IPlayer | undefined; // Not serialized
+  public gringottsEnforcersOwner: IPlayer | undefined; // Not serialized (Harry Potter expansion)
   // Crash Site promo project
   public someoneHasRemovedOtherPlayersPlants: boolean = false;
   // Syndicate Pirate Raids

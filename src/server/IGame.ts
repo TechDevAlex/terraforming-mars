@@ -88,6 +88,7 @@ export interface IGame extends Logger {
 
   /* An optimization to see if anyone owns Mons Insurance */
   monsInsuranceOwner: IPlayer | undefined; // Not serialized
+  gringottsEnforcersOwner: IPlayer | undefined; // Not serialized (Harry Potter expansion)
   /* For the promo Crash Site. */
   someoneHasRemovedOtherPlayersPlants: boolean;
   // Syndicate Pirate Raids

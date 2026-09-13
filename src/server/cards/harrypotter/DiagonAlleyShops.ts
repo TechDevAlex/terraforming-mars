@@ -11,7 +11,7 @@ export class DiagonAlleyShops extends Card implements IProjectCard {
       type: CardType.ACTIVE,
       name: CardName.DIAGON_ALLEY_SHOPS,
       tags: [Tag.BUILDING, Tag.CITY],
-      cost: 14,
+      cost: 12,
 
       cardDiscount: {tag: Tag.EARTH, amount: 2},
 

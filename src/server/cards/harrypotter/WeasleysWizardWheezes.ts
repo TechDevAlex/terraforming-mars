@@ -14,7 +14,7 @@ export class WeasleysWizardWheezes extends Card implements IProjectCard {
       type: CardType.ACTIVE,
       name: CardName.WEASLEYS_WIZARD_WHEEZES,
       tags: [Tag.BUILDING, Tag.EARTH],
-      cost: 10,
+      cost: 13,
 
       metadata: {
         cardNumber: 'HP16',

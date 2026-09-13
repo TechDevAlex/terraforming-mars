@@ -53,9 +53,9 @@ export class Stock extends BaseStock {
       CrashSiteCleanup.resourceHook(this.player, resource, delta, from.player);
     }
 
-    // Mons Insurance hook
+    // Mons Insurance / Gringotts Enforcers hook
     if (options?.from !== undefined && delta < 0 && (isFromPlayer(from) && from.player.id !== this.player.id)) {
-      this.player.resolveInsurance();
+      this.player.resolveInsurance(from.player);
     }
   }
 

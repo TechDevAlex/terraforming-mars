@@ -9,7 +9,7 @@ import {CardRenderer} from '../render/CardRenderer';
 export class RavenclawsPrivateLibrary extends Card implements IActionCard, IProjectCard {
   constructor() {
     super({
-      type: CardType.ACTIVE, name: CardName.RAVENCLAWS_PRIVATE_LIBRARY, tags: [Tag.BUILDING, Tag.SCIENCE], cost: 14, victoryPoints: 1,
+      type: CardType.ACTIVE, name: CardName.RAVENCLAWS_PRIVATE_LIBRARY, tags: [Tag.BUILDING, Tag.SCIENCE], cost: 6, victoryPoints: 1,
       metadata: {cardNumber: 'HP22', renderData: CardRenderer.builder((b) => {b.action('Spend 2 M€ to draw a card.', (ab) => {ab.megacredits(2).startAction.cards(1);});}),
         description: 'Action: Spend 2 M€ to draw a card. (The shelves rearrange themselves to present exactly the book you need.)'},
     });

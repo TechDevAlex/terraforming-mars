@@ -228,7 +228,7 @@ export interface IPlayer {
    *
    * `this` is the attacked player.
    */
-  resolveInsurance(): void;
+  resolveInsurance(attacker?: IPlayer): void;
   /**
    * In the solo game, Mons Insurance is only held by the sole player, who will
    * have to pay the penalty for hurting the neutral player.

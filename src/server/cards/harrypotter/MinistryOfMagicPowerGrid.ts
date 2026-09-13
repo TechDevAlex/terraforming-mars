@@ -11,7 +11,7 @@ export class MinistryOfMagicPowerGrid extends Card implements IProjectCard {
       type: CardType.AUTOMATED,
       name: CardName.MINISTRY_OF_MAGIC_POWER_GRID,
       tags: [Tag.POWER, Tag.BUILDING],
-      cost: 11,
+      cost: 6,
 
       behavior: {
         production: {energy: 3, plants: -1},

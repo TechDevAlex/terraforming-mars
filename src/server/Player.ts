@@ -48,6 +48,7 @@ import {Turmoil} from './turmoil/Turmoil';
 import {PathfindersExpansion} from './pathfinders/PathfindersExpansion';
 import {ColoniesHandler} from './colonies/ColoniesHandler';
 import {MonsInsurance} from './cards/promo/MonsInsurance';
+import {BrewPotionStandardProject} from './cards/harrypotter/BrewPotionStandardProject';
 import {InputResponse} from '../common/inputs/InputResponse';
 import {Tags} from './player/Tags';
 import {Colonies} from './player/Colonies';
@@ -435,11 +436,22 @@ export class Player implements IPlayer {
     });
   }
 
-  public resolveInsurance() {
+  public resolveInsurance(attacker?: IPlayer) {
     const monsInsuranceOwner = this.game.monsInsuranceOwner;
     if (monsInsuranceOwner !== undefined && monsInsuranceOwner !== this) {
       const monsInsurance = <MonsInsurance>monsInsuranceOwner.tableau.get(CardName.MONS_INSURANCE);
       monsInsurance.payDebt(monsInsuranceOwner, this);
+    }
+    // Gringotts Enforcers: victim is the enforcers owner → steal 2 M€ from attacker
+    const gringottsOwner = this.game.gringottsEnforcersOwner;
+    if (gringottsOwner !== undefined && gringottsOwner === this && attacker !== undefined && attacker !== this) {
+      const stolen = Math.min(attacker.megaCredits, 2);
+      if (stolen > 0) {
+        attacker.stock.deduct(Resource.MEGACREDITS, stolen, {log: true, from: {player: this}});
+        this.stock.add(Resource.MEGACREDITS, stolen, {log: true});
+        this.game.log('${0} took ${1} M€ from ${2} (Gringotts Enforcers)', (b) =>
+          b.player(this).number(stolen).player(attacker));
+      }
     }
   }
 
@@ -599,6 +611,7 @@ export class Player implements IPlayer {
     this.actionsThisGeneration.clear();
     this.removingPlayers = [];
     this.standardProjectsThisGeneration.clear();
+    BrewPotionStandardProject.clearGenerationState(this);
 
     this.turmoilPolicyActionUsed = false;
     this.politicalAgendasActionUsedCount = 0;

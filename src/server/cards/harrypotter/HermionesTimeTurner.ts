@@ -11,7 +11,7 @@ export class HermionesTimeTurner extends Card implements IProjectCard {
       type: CardType.AUTOMATED,
       name: CardName.HERMIONES_TIME_TURNER,
       tags: [Tag.SCIENCE],
-      cost: 9,
+      cost: 1,
       victoryPoints: 1,
 
       behavior: {

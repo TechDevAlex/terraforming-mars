@@ -10,7 +10,7 @@ import {CardRenderer} from '../render/CardRenderer';
 export class RoomOfRequirement extends Card implements IActionCard, IProjectCard {
   constructor() {
     super({
-      type: CardType.ACTIVE, name: CardName.ROOM_OF_REQUIREMENT, tags: [Tag.BUILDING, Tag.WILD], cost: 17, victoryPoints: 2,
+      type: CardType.ACTIVE, name: CardName.ROOM_OF_REQUIREMENT, tags: [Tag.BUILDING, Tag.WILD], cost: 45, victoryPoints: 2,
       metadata: {cardNumber: 'HP42', renderData: CardRenderer.builder((b) => {b.action('Spend 3 M€ to gain 2 steel and 2 titanium.', (ab) => {ab.megacredits(3).startAction.steel(2).titanium(2);});}),
         description: 'Action: Spend 3 M€ to gain 2 steel and 2 titanium. (The room becomes whatever you need most—a refuge, an arsenal, a classroom.)'},
     });
