@@ -12,7 +12,7 @@ export class ChamberOfSecrets extends Card implements IProjectCard {
     super({
       type: CardType.EVENT,
       name: CardName.CHAMBER_OF_SECRETS,
-      tags: [Tag.MICROBE, Tag.SPACE],
+      tags: [Tag.SPACE, Tag.JOVIAN],
       cost: 14,
 
       behavior: {

@@ -10,7 +10,7 @@ import {SelectPlayer} from '../../inputs/SelectPlayer';
 export class DarkMarkSignal extends Card implements IProjectCard {
   constructor() {
     super({
-      type: CardType.EVENT, name: CardName.DARK_MARK_SIGNAL, tags: [Tag.POWER], cost: 5, victoryPoints: -1,
+      type: CardType.EVENT, name: CardName.DARK_MARK_SIGNAL, tags: [Tag.POWER, Tag.SPACE], cost: 5, victoryPoints: -1,
       metadata: {cardNumber: 'HP50', renderData: CardRenderer.builder((b) => {b.minus().production((pb) => pb.megacredits(3)).asterix();}),
         description: 'Select a player. They lose 3 M€ production. -1 VP. (The skull and serpent hung in the sky, and all who saw it trembled.)'},
     });

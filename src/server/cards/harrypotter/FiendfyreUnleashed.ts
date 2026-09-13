@@ -11,7 +11,7 @@ export class FiendfyreUnleashed extends Card implements IProjectCard {
     super({
       type: CardType.EVENT,
       name: CardName.FIENDFYRE_UNLEASHED,
-      tags: [Tag.SPACE],
+      tags: [Tag.SPACE, Tag.JOVIAN],
       cost: 20,
 
       behavior: {

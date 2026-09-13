@@ -10,7 +10,7 @@ export class HogwartsExpress extends Card implements IProjectCard {
     super({
       type: CardType.AUTOMATED,
       name: CardName.HOGWARTS_EXPRESS,
-      tags: [Tag.CITY, Tag.BUILDING],
+      tags: [Tag.CITY, Tag.BUILDING, Tag.SPACE],
       cost: 22,
       victoryPoints: 1,
 

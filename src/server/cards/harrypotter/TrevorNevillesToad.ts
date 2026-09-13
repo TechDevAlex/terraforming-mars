@@ -10,7 +10,7 @@ export class TrevorNevillesToad extends Card implements IProjectCard {
     super({
       type: CardType.AUTOMATED,
       name: CardName.TREVOR_NEVILLES_TOAD,
-      tags: [Tag.SCIENCE],
+      tags: [Tag.ANIMAL],
       cost: 5,
 
       behavior: {

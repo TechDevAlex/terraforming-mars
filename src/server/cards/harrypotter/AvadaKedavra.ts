@@ -10,7 +10,7 @@ import {SelectPlayer} from '../../inputs/SelectPlayer';
 export class AvadaKedavra extends Card implements IProjectCard {
   constructor() {
     super({
-      type: CardType.EVENT, name: CardName.AVADA_KEDAVRA, tags: [Tag.POWER], cost: 20,
+      type: CardType.EVENT, name: CardName.AVADA_KEDAVRA, tags: [Tag.POWER, Tag.JOVIAN], cost: 20,
       metadata: {cardNumber: 'HP23', renderData: CardRenderer.builder((b) => {b.minus().production((pb) => pb.megacredits(4)).asterix();}),
         description: 'Select a player. That player loses 4 M€ production. (The killing curse leaves nothing but silence in its wake.)'},
     });

@@ -11,7 +11,7 @@ export class NevillesHerbologyLesson extends Card implements IProjectCard {
     super({
       type: CardType.EVENT,
       name: CardName.NEVILLES_HERBOLOGY_LESSON,
-      tags: [Tag.MARS],
+      tags: [Tag.MARS, Tag.PLANT],
       cost: 5,
 
       behavior: {

@@ -13,7 +13,7 @@ export class WeasleysWizardWheezes extends Card implements IProjectCard {
     super({
       type: CardType.ACTIVE,
       name: CardName.WEASLEYS_WIZARD_WHEEZES,
-      tags: [Tag.EARTH, Tag.BUILDING],
+      tags: [Tag.BUILDING, Tag.EARTH],
       cost: 10,
 
       metadata: {

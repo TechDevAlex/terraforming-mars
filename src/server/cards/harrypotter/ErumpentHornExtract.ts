@@ -7,7 +7,7 @@ import {CardRenderer} from '../render/CardRenderer';
 export class ErumpentHornExtract extends Card implements IProjectCard {
   constructor() {
     super({
-      type: CardType.EVENT, name: CardName.ERUMPENT_HORN_EXTRACT, tags: [Tag.SCIENCE, Tag.MICROBE], cost: 6,
+      type: CardType.EVENT, name: CardName.ERUMPENT_HORN_EXTRACT, tags: [Tag.MICROBE], cost: 6,
       behavior: {global: {temperature: 1}},
       metadata: {cardNumber: 'HP34', renderData: CardRenderer.builder((b) => {b.temperature(1);}),
         description: 'Raise temperature 1 step. (Highly explosive—handle with extreme care or not at all.)'},

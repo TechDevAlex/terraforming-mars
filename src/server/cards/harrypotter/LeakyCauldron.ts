@@ -13,7 +13,7 @@ export class LeakyCauldron extends Card implements IActionCard, IProjectCard {
     super({
       type: CardType.ACTIVE,
       name: CardName.LEAKY_CAULDRON,
-      tags: [Tag.BUILDING],
+      tags: [Tag.BUILDING, Tag.CITY],
       cost: 6,
 
       metadata: {

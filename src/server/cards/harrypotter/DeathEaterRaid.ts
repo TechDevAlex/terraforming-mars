@@ -1,4 +1,5 @@
 import {IProjectCard} from '../IProjectCard';
+import {Tag} from '../../../common/cards/Tag';
 import {Card} from '../Card';
 import {CardType} from '../../../common/cards/CardType';
 import {CardName} from '../../../common/cards/CardName';
@@ -8,7 +9,7 @@ import {Resource} from '../../../common/Resource';
 export class DeathEaterRaid extends Card implements IProjectCard {
   constructor() {
     super({
-      type: CardType.EVENT, name: CardName.DEATH_EATER_RAID, tags: [], cost: 8,
+      type: CardType.EVENT, name: CardName.DEATH_EATER_RAID, tags: [Tag.POWER], cost: 8,
       metadata: {cardNumber: 'HP45', renderData: CardRenderer.builder((b) => {b.minus().megacredits(2).asterix().steel(1).asterix();}),
         description: 'Each opponent loses 2 M€ and 1 steel. (Dark Marks blazed above the village as screams filled the night.)'},
     });

@@ -10,7 +10,7 @@ export class GringottsVault extends Card implements IProjectCard {
     super({
       type: CardType.AUTOMATED,
       name: CardName.GRINGOTTS_VAULT,
-      tags: [Tag.EARTH],
+      tags: [Tag.BUILDING, Tag.EARTH],
       cost: 18,
 
       behavior: {

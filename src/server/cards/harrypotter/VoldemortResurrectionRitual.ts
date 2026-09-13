@@ -9,7 +9,7 @@ import {SelectPlayer} from '../../inputs/SelectPlayer';
 export class VoldemortResurrectionRitual extends Card implements IProjectCard {
   constructor() {
     super({
-      type: CardType.EVENT, name: CardName.VOLDEMORT_RESURRECTION_RITUAL, tags: [Tag.POWER, Tag.MICROBE], cost: 24, victoryPoints: -3,
+      type: CardType.EVENT, name: CardName.VOLDEMORT_RESURRECTION_RITUAL, tags: [Tag.POWER, Tag.MICROBE, Tag.JOVIAN], cost: 24, victoryPoints: -3,
       behavior: {production: {megacredits: 6, energy: 2}},
       metadata: {cardNumber: 'HP100', renderData: CardRenderer.builder((b) => {b.production((pb) => pb.megacredits(6).energy(2));}),
         description: 'Increase M€ production 6 and energy production 2 steps. Select opponent: they lose 3 TR. -3 VP. (Bone of the father, flesh of the servant, blood of the enemy—the Dark Lord rises again.)'},

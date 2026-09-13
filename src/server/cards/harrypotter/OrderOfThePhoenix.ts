@@ -14,7 +14,7 @@ export class OrderOfThePhoenix extends Card implements IActionCard, IProjectCard
     super({
       type: CardType.ACTIVE,
       name: CardName.ORDER_OF_THE_PHOENIX,
-      tags: [Tag.SCIENCE, Tag.BUILDING],
+      tags: [Tag.BUILDING],
       cost: 12,
       resourceType: CardResource.AGENDA,
 
