@@ -13,7 +13,7 @@ export class UnicornSanctuary extends Card implements IActionCard, IProjectCard 
     super({
       type: CardType.ACTIVE, name: CardName.UNICORN_SANCTUARY, tags: [Tag.ANIMAL], cost: 12,
       resourceType: CardResource.ANIMAL,
-      victoryPoints: 'special',
+      victoryPoints: {resourcesHere: {}, each: 3, per: 2},
       requirements: {temperature: 0},
       metadata: {cardNumber: 'HP205', renderData: CardRenderer.builder((b) => {
         b.action('Add 1 animal to this card.', (ab) => {ab.empty().startAction.resource(CardResource.ANIMAL);}).br;
@@ -31,8 +31,5 @@ export class UnicornSanctuary extends Card implements IActionCard, IProjectCard 
   public action(player: IPlayer) {
     player.addResourceTo(this, {log: true});
     return undefined;
-  }
-  public override getVictoryPoints(): number {
-    return Math.floor(this.resourceCount / 2) * 3;
   }
 }

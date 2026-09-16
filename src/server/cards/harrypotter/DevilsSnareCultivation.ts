@@ -7,23 +7,19 @@ import {CardResource} from '../../../common/CardResource';
 import {Resource} from '../../../common/Resource';
 import {CardRenderer} from '../render/CardRenderer';
 import {IPlayer} from '../../IPlayer';
-import {IActionCard} from '../ICard';
 import {max} from '../Options';
 
-export class DevilsSnareCultivation extends Card implements IActionCard, IProjectCard {
+export class DevilsSnareCultivation extends Card implements IProjectCard {
   constructor() {
     super({
-      type: CardType.ACTIVE, name: CardName.DEVILS_SNARE_CULTIVATION, tags: [Tag.PLANT], cost: 8,
+      type: CardType.EVENT, name: CardName.DEVILS_SNARE_CULTIVATION, tags: [Tag.PLANT], cost: 8,
       requirements: {temperature: 0, max},
       metadata: {cardNumber: 'HP139', renderData: CardRenderer.builder((b) => {
-        b.action('Remove 1 animal from EACH card (yours and opponents). Gain 1 plant per animal removed.', (ab) => {ab.minus().resource(CardResource.ANIMAL).asterix().startAction.plants(1).slash().resource(CardResource.ANIMAL);});
-      }), description: 'Temperature must be 0°C or lower. Action: Remove 1 animal from EACH card in play (including opponents\'). Gain 1 plant per animal removed.'}
+        b.minus().resource(CardResource.ANIMAL).asterix().plants(1).slash().resource(CardResource.ANIMAL);
+      }), description: 'Temperature must be 0°C or lower. Remove 1 animal from EACH card in play (including opponents\'). Gain 1 plant per animal removed.'}
     });
   }
-  public canAct(player: IPlayer): boolean {
-    return player.game.players.some((p: IPlayer) => p.getCardsWithResources(CardResource.ANIMAL).length > 0);
-  }
-  public action(player: IPlayer) {
+  public override bespokePlay(player: IPlayer) {
     let removed = 0;
     for (const p of player.game.players) {
       for (const c of p.getCardsWithResources(CardResource.ANIMAL)) {
