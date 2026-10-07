@@ -14,19 +14,19 @@ export class SolarLogistics extends Card implements IProjectCard {
       type: CardType.ACTIVE,
       name: CardName.SOLAR_LOGISTICS,
       cost: 28,
-      tags: [Tag.EARTH, Tag.SPACE],
+      tags: [Tag.JOVIAN, Tag.SPACE],
 
       behavior: {
         stock: {titanium: 3},
       },
       victoryPoints: 1,
-      cardDiscount: {tag: Tag.EARTH, amount: 2},
+      cardDiscount: {tag: Tag.JOVIAN, amount: 4},
 
       metadata: {
         cardNumber: 'X63',
         renderData: CardRenderer.builder((b) => {
-          b.effect('When you play an Earth tag, you pay 2 M€ less.',
-            (eb) => eb.tag(Tag.EARTH).startEffect.megacredits(-2));
+          b.effect('When you play an JOVIAN tag, you pay 4 M€ less.',
+            (eb) => eb.tag(Tag.JOVIAN).startEffect.megacredits(-2));
           b.br;
           b.effect('When any player plays a space event, draw a card.',
             (eb) => eb.tag(Tag.SPACE, {all}).tag(Tag.EVENT, {all}).startEffect.cards(1));

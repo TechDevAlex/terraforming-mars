@@ -22,7 +22,7 @@ export class VenusContract extends PreludeCard {
         description: 'Draw 2 Venus cards.',
         renderData: CardRenderer.builder((b) => {
           b.effect('Each step you raise Venus, gain 3 M€.', (eb) => {
-            eb.venus(2).startEffect.megacredits(3);
+            eb.venus(1).startEffect.megacredits(3);
           });
           b.br;
           b.cards(2, {secondaryTag: Tag.VENUS});

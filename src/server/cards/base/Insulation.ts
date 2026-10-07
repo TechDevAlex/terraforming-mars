@@ -22,7 +22,7 @@ export class Insulation extends Card implements IProjectCard {
             pb.text('-X').heat(1).nbsp.text('+').megacredits(1, {text: 'x'});
           });
         }),
-        description: 'Decrease your heat production any number of steps and increase your M€ production the same number of steps.',
+        description: 'Decrease your heat production at least 1 step and increase your M€ production the same number of steps.',
       },
     });
   }

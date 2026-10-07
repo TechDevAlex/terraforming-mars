@@ -12,8 +12,8 @@ export class InterplanetaryTrade extends Card implements IProjectCard {
     super({
       type: CardType.AUTOMATED,
       name: CardName.INTERPLANETARY_TRADE,
-      tags: [Tag.SPACE, Tag.JOVIAN],
-      cost: 29,
+      tags: [Tag.SPACE],
+      cost: 26,
       victoryPoints: 1,
 
       metadata: {

@@ -25,14 +25,14 @@ export class AeronGenomics extends CorporationCard implements ICorporationCard {
 
       behavior: {
         stock: {steel: 5},
-        addResources: 2,
+        addResources: 4,
       },
 
       metadata: {
         cardNumber: 'UC07',
-        description: 'You start with 45 M€, 5 steel, and 1 animal resource on this card. 1 VP per 3 animals on this card.',
+        description: 'You start with 45 M€, 5 steel, and 4 animal resource on this card. 1 VP per 3 animals on this card.',
         renderData: CardRenderer.builder((b) => {
-          b.megacredits(45).steel(5, {digit}).resource(CardResource.ANIMAL, 2).br;
+          b.megacredits(45).steel(5, {digit}).resource(CardResource.ANIMAL, 4).br;
           b.effect(
             'When playing an animal card, you can remove animals from here to ' +
             'change the card\'s global requirement by 1 step for every 1 animal removed.',

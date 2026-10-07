@@ -20,6 +20,7 @@ export class Gordon extends CeoCard {
           b.greenery().city().colon().megacredits(4).asterix();
           b.br.br;
         }),
+          description: 'You can place greeneries and cities without placement restrictions. Gain 4MC when placing a greenery or a city',
       },
     });
   }

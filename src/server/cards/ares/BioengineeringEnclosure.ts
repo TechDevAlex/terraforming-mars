@@ -33,7 +33,7 @@ export class BioengineeringEnclosure extends Card implements IProjectCard, IActi
           b.action('Remove 1 animal from THIS card to add 1 animal to ANOTHER card.', (eb) => {
             eb.resource(CardResource.ANIMAL).asterix().startAction.resource(CardResource.ANIMAL).asterix();
           }).br;
-          b.resource(CardResource.ANIMAL, 2);
+          b.resource(CardResource.ANIMAL, 4);
         }),
       },
     });
