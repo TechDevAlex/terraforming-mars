@@ -1,30 +1,30 @@
-import {CorporationCard} from '../corporation/CorporationCard';
-import {Tag} from '../../../common/cards/Tag';
-import {CardName} from '../../../common/cards/CardName';
-import {CardRenderer} from '../render/CardRenderer';
-import {IPlayer} from '../../IPlayer';
-import {all} from '../Options';
-import {Phase} from '../../../common/Phase';
-import {Resource} from '../../../common/Resource';
-import {ICorporationCard} from '../corporation/ICorporationCard';
+import { CorporationCard } from '../corporation/CorporationCard';
+import { Tag } from '../../../common/cards/Tag';
+import { CardName } from '../../../common/cards/CardName';
+import { CardRenderer } from '../render/CardRenderer';
+import { IPlayer } from '../../IPlayer';
+import { all } from '../Options';
+import { Phase } from '../../../common/Phase';
+import { Resource } from '../../../common/Resource';
+import { ICorporationCard } from '../corporation/ICorporationCard';
 
 export class UnitedNationsMissionOne extends CorporationCard implements ICorporationCard {
   constructor() {
     super({
       name: CardName.UNITED_NATIONS_MISSION_ONE,
       tags: [Tag.EARTH],
-      startingMegaCredits: 47, // +4 for the initial change in TR.
+      startingMegaCredits: 45, // +4 for the initial change in TR.
 
       metadata: {
         cardNumber: 'R50',
-        description: 'You start with 36 M€. Increase your TR 1 step.',
+        description: 'You start with 43 M€. Increase your TR 1 step.',
         renderData: CardRenderer.builder((b) => {
           b.br.br.br;
-          b.megacredits(43).nbsp.tr(2);
+          b.megacredits(43).nbsp.tr(1);
           b.corpBox('effect', (ce) => {
             ce.vSpace();
             ce.effect('When you take an action or play a card that increases TR, including this, gain 2 M€ for each step.', (eb) => {
-              eb.tr(1, {all}).startEffect.megacredits(2);
+              eb.tr(1, { all }).startEffect.megacredits(2);
             });
           });
         }),
@@ -33,7 +33,6 @@ export class UnitedNationsMissionOne extends CorporationCard implements ICorpora
   }
 
   public override bespokePlay(player: IPlayer): undefined {
-    player.increaseTerraformRating();
     player.increaseTerraformRating();
     return undefined;
   }
@@ -44,8 +43,8 @@ export class UnitedNationsMissionOne extends CorporationCard implements ICorpora
     const game = player.game;
 
     if (player === cardOwner && (game.phase === Phase.ACTION || game.phase === Phase.PRELUDES)) {
-      cardOwner.stock.add(Resource.MEGACREDITS, steps, {log: true, from: {card: this}});
-      cardOwner.stock.add(Resource.MEGACREDITS, steps, {log: true, from: {card: this}});
+      cardOwner.stock.add(Resource.MEGACREDITS, steps, { log: true, from: { card: this } });
+      cardOwner.stock.add(Resource.MEGACREDITS, steps, { log: true, from: { card: this } });
     }
   }
 }

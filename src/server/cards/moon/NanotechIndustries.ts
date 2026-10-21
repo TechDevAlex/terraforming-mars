@@ -1,13 +1,13 @@
-import {CardName} from '../../../common/cards/CardName';
-import {Tag} from '../../../common/cards/Tag';
-import {CorporationCard} from '../corporation/CorporationCard';
-import {CardRenderer} from '../render/CardRenderer';
-import {IActionCard} from '../ICard';
-import {CardResource} from '../../../common/CardResource';
-import {IPlayer} from '../../IPlayer';
-import {AddResourcesToCard} from '../../deferredActions/AddResourcesToCard';
-import {MoonCards} from '../../moon/MoonCards';
-import {ICorporationCard} from '../corporation/ICorporationCard';
+import { CardName } from '../../../common/cards/CardName';
+import { Tag } from '../../../common/cards/Tag';
+import { CorporationCard } from '../corporation/CorporationCard';
+import { CardRenderer } from '../render/CardRenderer';
+import { IActionCard } from '../ICard';
+import { CardResource } from '../../../common/CardResource';
+import { IPlayer } from '../../IPlayer';
+import { AddResourcesToCard } from '../../deferredActions/AddResourcesToCard';
+import { MoonCards } from '../../moon/MoonCards';
+import { ICorporationCard } from '../corporation/ICorporationCard';
 
 export class NanotechIndustries extends CorporationCard implements ICorporationCard, IActionCard {
   constructor() {
@@ -18,21 +18,21 @@ export class NanotechIndustries extends CorporationCard implements ICorporationC
       resourceType: CardResource.SCIENCE,
 
       firstAction: {
-        text: 'Draw 4 cards and keep 3.',
-        drawCard: {count: 4, keep: 3},
+        text: 'Draw 15 cards and keep 2.',
+        drawCard: { count: 15, keep: 2 },
       },
 
-      victoryPoints: {resourcesHere: {}, per: 2},
+      victoryPoints: { resourcesHere: {}, per: 2 },
 
       metadata: {
         cardNumber: 'MC1',
         renderData: CardRenderer.builder((b) => {
-          b.megacredits(42).cards(3).minus().cards(1).br;
+          b.megacredits(48).cards(2).minus().cards(1).br;
           b.action('Add 1 science resource to ANY card [except those giving 2 or more VP per 1 science resource.]', (eb) => {
             eb.empty().startAction.resource(CardResource.SCIENCE).asterix();
           });
         }),
-        description: 'You start with 42 M€. As your first action, draw 3 cards. Take 2 of them into hand, and discard the rest. ' +
+        description: 'You start with 48 M€. As your first action, draw 15 cards. Take 2 of them into hand, and discard the rest. ' +
           '1 VP for every 2 science resources here.',
       },
     });
@@ -46,7 +46,7 @@ export class NanotechIndustries extends CorporationCard implements ICorporationC
     player.game.defer(new AddResourcesToCard(
       player,
       CardResource.SCIENCE,
-      {filter: (card): boolean => MoonCards.scienceCardsWithLessThan2VP.has(card.name)},
+      { filter: (card): boolean => MoonCards.scienceCardsWithLessThan2VP.has(card.name) },
     ));
     return undefined;
   }

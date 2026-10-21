@@ -1,33 +1,33 @@
-import {Card} from '../Card';
-import {CardType} from '../../../common/cards/CardType';
-import {IActionCard} from '../ICard';
-import {IProjectCard} from '../IProjectCard';
-import {Tag} from '../../../common/cards/Tag';
-import {Player} from '../../Player';
-import {CardName} from '../../../common/cards/CardName';
-import {Resource} from '../../../common/Resource';
-import {CardRenderer} from '../render/CardRenderer';
-import {CardResource} from '../../../common/CardResource';
-import {OrOptions} from '../../inputs/OrOptions';
-import {SelectOption} from '../../inputs/SelectOption';
-import {Size} from '../../../common/cards/render/Size';
-import {all} from '../Options';
+import { Card } from '../Card';
+import { CardType } from '../../../common/cards/CardType';
+import { IActionCard } from '../ICard';
+import { IProjectCard } from '../IProjectCard';
+import { Tag } from '../../../common/cards/Tag';
+import { Player } from '../../Player';
+import { CardName } from '../../../common/cards/CardName';
+import { Resource } from '../../../common/Resource';
+import { CardRenderer } from '../render/CardRenderer';
+import { CardResource } from '../../../common/CardResource';
+import { OrOptions } from '../../inputs/OrOptions';
+import { SelectOption } from '../../inputs/SelectOption';
+import { Size } from '../../../common/cards/render/Size';
+import { all } from '../Options';
 
 export class DeathStar extends Card implements IActionCard, IProjectCard {
-  public data: {timesFired: number} = {timesFired: 0};
+  public data: { timesFired: number } = { timesFired: 0 };
 
   constructor() {
     super({
       type: CardType.ACTIVE,
       name: CardName.DEATH_STAR,
       tags: [Tag.SPACE, Tag.SCIENCE],
-      cost: 34,
+      cost: 30,
       resourceType: CardResource.CLONE_TROOPER,
 
       metadata: {
         cardNumber: 'SW10',
         renderData: CardRenderer.builder((b) => {
-          b.titanium(1).arrow(Size.SMALL).resource(CardResource.CLONE_TROOPER).or().resource(CardResource.CLONE_TROOPER, 2).arrow(Size.SMALL).minus().tr(1, {all}).text('GEN+2');
+          b.titanium(1).arrow(Size.SMALL).resource(CardResource.CLONE_TROOPER).or().resource(CardResource.CLONE_TROOPER, 2).arrow(Size.SMALL).minus().tr(1, { all }).text('GEN+2');
           b.br;
           b.text('(Action: Pay 1 titanium to add 1 Clone Trooper, OR remove 2 Clone Troopers: all opponents lose GEN+2 TR. Cannot be blocked. Max 2x per game.)', Size.TINY, false, false);
           b.br;
@@ -51,7 +51,7 @@ export class DeathStar extends Card implements IActionCard, IProjectCard {
     if (player.titanium >= 1) {
       options.options.push(new SelectOption('Pay 1 titanium to add 1 Clone Trooper', 'Pay').andThen(() => {
         player.stock.deduct(Resource.TITANIUM, 1);
-        player.addResourceTo(this, {log: true});
+        player.addResourceTo(this, { log: true });
         return undefined;
       }));
     }
@@ -70,7 +70,7 @@ export class DeathStar extends Card implements IActionCard, IProjectCard {
         }
 
         for (const opponent of player.opponents) {
-          opponent.decreaseTerraformRating(trLoss, {log: true});
+          opponent.decreaseTerraformRating(trLoss, { log: true });
         }
         return undefined;
       }));
