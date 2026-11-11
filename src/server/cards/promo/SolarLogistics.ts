@@ -1,12 +1,12 @@
-import {Card} from '../Card';
-import {CardType} from '../../../common/cards/CardType';
-import {IPlayer} from '../../IPlayer';
-import {CardName} from '../../../common/cards/CardName';
-import {CardRenderer} from '../render/CardRenderer';
-import {Tag} from '../../../common/cards/Tag';
-import {all} from '../Options';
-import {IProjectCard} from '../IProjectCard';
-import {ICard} from '../ICard';
+import { Card } from '../Card';
+import { CardType } from '../../../common/cards/CardType';
+import { IPlayer } from '../../IPlayer';
+import { CardName } from '../../../common/cards/CardName';
+import { CardRenderer } from '../render/CardRenderer';
+import { Tag } from '../../../common/cards/Tag';
+import { all } from '../Options';
+import { IProjectCard } from '../IProjectCard';
+import { ICard } from '../ICard';
 
 export class SolarLogistics extends Card implements IProjectCard {
   constructor() {
@@ -17,19 +17,19 @@ export class SolarLogistics extends Card implements IProjectCard {
       tags: [Tag.JOVIAN, Tag.SPACE],
 
       behavior: {
-        stock: {titanium: 3},
+        stock: { titanium: 3 },
       },
       victoryPoints: 1,
-      cardDiscount: {tag: Tag.JOVIAN, amount: 4},
+      cardDiscount: { tag: Tag.JOVIAN, amount: 4 },
 
       metadata: {
         cardNumber: 'X63',
         renderData: CardRenderer.builder((b) => {
           b.effect('When you play an JOVIAN tag, you pay 4 M€ less.',
-            (eb) => eb.tag(Tag.JOVIAN).startEffect.megacredits(-2));
+            (eb) => eb.tag(Tag.JOVIAN).startEffect.megacredits(-4));
           b.br;
           b.effect('When any player plays a space event, draw a card.',
-            (eb) => eb.tag(Tag.SPACE, {all}).tag(Tag.EVENT, {all}).startEffect.cards(1));
+            (eb) => eb.tag(Tag.SPACE, { all }).tag(Tag.EVENT, { all }).startEffect.cards(1));
           b.br;
           b.titanium(3);
         }),
